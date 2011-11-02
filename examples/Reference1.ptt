@@ -1,0 +1,2066 @@
+Brucella melitensis ATCC 23457 chromosome chromosome I, complete sequence - 1..2125701
+2063 proteins
+Location	Strand	Length	PID	Gene	Synonym	Code	COG	Product
+634..2274	+	546	225851547	dnaA	BMEA_A0001	-	COG0593L	chromosomal replication initiation protein
+2503..3696	+	397	225851548	dnaN	BMEA_A0002	-	COG0592L	DNA polymerase III subunit beta
+3878..5032	+	384	225851549	recF	BMEA_A0003	-	COG1195L	recombination protein F
+5070..5852	+	260	225851550	-	BMEA_A0004	-	COG0476H	molybdopterin biosynthesis protein MoeB
+5869..6825	-	318	225851551	-	BMEA_A0005	-	COG0111HE	D-isomer specific 2-hydroxyacid dehydrogenase
+6822..8447	-	541	225851552	-	BMEA_A0006	-	COG4172R	ABC transporter-like protein
+8471..9610	-	379	225851553	-	BMEA_A0007	-	COG4239R	binding-protein-dependent transport systems inner membrane protein
+9610..10707	-	365	225851554	-	BMEA_A0008	-	COG4174R	hypothetical protein
+10819..12657	-	612	225851555	-	BMEA_A0009	-	COG4166E	extracellular solute-binding protein family 5
+12671..14539	-	622	225851556	-	BMEA_A0010	-	COG4166E	extracellular solute-binding protein family 5
+14770..15093	-	107	225851557	-	BMEA_A0011	-	-	hypothetical protein
+15139..15339	-	66	225851558	-	BMEA_A0012	-	-	hypothetical protein
+15379..15537	-	52	225851559	-	BMEA_A0013	-	-	hypothetical protein
+15994..17100	-	368	225851560	-	BMEA_A0014	-	COG0683E	extracellular ligand-binding receptor
+17372..17572	+	66	225851561	-	BMEA_A0016	-	-	hypothetical protein
+18358..19221	-	287	225851562	-	BMEA_A0017	-	COG0119E	hydroxymethylglutaryl-CoA lyase
+19214..21181	-	655	225851563	-	BMEA_A0018	-	COG4770I	carbamoyl-phosphate synthase subunit L
+21247..22854	-	535	225851564	-	BMEA_A0019	-	COG4799I	propionyl-CoA carboxylase
+22854..24032	-	392	225851565	-	BMEA_A0020	-	COG1960I	isovaleryl-CoA dehydrogenase
+26352..26786	-	144	225851566	-	BMEA_A0022	-	-	CHRD domain-containing protein
+26963..28084	-	373	225851567	-	BMEA_A0023	-	COG1835I	acyltransferase MdmB
+28607..28990	-	127	225851568	-	BMEA_A0025	-	COG4530	hypothetical protein
+29375..30727	+	450	225851569	aroA	BMEA_A0026	-	COG0128E	3-phosphoshikimate 1-carboxyvinyltransferase
+30724..31383	+	219	225851570	cmk	BMEA_A0027	-	COG0283F	cytidylate kinase
+31599..33299	+	566	225851571	rpsA	BMEA_A0028	-	COG0539J	30S ribosomal protein S1
+33717..34727	-	336	225851572	-	BMEA_A0029	-	COG2855S	hypothetical protein
+34843..35742	+	299	225851573	-	BMEA_A0030	-	COG0583K	LysR family transcriptional regulator
+36348..37631	-	427	225851574	-	BMEA_A0031	-	COG2951M	lytic murein transglycosylase
+37647..38252	-	201	225851575	recR	BMEA_A0032	-	COG0353L	recombination protein RecR
+38383..38706	-	107	225851576	-	BMEA_A0033	-	COG0718S	hypothetical protein
+38731..40539	-	602	225851577	dnaX	BMEA_A0034	-	COG2812L	DNA polymerase III subunits gamma and tau
+40821..41225	+	134	225851578	-	BMEA_A0037	-	COG0537FGR	histidine triad protein
+41254..42201	+	315	225851579	-	BMEA_A0038	-	COG2816L	peroxisomal NADH pyrophosphatase NUDT12
+42202..43065	-	287	225851580	-	BMEA_A0039	-	COG0077E	prephenate dehydratase
+43154..43909	-	251	225851581	kdsB	BMEA_A0040	-	COG1212M	3-deoxy-manno-octulosonate cytidylyltransferase
+44287..44895	+	202	225851582	-	BMEA_A0041	-	COG3474C	cytochrome c
+44940..45905	-	321	225851583	-	BMEA_A0042	-	COG0303H	hypothetical protein
+45961..46269	+	102	225851584	-	BMEA_A0043	-	-	hypothetical protein
+46444..47472	+	342	225851585	cyoA	BMEA_A0044	-	COG1622C	ubiquinol oxidase, subunit II
+47536..49515	+	659	225851586	cyoB	BMEA_A0045	-	COG0843C	cytochrome o ubiquinol oxidase subunit I
+49519..50148	+	209	225851587	cyoC	BMEA_A0046	-	COG1845C	cytochrome o ubiquinol oxidase subunit III
+50148..50513	+	121	225851588	cyoD	BMEA_A0047	-	COG3125C	cytochrome o ubiquinol oxidase subunit IV
+51067..51663	+	198	225851589	-	BMEA_A0048	-	COG4991S	SH3 type 3 domain-containing protein
+52148..54067	+	639	225851590	-	BMEA_A0049	-	COG0729M	surface antigen D15
+54064..58803	+	1579	225851591	-	BMEA_A0050	-	COG2911S	hypothetical protein
+59725..59940	-	71	225851592	-	BMEA_A0052	-	-	hypothetical protein
+60010..60519	-	169	225851593	-	BMEA_A0053	-	-	hypothetical protein
+60850..61056	-	68	225851594	-	BMEA_A0054	-	-	hypothetical protein
+61067..62071	-	334	225851595	-	BMEA_A0055	-	COG4549S	hypothetical protein
+62206..62604	-	132	225851596	-	BMEA_A0056	-	-	hypothetical protein
+62849..63244	-	131	225851597	-	BMEA_A0057	-	COG0346E	glyoxalase/bleomycin resistance protein/dioxygenase
+63441..64604	+	387	225851598	-	BMEA_A0058	-	COG0489D	hypothetical protein
+64817..66448	-	543	225851599	-	BMEA_A0059	-	COG0033G	phosphoglucomutase
+66504..66689	-	61	225851600	-	BMEA_A0061	-	-	hypothetical protein
+66664..67557	-	297	225851601	-	BMEA_A0062	-	COG0583K	LysR family transcriptional regulator
+67597..67701	-	34	225851602	-	BMEA_A0063	-	-	hypothetical protein
+67682..68605	+	307	225851603	-	BMEA_A0064	-	COG1073R	dienelactone hydrolase domain-containing protein
+68678..69376	+	232	225851604	-	BMEA_A0065	-	COG1072H	putative fructose transport system kinase
+69476..70165	+	229	225851605	-	BMEA_A0066	-	COG0179Q	fumarylacetoacetate hydrolase domain-containing protein 1
+70185..70376	+	63	225851606	-	BMEA_A0067	-	-	hypothetical protein
+70438..70653	+	71	225851607	-	BMEA_A0068	-	-	hypothetical protein
+70819..71007	+	62	225851608	-	BMEA_A0069	-	-	hypothetical protein
+71022..71885	+	287	225851609	-	BMEA_A0070	-	COG0741M	lytic transglycosylase catalytic
+72067..72723	+	218	225851610	-	BMEA_A0071	-	COG1272R	hemolysin-3
+72864..76097	-	1077	225851611	dnaE	BMEA_A0072	-	COG0587L	error-prone DNA polymerase
+76097..77683	-	528	225851612	-	BMEA_A0073	-	COG0389L	hypothetical protein
+77574..78437	-	287	225851613	-	BMEA_A0074	-	COG4544	hypothetical protein
+81199..81936	+	245	225851614	-	BMEA_A0076	-	-	hypothetical protein
+82015..83235	-	406	225851615	argG	BMEA_A0077	-	COG0137E	argininosuccinate synthase
+83422..84081	+	219	225851616	-	BMEA_A0078	-	COG1280E	hypothetical protein
+84085..84588	-	167	225851617	-	BMEA_A0079	-	-	hypothetical protein
+84622..85857	-	411	225851618	-	BMEA_A0080	-	COG0820R	radical SAM protein
+86117..86620	-	167	225851619	-	BMEA_A0083	-	-	hypothetical protein
+87036..87419	-	127	225851620	-	BMEA_A0084	-	COG3339S	hypothetical protein
+87507..87800	-	97	225851621	-	BMEA_A0085	-	COG2154H	pterin-4-alpha-carbinolamine dehydratase
+88542..89132	-	196	225851622	-	BMEA_A0087	-	COG1514J	2'-5' RNA ligase
+89313..90038	-	241	225851623	-	BMEA_A0088	-	COG2755E	arylesterase precursor
+90035..90613	-	192	225851624	-	BMEA_A0089	-	-	hypothetical protein
+90784..90912	+	42	225851625	-	BMEA_A0090	-	COG4181Q	ABC transporter-like protein
+90909..93458	+	849	225851626	-	BMEA_A0091	-	COG3127Q	hypothetical protein
+93692..94429	+	245	225851627	-	BMEA_A0093	-	COG0670R	hypothetical protein
+94544..95083	+	179	225851628	-	BMEA_A0094	-	COG1247M	phosphinothricin N-acetyltransferase
+95103..95504	-	133	225851629	-	BMEA_A0095	-	-	hypothetical protein
+96054..96788	-	244	225851630	-	BMEA_A0096	-	COG5429S	hypothetical protein
+96941..97081	-	46	225851631	-	BMEA_A0097	-	-	hypothetical protein
+97065..99752	-	895	225851632	acnA	BMEA_A0098	-	COG1048C	aconitate hydratase
+100096..100743	+	215	225851633	ccmA	BMEA_A0099	-	COG4133O	cytochrome c biogenesis protein CcmA
+100743..101408	+	221	225851634	ccmB	BMEA_A0100	-	COG2386O	heme exporter protein CcmB
+101466..102251	+	261	225851635	ccmC	BMEA_A0101	-	COG0755O	heme exporter protein CcmC
+102248..102421	+	57	225851636	ccmD	BMEA_A0102	-	-	heme exporter protein CcmD
+102418..103029	+	203	225851637	dsbE	BMEA_A0103	-	COG0526OC	periplasmic protein thiol:disulfide oxidoreductase
+103278..105113	-	611	225851638	ilvD	BMEA_A0105	-	COG0129EG	dihydroxy-acid dehydratase
+105286..105423	+	45	225851639	-	BMEA_A0106	-	-	hypothetical protein
+105504..105935	-	143	225851640	-	BMEA_A0107	-	-	hypothetical protein
+105962..106339	-	125	225851641	-	BMEA_A0108	-	COG2204T	response regulator receiver protein
+106514..106750	-	78	225851642	-	BMEA_A0109	-	COG1522K	AsnC family transcriptional regulator
+107069..107257	+	62	225851643	-	BMEA_A0110	-	-	hypothetical protein
+107403..107807	+	134	225851644	-	BMEA_A0111	-	-	hypothetical protein
+107893..108597	-	234	225851645	-	BMEA_A0112	-	-	hypothetical protein
+108669..109487	+	272	225851646	-	BMEA_A0113	-	COG1434S	hypothetical protein
+109765..110793	+	342	225851647	-	BMEA_A0114	-	COG1613P	sulfate ABC transporter sulfate-binding protein
+110888..111754	+	288	225851648	cysT	BMEA_A0115	-	COG0555O	sulfate ABC transporter permease CysT
+111744..112610	+	288	225851649	cysW	BMEA_A0116	-	COG4208P	sulfate ABC transporter permease CysW
+112708..113787	+	359	225851650	cysA	BMEA_A0117	-	COG1118P	sulfate ABC transporter ATP-binding protein
+114173..122776	+	2867	225851651	-	BMEA_A0118	-	COG3459G	glycosyltransferase 36
+122866..124170	+	434	225851652	pncB	BMEA_A0119	-	COG1488H	nicotinate phosphoribosyltransferase
+124212..125042	-	276	225851653	-	BMEA_A0120	-	COG0384R	phenazine biosynthesis protein PhzF family protein
+125152..125940	-	262	225851654	-	BMEA_A0121	-	COG2226H	methyltransferase type 11
+125963..126898	-	311	225851655	-	BMEA_A0122	-	COG0524G	fructokinase
+126989..127795	-	268	225851656	-	BMEA_A0123	-	COG1028IQR	short-chain dehydrogenase/reductase SDR
+127916..130207	-	763	225851657	-	BMEA_A0124	-	COG0744M	1A family penicillin-binding protein
+130413..131105	-	230	225851658	-	BMEA_A0125	-	COG3637M	porin
+131372..132058	-	228	225851659	-	BMEA_A0126	-	COG3637M	outer membrane protein
+132290..132907	-	205	225851660	-	BMEA_A0127	-	COG0349J	hypothetical protein
+132946..134361	-	471	225851661	-	BMEA_A0128	-	COG0624E	hypothetical protein
+134592..134840	+	82	225851662	-	BMEA_A0129	-	-	hypothetical protein
+134922..137858	+	978	225851663	polA	BMEA_A0130	-	COG0749L	DNA polymerase I
+138000..139880	+	626	225851664	-	BMEA_A0131	-	COG0513LKJ	DEAD-box ATP-dependent RNA helicase YdbR
+139976..142417	-	813	225851665	gyrB	BMEA_A0132	-	COG0187L	DNA gyrase subunit B
+142468..142635	-	55	225851666	-	BMEA_A0133	-	-	hypothetical protein
+144707..145819	-	370	225851667	-	BMEA_A0137	-	COG1062C	S-(hydroxymethyl)glutathione dehydrogenase/class III alcohol dehydrogenase
+145853..146209	-	118	225851668	-	BMEA_A0138	-	COG1937S	hypothetical protein
+148776..150068	+	430	225851669	-	BMEA_A0140	-	COG0642T	sensor histidine kinase regB
+150138..150506	+	122	225851670	-	BMEA_A0141	-	COG3293L	transposase
+150503..150781	+	92	225851671	-	BMEA_A0142	-	COG3293L	IS6501 transposase
+151496..152059	+	187	225851672	-	BMEA_A0143	-	COG4567TK	photosynthetic apparatus regulatory protein regA
+152065..152367	-	100	225851673	-	BMEA_A0144	-	COG5321	hypothetical protein
+152829..153449	+	206	225851674	-	BMEA_A0145	-	COG1376S	ErfK/YbiS/YcfS/YnhG family protein
+153539..154111	-	190	225851675	-	BMEA_A0146	-	COG0694O	NifU-related protein
+154220..154759	-	179	225851676	-	BMEA_A0147	-	-	UspA domain-containing protein
+154766..155923	-	385	225851677	trpS	BMEA_A0148	-	COG0180J	tryptophanyl-tRNA synthetase
+155930..157519	-	529	225851678	mviN	BMEA_A0149	-	COG0728R	integral membrane protein MviN
+157533..160337	-	934	225851679	glnD	BMEA_A0150	-	COG2844O	PII uridylyl-transferase
+160403..160498	+	31	225851680	-	BMEA_A0151	-	-	hypothetical protein
+162930..165662	+	910	225851681	mutS	BMEA_A0153	-	COG0249L	DNA mismatch repair protein MutS
+165968..166861	-	297	225851682	-	BMEA_A0154	-	COG3176R	hypothetical protein
+167136..167618	-	160	225851683	lspA	BMEA_A0155	-	COG0597MU	lipoprotein signal peptidase
+167620..168513	-	297	225851684	-	BMEA_A0156	-	COG0566J	tRNA/rRNA methyltransferase SpoU
+169767..170090	-	107	225851685	-	BMEA_A0158	-	-	hypothetical protein
+170100..170384	-	94	225851686	ihfB	BMEA_A0159	-	COG0776L	integration host factor subunit beta
+170431..171414	-	327	225851687	sppA	BMEA_A0160	-	COG0616OU	signal peptide peptidase SppA, 36K type
+171876..172598	+	240	225851688	-	BMEA_A0161	-	COG5375S	hypothetical protein
+172922..173536	+	204	225851689	-	BMEA_A0162	-	COG1934S	OstA-like protein
+173548..174381	+	277	225851690	-	BMEA_A0163	-	COG1137R	ABC transporter ATP-binding protein
+174677..176179	+	500	225851691	rpoN	BMEA_A0164	-	COG1508K	RNA polymerase factor sigma-54
+176325..176693	-	122	225851692	-	BMEA_A0165	-	-	hypothetical protein
+176929..177522	+	197	225851693	yfiA	BMEA_A0166	-	COG1544J	ribosomal subunit interface protein
+177625..178089	+	154	225851694	ptsN	BMEA_A0167	-	COG1762GT	PTS IIA-like nitrogen-regulatory protein PtsN
+178170..178415	-	81	225851695	-	BMEA_A0168	-	COG5568	hypothetical protein
+178521..178943	-	140	225851696	-	BMEA_A0169	-	COG0071O	small heat shock protein hspD
+179034..179234	-	66	225851697	-	BMEA_A0170	-	-	hypothetical protein
+179215..179829	-	204	225851698	-	BMEA_A0171	-	COG5488S	hypothetical protein
+179817..180563	+	248	225851699	nth	BMEA_A0172	-	COG0177L	endonuclease III
+180604..181317	-	237	225851700	-	BMEA_A0173	-	COG2981E	CysZ-like protein
+181314..181574	-	86	225851701	-	BMEA_A0174	-	-	hypothetical protein
+181577..182569	+	330	225851702	-	BMEA_A0175	-	COG0524G	fructokinase-2
+182588..183244	-	218	225851703	-	BMEA_A0176	-	COG2860S	hypothetical protein
+183377..184069	-	230	225851704	-	BMEA_A0177	-	COG0576O	heat shock protein GrpE
+184175..185245	-	356	225851705	hrcA	BMEA_A0178	-	COG1420K	heat-inducible transcription repressor
+185467..186183	+	238	225851706	rph	BMEA_A0179	-	COG0689J	ribonuclease PH
+186763..187425	+	220	225851707	rdgB	BMEA_A0182	-	COG0127F	putative deoxyribonucleotide triphosphate pyrophosphatase
+187422..188636	+	404	225851708	-	BMEA_A0183	-	COG0635H	coproporphyrinogen III oxidase
+188648..189559	+	303	225851709	-	BMEA_A0184	-	COG0313R	hypothetical protein
+189556..189936	+	126	225851710	-	BMEA_A0185	-	COG0792L	hypothetical protein
+190162..191568	+	468	225851711	cobA	BMEA_A0186	-	COG0007H	uroporphyrin-III C-methyltransferase
+191586..191888	+	100	225851712	-	BMEA_A0187	-	-	hypothetical protein
+191909..193579	+	556	225851713	-	BMEA_A0188	-	COG0155P	sulfite reductase ferredoxin
+193569..194327	+	252	225851714	cysH	BMEA_A0189	-	COG0175EH	phosphoadenosine phosphosulfate reductase
+194380..194904	+	174	225851715	-	BMEA_A0190	-	COG3749S	hypothetical protein
+194972..195265	+	97	225851716	-	BMEA_A0191	-	-	Stress responsive alpha-beta barrel domain-containing protein
+195266..195844	-	192	225851717	-	BMEA_A0192	-	COG0350L	methylated-DNA--protein-cysteine methyltransferase
+196102..196347	+	81	225851718	-	BMEA_A0194	-	-	hypothetical protein
+196400..196789	-	129	225851719	-	BMEA_A0195	-	-	BA14K family protein
+197103..200888	+	1261	225851720	metH	BMEA_A0196	-	COG1410E	B12-dependent methionine synthase
+201200..201916	+	238	225851721	-	BMEA_A0198	-	COG2771K	transcriptional activator protein solR
+202031..203401	+	456	225851722	-	BMEA_A0199	-	COG0161H	aminotransferase
+203483..203791	-	102	225851723	-	BMEA_A0200	-	-	hypothetical protein
+203804..204706	+	300	225851724	cysD	BMEA_A0201	-	COG0175EH	sulfate adenylyltransferase subunit 2
+204706..206640	+	644	225851725	cysN	BMEA_A0202	-	COG2895P	bifunctional sulfate adenylyltransferase subunit 1/adenylylsulfate kinase protein
+206643..207488	+	281	225851726	cysQ	BMEA_A0203	-	COG1218P	3'(2'),5'-bisphosphate nucleotidase
+207750..208556	-	268	225851727	-	BMEA_A0205	-	COG0664T	fumarate nitrate reduction regulatory protein
+208754..209491	+	245	225851728	-	BMEA_A0206	-	COG2197TK	monoamine regulon transcriptional regulator
+209466..209597	+	43	225851729	-	BMEA_A0207	-	-	hypothetical protein
+209819..210610	+	263	225851730	-	BMEA_A0208	-	COG1349KG	DeoR family transcriptional regulator
+210692..212194	+	500	225851731	-	BMEA_A0209	-	COG0578C	glycerol-3-phosphate dehydrogenase
+212080..213381	+	433	225851732	-	BMEA_A0210	-	COG3284QK	Fis family transcriptional regulator
+213530..215047	+	505	225851733	-	BMEA_A0211	-	COG1012C	EPTC-inducible aldehyde dehydrogenase
+215528..216562	+	344	225851734	-	BMEA_A0212	-	COG1064R	alcohol dehydrogenase
+216584..216985	+	133	225851735	-	BMEA_A0213	-	COG3564S	hypothetical protein
+217047..218069	+	340	225851736	-	BMEA_A0214	-	COG1609K	alanine racemase
+220427..220591	-	54	225851737	-	BMEA_A0216	-	-	hypothetical protein
+220580..222013	+	477	225851738	-	BMEA_A0217	-	COG1012C	aldehyde dehydrogenase family protein
+222830..223528	-	232	225851739	-	BMEA_A0219	-	COG0819K	transcriptional activator, TenA family protein
+223525..224493	-	322	225851740	-	BMEA_A0220	-	COG0715P	NMT1/THI5 like domain-containing protein
+224517..225128	-	203	225851741	-	BMEA_A0221	-	COG0352H	thiamine-phosphate pyrophosphorylase
+225125..225895	-	256	225851742	-	BMEA_A0222	-	COG2022H	thiazole synthase
+225897..226094	-	65	225851743	thiS	BMEA_A0223	-	COG2104H	thiamine biosynthesis protein ThiS
+226091..227095	-	334	225851744	thiO	BMEA_A0224	-	COG0665E	glycine oxidase ThiO
+227095..227970	-	291	225851745	thiD	BMEA_A0225	-	COG0351H	phosphomethylpyrimidine kinase
+228399..230510	+	703	225851746	-	BMEA_A0227	-	COG5001T	diguanylate cyclase GGDEF domain-containing protein
+230609..233089	+	826	225851747	-	BMEA_A0228	-	COG2217P	heavy metal translocating P-type ATPase
+233069..233518	-	149	225851748	cueR	BMEA_A0229	-	COG0789K	Cu (I) responsive transcriptional regulator
+233624..234370	-	248	225851749	-	BMEA_A0230	-	COG1174E	binding-protein-dependent transport systems inner membrane protein
+234367..235305	-	312	225851750	-	BMEA_A0231	-	COG1125E	ABC transporter-like protein
+235302..236462	-	386	225851751	-	BMEA_A0232	-	COG1174E	binding-protein-dependent transport systems inner membrane protein
+236535..237602	-	355	225851752	-	BMEA_A0233	-	COG1732M	glycine betaine ABC transporter substrate-binding protein
+237635..238300	-	221	225851753	-	BMEA_A0234	-	COG5514S	hypothetical protein
+238589..239854	-	421	225851754	-	BMEA_A0235	-	COG0334E	glutamate dehydrogenase
+240045..240212	+	55	225851755	-	BMEA_A0236	-	-	hypothetical protein
+240181..241434	+	417	225851756	-	BMEA_A0237	-	COG0665E	sarcosine oxidase subunit beta family protein
+241453..241758	+	101	225851757	-	BMEA_A0238	-	COG4311E	sarcosine oxidase subunit delta family protein
+241758..244757	+	999	225851758	-	BMEA_A0239	-	COG0404E	sarcosine oxidase subunit alpha family protein
+244768..245322	+	184	225851759	-	BMEA_A0240	-	COG4583E	sarcosine oxidase gamma subunit
+245375..246223	-	282	225851760	-	BMEA_A0241	-	COG3618R	amidohydrolase 2
+246281..247075	-	264	225851761	-	BMEA_A0242	-	COG1414K	HTH-type transcriptional repressor AllR
+247233..248552	+	439	225851762	-	BMEA_A0243	-	COG1653G	extracellular solute-binding protein family 1
+248613..249536	+	307	225851763	-	BMEA_A0244	-	COG1175G	binding-protein-dependent transport systems inner membrane protein
+249539..250414	+	291	225851764	-	BMEA_A0245	-	COG0395G	binding-protein-dependent transport systems inner membrane protein
+250422..251513	+	363	225851765	-	BMEA_A0246	-	COG3839G	lactose transport ATP-binding protein lacK
+251516..252634	+	372	225851766	-	BMEA_A0247	-	COG4948MR	mandelate racemase
+252631..252975	+	114	225851767	-	BMEA_A0248	-	COG3254S	hypothetical protein
+252968..254047	+	359	225851768	-	BMEA_A0249	-	COG0673R	trans-1,2-dihydrobenzene-1,2-diol dehydrogenase
+254050..254148	+	32	225851769	-	BMEA_A0250	-	-	hypothetical protein
+254152..254886	+	244	225851770	-	BMEA_A0251	-	COG1028IQR	short-chain dehydrogenase/reductase SDR
+254927..255772	+	281	225851771	-	BMEA_A0252	-	COG0179Q	fumarylacetoacetate hydrolase domain-containing protein 2
+255786..257063	+	425	225851772	-	BMEA_A0253	-	COG4948MR	mandelate racemase/muconate lactonizing enzyme domain-containing protein
+257224..257307	-	27	225851773	-	BMEA_A0254	-	-	hypothetical protein
+257462..258013	-	183	225851774	-	BMEA_A0255	-	-	hypothetical protein
+258842..258967	-	41	225851775	-	BMEA_A0256	-	-	hypothetical protein
+259204..260400	+	398	225851776	-	BMEA_A0257	-	COG0582L	putative integrase DNA protein
+260538..260810	-	90	225851777	-	BMEA_A0258	-	-	hypothetical protein
+260911..261129	+	72	225851778	-	BMEA_A0259	-	COG3311K	hypothetical protein
+261336..261650	+	104	225851779	-	BMEA_A0260	-	-	hypothetical protein
+261647..262528	+	293	225851780	-	BMEA_A0261	-	-	hypothetical protein
+262525..264027	+	500	225851781	-	BMEA_A0262	-	-	hypothetical protein
+264054..264641	+	195	225851782	-	BMEA_A0263	-	-	hypothetical protein
+264634..264798	+	54	225851783	-	BMEA_A0264	-	-	hypothetical protein
+264795..265811	+	338	225851784	-	BMEA_A0265	-	-	hypothetical protein
+265913..266122	+	69	225851785	-	BMEA_A0266	-	-	hypothetical protein
+268236..270281	+	681	225851786	-	BMEA_A0268	-	-	elastin precursor
+270264..270446	-	60	225851787	-	BMEA_A0269	-	-	hypothetical protein
+270482..270787	+	101	225851788	-	BMEA_A0270	-	-	hypothetical protein
+271886..272092	+	68	225851789	-	BMEA_A0271	-	-	hypothetical protein
+273999..274178	-	59	225851790	-	BMEA_A0272	-	-	hypothetical protein
+275310..275555	-	81	225851791	-	BMEA_A0273	-	-	helix-turn-helix domain-containing protein
+275633..275878	+	81	225851792	-	BMEA_A0274	-	-	hypothetical protein
+275944..276234	+	96	225851793	-	BMEA_A0275	-	-	hypothetical protein
+276231..276770	+	179	225851794	-	BMEA_A0276	-	-	hypothetical protein
+276871..277044	+	57	225851795	-	BMEA_A0277	-	-	hypothetical protein
+277041..277649	+	202	225851796	-	BMEA_A0278	-	-	hypothetical protein
+278349..279176	-	275	225851797	-	BMEA_A0279	-	-	hypothetical protein
+279415..279549	+	44	225851798	-	BMEA_A0280	-	-	hypothetical protein
+280156..280371	-	71	225851799	-	BMEA_A0282	-	COG3024S	zinc-binding protein
+280381..281007	-	208	225851800	maf	BMEA_A0283	-	COG0424D	Maf-like protein
+281041..281259	-	72	225851801	infA	BMEA_A0284	-	COG0361J	translation initiation factor IF-1
+281371..281844	-	157	225851802	-	BMEA_A0285	-	COG0394T	protein tyrosine phosphatase
+281851..282333	-	160	225851803	-	BMEA_A0286	-	COG5328	hypothetical protein
+282340..283632	-	430	225851804	hisD	BMEA_A0287	-	COG0141E	histidinol dehydrogenase
+283707..284147	-	146	225851805	-	BMEA_A0288	-	-	hypothetical protein
+284418..285707	-	429	225851806	murA	BMEA_A0289	-	COG0766M	UDP-N-acetylglucosamine 1-carboxyvinyltransferase
+285930..286109	-	59	225851807	-	BMEA_A0290	-	-	hypothetical protein
+286412..288178	+	588	225851808	-	BMEA_A0292	-	COG4974L	hypothetical protein
+288273..288695	+	140	225851809	-	BMEA_A0293	-	COG3617K	BRO family protein
+289064..289213	+	49	225851810	-	BMEA_A0294	-	-	hypothetical protein
+289493..290110	+	205	225851811	-	BMEA_A0295	-	COG1961L	DNA-invertase
+290668..292032	+	454	225851812	-	BMEA_A0296	-	-	hypothetical protein
+293335..293619	-	94	225851813	-	BMEA_A0297	-	-	hypothetical protein
+293733..293996	-	87	225851814	-	BMEA_A0298	-	-	hypothetical protein
+294080..294469	+	129	225851815	-	BMEA_A0299	-	-	hypothetical protein
+295061..295903	+	280	225851816	-	BMEA_A0300	-	COG0829O	urease accessory protein UreD
+296056..296358	+	100	225851817	ureA	BMEA_A0301	-	COG0831E	urease subunit gamma
+296525..296830	+	101	225851818	ureB	BMEA_A0302	-	COG0832E	urease subunit beta
+296849..298561	+	570	225851819	ureC	BMEA_A0303	-	COG0804E	urease subunit alpha
+298577..299065	+	162	225851820	-	BMEA_A0304	-	COG2371O	urease accessory protein UreE
+299037..299723	+	228	225851821	-	BMEA_A0305	-	COG0830O	urease accessory protein UreF
+299720..300346	+	208	225851822	ureG	BMEA_A0306	-	COG0378OK	urease accessory protein UreG
+300703..302328	-	541	225851823	-	BMEA_A0308	-	COG0642T	integral membrane sensor signal transduction histidine kinase
+302613..303764	+	383	225851824	-	BMEA_A0310	-	COG0845M	RND family efflux transporter
+303779..306910	+	1043	225851825	-	BMEA_A0311	-	COG0841V	acriflavin resistance protein
+307033..308502	-	489	225851826	hydA	BMEA_A0312	-	COG0044F	phenylhydantoinase
+308554..309801	-	415	225851827	-	BMEA_A0313	-	COG0624E	allantoate amidohydrolase
+310700..311089	+	129	225851828	-	BMEA_A0315	-	-	nudix domain-containing protein
+311134..312444	-	436	225851829	-	BMEA_A0316	-	COG0167F	dihydropyrimidine dehydrogenase
+312448..313944	-	498	225851830	-	BMEA_A0317	-	COG0493ER	putative oxidoreductase
+314132..314584	-	150	225851831	-	BMEA_A0319	-	COG3427S	carbon monoxide dehydrogenase subunit G
+314735..316384	+	549	225851832	-	BMEA_A0320	-	COG0166G	glucose-6-phosphate isomerase
+316518..317579	+	353	225851833	-	BMEA_A0321	-	COG3608R	succinylglutamate desuccinylase/aspartoacylase
+317576..318325	+	249	225851834	-	BMEA_A0322	-	COG0546R	HAD-superfamily hydrolase
+318298..319170	-	290	225851835	-	BMEA_A0323	-	COG4757R	hypothetical protein
+319196..320941	-	581	225851836	-	BMEA_A0324	-	COG0318IQ	Long-chain-fatty-acid--CoA ligase
+321292..321921	-	209	225851837	-	BMEA_A0325	-	COG1309K	HTH-type transcriptional regulator TtgR
+322094..323287	+	397	225851838	-	BMEA_A0327	-	COG0845M	RND family efflux transporter
+323284..326439	+	1051	225851839	-	BMEA_A0328	-	COG0841V	hydrophobe/amphiphile efflux protein
+326550..326717	-	55	225851840	-	BMEA_A0329	-	-	hypothetical protein
+326938..327078	-	46	225851841	-	BMEA_A0330	-	-	hypothetical protein
+327147..327989	-	280	225851842	-	BMEA_A0331	-	COG0834ET	extracellular solute-binding protein family 3
+328255..330147	+	630	225851843	-	BMEA_A0332	-	COG1215M	xyloglucan glycosyltransferase 1
+330075..331034	-	319	225851844	-	BMEA_A0333	-	COG2326S	hypothetical protein
+331167..332483	+	438	225851845	-	BMEA_A0334	-	COG5002T	histidine kinase
+332613..333155	-	180	225851846	-	BMEA_A0335	-	COG5352	GcrA cell cycle regulator
+333759..334970	+	403	225851847	argD	BMEA_A0336	-	COG4992E	acetylornithine transaminase protein
+334975..335913	+	312	225851848	argF	BMEA_A0337	-	COG0078E	ornithine carbamoyltransferase
+335915..336937	+	340	225851849	-	BMEA_A0338	-	COG1281O	Hsp33-like chaperonin
+336978..337370	-	130	225851850	-	BMEA_A0339	-	COG2967P	ApaG protein
+337739..338935	-	398	225851851	metZ	BMEA_A0340	-	COG0626E	O-succinylhomoserine sulfhydrylase
+339362..340453	+	363	225851852	-	BMEA_A0343	-	COG0717F	2'-deoxycytidine 5'-triphosphate deaminase
+340544..341560	+	338	225851853	-	BMEA_A0344	-	COG4977K	AraC family transcriptional regulator
+341647..341913	+	88	225851854	-	BMEA_A0345	-	-	hypothetical protein
+341950..342432	+	160	225851855	-	BMEA_A0346	-	COG2340S	SCP-like extracellular
+342607..343974	+	455	225851856	-	BMEA_A0347	-	COG0534V	MATE efflux family protein
+343976..345070	-	364	225851857	pyrD	BMEA_A0348	-	COG0167F	dihydroorotate dehydrogenase 2
+345067..345420	-	117	225851858	-	BMEA_A0349	-	COG3502S	hypothetical protein
+345674..346129	+	151	225851859	-	BMEA_A0351	-	-	hypothetical protein
+346220..347170	-	316	225851860	pip	BMEA_A0352	-	COG0596R	proline iminopeptidase
+347400..348041	+	213	225851861	-	BMEA_A0353	-	COG2197TK	LuxR family two component transcriptional regulator
+348078..351602	-	1174	225851862	-	BMEA_A0354	-	COG0591ER	integral membrane sensor hybrid histidine kinase
+351887..352033	-	48	225851863	-	BMEA_A0355	-	-	hypothetical protein
+352115..352531	+	138	225851864	mscL	BMEA_A0356	-	COG1970M	large-conductance mechanosensitive channel
+352607..353884	-	425	225851865	hemA	BMEA_A0357	-	COG0156H	5-aminolevulinate synthase
+354030..354731	-	233	225851866	-	BMEA_A0358	-	COG0726G	polysaccharide deacetylase
+354740..355459	-	239	225851867	-	BMEA_A0359	-	COG3306M	glycosyltransferase 25 family protein
+356354..356587	-	77	225851868	-	BMEA_A0361	-	-	hypothetical protein
+356630..357520	-	296	225851869	-	BMEA_A0362	-	COG0583K	LysR family transcriptional regulator
+357642..358061	+	139	225851870	-	BMEA_A0363	-	COG1380R	LrgA family protein
+358048..358755	+	235	225851871	-	BMEA_A0364	-	COG1346M	LrgB family protein
+358929..359264	+	111	225851872	-	BMEA_A0365	-	-	hypothetical protein
+359302..360543	+	413	225851873	-	BMEA_A0366	-	COG4782S	hypothetical protein
+360630..361511	+	293	225851874	panC	BMEA_A0367	-	COG0414H	pantoate--beta-alanine ligase
+361513..362340	+	275	225851875	panB	BMEA_A0368	-	COG0413H	3-methyl-2-oxobutanoate hydroxymethyltransferase
+362537..363313	-	258	225851876	-	BMEA_A0369	-	COG1018C	Oxidoreductase FAD-binding domain-containing protein
+363717..364070	+	117	225851877	-	BMEA_A0370	-	-	hypothetical protein
+364109..365206	+	365	225851878	nspC	BMEA_A0371	-	COG0019E	carboxynorspermidine decarboxylase
+365387..366628	+	413	225851879	-	BMEA_A0372	-	COG1748E	hypothetical protein
+366644..366859	-	71	225851880	-	BMEA_A0373	-	-	hypothetical protein
+366884..367912	-	342	225851881	-	BMEA_A0374	-	COG3938E	proline racemase A precursor
+368365..369780	+	471	225851882	-	BMEA_A0375	-	COG0534V	MATE efflux family protein
+369826..370380	-	184	225851883	-	BMEA_A0376	-	COG5342R	Invasion associated locus B family protein
+370589..371962	+	457	225851884	-	BMEA_A0377	-	COG4564T	integral membrane sensor signal transduction histidine kinase
+371959..372600	+	213	225851885	-	BMEA_A0378	-	COG2197TK	LuxR family two component transcriptional regulator
+372751..372861	+	36	225851886	-	BMEA_A0379	-	-	hypothetical protein
+372888..373436	+	182	225851887	-	BMEA_A0380	-	COG4665Q	hypothetical protein
+373448..375016	+	522	225851888	-	BMEA_A0381	-	COG4664Q	TRAP transporter subunit DctM
+375078..376187	+	369	225851889	-	BMEA_A0382	-	COG4663Q	RAP dicarboxylate transporter subunit DctP
+376270..377088	-	272	225851890	-	BMEA_A0383	-	COG3257R	hypothetical protein
+377101..378528	-	475	225851891	-	BMEA_A0384	-	COG3195S	urate catabolism protein
+378795..379070	+	91	225851892	-	BMEA_A0385	-	COG2351R	hypothetical protein
+379076..380551	+	491	225851893	xdhA	BMEA_A0386	-	COG4630F	xanthine dehydrogenase small subunit
+380564..382909	+	781	225851894	xdhB	BMEA_A0387	-	COG4631F	xanthine dehydrogenase molybdopterin binding subunit
+382914..383786	+	290	225851895	xdhC	BMEA_A0388	-	COG1975O	xanthine dehydrogenase accessory protein XdhC
+383867..384769	-	300	225851896	-	BMEA_A0389	-	COG0583K	LysR family transcriptional regulator
+384950..386203	+	417	225851897	-	BMEA_A0390	-	COG3748S	hypothetical protein
+386200..387504	+	434	225851898	guaD	BMEA_A0391	-	COG0402FR	guanine deaminase
+387584..388870	+	428	225851899	-	BMEA_A0392	-	COG2379G	hydroxypyruvate reductase
+388851..389009	-	52	225851900	ccoS	BMEA_A0393	-	COG3197P	cbb3-type cytochrome maturation protein
+389006..391264	-	752	225851901	-	BMEA_A0394	-	COG2217P	heavy metal translocating P-type ATPase
+391261..391758	-	165	225851902	-	BMEA_A0395	-	COG5456	FixH family protein
+391758..393308	-	516	225851903	ccoG	BMEA_A0396	-	COG0348C	cytochrome c oxidase accessory protein CcoG
+393476..394339	-	287	225851904	ccoP	BMEA_A0397	-	COG2010C	cbb3-type cytochrome c oxidase subunit III
+394332..394490	-	52	225851905	-	BMEA_A0398	-	COG4736O	Cbb3-type cytochrome oxidase component
+394505..395236	-	243	225851906	ccoO	BMEA_A0399	-	COG2993C	cbb3-type cytochrome c oxidase subunit II
+395251..396876	-	541	225851907	ccoN	BMEA_A0400	-	COG3278O	cbb3-type cytochrome c oxidase subunit I
+397094..397552	-	152	225851908	-	BMEA_A0401	-	COG0735P	ferric uptake regulation protein
+397551..397871	+	106	225851909	-	BMEA_A0402	-	-	hypothetical protein
+397983..398597	+	204	225851910	-	BMEA_A0403	-	COG1651O	DSBA oxidoreductase
+400289..401374	+	361	225851911	-	BMEA_A0405	-	COG2169F	methylated-DNA-protein-cysteine methyltransferase
+401556..401906	+	116	225851912	-	BMEA_A0406	-	COG1393P	hypothetical protein
+402243..403286	+	347	225851913	-	BMEA_A0407	-	COG4129S	hypothetical protein
+403436..404620	+	394	225851914	-	BMEA_A0408	-	COG2271G	hypothetical protein
+404842..406203	+	453	225851915	-	BMEA_A0409	-	COG1133I	transport protein
+406127..407125	-	332	225851916	-	BMEA_A0410	-	-	polysaccharide deacetylase
+407371..408042	+	223	225851917	-	BMEA_A0411	-	COG4649	hypothetical protein
+408064..409515	+	483	225851918	-	BMEA_A0412	-	COG1160R	GTP-binding protein EngA
+409674..410990	+	438	225851919	-	BMEA_A0413	-	COG0443O	Hsp70 family protein
+411427..412716	+	429	225851920	-	BMEA_A0414	-	COG3773M	cell wall hydrolase SleB
+412987..413385	+	132	225851921	-	BMEA_A0415	-	COG5336S	hypothetical protein
+413493..414242	+	249	225851922	atpB	BMEA_A0416	-	COG0356C	F0F1 ATP synthase subunit A
+414310..414537	+	75	225851923	-	BMEA_A0417	-	-	F0F1 ATP synthase subunit C
+414709..415335	+	208	225851924	-	BMEA_A0418	-	COG0711C	F0F1 ATP synthase subunit B'
+415346..415825	+	159	225851925	atpF	BMEA_A0419	-	-	F0F1 ATP synthase subunit B
+415948..416610	-	220	225851926	-	BMEA_A0420	-	COG0164L	ribonuclease HII
+416787..417953	-	388	225851927	-	BMEA_A0421	-	COG1533L	radical SAM domain-containing protein
+418089..418595	+	168	225851928	-	BMEA_A0422	-	COG0463M	hypothetical protein
+418675..418941	-	88	225851929	-	BMEA_A0423	-	-	hypothetical protein
+419013..419225	-	70	225851930	-	BMEA_A0424	-	-	hypothetical protein
+419300..420199	-	299	225851931	ispE	BMEA_A0426	-	COG1947I	4-diphosphocytidyl-2-C-methyl-D-erythritol kinase
+420229..420450	-	73	225851932	-	BMEA_A0427	-	-	hypothetical protein
+420881..423172	-	763	225851933	nhaA	BMEA_A0428	-	COG3004P	Na+/H+ antiporter NhaA
+423111..423326	-	71	225851934	-	BMEA_A0429	-	-	hypothetical protein
+423381..424163	-	260	225851935	-	BMEA_A0430	-	COG4123R	methyltransferase small
+424160..424387	-	75	225851936	-	BMEA_A0431	-	-	hypothetical protein
+424650..425672	+	340	225851937	-	BMEA_A0432	-	COG0142H	hypothetical protein
+425976..427841	+	621	225851938	-	BMEA_A0433	-	COG4785R	tetratricopeptide repeat protein
+427993..428919	+	308	225851939	glyQ	BMEA_A0434	-	COG0752J	glycyl-tRNA synthetase subunit alpha
+428925..431258	+	777	225851940	glyS	BMEA_A0435	-	COG0751J	glycyl-tRNA synthetase subunit beta
+431397..432368	+	323	225851941	-	BMEA_A0436	-	COG0009J	Sua5/YciO/YrdC/YwlC family protein
+432394..433806	+	470	225851942	-	BMEA_A0437	-	COG0277C	hypothetical protein
+433844..434161	-	105	225851943	-	BMEA_A0438	-	COG3668R	plasmid stabilization system
+434158..434418	-	86	225851944	-	BMEA_A0439	-	-	CopG-like DNA-binding protein
+434527..434739	-	70	225851945	-	BMEA_A0440	-	-	hypothetical protein
+434729..435295	+	188	225851946	-	BMEA_A0441	-	-	hypothetical protein
+435438..436190	-	250	225851947	-	BMEA_A0442	-	COG1024I	enoyl-CoA hydratase
+436193..437971	-	592	225851948	-	BMEA_A0443	-	COG1960I	acyl-CoA dehydrogenase domain-containing protein
+438289..439434	+	381	225851949	-	BMEA_A0444	-	COG2199T	diguanylate cyclase GGDEF domain-containing protein
+439452..440735	-	427	225851950	purD	BMEA_A0445	-	COG0151F	phosphoribosylamine--glycine ligase
+440880..441881	+	333	225851951	ubiA	BMEA_A0446	-	COG0382H	4-hydroxybenzoate polyprenyltransferase
+441921..442532	-	203	225851952	pdxH	BMEA_A0447	-	COG0259H	pyridoxamine 5'-phosphate oxidase
+443420..444361	+	313	225851953	-	BMEA_A0449	-	COG0484O	chaperone protein DnaJ
+444365..444472	-	35	225851954	-	BMEA_A0450	-	-	hypothetical protein
+444505..445323	+	272	225851955	-	BMEA_A0451	-	COG0623I	enoyl-(acyl carrier protein) reductase
+445837..446028	+	63	225851956	-	BMEA_A0452	-	COG0406G	phosphoglycerate mutase
+446290..446499	+	69	225851957	-	BMEA_A0454	-	COG1278K	ATP/GTP-binding domain-containing protein
+446597..446746	-	49	225851958	-	BMEA_A0455	-	-	hypothetical protein
+446969..447181	+	70	225851959	-	BMEA_A0456	-	-	hypothetical protein
+447258..447935	+	225	225851960	-	BMEA_A0457	-	COG2121S	hypothetical protein
+447971..448105	+	44	225851961	-	BMEA_A0458	-	-	hypothetical protein
+448080..448331	-	83	225851962	-	BMEA_A0459	-	-	hypothetical protein
+448455..448556	+	33	225851963	-	BMEA_A0460	-	-	hypothetical protein
+448605..449699	+	364	225851964	aroC	BMEA_A0461	-	COG0082E	chorismate synthase
+449835..450950	+	371	225851965	ribB	BMEA_A0462	-	COG0108H	3,4-dihydroxy-2-butanone 4-phosphate synthase
+451166..452116	+	316	225851966	-	BMEA_A0463	-	COG0123BQ	histone deacetylase superfamily protein
+452121..452375	+	84	225851967	xseB	BMEA_A0464	-	COG1722L	exodeoxyribonuclease VII small subunit
+452382..452900	-	172	225851968	-	BMEA_A0465	-	COG0586S	hypothetical protein
+453142..453402	-	86	225851969	-	BMEA_A0466	-	COG2261S	transglycosylase-associated protein
+453565..454116	+	183	225851970	-	BMEA_A0467	-	COG3753S	hypothetical protein
+454320..455192	+	290	225851971	-	BMEA_A0468	-	COG1741R	Pirin domain-containing protein
+455335..457266	+	643	225851972	dxs	BMEA_A0469	-	COG1154HI	1-deoxy-D-xylulose-5-phosphate synthase
+457272..458033	+	253	225851973	-	BMEA_A0470	-	COG1189J	hemolysin A
+458030..459277	+	415	225851974	-	BMEA_A0471	-	COG2265J	tRNA (Uracil-5-)-methyltransferase
+459429..460031	-	200	225851975	-	BMEA_A0472	-	COG1611R	hypothetical protein
+460161..460526	+	121	225851976	-	BMEA_A0473	-	COG3895R	hypothetical protein
+460713..461927	+	404	225851977	-	BMEA_A0474	-	COG1652S	peptidoglycan-binding LysM
+462130..464016	+	628	225851978	-	BMEA_A0475	-	COG5265O	ABC transporter-like protein
+464121..464819	+	232	225851979	-	BMEA_A0476	-	COG0688I	phosphatidylserine decarboxylase
+464824..465660	+	278	225851980	pssA	BMEA_A0477	-	COG1183I	CDP-diacylglycerol--serine O-phosphatidyltransferase
+465745..466485	-	246	225851981	-	BMEA_A0479	-	COG1028IQR	short-chain dehydrogenase/reductase SDR
+466554..468011	-	485	225851982	purF	BMEA_A0480	-	COG0034F	amidophosphoribosyltransferase
+468033..468230	+	65	225851983	-	BMEA_A0481	-	-	hypothetical protein
+468326..468904	-	192	225851984	-	BMEA_A0482	-	COG1286R	colicin V production protein
+469030..470433	-	467	225851985	radA	BMEA_A0483	-	COG1066O	DNA repair protein RadA
+470461..471966	-	501	225851986	dnaB	BMEA_A0484	-	COG0305L	replicative DNA helicase
+472165..473445	-	426	225851987	-	BMEA_A0485	-	COG2230M	cyclopropane-fatty-acyl-phospholipid synthase
+473819..474388	-	189	225851988	rplI	BMEA_A0486	-	COG0359J	50S ribosomal protein L9
+474418..475389	-	323	225851989	-	BMEA_A0487	-	-	hypothetical protein
+475540..475788	-	82	225851990	rpsR	BMEA_A0488	-	COG0238J	30S ribosomal protein S18
+475791..476237	-	148	225851991	rpsF	BMEA_A0490	-	COG0360J	30S ribosomal protein S6
+476262..476621	-	119	225851992	-	BMEA_A0491	-	-	hypothetical protein
+476643..477587	+	314	225851993	fabD	BMEA_A0492	-	COG0331I	malonyl CoA-acyl carrier protein transacylase
+477657..478394	+	245	225851994	fabG	BMEA_A0493	-	COG1028IQR	3-ketoacyl-(acyl-carrier-protein) reductase
+478596..478967	-	123	225851995	-	BMEA_A0494	-	-	acyl carrier protein
+478668..478904	+	78	225851996	acpP	BMEA_A0495	-	COG0236IQ	acyl carrier protein
+478908..479171	+	87	225851997	-	BMEA_A0496	-	-	hypothetical protein
+479228..480490	+	420	225851998	fabF	BMEA_A0497	-	COG0304IQ	3-oxoacyl-(acyl carrier protein) synthase II
+480715..481953	+	412	225851999	-	BMEA_A0498	-	COG1559R	hypothetical protein
+483045..483707	+	220	225852000	gmk	BMEA_A0500	-	COG0194F	guanylate kinase
+483734..485146	-	470	225852001	-	BMEA_A0501	-	COG0312R	peptidase U62
+485287..485913	-	208	225852002	-	BMEA_A0502	-	COG5342R	Invasion associated locus B family protein
+486347..487201	+	284	225852003	coxB	BMEA_A0503	-	COG1622C	cytochrome c oxidase subunit II
+487339..488997	+	552	225852004	ctaD	BMEA_A0504	-	COG0843C	cytochrome c oxidase subunit I
+489225..490172	+	315	225852005	cyoE	BMEA_A0505	-	COG0109O	protoheme IX farnesyltransferase
+490172..490357	+	61	225852006	-	BMEA_A0506	-	-	hypothetical protein
+490377..490982	+	201	225852007	-	BMEA_A0507	-	COG3175O	cytochrome C oxidase assembly protein
+491191..492069	+	292	225852008	-	BMEA_A0508	-	COG1845C	cytochrome c oxidase subunit 3
+492183..492566	+	127	225852009	-	BMEA_A0509	-	COG5349	hypothetical protein
+492563..493312	+	249	225852010	-	BMEA_A0510	-	COG3346S	surfeit locus protein 1
+493343..494461	+	372	225852011	ispH	BMEA_A0511	-	COG0761IM	4-hydroxy-3-methylbut-2-enyl diphosphate reductase
+494467..495447	+	326	225852012	thrB	BMEA_A0512	-	COG2334R	homoserine kinase
+495444..495908	+	154	225852013	-	BMEA_A0513	-	COG0328L	ribonuclease H
+495938..496423	-	161	225852014	-	BMEA_A0514	-	COG0678O	redoxin domain-containing protein
+496603..497403	-	266	225852015	-	BMEA_A0515	-	COG4233OC	hypothetical protein
+497538..498140	+	200	225852016	-	BMEA_A0516	-	COG1678K	hypothetical protein
+498246..501140	-	964	225852017	-	BMEA_A0517	-	COG2200T	GGDEF domain-containing protein
+501137..501757	-	206	225852018	-	BMEA_A0518	-	COG1670J	GCN5-related N-acetyltransferase
+501928..503220	-	430	225852019	-	BMEA_A0519	-	COG0612R	processing protease
+503274..504665	-	463	225852020	thrC	BMEA_A0520	-	COG0498E	threonine synthase
+505026..505604	+	192	225852021	-	BMEA_A0521	-	-	lipoprotein
+505918..507552	+	544	225852022	-	BMEA_A0522	-	COG4943T	hypothetical protein
+507681..507866	+	61	225852023	-	BMEA_A0524	-	-	hypothetical protein
+507908..508594	-	228	225852024	-	BMEA_A0525	-	COG0637R	HAD-superfamily hydrolase
+508742..510280	-	512	225852025	-	BMEA_A0526	-	COG0038P	chloride channel core protein
+510259..510399	-	46	225852026	-	BMEA_A0527	-	-	hypothetical protein
+510593..511726	+	377	225852027	-	BMEA_A0528	-	COG0863L	modification methylase HinfI
+511809..512426	-	205	225852028	-	BMEA_A0529	-	COG1011R	HAD-superfamily hydrolase
+512423..513499	-	358	225852029	mutY	BMEA_A0530	-	COG1194L	A/G-specific adenine glycosylase
+513773..514300	+	175	225852030	-	BMEA_A0531	-	COG5389	hypothetical protein
+514318..514491	+	57	225852031	-	BMEA_A0532	-	-	hypothetical protein
+514538..515191	+	217	225852032	-	BMEA_A0533	-	COG1651O	DSBA oxidoreductase
+515270..518728	+	1152	225852033	smc	BMEA_A0534	-	COG1196D	chromosome segregation protein SMC
+518751..519644	+	297	225852034	-	BMEA_A0535	-	COG1230P	cation diffusion facilitator family transporter
+519754..520119	-	121	225852035	-	BMEA_A0536	-	COG3324R	hypothetical protein
+520359..523022	+	887	225852036	ppdK	BMEA_A0537	-	COG0574G	pyruvate phosphate dikinase
+523236..524054	+	272	225852037	-	BMEA_A0538	-	COG0726G	polysaccharide deacetylase
+524257..524403	-	48	225852038	-	BMEA_A0539	-	-	hypothetical protein
+525015..525803	+	262	225852039	-	BMEA_A0540	-	-	hypothetical protein
+525804..526709	-	301	225852040	-	BMEA_A0541	-	COG0491R	beta-lactamase domain-containing protein
+526910..527509	+	199	225852041	-	BMEA_A0542	-	COG1268R	protein BioY
+527645..528154	+	169	225852042	-	BMEA_A0543	-	COG3194F	ureidoglycolate hydrolase
+528166..528522	+	118	225852043	pucM	BMEA_A0544	-	COG2351R	hydroxyisourate hydrolase
+528593..529429	+	278	225852044	-	BMEA_A0545	-	-	hypothetical protein
+529966..531834	+	622	225852045	-	BMEA_A0546	-	COG1086MG	polysaccharide biosynthesis protein CapD
+531821..532828	-	335	225852046	-	BMEA_A0547	-	COG0472M	family 4 glycosyl transferase
+533487..534305	+	272	225852047	-	BMEA_A0549	-	COG3293L	transposase and inactivated derivatives-like protein
+534037..534624	+	195	225852048	-	BMEA_A0550	-	-	insertion sequence transposase protein
+534681..534980	+	99	225852049	-	BMEA_A0551	-	-	insertion sequence transposase protein
+535037..535267	+	76	225852050	-	BMEA_A0552	-	COG3293L	transposase
+535518..535643	+	41	225852051	-	BMEA_A0553	-	-	transposase IS3/IS911 family protein
+535637..536359	+	240	225852052	-	BMEA_A0554	-	COG2801L	Is511 transposase orfB
+536695..537474	-	259	225852053	-	BMEA_A0555	-	COG0223J	bifunctional polymyxin resistance protein ArnA
+537501..538355	-	284	225852054	-	BMEA_A0556	-	-	WbcT protein
+538352..539110	-	252	225852055	-	BMEA_A0557	-	COG1134GM	O-antigen export system ATP-binding protein rfbB
+539107..539889	-	260	225852056	-	BMEA_A0558	-	COG1682GM	O-antigen export system permease rfbD
+539904..541007	-	367	225852057	-	BMEA_A0559	-	COG0399M	L-glutamine:2-deoxy-scyllo-inosose aminotransferase
+541015..542103	-	362	225852058	gmd	BMEA_A0560	-	COG1089M	GDP-mannose 4,6-dehydratase
+542741..543049	+	102	225852059	-	BMEA_A0561	-	COG3293L	ISBm1 transposase orfA
+542968..543342	+	124	225852060	-	BMEA_A0562	-	COG3293L	transposase and inactivated derivatives-like protein
+544235..544567	+	110	225852061	-	BMEA_A0564	-	COG3293L	transposase
+544993..545232	+	79	225852062	-	BMEA_A0565	-	COG3293L	transposase and inactivated derivatives-like protein
+545363..546481	+	372	225852063	-	BMEA_A0566	-	COG0438M	mannosyltransferase
+546539..546907	+	122	225852064	-	BMEA_A0567	-	COG3293L	transposase orfA IS5 family protein
+547003..547344	+	113	225852065	-	BMEA_A0568	-	COG3293L	transposase
+547808..547945	-	45	225852066	-	BMEA_A0570	-	-	Integrase, catalytic domain-containing protein
+548152..548580	+	142	225852067	-	BMEA_A0571	-	COG3293L	ISBm1 transposase orfA
+548499..548915	+	138	225852068	-	BMEA_A0572	-	COG3293L	transposase and inactivated derivatives-like protein
+549275..549574	+	99	225852069	-	BMEA_A0573	-	-	hypothetical protein
+549806..551095	+	429	225852070	-	BMEA_A0574	-	COG1109G	phosphomannomutase
+551166..552590	+	474	225852071	-	BMEA_A0575	-	COG0836M	mannose-1-phosphate guanylyltransferase/mannose-6-phosphate isomerase
+552623..553795	+	390	225852072	-	BMEA_A0576	-	COG2942G	phosphomannose isomerase
+553878..554987	+	369	225852073	-	BMEA_A0577	-	COG0438M	glycosyltransferase protein
+555468..555647	-	59	225852074	-	BMEA_A0578	-	-	hypothetical protein
+557233..558234	+	333	225852075	-	BMEA_A0580	-	COG1172G	monosaccharide-transporting ATPase
+558313..559275	+	320	225852076	-	BMEA_A0582	-	COG1879G	hypothetical protein
+559333..560385	+	350	225852077	-	BMEA_A0583	-	COG1082G	hypothetical protein
+560393..561565	+	390	225852078	-	BMEA_A0584	-	COG0673R	oxidoreductase domain-containing protein
+561607..562914	-	435	225852079	xylA	BMEA_A0585	-	COG2115G	xylose isomerase
+562961..564412	-	483	225852080	xylB	BMEA_A0586	-	COG1070G	xylulokinase
+564445..565476	-	343	225852081	-	BMEA_A0587	-	COG1879G	HTH-type transcriptional regulator DegA
+567272..568735	-	487	225852082	betB	BMEA_A0589	-	COG1012C	betaine aldehyde dehydrogenase
+570572..571168	-	198	225852083	betI	BMEA_A0591	-	COG3226S	transcriptional regulator BetI
+571359..572381	+	340	225852084	-	BMEA_A0592	-	COG4448E	L-asparaginase II protein
+572426..572896	+	156	225852085	-	BMEA_A0593	-	COG0782K	Transcription elongation factor greA
+572893..573282	-	129	225852086	-	BMEA_A0594	-	COG3654R	death-on-curing family protein
+573279..573509	-	76	225852087	-	BMEA_A0595	-	-	addiction module antidote
+573570..574562	-	330	225852088	-	BMEA_A0596	-	COG0598P	Mg2 transporter protein CorA family protein
+574718..575395	+	225	225852089	-	BMEA_A0597	-	COG2186K	GntR domain-containing protein
+575392..576690	+	432	225852090	-	BMEA_A0598	-	COG2807P	major facilitator superfamily protein
+576747..577109	-	120	225852091	-	BMEA_A0599	-	-	hypothetical protein
+577445..578956	+	503	225852092	-	BMEA_A0600	-	COG0433R	hypothetical protein
+578998..579096	+	32	225852093	-	BMEA_A0601	-	-	hypothetical protein
+579154..579870	-	238	225852094	-	BMEA_A0602	-	COG1376S	ErfK/YbiS/YcfS/YnhG family protein
+581048..581647	+	199	225852095	-	BMEA_A0604	-	COG0605P	superoxide dismutase
+581819..582205	-	128	225852096	-	BMEA_A0606	-	-	hypothetical protein
+582272..584380	-	702	225852097	-	BMEA_A0607	-	COG1770E	protease 2
+584804..584965	+	53	225852098	-	BMEA_A0608	-	-	hypothetical protein
+584953..585381	+	142	225852099	-	BMEA_A0609	-	COG4957	transcriptional regulator RosAr
+585589..585900	-	103	225852100	-	BMEA_A0610	-	-	hypothetical protein
+586082..586537	+	151	225852101	-	BMEA_A0611	-	COG0593L	hypothetical protein
+586534..587307	+	257	225852102	-	BMEA_A0612	-	-	hypothetical protein
+587420..588757	+	445	225852103	-	BMEA_A0613	-	COG0154J	amidase
+588798..589223	-	141	225852104	-	BMEA_A0614	-	COG2166R	hypothetical protein
+589303..589752	-	149	225852105	-	BMEA_A0615	-	-	hypothetical protein
+590043..591872	+	609	225852106	-	BMEA_A0616	-	COG0642T	integral membrane sensor signal transduction histidine kinase
+591799..592815	+	338	225852107	-	BMEA_A0617	-	-	peptidoglycan-binding domain 1 protein
+592829..593176	+	115	225852108	-	BMEA_A0618	-	COG5447	hypothetical protein
+593187..594245	-	352	225852109	-	BMEA_A0619	-	COG5330	hypothetical protein
+594443..594985	-	180	225852110	-	BMEA_A0620	-	COG5436S	hypothetical protein
+594978..595589	-	203	225852111	-	BMEA_A0621	-	COG5402S	hypothetical protein
+595596..597752	-	718	225852112	-	BMEA_A0622	-	COG0744M	1A family penicillin-binding protein
+598585..599820	+	411	225852113	-	BMEA_A0624	-	COG5323S	hypothetical protein
+599852..601045	+	397	225852114	-	BMEA_A0625	-	COG4695S	phage portal protein
+601042..601419	+	125	225852115	-	BMEA_A0626	-	-	hypothetical protein
+602097..603371	+	424	225852116	-	BMEA_A0628	-	COG4653R	phage major capsid protein
+603536..604102	+	188	225852117	-	BMEA_A0629	-	-	hypothetical protein
+604099..604437	+	112	225852118	-	BMEA_A0630	-	COG5614R	phage head-tail adaptor
+604559..604966	+	135	225852119	-	BMEA_A0631	-	-	hypothetical protein
+605007..605420	+	137	225852120	-	BMEA_A0632	-	COG5437S	phage major tail protein
+605417..605758	+	113	225852121	-	BMEA_A0633	-	-	hypothetical protein
+605802..605972	+	56	225852122	-	BMEA_A0634	-	-	hypothetical protein
+605977..606522	+	181	225852123	-	BMEA_A0635	-	COG5281S	hypothetical protein
+606525..607157	+	210	225852124	-	BMEA_A0636	-	COG5448S	hypothetical protein
+607154..608029	+	291	225852125	-	BMEA_A0637	-	COG5449S	hypothetical protein
+608026..608460	+	144	225852126	-	BMEA_A0638	-	COG0791M	phage cell wall peptidase NlpC/P60 family protein
+612390..612596	+	68	225852127	-	BMEA_A0640	-	-	hypothetical protein
+612758..613054	+	98	225852128	-	BMEA_A0641	-	-	hypothetical protein
+613133..613822	+	229	225852129	-	BMEA_A0642	-	COG0745TK	winged helix family two component transcriptional regulator
+613972..615207	+	411	225852130	-	BMEA_A0643	-	COG0642T	histidine kinase
+615268..615753	+	161	225852131	-	BMEA_A0644	-	COG4520M	outer membrane lipoprotein-related protein
+615854..616993	+	379	225852132	ccmI	BMEA_A0645	-	COG4235O	cytochrome c-type biogenesis protein CcmI
+616990..617487	+	165	225852133	-	BMEA_A0646	-	COG2332O	cytochrome c-type biogenesis protein CcmE
+617507..619498	+	663	225852134	ccmF	BMEA_A0647	-	COG1138O	cytochrome c-type biogenesis protein CcmF
+619495..619971	+	158	225852135	-	BMEA_A0648	-	COG3088O	cytochrome c-type biogenesis protein ccl2 precursor
+620113..621654	+	513	225852136	degP	BMEA_A0649	-	COG0265O	protease Do
+621748..622455	+	235	225852137	-	BMEA_A0650	-	COG0745TK	transcriptional activator protein copR
+622455..623858	+	467	225852138	-	BMEA_A0651	-	COG0642T	integral membrane sensor signal transduction histidine kinase
+623981..626932	+	983	225852139	-	BMEA_A0652	-	COG1391OT	bifunctional glutamine-synthetase adenylyltransferase/deadenyltransferase
+626977..629088	-	703	225852140	-	BMEA_A0653	-	COG3306M	glycosyltransferase 25 family protein
+629359..631710	-	783	225852141	-	BMEA_A0654	-	COG0642T	PAS domain S-box-containing protein
+632101..634752	-	883	225852142	pepN	BMEA_A0655	-	COG0308E	aminopeptidase N
+634921..635937	+	338	225852143	-	BMEA_A0656	-	COG0697GER	hypothetical protein
+635942..637198	-	418	225852144	-	BMEA_A0657	-	COG2814G	major facilitator superfamily protein
+637360..638232	-	290	225852145	-	BMEA_A0658	-	COG1573L	uracil-DNA glycosylase
+638621..640312	+	563	225852146	-	BMEA_A0659	-	COG0644C	electron-transferring-flavoprotein dehydrogenase
+640428..641504	-	358	225852147	-	BMEA_A0660	-	COG3021S	hypothetical protein
+641557..643059	-	500	225852148	amn	BMEA_A0661	-	COG0775F	AMP nucleosidase
+643112..643270	+	52	225852149	-	BMEA_A0663	-	-	hypothetical protein
+643267..643548	+	93	225852150	-	BMEA_A0664	-	-	hypothetical protein
+643626..644336	+	236	225852151	-	BMEA_A0665	-	COG0625O	glutathione S-transferase domain-containing protein
+644395..644742	-	115	225852152	-	BMEA_A0666	-	COG4731S	hypothetical protein
+644739..645029	-	96	225852153	-	BMEA_A0667	-	-	hypothetical protein
+645248..645505	+	85	225852154	-	BMEA_A0668	-	-	hypothetical protein
+645565..646338	-	257	225852155	-	BMEA_A0669	-	COG1284S	hypothetical protein
+646601..646696	+	31	225852156	-	BMEA_A0670	-	-	hypothetical protein
+646990..647640	+	216	225852157	-	BMEA_A0671	-	-	hypothetical protein
+647685..648059	-	124	225852158	-	BMEA_A0672	-	COG2363S	oxidoreductase Gfo/Idh/MocA family protein
+648077..649210	-	377	225852159	-	BMEA_A0673	-	COG0079E	histidinol-phosphate aminotransferase
+649573..650499	-	308	225852160	-	BMEA_A0674	-	COG4974L	tyrosine recombinase XerC
+650774..651877	-	367	225852161	-	BMEA_A0675	-	-	outer membrane protein IIIA precursor
+652678..653805	+	375	225852162	-	BMEA_A0677	-	-	outer membrane protein IIIA precursor
+653949..654590	+	213	225852163	-	BMEA_A0678	-	-	hypothetical protein
+654646..654828	+	60	225852164	-	BMEA_A0679	-	-	hypothetical protein
+654889..655563	+	224	225852165	-	BMEA_A0680	-	COG3743S	50S ribosomal protein L21
+655626..657683	-	685	225852166	-	BMEA_A0681	-	COG0741M	lytic transglycosylase catalytic
+658159..659040	+	293	225852167	dapA	BMEA_A0683	-	COG0329EM	dihydrodipicolinate synthase
+659131..659607	+	158	225852168	smpB	BMEA_A0684	-	COG0691O	SsrA-binding protein
+659744..660415	-	223	225852169	-	BMEA_A0685	-	COG1573L	uracil-DNA glycosylase superfamily protein
+660446..661021	-	191	225852170	-	BMEA_A0686	-	COG1432S	hypothetical protein
+661221..661376	-	51	225852171	-	BMEA_A0687	-	-	hypothetical protein
+661418..661819	+	133	225852172	rpoZ	BMEA_A0688	-	COG1758K	DNA-directed RNA polymerase subunit omega
+662060..664312	+	750	225852173	-	BMEA_A0689	-	COG0317TK	RelA/SpoT family protein
+664320..664898	+	192	225852174	pyrE	BMEA_A0690	-	COG0461F	orotate phosphoribosyltransferase
+665058..665813	+	251	225852175	-	BMEA_A0691	-	COG0664T	transcriptional activator protein fnrA
+666194..667528	+	444	225852176	hemN	BMEA_A0692	-	COG0635H	coproporphyrinogen III oxidase
+667712..668923	-	403	225852177	-	BMEA_A0693	-	COG2223P	major facilitator superfamily protein
+669175..670014	+	279	225852178	-	BMEA_A0694	-	COG2207K	AraC family transcriptional regulator
+670064..670639	+	191	225852179	-	BMEA_A0695	-	COG3216S	hypothetical protein
+670636..671040	+	134	225852180	acpS	BMEA_A0696	-	COG0736I	4'-phosphopantetheinyl transferase
+671151..671933	+	260	225852181	lepB	BMEA_A0697	-	COG0681U	signal peptidase I
+671902..672639	+	245	225852182	rnc	BMEA_A0698	-	COG0571K	ribonuclease III
+672682..672780	+	32	225852183	-	BMEA_A0699	-	-	hypothetical protein
+672784..673719	+	311	225852184	era	BMEA_A0700	-	COG1159R	GTP-binding protein Era
+673746..674489	+	247	225852185	recO	BMEA_A0701	-	COG1381L	DNA repair protein RecO
+674467..674976	-	169	225852186	-	BMEA_A0702	-	COG5350R	hypothetical protein
+674973..675593	-	206	225852187	-	BMEA_A0703	-	COG1896R	hypothetical protein
+675593..676456	-	287	225852188	ygfZ	BMEA_A0704	-	COG0354R	folate-binding protein YgfZ
+676542..677876	+	444	225852189	pyrC	BMEA_A0705	-	COG0044F	dihydroorotase
+677925..678689	-	254	225852190	-	BMEA_A0706	-	-	hypothetical protein
+678738..679004	-	88	225852191	-	BMEA_A0707	-	-	hypothetical protein
+679161..679544	-	127	225852192	-	BMEA_A0708	-	COG5451	hypothetical protein
+679624..680067	-	147	225852193	-	BMEA_A0709	-	COG1051F	NUDIX hydrolase
+680153..680932	+	259	225852194	-	BMEA_A0710	-	COG2135S	hypothetical protein
+680987..681601	+	204	225852195	-	BMEA_A0711	-	COG1279R	amino-acid transporter yggA
+681578..681745	-	55	225852196	-	BMEA_A0712	-	-	hypothetical protein
+681750..681965	-	71	225852197	-	BMEA_A0713	-	-	hypothetical protein
+682112..683632	+	506	225852198	cysS	BMEA_A0714	-	COG0215J	cysteinyl-tRNA synthetase
+683651..685264	+	537	225852199	-	BMEA_A0715	-	COG0119E	putative alpha-isopropylmalate/homocitrate synthase family transferase
+685515..686435	+	306	225852200	rarD	BMEA_A0716	-	COG2962R	RarD protein
+686568..688301	+	577	225852201	-	BMEA_A0717	-	COG0739M	peptidase M23B
+688369..689199	-	276	225852202	ksgA	BMEA_A0718	-	COG0030J	dimethyladenosine transferase
+689196..690227	-	343	225852203	pdxA	BMEA_A0719	-	COG1995H	4-hydroxythreonine-4-phosphate dehydrogenase
+690292..691248	-	318	225852204	-	BMEA_A0720	-	COG0760O	chaperone SurA
+691576..693954	-	792	225852205	-	BMEA_A0721	-	COG1452M	LPS-assembly protein precursor
+693975..695063	-	362	225852206	-	BMEA_A0722	-	COG0795R	permease YjgP/YjgQ family protein
+695060..696268	-	402	225852207	-	BMEA_A0723	-	COG0795R	permease YjgP/YjgQ family protein
+696441..696605	-	54	225852208	-	BMEA_A0724	-	-	hypothetical protein
+696678..698171	+	497	225852209	-	BMEA_A0725	-	COG0260E	leucyl aminopeptidase
+698243..698692	+	149	225852210	-	BMEA_A0726	-	COG2927L	DNA polymerase III subunit chi
+698692..699255	+	187	225852211	-	BMEA_A0727	-	-	hypothetical protein
+699315..701255	-	646	225852212	-	BMEA_A0728	-	COG0488R	ATP-binding protein
+701259..701771	-	170	225852213	-	BMEA_A0729	-	COG2318S	DinB family protein
+702000..702422	+	140	225852214	-	BMEA_A0730	-	COG0105F	nucleoside diphosphate kinase
+702532..703335	-	267	225852215	-	BMEA_A0731	-	COG3126S	hypothetical protein
+703573..704064	-	163	225852216	-	BMEA_A0732	-	COG0314H	molybdopterin biosynthesis MoaE protein
+704066..704323	-	85	225852217	moaD	BMEA_A0733	-	COG1977H	molybdopterin converting factor, subunit 1
+704328..704912	-	194	225852218	pgsA	BMEA_A0734	-	COG0558I	CDP-diacylglycerol--glycerol-3-phosphate 3-phosphatidyltransferase
+705031..707088	-	685	225852219	uvrC	BMEA_A0735	-	COG0322L	excinuclease ABC subunit C
+707088..707843	-	251	225852220	-	BMEA_A0736	-	COG1028IQR	short chain dehydrogenase
+708048..708206	+	52	225852221	-	BMEA_A0737	-	-	hypothetical protein
+708245..708886	+	213	225852222	-	BMEA_A0738	-	COG3637M	OmpA-like transmembrane domain-containing protein
+708983..709582	-	199	225852223	-	BMEA_A0739	-	COG0625O	glutathione S-transferase domain-containing protein
+709637..710326	-	229	225852224	-	BMEA_A0741	-	COG3719J	ribonuclease precursor
+710339..710809	-	156	225852225	-	BMEA_A0742	-	COG5511R	hypothetical protein
+710892..711764	-	290	225852226	-	BMEA_A0743	-	COG2961R	hypothetical protein
+711920..712765	+	281	225852227	-	BMEA_A0744	-	-	hypothetical protein
+712843..714969	+	708	225852228	-	BMEA_A0745	-	COG0243C	nitrate reductase
+715095..715619	-	174	225852229	-	BMEA_A0746	-	-	hypothetical protein
+715795..716412	-	205	225852230	purN	BMEA_A0747	-	COG0299F	phosphoribosylglycinamide formyltransferase
+716409..717488	-	359	225852231	purM	BMEA_A0748	-	COG0150F	phosphoribosylaminoimidazole synthetase
+717530..717709	-	59	225852232	-	BMEA_A0749	-	-	hypothetical protein
+717978..719126	+	382	225852233	-	BMEA_A0750	-	COG0628R	hypothetical protein
+719166..719861	+	231	225852234	-	BMEA_A0751	-	COG0593L	hypothetical protein
+719858..720727	+	289	225852235	-	BMEA_A0752	-	COG0451MG	UDP-glucose 4-epimerase
+720724..721509	-	261	225852236	-	BMEA_A0753	-	-	hypothetical protein
+721582..722286	-	234	225852237	-	BMEA_A0754	-	COG1028IQR	oxidoreductase, short-chain dehydrogenase/reductase family protein
+722448..722663	-	71	225852238	-	BMEA_A0755	-	-	hypothetical protein
+722677..722832	+	51	225852239	-	BMEA_A0756	-	-	hypothetical protein
+725203..725508	+	101	225852240	-	BMEA_A0759	-	-	ETC complex I subunit conserved protein
+726074..726664	+	196	225852241	-	BMEA_A0761	-	-	hypothetical protein
+726885..727496	-	203	225852242	-	BMEA_A0762	-	COG2176L	exonuclease
+727807..728139	+	110	225852243	-	BMEA_A0763	-	COG3293L	transposase
+728665..729210	-	181	225852244	-	BMEA_A0764	-	COG2019F	ATP synthase subunit beta
+729207..730742	-	511	225852245	-	BMEA_A0765	-	-	GCN5-related N-acetyltransferase
+730717..731511	-	264	225852246	-	BMEA_A0766	-	COG4933S	helix-turn-helix domain-containing protein
+731536..731955	-	139	225852247	-	BMEA_A0767	-	-	hypothetical protein
+732335..733231	+	298	225852248	-	BMEA_A0768	-	-	hypothetical protein
+733231..735345	+	704	225852249	-	BMEA_A0769	-	-	integrase catalytic domain-containing protein
+738159..738356	-	65	225852250	-	BMEA_A0772	-	-	hypothetical protein
+738597..739904	+	435	225852251	-	BMEA_A0773	-	COG2856E	hypothetical protein
+740358..741731	+	457	225852252	-	BMEA_A0774	-	-	hypothetical protein
+741820..742698	+	292	225852253	-	BMEA_A0775	-	COG4916S	hypothetical protein
+743082..743594	-	170	225852254	-	BMEA_A0776	-	COG4991S	SH3 type 3 domain-containing protein
+743754..744002	-	82	225852255	-	BMEA_A0777	-	-	lipoprotein
+744105..744260	-	51	225852256	-	BMEA_A0778	-	-	hypothetical protein
+744247..745416	-	389	225852257	metC	BMEA_A0779	-	COG0626E	cystathionine beta-lyase
+745627..746394	+	255	225852258	-	BMEA_A0780	-	COG0671I	bacitracin transport permease BcrC
+746849..747880	+	343	225852259	-	BMEA_A0781	-	COG0834ET	lysine-arginine-ornithine-binding periplasmic protein
+747914..748141	+	75	225852260	-	BMEA_A0782	-	-	hypothetical protein
+748177..749370	+	397	225852261	-	BMEA_A0783	-	COG4597E	His/Glu/Gln/Arg/opine family amino acid ABC transporter permease
+750544..751359	+	271	225852262	-	BMEA_A0785	-	COG1126E	glutamate/glutamine/aspartate/asparagine transport ATP-binding protein BztD
+751407..752612	-	401	225852263	-	BMEA_A0786	-	COG0654HC	salicylate hydroxylase
+752642..752896	-	84	225852264	-	BMEA_A0787	-	COG4391S	hypothetical protein
+753182..755422	+	746	225852265	-	BMEA_A0788	-	COG0855P	polyphosphate kinase
+755419..756957	+	512	225852266	-	BMEA_A0789	-	COG0248FP	Ppx/GppA phosphatase
+757055..758212	-	385	225852267	rnd	BMEA_A0790	-	COG0349J	ribonuclease D
+758439..760226	+	595	225852268	aspS	BMEA_A0791	-	COG0173J	aspartyl-tRNA synthetase
+760267..761463	-	398	225852269	-	BMEA_A0792	-	-	hypothetical protein
+761518..761757	+	79	225852270	-	BMEA_A0793	-	-	hypothetical protein
+761863..764175	+	770	225852271	parC	BMEA_A0794	-	COG0188L	DNA topoisomerase IV subunit A
+764354..765103	-	249	225852272	-	BMEA_A0795	-	COG2935O	arginyl-tRNA-protein transferase
+765224..765694	-	156	225852273	-	BMEA_A0796	-	COG1714S	RDD domain-containing protein
+765841..766878	-	345	225852274	-	BMEA_A0797	-	COG0113H	delta-aminolevulinic acid dehydratase
+767046..768095	+	349	225852275	-	BMEA_A0798	-	COG1024I	3-hydroxyisobutyryl-CoA hydrolase
+768109..768543	+	144	225852276	-	BMEA_A0799	-	-	hypothetical protein
+768774..769373	+	199	225852277	-	BMEA_A0800	-	COG1846K	MarR family transcriptional regulator
+769460..769600	-	46	225852278	-	BMEA_A0801	-	-	hypothetical protein
+769735..771036	+	433	225852279	-	BMEA_A0802	-	COG2989S	peptidoglycan-binding domain 1 protein
+771129..771263	+	44	225852280	-	BMEA_A0803	-	-	hypothetical protein
+771267..772583	+	438	225852281	-	BMEA_A0804	-	COG0112E	serine hydroxymethyltransferase
+772840..773316	+	158	225852282	-	BMEA_A0805	-	COG1327K	transcriptional regulator NrdR
+773318..774439	+	373	225852283	ribD	BMEA_A0806	-	COG1985H	riboflavin biosynthesis protein RibD
+774439..775047	+	202	225852284	ribE	BMEA_A0807	-	COG0307H	riboflavin synthase subunit alpha
+775142..775603	+	153	225852285	ribH	BMEA_A0808	-	COG0054H	6,7-dimethyl-8-ribityllumazine synthase
+775609..776124	+	171	225852286	nusB	BMEA_A0809	-	COG0781K	transcription antitermination protein NusB
+776575..778731	+	718	225852287	-	BMEA_A0810	-	COG3808C	membrane-bound proton-translocating pyrophosphatase
+778803..779309	-	168	225852288	-	BMEA_A0811	-	COG2913J	SmpA/OmlA domain-containing protein
+779411..779965	+	184	225852289	-	BMEA_A0812	-	COG5452	ubiquinol-cytochrome C chaperone
+780085..780642	+	185	225852290	-	BMEA_A0813	-	COG1399R	hypothetical protein
+780760..781800	+	346	225852291	plsX	BMEA_A0814	-	COG0416I	putative glycerol-3-phosphate acyltransferase PlsX
+782048..783019	+	323	225852292	fabH	BMEA_A0815	-	COG0332I	3-oxoacyl-(acyl carrier protein) synthase III
+783138..783461	+	107	225852293	ihfA	BMEA_A0816	-	COG0776L	integration host factor subunit alpha
+783995..784537	+	180	225852294	-	BMEA_A0817	-	COG0789K	MerR family regulatory protein
+784587..784904	-	105	225852295	-	BMEA_A0818	-	COG2076P	quaternary ammonium compound-resistance protein SugE
+785250..786788	-	512	225852296	-	BMEA_A0820	-	COG2148M	exopolysaccharide biosynthesis polyprenyl glycosylphosphotransferase
+786918..787133	-	71	225852297	-	BMEA_A0821	-	-	group 1 glycosyl transferase
+787142..787729	-	195	225852298	-	BMEA_A0822	-	COG1596M	polysaccharide export protein
+787853..788515	+	220	225852299	-	BMEA_A0823	-	COG0489D	exopolysaccharide transport protein family protein
+788583..788801	-	72	225852300	-	BMEA_A0824	-	-	hypothetical protein
+789153..790229	+	358	225852301	-	BMEA_A0825	-	COG1612O	cytochrome oxidase assembly
+790382..791314	-	310	225852302	argC	BMEA_A0826	-	COG0002E	N-acetyl-gamma-glutamyl-phosphate reductase
+791404..792354	-	316	225852303	speB	BMEA_A0827	-	COG0010E	agmatinase
+792445..792921	-	158	225852304	-	BMEA_A0828	-	COG0103J	30S ribosomal protein S9
+792924..793388	-	154	225852305	rplM	BMEA_A0829	-	COG0102J	50S ribosomal protein L13
+793624..794070	-	148	225852306	-	BMEA_A0830	-	COG2050Q	thioesterase superfamily protein
+794304..795587	+	427	225852307	-	BMEA_A0831	-	COG2873E	O-acetylhomoserine aminocarboxypropyltransferase
+795659..796048	-	129	225852308	-	BMEA_A0832	-	-	hypothetical protein
+796288..796419	+	43	225852309	-	BMEA_A0833	-	-	hypothetical protein
+796740..797108	+	122	225852310	-	BMEA_A0834	-	COG3293L	transposase
+797105..797497	+	130	225852311	-	BMEA_A0835	-	COG3293L	IS4 transposase
+797517..798026	+	169	225852312	-	BMEA_A0836	-	-	hypothetical protein
+798023..798418	+	131	225852313	-	BMEA_A0837	-	-	hypothetical protein
+798472..798807	+	111	225852314	-	BMEA_A0838	-	-	hypothetical protein
+798864..799265	-	133	225852315	-	BMEA_A0839	-	-	hypothetical protein
+799562..799744	+	60	225852316	-	BMEA_A0841	-	-	hypothetical protein
+800129..800332	-	67	225852317	-	BMEA_A0843	-	-	hypothetical protein
+800840..801205	+	121	225852318	-	BMEA_A0844	-	COG0838C	NADH dehydrogenase subunit A
+801196..801777	+	193	225852319	-	BMEA_A0845	-	COG0377C	NADH dehydrogenase subunit B
+801890..802498	+	202	225852320	nuoC	BMEA_A0846	-	COG0852C	NADH dehydrogenase subunit C
+802516..803706	+	396	225852321	nuoD	BMEA_A0847	-	COG0649C	NADH dehydrogenase subunit D
+803706..804419	+	237	225852322	nuoE	BMEA_A0848	-	COG1905C	NADH dehydrogenase subunit E
+804423..805730	+	435	225852323	nuoF	BMEA_A0849	-	COG1894C	NADH dehydrogenase I subunit F
+805865..807949	+	694	225852324	-	BMEA_A0850	-	COG1034C	NADH dehydrogenase subunit G
+807969..809012	+	347	225852325	-	BMEA_A0851	-	COG1005C	NADH dehydrogenase subunit H
+809025..809516	+	163	225852326	-	BMEA_A0852	-	COG1143C	NADH dehydrogenase subunit I
+809690..810307	+	205	225852327	-	BMEA_A0853	-	COG0839C	NADH dehydrogenase subunit J
+810318..810626	+	102	225852328	-	BMEA_A0854	-	COG0713C	NADH dehydrogenase subunit K
+810634..812619	+	661	225852329	-	BMEA_A0855	-	COG1009CP	NADH dehydrogenase subunit L
+812619..814127	+	502	225852330	-	BMEA_A0856	-	COG1008C	NADH dehydrogenase subunit M
+814149..815585	+	478	225852331	-	BMEA_A0857	-	COG1007C	NADH dehydrogenase subunit N
+815611..816408	+	265	225852332	-	BMEA_A0858	-	COG0340H	biotin--acetyl-CoA-carboxylase ligase
+816602..818278	+	558	225852333	-	BMEA_A0859	-	COG0595R	hypothetical protein
+818318..818722	+	134	225852334	mce	BMEA_A0860	-	COG0346E	methylmalonyl-CoA epimerase
+818725..818994	+	89	225852335	-	BMEA_A0861	-	COG5454	hypothetical protein
+819842..821170	+	442	225852336	proS	BMEA_A0862	-	COG0442J	prolyl-tRNA synthetase
+821212..822480	+	422	225852337	-	BMEA_A0863	-	COG4591M	lipoprotein releasing system, transmembrane protein, LolC/E family protein
+822480..823163	+	227	225852338	-	BMEA_A0864	-	COG1136V	lipoprotein-releasing system ATP-binding protein lolD
+823822..827313	+	1163	225852339	dnaE	BMEA_A0865	-	COG0587L	DNA polymerase III subunit alpha
+827354..827551	+	65	225852340	-	BMEA_A0866	-	-	hypothetical protein
+827596..828009	-	137	225852341	-	BMEA_A0867	-	-	hypothetical protein
+828281..829303	-	340	225852342	-	BMEA_A0868	-	COG3921S	extensin family protein
+829587..830204	+	205	225852343	rpsD	BMEA_A0869	-	COG0522J	30S ribosomal protein S4
+830734..831615	+	293	225852344	-	BMEA_A0870	-	COG0037D	PP-loop domain-containing protein
+831602..832429	+	275	225852345	-	BMEA_A0871	-	COG0483G	inositol monophosphatase family protein
+832644..833909	-	421	225852346	-	BMEA_A0872	-	COG2814G	drug resistance transporter, Bcr/CflA subfamily protein
+833908..834093	+	61	225852347	-	BMEA_A0873	-	-	hypothetical protein
+834180..834512	-	110	225852348	-	BMEA_A0874	-	COG0278O	glutaredoxin-like protein
+834697..834930	-	77	225852349	-	BMEA_A0875	-	COG0271T	hypothetical protein
+835200..837422	-	740	225852350	purL	BMEA_A0876	-	COG0046F	phosphoribosylformylglycinamidine synthase II
+837609..838010	-	133	225852351	-	BMEA_A0877	-	-	hypothetical protein
+838070..838717	-	215	225852352	-	BMEA_A0878	-	COG0625O	glutathione S-transferase domain-containing protein
+838969..839640	-	223	225852353	purQ	BMEA_A0879	-	COG0047F	phosphoribosylformylglycinamidine synthase I
+839663..839905	-	80	225852354	purS	BMEA_A0880	-	COG1828F	phosphoribosylformylglycinamidine synthase subunit PurS
+840021..840785	-	254	225852355	purC	BMEA_A0881	-	COG0152F	phosphoribosylaminoimidazole-succinocarboxamide synthase
+841041..841364	+	107	225852356	-	BMEA_A0882	-	COG5467	hypothetical protein
+841429..842196	+	255	225852357	-	BMEA_A0883	-	COG3836G	2,4-dihydroxyhept-2-ene-1,7-dioic acid aldolase
+842245..842811	-	188	225852358	-	BMEA_A0884	-	COG3545R	hypothetical protein
+842834..842935	+	33	225852359	-	BMEA_A0885	-	-	hypothetical protein
+843080..843955	+	291	225852360	-	BMEA_A0886	-	COG2514R	biphenyl-2,3-diol 1,2-dioxygenase 3
+844181..845482	-	433	225852361	purB	BMEA_A0887	-	COG0015F	adenylosuccinate lyase
+845509..846186	-	225	225852362	rpe	BMEA_A0888	-	COG0036G	ribulose-phosphate 3-epimerase
+846344..847270	-	308	225852363	-	BMEA_A0889	-	COG1560M	lipid A biosynthesis lauroyl acyltransferase
+847284..848312	-	342	225852364	-	BMEA_A0890	-	COG0604CR	hypothetical protein
+848394..849671	-	425	225852365	-	BMEA_A0891	-	COG0304IQ	3-oxoacyl-(acyl carrier protein) synthase II
+849673..850854	-	393	225852366	-	BMEA_A0892	-	COG0304IQ	3-oxoacyl-(acyl carrier protein) synthase II
+851002..851283	-	93	225852367	-	BMEA_A0893	-	COG0236IQ	acyl carrier protein
+851484..852245	-	253	225852368	-	BMEA_A0894	-	COG3926R	hypothetical protein
+852461..853483	+	340	225852369	-	BMEA_A0895	-	COG2017G	aldose 1-epimerase
+853480..854397	-	305	225852370	-	BMEA_A0896	-	COG0524G	2-dehydro-3-deoxygluconokinase
+854586..855317	+	243	225852371	-	BMEA_A0897	-	-	phosphonate metabolism protein
+855321..856460	+	379	225852372	phnM	BMEA_A0898	-	COG3454P	phosphonate metabolism protein PhnM
+856457..857140	-	227	225852373	-	BMEA_A0899	-	COG0637R	HAD-superfamily hydrolase
+857397..858185	+	262	225852374	-	BMEA_A0900	-	COG0834ET	extracellular solute-binding protein family 3
+858377..859399	+	340	225852375	-	BMEA_A0901	-	COG0042J	tRNA-dihydrouridine synthase A
+859396..860100	-	234	225852376	-	BMEA_A0902	-	COG3577R	hypothetical protein
+860100..860249	-	49	225852377	-	BMEA_A0903	-	COG3313R	hypothetical protein
+860314..861096	-	260	225852378	cobS	BMEA_A0904	-	COG0368H	cobalamin synthase
+861250..862269	+	339	225852379	cobT	BMEA_A0905	-	COG2038H	nicotinate-nucleotide--dimethylbenzimidazole phosphoribosyltransferase
+862377..862856	-	159	225852380	-	BMEA_A0906	-	COG1522K	hypothetical protein
+862985..863626	-	213	225852381	-	BMEA_A0907	-	COG1573L	hypothetical protein
+863723..864292	-	189	225852382	-	BMEA_A0908	-	COG1525L	nuclease, SNase domain-containing protein
+864263..864541	+	92	225852383	-	BMEA_A0909	-	-	hypothetical protein
+864913..865716	+	267	225852384	-	BMEA_A0910	-	COG0790R	exopolysaccharide production negative regulator precursor
+865775..866557	-	260	225852385	-	BMEA_A0911	-	COG0708L	exodeoxyribonuclease III Xth
+866726..867433	+	235	225852386	-	BMEA_A0912	-	COG2979S	hypothetical protein
+867514..867840	-	108	225852387	-	BMEA_A0913	-	COG0316S	iron-sulfur cluster assembly accessory protein
+868007..869215	+	402	225852388	dgt	BMEA_A0914	-	COG0232F	deoxyguanosinetriphosphate triphosphohydrolase-like protein
+869437..871194	+	585	225852389	argS	BMEA_A0915	-	COG0018J	arginyl-tRNA synthetase
+871406..874378	+	990	225852390	-	BMEA_A0916	-	-	oleosin-B6
+874579..875598	+	339	225852391	-	BMEA_A0917	-	COG1472G	beta-hexosaminidase A
+875671..876522	+	283	225852392	-	BMEA_A0918	-	COG1354S	chromosome segregation and condensation protein ScpA
+876515..877240	+	241	225852393	scpB	BMEA_A0919	-	COG1386K	segregation and condensation protein B
+877386..877604	+	72	225852394	tatA	BMEA_A0920	-	COG1826U	twin arginine translocase protein A
+877685..878281	+	198	225852395	tatB	BMEA_A0921	-	COG1826U	sec-independent translocase
+878278..879102	+	274	225852396	tatC	BMEA_A0922	-	COG0805U	Sec-independent protein translocase TatC
+879179..880462	+	427	225852397	serS	BMEA_A0923	-	COG0172J	seryl-tRNA synthetase
+880611..881378	+	255	225852398	surE	BMEA_A0924	-	COG0496R	stationary phase survival protein SurE
+881375..882043	+	222	225852399	-	BMEA_A0925	-	COG2518O	protein-L-isoaspartate O-methyltransferase
+882188..882373	+	61	225852400	-	BMEA_A0926	-	-	hypothetical protein
+882422..883720	+	432	225852401	-	BMEA_A0927	-	COG0739M	peptidase M23B
+883769..884635	-	288	225852402	-	BMEA_A0928	-	COG2607R	hypothetical protein
+884795..885136	+	113	225852403	yajC	BMEA_A0929	-	COG1862U	preprotein translocase subunit YajC
+885255..887582	+	775	225852404	secD	BMEA_A0930	-	COG0341U	bifunctional preprotein translocase subunit SecD/SecF
+887585..887974	+	129	225852405	-	BMEA_A0931	-	COG3737S	hypothetical protein
+887980..888813	+	277	225852406	-	BMEA_A0932	-	COG1562I	phytoene synthase
+888865..890265	-	466	225852407	gid	BMEA_A0933	-	COG1206J	tRNA (uracil-5-)-methyltransferase Gid
+890507..890653	-	48	225852408	-	BMEA_A0934	-	COG5457S	hypothetical protein
+890927..892063	+	378	225852409	-	BMEA_A0935	-	COG4872S	hypothetical protein
+892060..892629	+	189	225852410	-	BMEA_A0936	-	COG4929S	hypothetical protein
+893009..894466	+	485	225852411	tig	BMEA_A0938	-	COG0544O	trigger factor
+894616..896118	+	500	225852412	gatB	BMEA_A0939	-	COG0064J	aspartyl/glutamyl-tRNA amidotransferase subunit B
+896118..896621	+	167	225852413	-	BMEA_A0940	-	COG0456R	GCN5-related N-acetyltransferase
+896781..897191	+	136	225852414	-	BMEA_A0941	-	COG3761C	NADH dehydrogenase
+897251..897376	+	41	225852415	-	BMEA_A0942	-	-	hypothetical protein
+897385..897855	+	156	225852416	-	BMEA_A0943	-	COG4765S	hypothetical protein
+897899..898513	-	204	225852417	aat	BMEA_A0944	-	COG2360O	leucyl/phenylalanyl-tRNA--protein transferase
+898519..899877	-	452	225852418	accC	BMEA_A0945	-	COG0439I	acetyl-CoA carboxylase biotin carboxylase subunit
+899927..900397	-	156	225852419	accB	BMEA_A0946	-	COG0511I	acetyl-CoA carboxylase biotin carboxyl carrier protein subunit
+900399..900872	-	157	225852420	aroQ	BMEA_A0947	-	COG0757E	3-dehydroquinate dehydratase
+901116..901913	-	265	225852421	-	BMEA_A0948	-	COG1651O	DSBA oxidoreductase
+901961..903376	-	471	225852422	-	BMEA_A0949	-	COG4783R	peptidase M48 Ste24p
+903568..904731	+	387	225852423	-	BMEA_A0950	-	COG0436E	aminotransferase class I and II
+904850..907525	-	891	225852424	-	BMEA_A0951	-	COG1530J	ribonuclease, Rne/Rng family protein
+907528..907713	+	61	225852425	-	BMEA_A0952	-	-	hypothetical protein
+908204..909472	+	422	225852426	-	BMEA_A0953	-	COG0860M	N-acetylmuramoyl-L-alanine amidase
+909752..912211	+	819	225852427	-	BMEA_A0954	-	COG5009M	1A family penicillin-binding protein
+912267..912398	-	43	225852428	-	BMEA_A0955	-	-	hypothetical protein
+912515..913480	+	321	225852429	prfB	BMEA_A0956	-	COG1186J	peptide chain release factor 2
+913539..913703	-	54	225852430	-	BMEA_A0957	-	-	hypothetical protein
+913674..914042	+	122	225852431	-	BMEA_A0958	-	COG3293L	transposase
+914039..914317	+	92	225852432	-	BMEA_A0959	-	COG3293L	IS6501 transposase
+914584..914946	-	120	225852433	-	BMEA_A0960	-	-	peptidase M23B
+915117..915944	-	275	225852434	-	BMEA_A0961	-	COG2833S	hypothetical protein
+915966..916430	-	154	225852435	-	BMEA_A0962	-	COG1225O	alkyl hydroperoxide reductase/ Thiol specific antioxidant/ Mal allergen
+916675..920115	+	1146	225852436	-	BMEA_A0963	-	-	hypothetical protein
+920174..921427	-	417	225852437	tyrS	BMEA_A0964	-	COG0162J	tyrosyl-tRNA synthetase
+921543..922664	+	373	225852438	-	BMEA_A0965	-	COG2377O	anhydro-N-acetylmuramic acid kinase
+922661..922993	-	110	225852439	-	BMEA_A0966	-	COG2076P	quaternary ammonium compound-resistance protein QacF
+923105..923779	-	224	225852440	-	BMEA_A0967	-	COG2945R	hypothetical protein
+923983..925161	+	392	225852441	-	BMEA_A0968	-	COG1104E	cysteine desulfurase
+925342..926865	+	507	225852442	sufB	BMEA_A0969	-	COG0719O	cysteine desulfurase activator complex subunit SufB
+926933..927688	+	251	225852443	sufC	BMEA_A0970	-	COG0396O	FeS assembly ATPase SufC
+927702..928979	+	425	225852444	sufD	BMEA_A0971	-	COG0719O	FeS assembly protein SufD
+929061..930305	+	414	225852445	sufS	BMEA_A0972	-	COG0520E	cysteine desulfurase
+930302..930721	+	139	225852446	-	BMEA_A0973	-	COG2151R	FeS assembly SUF system protein
+930755..931726	-	323	225852447	-	BMEA_A0974	-	COG1216R	group 2 family glycosyl transferase
+932153..932926	+	257	225852448	-	BMEA_A0976	-	COG0061G	inorganic polyphosphate/ATP-NAD kinase
+933254..934702	+	482	225852449	-	BMEA_A0977	-	COG0513LKJ	ATP-dependent RNA helicase Dbp2
+934939..935319	-	126	225852450	sufA	BMEA_A0978	-	COG0316S	FeS assembly scaffold SufA
+935512..936135	+	207	225852451	-	BMEA_A0979	-	-	hypothetical protein
+936120..936212	+	30	225852452	-	BMEA_A0980	-	-	hypothetical protein
+936216..936416	+	66	225852453	-	BMEA_A0981	-	COG2608P	heavy metal transport/detoxification protein
+936745..937413	+	222	225852454	-	BMEA_A0983	-	COG2518O	protein-L-isoaspartate O-methyltransferase
+937552..938922	+	456	225852455	-	BMEA_A0984	-	COG1538MU	type I secretion outer membrane protein
+939172..939903	+	243	225852456	-	BMEA_A0985	-	COG3827S	hypothetical protein
+940194..942926	+	910	225852457	valS	BMEA_A0986	-	COG0525J	valyl-tRNA synthetase
+943290..943619	+	109	225852458	-	BMEA_A0987	-	-	hypothetical protein
+943728..944618	+	296	225852459	-	BMEA_A0988	-	COG2067I	outer membrane protein E
+944684..945559	-	291	225852460	-	BMEA_A0989	-	COG2084I	6-phosphogluconate dehydrogenase
+946679..947152	-	157	225852461	mobB	BMEA_A0990	-	COG1763H	molybdopterin-guanine dinucleotide biosynthesis protein B
+947178..947843	-	221	225852462	mobA	BMEA_A0991	-	COG0746H	molybdopterin-guanine dinucleotide biosynthesis protein A
+948019..949053	-	344	225852463	moaA	BMEA_A0992	-	COG2896H	molybdenum cofactor biosynthesis protein A
+949240..949599	+	119	225852464	-	BMEA_A0993	-	COG3536S	hypothetical protein
+949667..950773	-	368	225852465	-	BMEA_A0994	-	COG0654HC	monooxygenase FAD-binding
+951119..952738	-	539	225852466	-	BMEA_A0995	-	COG1951C	hydro-lyase, Fe-S type, tartrate/fumarate subfamily subunit beta
+953144..953431	+	95	225852467	-	BMEA_A0996	-	-	peptidoglycan-binding domain 1 protein
+953516..955048	+	510	225852468	-	BMEA_A0997	-	COG2989S	peptidoglycan-binding domain 1 protein
+955849..956100	-	83	225852469	-	BMEA_A1000	-	-	transglycosylase-associated protein
+956255..956416	+	53	225852470	-	BMEA_A1001	-	-	hypothetical protein
+956609..957634	-	341	225852471	-	BMEA_A1003	-	COG0582L	phage-related integrase
+958039..958242	-	67	225852472	-	BMEA_A1004	-	-	hypothetical protein
+958428..958997	+	189	225852473	-	BMEA_A1005	-	-	hypothetical protein
+958994..959224	+	76	225852474	-	BMEA_A1006	-	-	hypothetical protein
+959221..959496	+	91	225852475	-	BMEA_A1007	-	-	hypothetical protein
+959519..959995	+	158	225852476	-	BMEA_A1008	-	-	hypothetical protein
+960341..961051	+	236	225852477	-	BMEA_A1009	-	COG3637M	porin
+961399..961569	-	56	225852478	-	BMEA_A1010	-	COG3422S	hypothetical protein
+961587..961766	+	59	225852479	-	BMEA_A1011	-	-	hypothetical protein
+961917..962231	-	104	225852480	-	BMEA_A1012	-	COG3514S	hypothetical protein
+962231..962551	-	106	225852481	-	BMEA_A1013	-	COG2929S	hypothetical protein
+962639..963247	+	202	225852482	-	BMEA_A1014	-	COG0343J	queuine tRNA-ribosyltransferase
+963317..963685	+	122	225852483	-	BMEA_A1015	-	COG3293L	transposase
+963682..963960	+	92	225852484	-	BMEA_A1016	-	COG3293L	IS6501 transposase
+964076..964768	+	230	225852485	-	BMEA_A1017	-	-	hypothetical protein
+964966..965088	+	40	225852486	-	BMEA_A1018	-	-	hypothetical protein
+966957..968189	+	410	225852487	-	BMEA_A1020	-	COG0438M	hypothetical protein
+968186..969745	+	519	225852488	-	BMEA_A1021	-	COG0438M	hypothetical protein
+969726..969947	-	73	225852489	-	BMEA_A1022	-	-	hypothetical protein
+970092..970850	+	252	225852490	-	BMEA_A1023	-	COG3926R	hypothetical protein
+971240..971482	+	80	225852491	-	BMEA_A1025	-	-	hypothetical protein
+971584..971685	+	33	225852492	-	BMEA_A1027	-	-	hypothetical protein
+971694..971831	+	45	225852493	-	BMEA_A1028	-	-	hypothetical protein
+971822..972169	+	115	225852494	arsC	BMEA_A1029	-	COG1393P	arsenate reductase
+972540..973805	+	421	225852495	rlpA	BMEA_A1030	-	COG0797M	rare lipoprotein A
+973916..975106	+	396	225852496	-	BMEA_A1032	-	COG1686M	serine-type D-Ala-D-Ala carboxypeptidase
+975188..975832	+	214	225852497	tmk	BMEA_A1033	-	COG0125F	thymidylate kinase
+975829..976911	+	360	225852498	holB	BMEA_A1034	-	COG0470L	DNA polymerase III subunit delta'
+976931..977080	+	49	225852499	-	BMEA_A1035	-	-	hypothetical protein
+977080..978627	+	515	225852500	metG	BMEA_A1036	-	COG0143J	methionyl-tRNA synthetase
+978636..979427	+	263	225852501	-	BMEA_A1037	-	COG0084L	TatD family hydrolase
+979430..980248	+	272	225852502	-	BMEA_A1038	-	COG1235R	beta-lactamase domain-containing protein
+980298..982097	-	599	225852503	-	BMEA_A1039	-	COG1132V	cyclic beta-1,2-glucan ABC transporter
+982232..982366	+	44	225852504	-	BMEA_A1040	-	-	hypothetical protein
+982410..983390	+	326	225852505	-	BMEA_A1041	-	COG0564J	pseudouridine synthase, RluA family protein
+983393..984316	+	307	225852506	-	BMEA_A1042	-	COG0697GER	hypothetical protein
+984313..984963	+	216	225852507	-	BMEA_A1043	-	COG0546R	HAD-superfamily hydrolase
+985005..985787	+	260	225852508	-	BMEA_A1044	-	COG5387O	ATPase
+985913..987322	-	469	225852509	glnA	BMEA_A1045	-	COG0174E	glutamine synthetase, type I
+987470..987808	-	112	225852510	-	BMEA_A1046	-	COG0347E	nitrogen regulatory protein P-II
+988115..989620	+	501	225852511	-	BMEA_A1047	-	COG0063G	YjeF family protein
+989651..989842	-	63	225852512	-	BMEA_A1048	-	-	hypothetical protein
+989920..990624	-	234	225852513	gph	BMEA_A1049	-	COG0546R	phosphoglycolate phosphatase
+990679..990792	+	37	225852514	-	BMEA_A1050	-	-	hypothetical protein
+990971..991669	+	232	225852515	rpiA	BMEA_A1051	-	COG0120G	ribose-5-phosphate isomerase A
+991695..992231	+	178	225852516	-	BMEA_A1052	-	COG3184S	hypothetical protein
+992385..993779	+	464	225852517	gor	BMEA_A1053	-	COG1249C	glutathione reductase
+993988..995367	+	459	225852518	-	BMEA_A1054	-	COG3200E	3-deoxy-7-phosphoheptulonate synthase
+995481..995831	+	116	225852519	-	BMEA_A1055	-	COG0818M	diacylglycerol kinase
+995896..997575	+	559	225852520	nadE	BMEA_A1056	-	COG0171H	NAD synthetase
+997587..998960	+	457	225852521	gltX	BMEA_A1057	-	COG0008J	glutamyl-tRNA synthetase
+999774..1002098	-	774	225852522	-	BMEA_A1058	-	COG0281C	malic enzyme
+1002316..1003296	-	326	225852523	-	BMEA_A1059	-	COG4948MR	mandelate racemase/muconate lactonizing protein
+1003357..1004532	+	391	225852524	-	BMEA_A1060	-	COG0767Q	hypothetical protein
+1004748..1005605	+	285	225852525	-	BMEA_A1061	-	COG1127Q	ABC transporter-like protein
+1005609..1006604	+	331	225852526	-	BMEA_A1062	-	COG1463Q	mammalian cell entry related domain-containing protein
+1006628..1007230	+	200	225852527	-	BMEA_A1063	-	COG3218R	hypothetical protein
+1007470..1012143	-	1557	225852528	-	BMEA_A1064	-	COG1463Q	hypothetical protein
+1012358..1012639	+	93	225852529	-	BMEA_A1065	-	-	hypothetical protein
+1012758..1013081	+	107	225852530	-	BMEA_A1066	-	COG0633C	ferredoxin-6
+1013399..1013722	+	107	225852531	-	BMEA_A1067	-	COG0492O	FAD-dependent pyridine nucleotide-disulfide oxidoreductase
+1013727..1014347	-	206	225852532	-	BMEA_A1068	-	COG5661O	hypothetical protein
+1014505..1015344	+	279	225852533	folP	BMEA_A1070	-	COG0294H	dihydropteroate synthase
+1015363..1015722	+	119	225852534	folB	BMEA_A1071	-	COG1539H	dihydroneopterin aldolase
+1015719..1016252	+	177	225852535	folK	BMEA_A1072	-	COG0801H	2-amino-4-hydroxy-6-hydroxymethyldihydropteridine pyrophosphokinase
+1016367..1016924	-	185	225852536	-	BMEA_A1073	-	-	hypothetical protein
+1017176..1018249	-	357	225852537	-	BMEA_A1074	-	COG3768S	hypothetical protein
+1018266..1019705	-	479	225852538	-	BMEA_A1075	-	COG3106R	hypothetical protein
+1019798..1020298	-	166	225852539	-	BMEA_A1076	-	COG2062T	phosphohistidine phosphatase SixA
+1020695..1021111	+	138	225852540	dksA	BMEA_A1077	-	COG1734T	RNA polymerase-binding protein DksA
+1021257..1022513	-	418	225852541	-	BMEA_A1078	-	-	hypothetical protein
+1022880..1025576	+	898	225852542	-	BMEA_A1079	-	COG0642T	PAS domain S-box-containing protein
+1025601..1026809	+	402	225852543	-	BMEA_A1080	-	COG2081R	hypothetical protein
+1026840..1028162	+	440	225852544	-	BMEA_A1081	-	COG1680V	beta-lactamase
+1028143..1029369	-	408	225852545	-	BMEA_A1082	-	COG0668M	mechanosensitive ion channel protein MscS
+1029459..1033253	-	1264	225852546	-	BMEA_A1083	-	COG0209F	ribonucleotide-diphosphate reductase subunit alpha
+1033306..1033545	+	79	225852547	-	BMEA_A1084	-	-	hypothetical protein
+1033955..1034443	-	162	225852548	-	BMEA_A1085	-	COG0494LR	diphosphoinositol polyphosphate phosphohydrolase 3 beta
+1034539..1034673	-	44	225852549	-	BMEA_A1086	-	-	hypothetical protein
+1035571..1036416	-	281	225852550	-	BMEA_A1087	-	COG0589T	UspA domain-containing protein
+1036494..1037252	-	252	225852551	-	BMEA_A1088	-	COG1058R	CinA-like protein
+1037413..1038012	+	199	225852552	wrbA	BMEA_A1089	-	COG0655R	TrpR binding protein WrbA
+1037990..1038139	-	49	225852553	-	BMEA_A1090	-	-	hypothetical protein
+1038314..1039573	+	419	225852554	ilvA	BMEA_A1092	-	COG1171E	threonine dehydratase
+1039640..1041247	+	535	225852555	-	BMEA_A1093	-	COG0513LKJ	DEAD/DEAH box helicase domain-containing protein
+1041418..1042446	+	342	225852556	-	BMEA_A1094	-	COG0031E	cysteine synthase A
+1042449..1043192	+	247	225852557	-	BMEA_A1095	-	COG2872R	alanyl-tRNA synthetase
+1043219..1044073	+	284	225852558	-	BMEA_A1096	-	COG2897P	3-mercaptopyruvate sulfurtransferase
+1044075..1044596	+	173	225852559	-	BMEA_A1097	-	-	GCN5-related N-acetyltransferase
+1044635..1045429	-	264	225852560	-	BMEA_A1098	-	COG2199T	GGDEF domain-containing protein
+1045994..1047484	-	496	225852561	-	BMEA_A1099	-	COG0427C	succinate CoA transferase
+1047749..1049290	-	513	225852562	-	BMEA_A1100	-	COG2814G	drug resistance transporter, EmrB/QacA subfamily protein
+1049290..1050390	-	366	225852563	-	BMEA_A1101	-	COG1566V	secretion protein HlyD family protein
+1050784..1051767	+	327	225852564	-	BMEA_A1102	-	COG1064R	zinc-binding alcohol dehydrogenase family protein
+1051811..1052953	-	380	225852565	-	BMEA_A1103	-	COG0006E	Xaa-Pro dipeptidase
+1053212..1054042	-	276	225852566	-	BMEA_A1104	-	COG4976	methyltransferase type 12
+1054151..1055116	-	321	225852567	-	BMEA_A1105	-	COG0385R	bile acid:sodium symporter
+1055245..1056252	-	335	225852568	galE	BMEA_A1107	-	COG1087M	UDP-glucose 4-epimerase
+1056397..1057221	+	274	225852569	-	BMEA_A1108	-	COG3956R	nucleoside triphosphate pyrophosphohydrolase
+1057230..1057841	-	203	225852570	-	BMEA_A1109	-	COG1853R	hypothetical protein
+1057884..1058468	-	194	225852571	-	BMEA_A1110	-	COG0778C	nitroreductase
+1058688..1059698	+	336	225852572	-	BMEA_A1111	-	-	hypothetical protein
+1059753..1061729	-	658	225852573	thrS	BMEA_A1112	-	COG0441J	threonyl-tRNA synthetase
+1063283..1063762	-	159	225852574	-	BMEA_A1114	-	COG0759S	hypothetical protein
+1063656..1064096	-	146	225852575	-	BMEA_A1115	-	COG0822C	nitrogen-fixing NifU domain-containing protein
+1064360..1065001	+	213	225852576	folE	BMEA_A1116	-	COG0302H	GTP cyclohydrolase I
+1065024..1065443	+	139	225852577	-	BMEA_A1117	-	COG0139E	phosphoribosyl-AMP cyclohydrolase
+1065660..1066607	+	315	225852578	-	BMEA_A1118	-	COG1752R	patatin
+1066694..1066873	+	59	225852579	-	BMEA_A1119	-	-	hypothetical protein
+1067081..1068388	+	435	225852580	-	BMEA_A1121	-	COG0582L	site-specific recombinase, phage integrase family protein
+1068463..1068867	+	134	225852581	-	BMEA_A1122	-	-	hypothetical protein
+1070613..1072010	-	465	225852582	-	BMEA_A1123	-	-	hypothetical protein
+1072535..1073164	-	209	225852583	-	BMEA_A1124	-	COG1961L	DNA-invertase
+1073432..1073581	-	49	225852584	-	BMEA_A1125	-	-	hypothetical protein
+1073660..1073995	-	111	225852585	-	BMEA_A1126	-	-	hypothetical protein
+1074279..1074854	-	191	225852586	-	BMEA_A1127	-	COG3617K	BRO family protein
+1075381..1076526	-	381	225852587	-	BMEA_A1129	-	COG1804C	acyl-CoA transferase/carnitine dehydratase
+1076605..1077789	-	394	225852588	-	BMEA_A1130	-	COG1960I	glutaryl-CoA dehydrogenase
+1078792..1079775	-	327	225852589	-	BMEA_A1132	-	COG2141C	luciferase family protein
+1079856..1082945	-	1029	225852590	-	BMEA_A1133	-	COG0841V	acriflavin resistance protein
+1082955..1084136	-	393	225852591	-	BMEA_A1134	-	COG0845M	RND family efflux transporter
+1084244..1084810	+	188	225852592	-	BMEA_A1135	-	COG1309K	TetR family transcriptional regulator
+1084847..1085980	-	377	225852593	tgt	BMEA_A1136	-	COG0343J	queuine tRNA-ribosyltransferase
+1085977..1087068	-	363	225852594	-	BMEA_A1137	-	COG0809J	S-adenosylmethionine:tRNA ribosyltransferase-isomerase
+1087190..1087696	-	168	225852595	-	BMEA_A1138	-	COG0652O	peptidyl-prolyl cis-trans isomerase cyclophilin type
+1087759..1088349	-	196	225852596	-	BMEA_A1139	-	COG0652O	peptidyl-prolyl cis-trans isomerase cyclophilin type
+1088370..1088864	-	164	225852597	coaD	BMEA_A1140	-	COG0669H	phosphopantetheine adenylyltransferase
+1089059..1089208	+	49	225852598	-	BMEA_A1142	-	-	hypothetical protein
+1089080..1089319	-	79	225852599	-	BMEA_A1143	-	-	hypothetical protein
+1089375..1092143	-	922	225852600	gyrA	BMEA_A1144	-	COG0188L	DNA gyrase subunit A
+1092431..1093060	+	209	225852601	-	BMEA_A1145	-	COG2095U	hypothetical protein
+1093151..1093729	-	192	225852602	phnN	BMEA_A1146	-	COG3709P	phosphonate metabolism protein/1,5-bisphosphokinase (PRPP-forming) PhnN
+1093916..1094677	+	253	225852603	phnF	BMEA_A1147	-	COG2188K	phosphonates metabolism transcriptional regulator PhnF
+1095363..1095869	-	168	225852604	ssb	BMEA_A1148	-	COG0629L	single-strand binding protein
+1096437..1096637	+	66	225852605	-	BMEA_A1149	-	-	hypothetical protein
+1096768..1099692	+	974	225852606	uvrA	BMEA_A1150	-	COG0178L	excinuclease ABC subunit A
+1099879..1100154	-	91	225852607	-	BMEA_A1151	-	COG0776L	DNA-binding protein HRL18
+1100335..1102773	-	812	225852608	lon	BMEA_A1152	-	COG0466O	ATP-dependent protease La
+1103205..1104479	-	424	225852609	clpX	BMEA_A1153	-	COG1219O	ATP-dependent protease ATP-binding subunit ClpX
+1104861..1105490	-	209	225852610	-	BMEA_A1154	-	COG0740OU	ATP-dependent Clp protease proteolytic subunit
+1105595..1107013	-	472	225852611	hflX	BMEA_A1155	-	COG2262R	GTP-binding proten HflX
+1107204..1107440	-	78	225852612	hfq	BMEA_A1156	-	COG1923R	RNA-binding protein Hfq
+1107446..1107685	-	79	225852613	-	BMEA_A1157	-	-	hypothetical protein
+1107669..1108499	-	276	225852614	-	BMEA_A1158	-	-	hypothetical protein
+1108548..1109924	-	458	225852615	-	BMEA_A1159	-	COG0569P	potassium transporter peripheral membrane component
+1109949..1111310	-	453	225852616	-	BMEA_A1160	-	COG2204T	nitrogen assimilation regulatory protein
+1111312..1113636	-	774	225852617	-	BMEA_A1161	-	COG5000T	PAS domain S-box-containing protein
+1113727..1115202	-	491	225852618	ntrC	BMEA_A1162	-	COG2204T	nitrogen regulation protein NR(I)
+1115199..1116341	-	380	225852619	-	BMEA_A1163	-	COG3852T	nitrogen regulation protein ntrB
+1116341..1117342	-	333	225852620	-	BMEA_A1164	-	COG0042J	TIM-barrel protein nifR3 family protein
+1117354..1118709	+	451	225852621	ispF	BMEA_A1165	-	COG1211I	bifunctional 2-C-methyl-D-erythritol 4-phosphate cytidylyltransferase/2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase protein
+1118706..1119203	+	165	225852622	-	BMEA_A1166	-	COG1546R	CinA domain-containing protein
+1120080..1120538	-	152	225852623	-	BMEA_A1168	-	COG2867I	cyclase/dehydrase
+1120544..1121512	-	322	225852624	lipA	BMEA_A1169	-	COG0320H	lipoyl synthase
+1121622..1121783	-	53	225852625	-	BMEA_A1170	-	-	hypothetical protein
+1121902..1123365	-	487	225852626	lpdA	BMEA_A1171	-	COG1249C	dihydrolipoamide dehydrogenase
+1123448..1124791	-	447	225852627	-	BMEA_A1172	-	COG0508C	branched-chain alpha-keto acid dehydrogenase subunit E2
+1124809..1126194	-	461	225852628	-	BMEA_A1173	-	COG0022C	pyruvate dehydrogenase subunit beta
+1126213..1127253	-	346	225852629	pdhA	BMEA_A1174	-	COG1071C	dehydrogenase E1 component
+1127392..1127721	-	109	225852630	-	BMEA_A1175	-	COG2919D	septum formation initiator
+1127993..1128574	-	193	225852631	-	BMEA_A1176	-	-	hypothetical protein
+1128911..1130188	-	425	225852632	eno	BMEA_A1177	-	COG0148G	phosphopyruvate hydratase
+1130375..1131208	-	277	225852633	kdsA	BMEA_A1178	-	COG2877M	2-dehydro-3-deoxyphosphooctonate aldolase
+1131314..1132942	-	542	225852634	pyrG	BMEA_A1179	-	COG0504F	CTP synthetase
+1133212..1133904	-	230	225852635	-	BMEA_A1180	-	COG1376S	ErfK/YbiS/YcfS/YnhG family protein
+1134158..1134604	-	148	225852636	secG	BMEA_A1181	-	COG1314U	preprotein translocase subunit SecG
+1134704..1135468	-	254	225852637	tpiA	BMEA_A1182	-	COG0149G	triosephosphate isomerase
+1135687..1137573	+	628	225852638	-	BMEA_A1183	-	COG0760O	rotamase family protein
+1137588..1138607	+	339	225852639	trpD	BMEA_A1184	-	COG0547E	anthranilate phosphoribosyltransferase
+1138624..1139430	+	268	225852640	-	BMEA_A1185	-	COG0134E	indole-3-glycerol-phosphate synthase
+1139427..1139924	+	165	225852641	moaC	BMEA_A1186	-	COG0315H	molybdenum cofactor biosynthesis protein MoaC
+1140020..1141234	+	404	225852642	-	BMEA_A1187	-	COG0303H	molybdenum cofactor synthesis domain-containing protein
+1141482..1142204	+	240	225852643	lexA	BMEA_A1188	-	COG1974KT	LexA repressor
+1144760..1144936	-	58	225852644	-	BMEA_A1190	-	-	hypothetical protein
+1144949..1146370	+	473	225852645	gltX	BMEA_A1191	-	COG0008J	glutamyl-tRNA synthetase
+1146599..1147891	+	430	225852646	gltA	BMEA_A1192	-	COG0372C	type II citrate synthase
+1148064..1149251	-	395	225852647	lpxB	BMEA_A1193	-	COG0763M	lipid-A-disaccharide synthase
+1149248..1150150	-	300	225852648	-	BMEA_A1194	-	COG3494S	hypothetical protein
+1150131..1150967	-	278	225852649	lpxA	BMEA_A1195	-	COG1043M	UDP-N-acetylglucosamine acyltransferase
+1150976..1151449	-	157	225852650	fabZ	BMEA_A1196	-	COG0764I	(3R)-hydroxymyristoyl-ACP dehydratase
+1151442..1152497	-	351	225852651	lpxD	BMEA_A1197	-	COG1044M	UDP-3-O-[3-hydroxymyristoyl] glucosamine N-acyltransferase
+1152551..1154896	-	781	225852652	yaeT	BMEA_A1198	-	COG4775M	outer membrane protein assembly complex protein YaeT
+1155232..1156371	-	379	225852653	-	BMEA_A1199	-	COG0750M	membrane-associated zinc metalloprotease
+1156438..1157250	-	270	225852654	-	BMEA_A1200	-	COG0575I	phosphatidate cytidylyltransferase
+1157355..1158119	-	254	225852655	uppS	BMEA_A1201	-	COG0020I	undecaprenyl pyrophosphate synthase
+1158164..1158724	-	186	225852656	frr	BMEA_A1202	-	COG0233J	ribosome recycling factor
+1158760..1159731	-	323	225852657	pyrH	BMEA_A1203	-	COG0528F	uridylate kinase
+1159649..1160566	-	305	225852658	tsf	BMEA_A1204	-	COG0264J	elongation factor Ts
+1160756..1161526	-	256	225852659	rpsB	BMEA_A1205	-	COG0052J	30S ribosomal protein S2
+1161749..1162243	-	164	225852660	-	BMEA_A1206	-	COG4875S	hypothetical protein
+1162355..1163197	-	280	225852661	-	BMEA_A1207	-	-	hypothetical protein
+1163342..1163806	+	154	225852662	-	BMEA_A1208	-	COG0251J	endoribonuclease L-PSP
+1163808..1164548	+	246	225852663	-	BMEA_A1209	-	COG0584C	glycerophosphoryl diester phosphodiesterase
+1164603..1165790	+	395	225852664	-	BMEA_A1210	-	COG3146S	hypothetical protein
+1165862..1166284	+	140	225852665	-	BMEA_A1211	-	COG0537FGR	histidine triad protein
+1166391..1168865	-	824	225852666	clpA	BMEA_A1212	-	COG0542O	ATP-dependent Clp protease ATP-binding subunit ClpA
+1168872..1169222	-	116	225852667	-	BMEA_A1213	-	COG2127S	ATP-dependent Clp protease adaptor protein ClpS
+1169283..1169474	+	63	225852668	-	BMEA_A1214	-	-	hypothetical protein
+1169708..1171126	+	472	225852669	-	BMEA_A1215	-	COG1686M	serine-type D-Ala-D-Ala carboxypeptidase
+1171158..1171499	+	113	225852670	-	BMEA_A1216	-	-	hypothetical protein
+1171613..1172050	-	145	225852671	-	BMEA_A1218	-	COG5458	hypothetical protein
+1172139..1173542	-	467	225852672	sdaA	BMEA_A1220	-	COG1760E	L-serine ammonia-lyase
+1173740..1173865	-	41	225852673	-	BMEA_A1221	-	-	hypothetical protein
+1174064..1174858	-	264	225852674	-	BMEA_A1222	-	COG1434S	hypothetical protein
+1176029..1176415	-	128	225852675	-	BMEA_A1223	-	COG0789K	MerR family transcriptional regulator
+1176653..1177018	+	121	225852676	-	BMEA_A1224	-	-	hypothetical protein
+1177033..1177380	+	115	225852677	-	BMEA_A1225	-	-	hypothetical protein
+1177451..1177765	+	104	225852678	-	BMEA_A1226	-	-	hypothetical protein
+1178061..1178528	+	155	225852679	queF	BMEA_A1227	-	COG0780R	7-cyano-7-deazaguanine reductase
+1178532..1178681	-	49	225852680	-	BMEA_A1228	-	-	hypothetical protein
+1178659..1178835	+	58	225852681	-	BMEA_A1229	-	-	hypothetical protein
+1178867..1179409	+	180	225852682	-	BMEA_A1230	-	COG3803S	hypothetical protein
+1179412..1180824	-	470	225852683	-	BMEA_A1231	-	COG3800R	hypothetical protein
+1181773..1182507	+	244	225852684	-	BMEA_A1232	-	COG4799I	propionyl-CoA carboxylase subunit beta
+1182592..1184595	+	667	225852685	-	BMEA_A1233	-	COG4770I	propionyl-coenzyme A carboxylase subunit alpha
+1184656..1186794	+	712	225852686	-	BMEA_A1234	-	COG1884I	methylmalonyl-CoA mutase
+1186901..1187263	-	120	225852687	-	BMEA_A1235	-	-	hypothetical protein
+1187450..1189498	-	682	225852688	-	BMEA_A1236	-	COG4666R	TRAP transporter transmembrane protein
+1189539..1189685	-	48	225852689	-	BMEA_A1237	-	-	hypothetical protein
+1189735..1190724	-	329	225852690	-	BMEA_A1238	-	COG2358R	TRAP transporter solute receptor
+1190870..1191703	-	277	225852691	murI	BMEA_A1239	-	COG0796M	glutamate racemase
+1191700..1192530	-	276	225852692	-	BMEA_A1240	-	COG0565J	TrmH family RNA methyltransferase
+1192710..1193294	+	194	225852693	-	BMEA_A1241	-	COG0693R	intracellular protease, PfpI family protein
+1193383..1193793	+	136	225852694	-	BMEA_A1242	-	COG4321R	hypothetical protein
+1193921..1195135	+	404	225852695	-	BMEA_A1243	-	COG0538C	isocitrate dehydrogenase
+1195357..1196802	+	481	225852696	-	BMEA_A1244	-	COG1785P	alkaline phosphatase
+1196954..1199611	-	885	225852697	alaS	BMEA_A1245	-	COG0013J	alanyl-tRNA synthetase
+1200004..1201089	-	361	225852698	recA	BMEA_A1246	-	COG0468L	recombinase A
+1201259..1201384	-	41	225852699	-	BMEA_A1247	-	-	hypothetical protein
+1201420..1202082	-	220	225852700	-	BMEA_A1248	-	COG2885M	OmpA/MotB domain-containing protein
+1202169..1202753	-	194	225852701	-	BMEA_A1249	-	COG4764S	lytic transglycosylase catalytic
+1202877..1204190	-	437	225852702	-	BMEA_A1250	-	COG2256L	recombination factor protein RarA
+1204337..1205761	-	474	225852703	degP	BMEA_A1251	-	COG0265O	protease Do
+1206041..1206469	-	142	225852704	rplQ	BMEA_A1252	-	COG0203J	50S ribosomal protein L17
+1206631..1207644	-	337	225852705	rpoA	BMEA_A1253	-	COG0202K	DNA-directed RNA polymerase subunit alpha
+1207760..1208149	-	129	225852706	-	BMEA_A1254	-	COG0100J	30S ribosomal protein S11
+1208277..1208645	-	122	225852707	-	BMEA_A1255	-	COG0099J	30S ribosomal protein S13
+1208639..1208812	+	57	225852708	-	BMEA_A1256	-	-	hypothetical protein
+1208955..1209539	-	194	225852709	-	BMEA_A1257	-	COG0563F	adenylate kinase
+1209536..1210876	-	446	225852710	secY	BMEA_A1258	-	COG0201U	preprotein translocase subunit SecY
+1211037..1211507	-	156	225852711	rplO	BMEA_A1259	-	COG0200J	50S ribosomal protein L15
+1211528..1211725	-	65	225852712	rpmD	BMEA_A1260	-	COG1841J	50S ribosomal protein L30
+1211843..1212403	-	186	225852713	rpsE	BMEA_A1261	-	COG0098J	30S ribosomal protein S5
+1212445..1212807	-	120	225852714	rplR	BMEA_A1262	-	COG0256J	50S ribosomal protein L18
+1212820..1213353	-	177	225852715	-	BMEA_A1263	-	COG0097J	50S ribosomal protein L6
+1213392..1213790	-	132	225852716	-	BMEA_A1264	-	COG0096J	30S ribosomal protein S8
+1213801..1214106	-	101	225852717	-	BMEA_A1265	-	COG0199J	30S ribosomal protein S14
+1214134..1214691	-	185	225852718	-	BMEA_A1266	-	COG0094J	50S ribosomal protein L5
+1214684..1214995	-	103	225852719	rplX	BMEA_A1267	-	COG0198J	50S ribosomal protein L24
+1215008..1215376	-	122	225852720	rplN	BMEA_A1268	-	COG0093J	50S ribosomal protein L14
+1215445..1215687	-	80	225852721	-	BMEA_A1269	-	COG0186J	30S ribosomal protein S17
+1215700..1215900	-	66	225852722	rpmC	BMEA_A1270	-	COG0255J	50S ribosomal protein L29
+1215913..1216326	-	137	225852723	rplP	BMEA_A1271	-	COG0197J	50S ribosomal protein L16
+1216365..1217075	-	236	225852724	rpsC	BMEA_A1272	-	COG0092J	30S ribosomal protein S3
+1217075..1217464	-	129	225852725	rplV	BMEA_A1273	-	COG0091J	50S ribosomal protein L22
+1217467..1217745	-	92	225852726	rpsS	BMEA_A1274	-	COG0185J	30S ribosomal protein S19
+1217761..1218594	-	277	225852727	rplB	BMEA_A1275	-	COG0090J	50S ribosomal protein L2
+1218616..1218909	-	97	225852728	-	BMEA_A1276	-	COG0089J	50S ribosomal protein L23
+1218906..1219526	-	206	225852729	-	BMEA_A1277	-	COG0088J	50S ribosomal protein L4
+1219526..1220239	-	237	225852730	-	BMEA_A1278	-	COG0087J	50S ribosomal protein L3
+1220269..1220577	-	102	225852731	rpsJ	BMEA_A1279	-	COG0051J	30S ribosomal protein S10
+1220638..1221813	-	391	225852732	tuf	BMEA_A1280	-	COG0050J	elongation factor Tu
+1221877..1223961	-	694	225852733	fusA	BMEA_A1281	-	COG0480J	elongation factor G
+1223992..1224462	-	156	225852734	rpsG	BMEA_A1282	-	COG0049J	30S ribosomal protein S7
+1224529..1224900	-	123	225852735	rpsL	BMEA_A1283	-	COG0048J	30S ribosomal protein S12
+1224990..1225124	-	44	225852736	-	BMEA_A1284	-	-	hypothetical protein
+1225332..1225691	+	119	225852737	-	BMEA_A1285	-	-	hypothetical protein
+1225798..1230000	-	1400	225852738	rpoC	BMEA_A1286	-	COG0086K	DNA-directed RNA polymerase subunit beta'
+1229997..1230122	-	41	225852739	-	BMEA_A1287	-	-	hypothetical protein
+1230149..1234282	-	1377	225852740	rpoB	BMEA_A1288	-	COG0085K	DNA-directed RNA polymerase subunit beta
+1234490..1234864	-	124	225852741	rplL	BMEA_A1289	-	COG0222J	50S ribosomal protein L7/L12
+1234916..1235434	-	172	225852742	-	BMEA_A1290	-	COG0244J	50S ribosomal protein L10
+1235825..1236526	-	233	225852743	rplA	BMEA_A1291	-	COG0081J	50S ribosomal protein L1
+1236531..1236959	-	142	225852744	rplK	BMEA_A1292	-	COG0080J	50S ribosomal protein L11
+1237162..1237689	-	175	225852745	nusG	BMEA_A1293	-	COG0250K	transcription antitermination protein NusG
+1237713..1237913	-	66	225852746	secE	BMEA_A1294	-	COG0690U	preprotein translocase subunit SecE
+1238587..1239762	-	391	225852747	tuf	BMEA_A1296	-	COG0050J	elongation factor Tu
+1239713..1239913	+	66	225852748	-	BMEA_A1297	-	-	hypothetical protein
+1240393..1241253	+	286	225852749	-	BMEA_A1300	-	COG0566J	TrmH family RNA methyltransferase
+1241314..1241787	-	157	225852750	-	BMEA_A1301	-	COG2905T	CBS domain-containing protein
+1241916..1242677	-	253	225852751	-	BMEA_A1302	-	COG0705R	rhomboid family protein
+1243036..1243677	+	213	225852752	-	BMEA_A1303	-	COG5388	hypothetical protein
+1243921..1244526	+	201	225852753	-	BMEA_A1304	-	COG3672S	transglutaminase family protein cysteine peptidase BTLCP
+1244605..1245132	-	175	225852754	-	BMEA_A1305	-	COG0663R	hypothetical protein
+1245196..1245588	-	130	225852755	-	BMEA_A1306	-	COG3293L	IS4 transposase
+1245585..1245953	-	122	225852756	-	BMEA_A1307	-	COG3293L	transposase
+1246247..1246501	-	84	225852757	-	BMEA_A1309	-	-	hypothetical protein
+1246749..1247573	-	274	225852758	cysE	BMEA_A1310	-	COG1045E	serine O-acetyltransferase
+1247748..1248518	-	256	225852759	-	BMEA_A1311	-	COG0596R	alpha/beta hydrolase
+1248552..1249031	-	159	225852760	-	BMEA_A1312	-	COG1430S	hypothetical protein
+1249405..1249986	-	193	225852761	-	BMEA_A1313	-	COG1278K	cold shock-like protein CspG
+1250110..1250247	-	45	225852762	-	BMEA_A1314	-	-	hypothetical protein
+1250348..1251376	-	342	225852763	-	BMEA_A1315	-	COG4395S	import inner membrane translocase subunit Tim44
+1251538..1253322	-	594	225852764	recJ	BMEA_A1316	-	COG0608L	single-stranded-DNA-specific exonuclease RecJ
+1253372..1254433	-	353	225852765	-	BMEA_A1317	-	COG1181M	D-alanyl-alanine synthetase A
+1254462..1254602	+	46	225852766	-	BMEA_A1318	-	-	hypothetical protein
+1254736..1255722	-	328	225852767	glpX	BMEA_A1319	-	COG1494G	fructose 1,6-bisphosphatase II
+1256115..1257434	-	439	225852768	-	BMEA_A1320	-	COG0460E	homoserine dehydrogenase
+1257570..1258790	-	406	225852769	-	BMEA_A1321	-	COG0436E	aminotransferase
+1258921..1259268	-	115	225852770	-	BMEA_A1322	-	-	hypothetical protein
+1259696..1259899	-	67	225852771	-	BMEA_A1323	-	-	hypothetical protein
+1261648..1261932	+	94	225852772	-	BMEA_A1327	-	COG3553S	hypothetical protein
+1262255..1262971	+	238	225852773	sfsA	BMEA_A1328	-	COG1489R	sugar fermentation stimulation protein A
+1262971..1263798	+	275	225852774	map	BMEA_A1329	-	COG0024J	methionine aminopeptidase
+1263854..1264603	+	249	225852775	-	BMEA_A1330	-	COG2003L	DNA repair protein RadC
+1264805..1265443	+	212	225852776	-	BMEA_A1331	-	COG3637M	hypothetical protein
+1265732..1266937	-	401	225852777	cbiE	BMEA_A1332	-	COG2242H	precorrin-6y C5,15-methyltransferase subunit CbiE
+1267011..1268306	+	431	225852778	cobG	BMEA_A1333	-	COG0155P	precorrin-3B synthase
+1268316..1268942	+	208	225852779	-	BMEA_A1334	-	COG2082H	precorrin-8X methylmutase
+1268942..1269676	+	244	225852780	cobI	BMEA_A1335	-	COG2243H	precorrin-2 C(20)-methyltransferase
+1269622..1271367	+	581	225852781	cobJ	BMEA_A1336	-	COG1010H	precorrin-3B C17-methyltransferase
+1271405..1271890	-	161	225852782	-	BMEA_A1337	-	-	hypothetical protein
+1272915..1273436	-	173	225852783	-	BMEA_A1339	-	COG1853R	4-hydroxyphenylacetate 3-monooxygenase reductase subunit
+1273485..1274672	+	395	225852784	-	BMEA_A1340	-	COG0683E	extracellular ligand-binding receptor
+1274658..1275641	-	327	225852785	-	BMEA_A1341	-	COG1270H	cobalamin biosynthesis protein
+1275678..1276676	-	332	225852786	-	BMEA_A1342	-	COG0079E	L-threonine-O-3-phosphate decarboxylase
+1276673..1277983	-	436	225852787	cobB	BMEA_A1343	-	COG1797H	cobyrinic acid a,c-diamide synthase
+1277980..1278858	-	292	225852788	cobA	BMEA_A1344	-	COG0007H	uroporphyrin-III C-methyltransferase
+1278919..1280028	+	369	225852789	cbiD	BMEA_A1345	-	COG1903H	cobalt-precorrin-6A synthase
+1280015..1280761	+	248	225852790	-	BMEA_A1346	-	COG2099H	cobalt-precorrin-6x reductase
+1280750..1281508	-	252	225852791	cobM	BMEA_A1347	-	COG2875H	precorrin-4 C11-methyltransferase
+1281568..1281963	-	131	225852792	-	BMEA_A1348	-	COG2073H	protein CobE
+1281956..1282402	-	148	225852793	-	BMEA_A1349	-	COG4103S	hypothetical protein
+1282562..1283347	+	261	225852794	-	BMEA_A1350	-	COG0730R	hypothetical protein
+1283344..1283772	-	142	225852795	-	BMEA_A1351	-	COG2510S	hypothetical protein
+1283772..1284410	-	212	225852796	cobO	BMEA_A1352	-	COG2109H	cob(I)yrinic acid a,c-diamide adenosyltransferase
+1284403..1288194	-	1263	225852797	cobN	BMEA_A1353	-	COG1429H	cobaltochelatase subunit CobN
+1288194..1289243	-	349	225852798	cobW	BMEA_A1354	-	COG0523R	cobalamin biosynthesis protein CobW
+1289247..1289768	-	173	225852799	-	BMEA_A1355	-	COG2087H	adenosylcobinamide kinase/adenosylcobinamide-phosphate guanylyltransferase
+1289774..1290490	-	238	225852800	cbtA	BMEA_A1356	-	COG5446S	cobalt transporter subunit CbtB
+1290579..1290767	-	62	225852801	cbtB	BMEA_A1357	-	-	cobalt transporter subunit CbtB
+1291081..1292532	-	483	225852802	cobQ	BMEA_A1359	-	COG1492H	cobyric acid synthase
+1292543..1292728	-	61	225852803	-	BMEA_A1360	-	-	hypothetical protein
+1292808..1293965	+	385	225852804	-	BMEA_A1361	-	COG1960I	acyl-CoA dehydrogenase
+1293997..1294887	+	296	225852805	mmsB	BMEA_A1362	-	COG2084I	3-hydroxyisobutyrate dehydrogenase
+1295123..1295290	-	55	225852806	-	BMEA_A1363	-	-	hypothetical protein
+1295597..1296547	-	316	225852807	-	BMEA_A1364	-	COG0583K	HTH-type transcriptional regulator PecT
+1296963..1297961	+	332	225852808	-	BMEA_A1365	-	COG4977K	hypothetical protein
+1300875..1301165	-	96	225852809	-	BMEA_A1367	-	-	hypothetical protein
+1301272..1303854	-	860	225852810	-	BMEA_A1368	-	COG3264M	mechanosensitive ion channel protein MscS
+1303978..1304562	-	194	225852811	-	BMEA_A1369	-	-	hypothetical protein
+1304614..1307151	+	845	225852812	secD	BMEA_A1370	-	COG0342U	bifunctional preprotein translocase subunit SecD/SecF
+1307229..1309088	+	619	225852813	-	BMEA_A1371	-	COG4651P	potassium efflux system protein
+1309088..1310059	+	323	225852814	-	BMEA_A1372	-	COG0392S	hypothetical protein
+1310937..1311767	-	276	225852815	cysW	BMEA_A1374	-	COG4208P	sulfate ABC transporter permease CysW
+1311754..1312620	-	288	225852816	cysT	BMEA_A1375	-	COG0555O	sulfate ABC transporter permease CysT
+1312747..1313751	-	334	225852817	-	BMEA_A1376	-	COG4150P	sulfate ABC transporter sulfate-binding protein
+1314017..1314202	-	61	225852818	-	BMEA_A1378	-	-	hypothetical protein
+1314382..1315950	-	522	225852819	-	BMEA_A1379	-	COG0861P	Integral membrane protein TerC
+1316368..1317030	-	220	225852820	-	BMEA_A1380	-	COG0586S	hypothetical protein
+1317020..1317133	+	37	225852821	-	BMEA_A1381	-	-	hypothetical protein
+1317927..1318466	+	179	225852822	-	BMEA_A1384	-	-	hypothetical protein
+1318600..1319022	-	140	225852823	-	BMEA_A1385	-	COG4154G	transport protein
+1319116..1319925	-	269	225852824	-	BMEA_A1386	-	COG1028IQR	short chain dehydrogenase
+1319940..1320719	-	259	225852825	-	BMEA_A1387	-	COG1129G	hypothetical protein
+1320733..1321860	-	375	225852826	-	BMEA_A1388	-	COG1172G	monosaccharide-transporting ATPase
+1322147..1323076	-	309	225852827	-	BMEA_A1389	-	COG1879G	periplasmic binding protein/LacI transcriptional regulator
+1323455..1324570	+	371	225852828	-	BMEA_A1390	-	COG0673R	1-carboxy-3-chloro-3,4-dihydroxycyclo hexa-1,5-diene dehydrogenase
+1324567..1325343	-	258	225852829	-	BMEA_A1391	-	COG1120PH	achromobactin transport ATP-binding protein cbrD
+1325340..1326341	-	333	225852830	-	BMEA_A1392	-	COG0609P	transport system permease
+1326334..1327173	-	279	225852831	-	BMEA_A1393	-	COG0614P	periplasmic binding protein
+1327187..1329049	-	620	225852832	-	BMEA_A1394	-	COG4206H	TonB-dependent receptor
+1329338..1329493	-	51	225852833	-	BMEA_A1396	-	-	hypothetical protein
+1329543..1330655	-	370	225852834	-	BMEA_A1397	-	COG0842V	ABC transporter
+1333423..1334490	-	355	225852835	-	BMEA_A1399	-	COG1566V	HlyD family secretion protein
+1334470..1334649	+	59	225852836	-	BMEA_A1400	-	-	hypothetical protein
+1335036..1336331	-	431	225852837	-	BMEA_A1401	-	COG1649S	hypothetical protein
+1336910..1337086	-	58	225852838	-	BMEA_A1402	-	-	hypothetical protein
+1337146..1337448	+	100	225852839	ureA	BMEA_A1403	-	COG0831E	urease subunit gamma
+1337445..1337978	+	177	225852840	ureB	BMEA_A1404	-	COG0832E	urease subunit beta
+1338018..1339739	+	573	225852841	ureC	BMEA_A1405	-	COG0804E	urease subunit alpha
+1339787..1340392	+	201	225852842	-	BMEA_A1406	-	COG2371O	urease accessory protein UreE
+1340364..1341095	+	243	225852843	-	BMEA_A1407	-	COG0830O	urease accessory protein UreF
+1341111..1341749	+	212	225852844	ureG	BMEA_A1408	-	COG0378OK	urease accessory protein UreG
+1341749..1342657	+	302	225852845	-	BMEA_A1409	-	COG0829O	urease accessory protein UreD
+1342667..1343716	+	349	225852846	yut	BMEA_A1410	-	COG4413E	urea transporter
+1343743..1344501	+	252	225852847	-	BMEA_A1411	-	COG5266P	cobalt ABC transporter periplasmic binding protein CbiN
+1344521..1345156	+	211	225852848	-	BMEA_A1412	-	COG0310P	cobalt transport protein CbiM
+1345153..1345779	+	208	225852849	-	BMEA_A1413	-	-	CbiL protein
+1345776..1346540	+	254	225852850	cbiQ	BMEA_A1414	-	COG0619P	cobalt ABC transporter permease CbiQ
+1346537..1347256	+	239	225852851	-	BMEA_A1415	-	COG1122P	cobalt ABC transporter ATP-binding protein
+1347277..1348089	-	270	225852852	-	BMEA_A1416	-	COG3439S	camphor resistance protein CrcB
+1348102..1348491	-	129	225852853	crcB	BMEA_A1417	-	COG0239D	CrcB protein
+1348760..1349776	+	338	225852854	-	BMEA_A1418	-	-	hypothetical protein
+1349909..1350343	-	144	225852855	-	BMEA_A1419	-	COG3467R	pyridoxamine 5'-phosphate oxidase-like FMN-binding protein
+1350345..1350482	+	45	225852856	-	BMEA_A1420	-	-	hypothetical protein
+1350495..1351421	-	308	225852857	-	BMEA_A1421	-	COG0384R	phenazine biosynthesis protein PhzF family protein
+1351526..1352257	-	243	225852858	-	BMEA_A1422	-	-	NUDIX hydrolase
+1352277..1353386	-	369	225852859	-	BMEA_A1423	-	COG2374R	endonuclease/exonuclease/phosphatase
+1353463..1353978	+	171	225852860	-	BMEA_A1424	-	-	BA14K family protein
+1354025..1355257	-	410	225852861	-	BMEA_A1425	-	COG1167KE	GntR family transcriptional regulator
+1355390..1355671	-	93	225852862	-	BMEA_A1426	-	-	hypothetical protein
+1355693..1356712	-	339	225852863	ilvC	BMEA_A1427	-	COG0059EH	ketol-acid reductoisomerase
+1356768..1357409	-	213	225852864	-	BMEA_A1428	-	COG1309K	TetR family transcriptional regulator
+1357467..1357622	+	51	225852865	-	BMEA_A1429	-	-	hypothetical protein
+1357619..1359574	-	651	225852866	-	BMEA_A1430	-	COG3158P	potassium transport system protein kup
+1359717..1359875	-	52	225852867	-	BMEA_A1431	-	-	hypothetical protein
+1359944..1360684	-	246	225852868	-	BMEA_A1432	-	COG0854H	pyridoxine 5'-phosphate synthase
+1360981..1361382	+	133	225852869	-	BMEA_A1433	-	-	hypothetical protein
+1361383..1362549	-	388	225852870	-	BMEA_A1434	-	COG0507L	hypothetical protein
+1362688..1363260	-	190	225852871	ilvN	BMEA_A1435	-	COG0440E	acetolactate synthase 3 regulatory subunit
+1363279..1365102	-	607	225852872	ilvB	BMEA_A1436	-	COG0028EH	acetolactate synthase 3 catalytic subunit
+1365350..1366282	-	310	225852873	miaA	BMEA_A1437	-	COG0324J	tRNA delta(2)-isopentenylpyrophosphate transferase
+1366300..1367199	+	299	225852874	serB	BMEA_A1438	-	COG0560E	phosphoserine phosphatase SerB
+1368397..1368540	-	47	225852875	-	BMEA_A1440	-	-	hypothetical protein
+1368551..1370125	-	524	225852876	degP	BMEA_A1441	-	COG0265O	protease Do
+1370349..1370534	-	61	225852877	-	BMEA_A1442	-	COG3242S	hypothetical protein
+1370554..1371456	-	300	225852878	hflC	BMEA_A1443	-	COG0330O	HflC protein
+1371456..1372658	-	400	225852879	hflK	BMEA_A1444	-	COG0330O	HflK protein
+1372735..1373253	-	172	225852880	-	BMEA_A1445	-	COG0262H	dihydrofolate reductase type 3
+1373256..1374050	-	264	225852881	thyA	BMEA_A1446	-	COG0207F	thymidylate synthase
+1374151..1374462	-	103	225852882	-	BMEA_A1447	-	-	hypothetical protein
+1376249..1376395	-	48	225852884	-	BMEA_A1450	-	-	hypothetical protein
+1376626..1377252	+	208	225852885	-	BMEA_A1451	-	COG1309K	TetR family transcriptional regulator
+1377333..1377902	+	189	225852886	-	BMEA_A1452	-	COG3814S	hypothetical protein
+1378015..1378191	+	58	225852887	-	BMEA_A1453	-	-	hypothetical protein
+1378283..1378483	+	66	225852888	-	BMEA_A1454	-	-	hypothetical protein
+1378480..1378731	+	83	225852889	-	BMEA_A1455	-	COG4321R	hypothetical protein
+1378759..1382502	-	1247	225852890	-	BMEA_A1456	-	COG2982M	AsmA family protein
+1382557..1382697	-	46	225852891	-	BMEA_A1457	-	-	hypothetical protein
+1382694..1384100	-	468	225852892	-	BMEA_A1458	-	COG0277C	hypothetical protein
+1384125..1384634	-	169	225852893	-	BMEA_A1459	-	COG4702S	hypothetical protein
+1384754..1385830	+	358	225852894	-	BMEA_A1460	-	COG2112T	serine/threonine protein kinase
+1385889..1388465	+	858	225852895	-	BMEA_A1461	-	COG0210L	ATP-dependent DNA helicase PcrA
+1388539..1389036	-	165	225852896	-	BMEA_A1462	-	COG3045S	CreA family protein
+1389101..1389790	-	229	225852897	-	BMEA_A1463	-	COG0110R	phosphonate metabolim protein
+1389899..1390489	+	196	225852898	-	BMEA_A1464	-	COG1999R	electron transport protein SCO1/SenC
+1390527..1391384	+	285	225852899	-	BMEA_A1465	-	COG2264J	ribosomal protein L11 methyltransferase
+1391461..1393287	+	608	225852900	-	BMEA_A1466	-	COG0006E	peptidase M24
+1393288..1393992	-	234	225852901	-	BMEA_A1467	-	COG5587S	hypothetical protein
+1393992..1396151	-	719	225852902	ligA	BMEA_A1468	-	COG0272L	NAD-dependent DNA ligase LigA
+1396337..1398016	-	559	225852903	recN	BMEA_A1469	-	COG0497L	DNA repair protein RecN
+1398029..1398892	-	287	225852904	yfiO	BMEA_A1470	-	COG4105R	outer membrane assembly lipoprotein YfiO
+1398994..1399239	+	81	225852905	-	BMEA_A1471	-	-	hypothetical protein
+1399299..1400159	-	286	225852906	lpxC	BMEA_A1472	-	COG0774M	UDP-3-O-[3-hydroxymyristoyl] N-acetylglucosamine deacetylase
+1400699..1402399	-	566	225852907	ftsZ	BMEA_A1473	-	COG0206D	cell division protein FtsZ
+1402496..1403818	-	440	225852908	ftsA	BMEA_A1474	-	COG0849D	cell division protein FtsA
+1403815..1404681	-	288	225852909	-	BMEA_A1475	-	COG1589M	cell division protein FtsQ
+1404738..1405664	-	308	225852910	-	BMEA_A1476	-	COG1181M	D-alanine--D-alanine ligase
+1405907..1406875	-	322	225852911	murB	BMEA_A1477	-	COG0812M	UDP-N-acetylenolpyruvoylglucosamine reductase
+1406875..1408290	-	471	225852912	murC	BMEA_A1478	-	COG0773M	UDP-N-acetylmuramate--L-alanine ligase
+1408287..1409426	-	379	225852913	murG	BMEA_A1479	-	COG0707M	undecaprenyldiphospho-muramoylpentapeptide beta-N- acetylglucosaminyltransferase
+1409653..1410810	-	385	225852914	ftsW	BMEA_A1480	-	COG0772D	cell division protein FtsW
+1410810..1412213	-	467	225852915	murD	BMEA_A1481	-	COG0771M	UDP-N-acetylmuramoyl-L-alanyl-D-glutamate synthetase
+1412226..1413308	-	360	225852916	mraY	BMEA_A1482	-	COG0472M	phospho-N-acetylmuramoyl-pentapeptide-transferase
+1413335..1414780	-	481	225852917	murF	BMEA_A1483	-	COG0770M	UDP-N-acetylmuramoyl-tripeptide--D-alanyl-D-alanine ligase
+1414777..1416243	-	488	225852918	murE	BMEA_A1484	-	COG0769M	UDP-N-acetylmuramoylalanyl-D-glutamate--2,6-diaminopimelate ligase
+1416304..1418127	-	607	225852919	-	BMEA_A1485	-	COG0768M	penicillin-binding protein 2
+1418118..1418531	-	137	225852920	-	BMEA_A1486	-	COG5462S	hypothetical protein
+1418536..1419576	-	346	225852921	mraW	BMEA_A1487	-	COG0275M	S-adenosyl-methyltransferase MraW
+1419554..1419823	+	89	225852922	-	BMEA_A1488	-	-	hypothetical protein
+1420018..1421388	+	456	225852923	-	BMEA_A1489	-	COG1914P	manganese transport protein MntH
+1422090..1422734	-	214	225852924	-	BMEA_A1493	-	COG0741M	lytic transglycosylase catalytic
+1423075..1423881	-	268	225852925	-	BMEA_A1494	-	COG3023V	N-acetylmuramoyl-L-alanine amidase family 2
+1423878..1424588	-	236	225852926	-	BMEA_A1495	-	COG1076O	DnaJ-like protein djlA
+1424708..1425112	-	134	225852927	-	BMEA_A1496	-	-	hypothetical protein
+1425416..1426249	+	277	225852928	-	BMEA_A1497	-	COG3757M	family 25 glycosyl hydrolase
+1426361..1427602	+	413	225852929	-	BMEA_A1498	-	COG2951M	lytic murein transglycosylase
+1427664..1428599	+	311	225852930	-	BMEA_A1499	-	COG0679R	auxin efflux carrier protein
+1429034..1429945	-	303	225852931	metF	BMEA_A1500	-	COG0685E	5,10-methylenetetrahydrofolate reductase
+1429991..1431016	-	341	225852932	-	BMEA_A1501	-	COG2226H	methyltransferase type 11
+1431136..1431459	+	107	225852933	-	BMEA_A1502	-	COG5586S	hypothetical protein
+1431514..1432839	-	441	225852934	cit	BMEA_A1503	-	COG2814G	metabolite:proton symporter family protein
+1432847..1433101	+	84	225852935	-	BMEA_A1504	-	-	hypothetical protein
+1433275..1433940	-	221	225852936	-	BMEA_A1505	-	COG4106R	trans-aconitate 2-methyltransferase
+1434114..1435763	-	549	225852937	-	BMEA_A1506	-	COG0488R	putative ABC transporter ATP-binding protein
+1435843..1436022	-	59	225852938	-	BMEA_A1507	-	-	hypothetical protein
+1436259..1437203	+	314	225852939	-	BMEA_A1508	-	COG2267I	lysophospholipase L2
+1438000..1438686	-	228	225852940	-	BMEA_A1510	-	COG3822R	hypothetical protein
+1439037..1440284	+	415	225852941	-	BMEA_A1511	-	COG4638PR	biphenyl dioxygenase subunit alpha
+1440318..1441436	+	372	225852942	-	BMEA_A1512	-	COG1018C	ferredoxin, leaf L-A
+1441439..1441660	-	73	225852943	-	BMEA_A1513	-	COG2824P	PhnA protein
+1441798..1442427	+	209	225852944	-	BMEA_A1514	-	COG1335Q	nicotinamidase
+1442424..1443485	-	353	225852945	-	BMEA_A1515	-	COG2899S	hypothetical protein
+1443832..1444098	+	88	225852946	-	BMEA_A1516	-	-	hypothetical protein
+1444054..1444233	-	59	225852947	-	BMEA_A1517	-	-	hypothetical protein
+1444296..1445399	-	367	225852948	-	BMEA_A1518	-	COG3049M	penicillin acylase precursor
+1445675..1446478	+	267	225852949	-	BMEA_A1519	-	-	hypothetical protein
+1446682..1446801	-	39	225852950	-	BMEA_A1520	-	-	hypothetical protein
+1447085..1447270	+	61	225852951	-	BMEA_A1521	-	-	hypothetical protein
+1447324..1447551	-	75	225852952	-	BMEA_A1522	-	-	hypothetical protein
+1447678..1448031	+	117	225852953	-	BMEA_A1523	-	-	hypothetical protein
+1448192..1448764	-	190	225852954	-	BMEA_A1524	-	-	hypothetical protein
+1449000..1449494	+	164	225852955	-	BMEA_A1525	-	COG4973L	phage integrase
+1449912..1450664	+	250	225852956	-	BMEA_A1527	-	COG2968S	hypothetical protein
+1450838..1451182	-	114	225852957	-	BMEA_A1528	-	-	hypothetical protein
+1451426..1451884	-	152	225852958	-	BMEA_A1529	-	COG2983S	hypothetical protein
+1452076..1452366	-	96	225852959	-	BMEA_A1530	-	COG5453S	hypothetical protein
+1452390..1454408	-	672	225852960	rpoD	BMEA_A1531	-	COG0568K	RNA polymerase sigma factor RpoD
+1454439..1454594	-	51	225852961	-	BMEA_A1532	-	-	hypothetical protein
+1454876..1456843	-	655	225852962	dnaG	BMEA_A1533	-	COG0358L	DNA primase
+1457213..1458889	+	558	225852963	-	BMEA_A1534	-	COG1283P	Na+ cotransporter
+1458956..1459408	-	150	225852964	-	BMEA_A1535	-	COG1610S	GatB/Yqey domain-containing protein
+1459788..1461011	+	407	225852965	carA	BMEA_A1536	-	COG0505EF	carbamoyl phosphate synthase small subunit
+1461183..1462109	-	308	225852966	-	BMEA_A1538	-	COG2321R	hypothetical protein
+1462226..1462744	-	172	225852967	-	BMEA_A1539	-	COG5395	hypothetical protein
+1462830..1463534	+	234	225852968	-	BMEA_A1540	-	COG3279KT	response regulator receiver protein
+1463864..1467352	+	1162	225852969	carB	BMEA_A1541	-	COG0458EF	carbamoyl phosphate synthase large subunit
+1467673..1468011	+	112	225852970	-	BMEA_A1542	-	-	hypothetical protein
+1468069..1469934	-	621	225852971	-	BMEA_A1543	-	COG4178R	ABC transporter-like protein
+1470124..1470585	+	153	225852972	-	BMEA_A1544	-	COG1051F	NUDIX hydrolase
+1470778..1470987	+	69	225852973	-	BMEA_A1545	-	COG1278K	hypothetical protein
+1471116..1471727	-	203	225852974	-	BMEA_A1546	-	COG0625O	protein GstA
+1471977..1473179	+	400	225852975	-	BMEA_A1547	-	COG0436E	aspartate aminotransferase
+1473381..1473596	+	71	225852976	-	BMEA_A1548	-	-	hypothetical protein
+1473648..1474553	-	301	225852977	-	BMEA_A1549	-	COG0583K	hypothetical protein
+1474624..1475598	-	324	225852978	trxB	BMEA_A1550	-	COG0492O	thioredoxin-disulfide reductase
+1475920..1477320	+	466	225852979	-	BMEA_A1551	-	COG0168P	cation transporter
+1477327..1477491	+	54	225852980	-	BMEA_A1552	-	-	hypothetical protein
+1477578..1478048	+	156	225852981	-	BMEA_A1553	-	COG1522K	leucine-responsive regulatory protein
+1478055..1479119	-	354	225852982	-	BMEA_A1554	-	COG0438M	lipopolysaccharide core biosynthesis mannosyltransferase lpcC
+1479126..1479599	-	157	225852983	greA	BMEA_A1555	-	COG0782K	transcription elongation factor GreA
+1479868..1480923	-	351	225852984	-	BMEA_A1556	-	-	hypothetical protein
+1480913..1481101	-	62	225852985	-	BMEA_A1557	-	-	hypothetical protein
+1481079..1481990	+	303	225852986	-	BMEA_A1558	-	COG0697GER	hypothetical protein
+1481995..1482345	-	116	225852987	-	BMEA_A1559	-	COG3169S	hypothetical protein
+1482623..1483534	+	303	225852988	-	BMEA_A1560	-	COG3921S	extensin family protein
+1483667..1484056	-	129	225852989	-	BMEA_A1561	-	COG1607I	thioesterase superfamily protein
+1484984..1487806	+	940	225852990	uvrB	BMEA_A1563	-	COG0556L	excinuclease ABC subunit B
+1489236..1489451	+	71	225852991	-	BMEA_A1565	-	COG1278K	hypothetical protein
+1489467..1489790	+	107	225852992	-	BMEA_A1566	-	-	hypothetical protein
+1489868..1490374	+	168	225852993	-	BMEA_A1567	-	-	hypothetical protein
+1490433..1491089	-	218	225852994	-	BMEA_A1568	-	COG0491R	beta-lactamase domain-containing protein
+1491303..1491584	-	93	225852995	-	BMEA_A1569	-	-	hypothetical protein
+1491759..1492067	+	102	225852996	-	BMEA_A1570	-	-	hypothetical protein
+1492051..1492644	+	197	225852997	-	BMEA_A1572	-	COG1846K	HTH-type transcriptional regulator PetP
+1492726..1493451	+	241	225852998	-	BMEA_A1573	-	COG0745TK	protein PetR
+1493595..1494938	+	447	225852999	-	BMEA_A1574	-	COG0642T	integral membrane sensor signal transduction histidine kinase
+1494942..1495070	+	42	225853000	-	BMEA_A1575	-	-	hypothetical protein
+1495370..1495717	-	115	225853001	csaA	BMEA_A1577	-	COG0073R	export-related chaperone CsaA
+1495857..1496357	-	166	225853002	-	BMEA_A1578	-	COG5465S	hypothetical protein
+1496419..1496511	-	30	225853003	-	BMEA_A1579	-	-	hypothetical protein
+1496786..1497106	-	106	225853004	-	BMEA_A1580	-	COG2960S	hypothetical protein
+1497124..1497264	-	46	225853005	-	BMEA_A1581	-	-	hypothetical protein
+1497291..1498136	+	281	225853006	lgt	BMEA_A1582	-	COG0682M	prolipoprotein diacylglyceryl transferase
+1498129..1499226	+	365	225853007	-	BMEA_A1583	-	COG1565S	hypothetical protein
+1499406..1500257	+	283	225853008	-	BMEA_A1584	-	COG1496S	hypothetical protein
+1500370..1501521	+	383	225853009	-	BMEA_A1585	-	COG0006E	Xaa-Pro dipeptidase
+1501575..1502129	+	184	225853010	-	BMEA_A1586	-	-	hypothetical protein
+1502468..1503400	+	310	225853011	prs	BMEA_A1587	-	COG0462FE	ribose-phosphate pyrophosphokinase
+1503548..1505089	-	513	225853012	-	BMEA_A1588	-	COG0433R	hypothetical protein
+1505523..1505693	+	56	225853013	-	BMEA_A1589	-	-	hypothetical protein
+1505781..1506404	+	207	225853014	-	BMEA_A1590	-	COG1825J	50S ribosomal protein L25/general stress protein Ctc
+1506433..1507185	+	250	225853015	pth	BMEA_A1591	-	COG0193J	peptidyl-tRNA hydrolase
+1507273..1508376	+	367	225853016	ychF	BMEA_A1592	-	COG0012J	GTP-dependent nucleic acid-binding protein EngD
+1508438..1508938	+	166	225853017	-	BMEA_A1593	-	COG2030I	MaoC domain-containing protein dehydratase
+1508935..1509417	+	160	225853018	-	BMEA_A1594	-	COG2030I	MaoC domain-containing protein dehydratase
+1509459..1510019	-	186	225853019	apt	BMEA_A1595	-	COG0503F	adenine phosphoribosyltransferase
+1510064..1510180	+	38	225853020	-	BMEA_A1596	-	-	hypothetical protein
+1510327..1511214	-	295	225853021	-	BMEA_A1597	-	COG2857C	cytochrome c1 precursor
+1511228..1512526	-	432	225853022	-	BMEA_A1598	-	COG1290C	cytochrome b
+1512548..1513111	-	187	225853023	petA	BMEA_A1599	-	COG0723C	ubiquinol-cytochrome c reductase iron-sulfur subunit
+1513363..1515231	-	622	225853024	-	BMEA_A1600	-	COG1132V	ABC transporter-like protein
+1515385..1517277	-	630	225853025	-	BMEA_A1601	-	COG1132V	ABC transporter-like protein
+1517398..1517877	+	159	225853026	-	BMEA_A1602	-	COG0219J	tRNA/rRNA methyltransferase SpoU
+1517912..1519024	+	370	225853027	-	BMEA_A1603	-	COG5042F	purine nucleoside permease
+1519136..1519396	-	86	225853028	-	BMEA_A1604	-	-	hypothetical protein
+1519690..1520601	+	303	225853029	-	BMEA_A1605	-	COG0408H	coproporphyrinogen III oxidase
+1520635..1521129	-	164	225853030	-	BMEA_A1606	-	COG3153R	GCN5-related N-acetyltransferase
+1522162..1523433	-	423	225853031	-	BMEA_A1608	-	COG0617J	CCA-adding protein
+1523430..1524053	-	207	225853032	-	BMEA_A1609	-	-	NUDIX hydrolase
+1524050..1524715	-	221	225853033	-	BMEA_A1610	-	COG3816S	hypothetical protein
+1524835..1525842	+	335	225853034	-	BMEA_A1611	-	COG0714R	hypothetical protein
+1525842..1526774	+	310	225853035	-	BMEA_A1612	-	COG1721R	hypothetical protein
+1526771..1529620	+	949	225853036	-	BMEA_A1613	-	-	N-terminal double-transmembrane domain-containing protein
+1529684..1531753	+	689	225853037	-	BMEA_A1614	-	COG5426S	hypothetical protein
+1531821..1532327	-	168	225853038	-	BMEA_A1615	-	COG3153R	GCN5-related N-acetyltransferase
+1532631..1533614	+	327	225853039	-	BMEA_A1616	-	COG0435O	glutathione S-transferase
+1533762..1534445	+	227	225853040	-	BMEA_A1617	-	COG3047M	outer membrane protein alkL precursor
+1534479..1534934	-	151	225853041	-	BMEA_A1618	-	COG1051F	NUDIX hydrolase
+1535043..1535945	+	300	225853042	-	BMEA_A1619	-	COG1409R	metallophosphoesterase
+1536146..1537873	-	575	225853043	leuA	BMEA_A1620	-	COG0119E	2-isopropylmalate synthase
+1538005..1538163	-	52	225853044	-	BMEA_A1621	-	-	hypothetical protein
+1538178..1539086	-	302	225853045	-	BMEA_A1622	-	COG0053P	cation diffusion facilitator family transporter
+1539096..1539377	+	93	225853046	-	BMEA_A1623	-	-	hypothetical protein
+1539555..1541750	-	731	225853047	-	BMEA_A1624	-	COG0147EH	anthranilate synthase
+1542429..1542890	+	153	225853048	-	BMEA_A1626	-	COG1522K	leucine-responsive regulatory protein
+1543031..1543441	+	136	225853049	-	BMEA_A1627	-	COG1846K	MarR family transcriptional regulator
+1543536..1544828	+	430	225853050	-	BMEA_A1628	-	COG2271G	major facilitator superfamily protein
+1544823..1545788	-	321	225853051	-	BMEA_A1629	-	COG5459J	hypothetical protein
+1545794..1546990	-	398	225853052	-	BMEA_A1630	-	COG5345S	hypothetical protein
+1546987..1547223	-	78	225853053	-	BMEA_A1631	-	-	hypothetical protein
+1547426..1548394	+	322	225853054	choX	BMEA_A1632	-	COG2113E	choline ABC transporter periplasmic binding protein
+1548483..1549319	+	278	225853055	choW	BMEA_A1633	-	COG4176E	choline ABC transporter permease
+1549489..1550535	+	348	225853056	choV	BMEA_A1634	-	COG4175E	choline ABC transporter ATP-binding protein
+1550809..1551657	-	282	225853057	-	BMEA_A1635	-	COG1123R	hypothetical protein
+1551654..1552502	-	282	225853058	-	BMEA_A1636	-	COG0444EP	ABC transporter-like protein
+1552508..1553416	-	302	225853059	-	BMEA_A1637	-	COG1173EP	dipeptide transport system permease DppC
+1553424..1554431	-	335	225853060	-	BMEA_A1638	-	COG0601EP	dipeptide transport system permease DppB
+1556596..1556772	+	58	225853061	-	BMEA_A1640	-	COG0748P	pyridoxamine 5'-phosphate oxidase-like FMN-binding protein
+1557013..1557240	-	75	225853062	-	BMEA_A1641	-	-	hypothetical protein
+1557230..1557577	+	115	225853063	-	BMEA_A1642	-	COG0640K	nodulation protein nolR
+1557607..1558437	+	276	225853064	-	BMEA_A1643	-	COG0566J	tRNA/rRNA methyltransferase SpoU
+1558659..1559855	-	398	225853065	trmU	BMEA_A1644	-	COG0482J	tRNA-specific 2-thiouridylase MnmA
+1559893..1560051	-	52	225853066	-	BMEA_A1645	-	-	hypothetical protein
+1560160..1560435	+	91	225853067	-	BMEA_A1646	-	-	hypothetical protein
+1560978..1561913	-	311	225853068	-	BMEA_A1647	-	COG1196D	myosin-14
+1562143..1562739	-	198	225853069	-	BMEA_A1648	-	COG5400	hypothetical protein
+1563009..1563152	-	47	225853070	-	BMEA_A1649	-	-	hypothetical protein
+1563151..1563780	+	209	225853071	-	BMEA_A1650	-	COG5385	hypothetical protein
+1563893..1564591	-	232	225853072	-	BMEA_A1651	-	COG0745TK	hypothetical protein
+1565123..1565515	+	130	225853073	-	BMEA_A1652	-	-	hypothetical protein
+1565599..1566723	-	374	225853074	-	BMEA_A1653	-	COG0399M	pleiotropic regulatory protein
+1566883..1567839	-	318	225853075	-	BMEA_A1654	-	COG0673R	oxidoreductase domain-containing protein
+1568241..1568495	+	84	225853076	-	BMEA_A1656	-	-	hypothetical protein
+1568671..1569453	-	260	225853077	-	BMEA_A1657	-	COG3306M	lacto-N-neotetraose biosynthesis glycosyltransferase lgtE
+1570198..1573305	+	1035	225853078	-	BMEA_A1659	-	COG0642T	PAS domain S-box-containing protein
+1573525..1573656	-	43	225853079	-	BMEA_A1660	-	-	hypothetical protein
+1574046..1575983	+	645	225853080	-	BMEA_A1661	-	COG2982M	AsmA family protein
+1575991..1576812	-	273	225853081	-	BMEA_A1662	-	COG1177E	Spermidine/putrescine transport system permease potC
+1576814..1577725	-	303	225853082	-	BMEA_A1663	-	COG1176E	binding-protein-dependent transport systems inner membrane protein
+1577741..1578886	-	381	225853083	-	BMEA_A1664	-	COG3842E	polyamine ABC transporter ATP-binding protein
+1579128..1580231	-	367	225853084	-	BMEA_A1665	-	COG0687E	hypothetical protein
+1582114..1583403	+	429	225853085	aceA	BMEA_A1667	-	COG2224C	isocitrate lyase
+1583438..1583674	+	78	225853086	-	BMEA_A1668	-	-	hypothetical protein
+1584387..1585154	+	255	225853087	-	BMEA_A1670	-	COG1028IQR	7-alpha-hydroxysteroid dehydrogenase
+1585220..1586014	+	264	225853088	-	BMEA_A1671	-	COG1028IQR	hypothetical protein
+1586021..1587781	+	586	225853089	-	BMEA_A1672	-	-	hypothetical protein
+1587797..1588411	+	204	225853090	-	BMEA_A1673	-	COG2095U	hypothetical protein
+1588635..1589243	+	202	225853091	-	BMEA_A1674	-	COG3637M	outer membrane protein Omp31
+1589380..1590930	-	516	225853092	-	BMEA_A1675	-	COG1752R	patatin
+1591483..1591764	+	93	225853093	-	BMEA_A1676	-	-	hypothetical protein
+1592041..1592784	-	247	225853094	-	BMEA_A1677	-	COG2376G	dihydroxyacetone kinase subunit L
+1592754..1594838	-	694	225853095	-	BMEA_A1678	-	COG2390K	glycerone kinase
+1594997..1595653	-	218	225853096	-	BMEA_A1679	-	COG2376G	dihydroxyacetone kinase subunit L
+1595650..1596678	-	342	225853097	-	BMEA_A1680	-	COG2376G	glycerone kinase
+1597541..1598530	-	329	225853098	-	BMEA_A1682	-	COG1879G	rhizopine-binding protein
+1598706..1599710	-	334	225853099	-	BMEA_A1683	-	COG1172G	hypothetical protein
+1599806..1601227	-	473	225853100	-	BMEA_A1684	-	COG1129G	ribose/galactose/methyl galactoside import ATP-binding protein 2
+1601579..1601896	+	105	225853101	-	BMEA_A1685	-	COG5591S	hypothetical protein
+1602026..1602154	-	42	225853102	-	BMEA_A1686	-	-	hypothetical protein
+1602253..1603914	+	553	225853103	-	BMEA_A1687	-	COG2303E	choline dehydrogenase
+1604563..1604715	+	50	225853104	-	BMEA_A1690	-	-	hypothetical protein
+1607670..1607912	+	80	225853105	-	BMEA_A1692	-	-	hypothetical protein
+1610613..1611434	-	273	225853106	-	BMEA_A1696	-	COG1414K	regulatory protein IclR
+1611552..1613003	+	483	225853107	-	BMEA_A1697	-	COG1012C	succinic semialdehyde dehydrogenase
+1613120..1613710	+	196	225853108	-	BMEA_A1698	-	COG1238S	hypothetical protein
+1613823..1614341	+	172	225853109	-	BMEA_A1699	-	COG1495O	disulfide bond formation protein B
+1614358..1614930	-	190	225853110	-	BMEA_A1700	-	COG1403V	HNH endonuclease
+1615204..1615902	-	232	225853111	-	BMEA_A1701	-	COG0122L	HhH-GPD family protein
+1615924..1616799	+	291	225853112	-	BMEA_A1702	-	COG0008J	glutamyl-Q tRNA(Asp) synthetase
+1616942..1619128	+	728	225853113	glcB	BMEA_A1703	-	COG2225C	malate synthase G
+1619203..1619304	+	33	225853114	-	BMEA_A1704	-	-	hypothetical protein
+1619433..1619927	+	164	225853115	-	BMEA_A1705	-	COG1247M	GCN5-related N-acetyltransferase
+1619986..1620897	-	303	225853116	rpoH	BMEA_A1706	-	COG0568K	RNA polymerase factor sigma-32
+1621328..1622371	-	347	225853117	-	BMEA_A1707	-	COG0564J	pseudouridine synthase
+1622388..1622864	+	158	225853118	-	BMEA_A1708	-	-	hypothetical protein
+1622898..1623071	+	57	225853119	-	BMEA_A1709	-	-	hypothetical protein
+1623243..1623668	+	141	225853120	-	BMEA_A1711	-	COG0735P	ferric uptake regulation protein
+1623904..1624839	-	311	225853121	-	BMEA_A1712	-	COG3920T	signal transduction histidine kinase
+1625107..1625316	-	69	225853122	-	BMEA_A1713	-	-	hypothetical protein
+1625421..1626215	-	264	225853123	-	BMEA_A1714	-	COG0784T	two-component response regulator
+1626661..1627233	+	190	225853124	-	BMEA_A1715	-	COG1595K	RNA polymerase sigma factor
+1627433..1628875	+	480	225853125	-	BMEA_A1716	-	COG3920T	signal transduction histidine kinase
+1628936..1629367	-	143	225853126	-	BMEA_A1717	-	-	hypothetical protein
+1629376..1629729	-	117	225853127	-	BMEA_A1718	-	-	hypothetical protein
+1630908..1631066	-	52	225853128	-	BMEA_A1720	-	-	hypothetical protein
+1631197..1631400	+	67	225853129	-	BMEA_A1721	-	-	hypothetical protein
+1631517..1632440	+	307	225853130	exbB	BMEA_A1722	-	COG0811U	TonB-system energizer ExbB
+1632446..1632970	+	174	225853131	exbD	BMEA_A1723	-	COG0848U	TonB system transport protein ExbD
+1632937..1633788	+	283	225853132	-	BMEA_A1724	-	COG0810M	TonB family C-terminal domain-containing protein
+1633831..1634601	-	256	225853133	-	BMEA_A1725	-	COG3698S	hypothetical protein
+1636574..1637800	-	408	225853134	-	BMEA_A1727	-	COG0845M	RND family efflux transporter
+1638035..1638508	-	157	225853135	dut	BMEA_A1728	-	COG0756F	deoxyuridine 5'-triphosphate nucleotidohydrolase
+1638730..1639200	-	156	225853136	-	BMEA_A1729	-	COG1522K	AsnC family transcriptional regulator
+1639346..1639561	+	71	225853137	-	BMEA_A1730	-	-	hypothetical protein
+1641670..1643022	+	450	225853138	-	BMEA_A1734	-	COG2814G	hypothetical protein
+1643131..1644528	-	465	225853139	-	BMEA_A1735	-	-	hypothetical protein
+1644841..1646130	-	429	225853140	purA	BMEA_A1736	-	COG0104F	adenylosuccinate synthetase
+1646448..1646957	-	169	225853141	-	BMEA_A1737	-	COG0456R	GCN5-related N-acetyltransferase
+1646962..1648563	-	533	225853142	serA	BMEA_A1738	-	COG0111HE	D-3-phosphoglycerate dehydrogenase
+1648706..1649881	-	391	225853143	-	BMEA_A1739	-	COG1932HE	phosphoserine aminotransferase
+1650032..1650988	-	318	225853144	-	BMEA_A1741	-	COG0385R	bile acid:sodium symporter
+1651169..1651993	-	274	225853145	-	BMEA_A1742	-	COG3637M	porin opacity type
+1652178..1653557	-	459	225853146	glmM	BMEA_A1743	-	COG1109G	phosphoglucosamine mutase
+1653838..1655772	-	644	225853147	ftsH	BMEA_A1744	-	COG0465O	ATP-dependent metalloprotease FtsH
+1655908..1657254	-	448	225853148	tilS	BMEA_A1745	-	COG0037D	tRNA(Ile)-lysidine synthetase
+1657270..1658736	-	488	225853149	ygbF	BMEA_A1746	-	COG1729S	Tol-Pal system protein YbgF
+1659133..1659639	-	168	225853150	pal	BMEA_A1747	-	COG2885M	peptidoglycan-associated lipoprotein
+1659688..1659867	-	59	225853151	-	BMEA_A1748	-	-	hypothetical protein
+1659927..1661258	-	443	225853152	tolB	BMEA_A1749	-	COG0823U	translocation protein TolB
+1661314..1662384	-	356	225853153	-	BMEA_A1750	-	-	hypothetical protein
+1662392..1662844	-	150	225853154	tolR	BMEA_A1751	-	COG0848U	protein TolR
+1662891..1663601	-	236	225853155	tolQ	BMEA_A1752	-	COG0811U	protein TolQ
+1663637..1663804	+	55	225853156	-	BMEA_A1753	-	-	hypothetical protein
+1663976..1664257	-	93	225853157	-	BMEA_A1754	-	COG0824R	thioesterase superfamily protein
+1664422..1665462	-	346	225853158	ruvB	BMEA_A1755	-	COG2255L	Holliday junction DNA helicase RuvB
+1665503..1666120	-	205	225853159	ruvA	BMEA_A1756	-	COG0632L	Holliday junction DNA helicase RuvA
+1666125..1666646	-	173	225853160	ruvC	BMEA_A1757	-	COG0817L	Holliday junction resolvase
+1666748..1667254	-	168	225853161	-	BMEA_A1758	-	COG5317	hypothetical protein
+1667742..1668923	-	393	225853162	-	BMEA_A1759	-	COG4645S	hypothetical protein
+1669168..1669833	+	221	225853163	-	BMEA_A1760	-	COG0352H	thiamine-phosphate pyrophosphorylase
+1669834..1670922	+	362	225853164	-	BMEA_A1761	-	COG0790R	Sel1 domain-containing protein repeat-containing protein
+1671187..1671747	+	186	225853165	efp	BMEA_A1762	-	COG0231J	elongation factor P
+1671933..1672724	+	263	225853166	-	BMEA_A1763	-	COG0483G	inositol-phosphate phosphatase
+1672729..1672839	+	36	225853167	-	BMEA_A1764	-	-	hypothetical protein
+1672979..1674028	+	349	225853168	-	BMEA_A1765	-	-	hypothetical protein
+1674035..1675066	+	343	225853169	-	BMEA_A1766	-	COG1360N	hypothetical protein
+1675100..1676899	-	599	225853170	-	BMEA_A1767	-	COG1132V	ABC transporter ATP-binding protein/permease
+1677215..1677436	+	73	225853171	rpmE	BMEA_A1768	-	COG0254J	50S ribosomal protein L31
+1677664..1678410	-	248	225853172	-	BMEA_A1769	-	COG0217S	hypothetical protein
+1678631..1679323	+	230	225853173	-	BMEA_A1770	-	COG1802K	GntR family transcriptional regulator
+1679485..1680060	+	191	225853174	-	BMEA_A1771	-	COG1268R	BioY protein
+1680071..1680499	+	142	225853175	-	BMEA_A1772	-	COG3543S	hypothetical protein
+1680512..1681255	-	247	225853176	-	BMEA_A1773	-	COG0861P	integral membrane protein TerC
+1681466..1682290	-	274	225853177	-	BMEA_A1774	-	COG1692S	hypothetical protein
+1682399..1682995	-	198	225853178	-	BMEA_A1775	-	COG0212H	5,10-methenyltetrahydrofolate synthetase
+1683383..1683748	-	121	225853179	-	BMEA_A1778	-	COG3027S	hypothetical protein
+1683758..1684030	-	90	225853180	-	BMEA_A1779	-	-	hypothetical protein
+1684447..1686438	+	663	225853181	tkt	BMEA_A1780	-	COG0021G	transketolase
+1686579..1687586	+	335	225853182	gap	BMEA_A1781	-	COG0057G	glyceraldehyde-3-phosphate dehydrogenase type I
+1687654..1688844	+	396	225853183	-	BMEA_A1782	-	COG0126G	phosphoglycerate kinase
+1689135..1689299	-	54	225853184	-	BMEA_A1783	-	-	hypothetical protein
+1689573..1691483	+	636	225853185	-	BMEA_A1784	-	COG0365I	propionate--CoA ligase
+1691867..1692052	+	61	225853186	-	BMEA_A1786	-	-	hypothetical protein
+1692059..1692760	+	233	225853187	-	BMEA_A1787	-	COG2378K	hypothetical protein
+1693163..1693570	+	135	225853188	-	BMEA_A1788	-	COG2050Q	hypothetical protein
+1693648..1694337	-	229	225853189	-	BMEA_A1789	-	COG3820S	hypothetical protein
+1694465..1695469	-	334	225853190	-	BMEA_A1790	-	COG0604CR	quinone oxidoreductase, PIG3 family protein
+1695662..1695853	+	63	225853191	-	BMEA_A1791	-	COG5509	hypothetical protein
+1695951..1697189	+	412	225853192	-	BMEA_A1792	-	-	major facilitator superfamily protein
+1697332..1697511	-	59	225853193	-	BMEA_A1793	-	COG5570	hypothetical protein
+1697570..1697791	-	73	225853194	-	BMEA_A1794	-	-	hypothetical protein
+1697905..1698108	+	67	225853195	-	BMEA_A1795	-	COG5481	hypothetical protein
+1698206..1698694	+	162	225853196	purE	BMEA_A1796	-	COG0041F	phosphoribosylaminoimidazole carboxylase catalytic subunit
+1698711..1699799	+	362	225853197	purK	BMEA_A1797	-	COG0026F	phosphoribosylaminoimidazole carboxylase ATPase subunit
+1699966..1700160	+	64	225853198	-	BMEA_A1798	-	COG0257J	50S ribosomal protein L36
+1700198..1700887	+	229	225853199	-	BMEA_A1799	-	COG5010U	tetratricopeptide repeat protein
+1701139..1702575	-	478	225853200	pyk	BMEA_A1800	-	COG0469G	pyruvate kinase
+1702572..1703033	-	153	225853201	-	BMEA_A1801	-	COG5480S	hypothetical protein
+1703274..1704092	+	272	225853202	-	BMEA_A1802	-	COG3931E	N-formylglutamate amidohydrolase
+1704089..1704250	+	53	225853203	-	BMEA_A1803	-	-	hypothetical protein
+1704265..1704525	+	86	225853204	-	BMEA_A1804	-	COG3750S	hypothetical protein
+1704617..1706434	-	605	225853205	-	BMEA_A1805	-	COG0488R	ABC transporter-like protein
+1706582..1706866	-	94	225853206	-	BMEA_A1807	-	-	hypothetical protein
+1707000..1707656	-	218	225853207	-	BMEA_A1808	-	COG1564H	thiamine pyrophosphokinase
+1707963..1708967	+	334	225853208	thiB	BMEA_A1810	-	COG4143H	thiamine transporter substrate binding subunit
+1708943..1710595	+	550	225853209	thiP	BMEA_A1811	-	COG1178P	thiamine transporter membrane protein
+1710592..1711317	+	241	225853210	-	BMEA_A1812	-	COG3840H	thiamine ABC transporter ATP-binding protein
+1711584..1713065	+	493	225853211	-	BMEA_A1813	-	COG4784R	peptidase M48 Ste24p
+1713092..1713820	+	242	225853212	-	BMEA_A1814	-	COG2258S	MOSC domain-containing protein
+1713908..1714843	-	311	225853213	-	BMEA_A1815	-	COG0568K	RNA polymerase factor sigma-32
+1714884..1715087	+	67	225853214	-	BMEA_A1816	-	-	hypothetical protein
+1715007..1715216	-	69	225853215	-	BMEA_A1817	-	-	hypothetical protein
+1715188..1715763	-	191	225853216	-	BMEA_A1818	-	COG1329K	hypothetical protein
+1716281..1716619	-	112	225853217	-	BMEA_A1819	-	COG1146C	ferredoxin-2
+1716983..1717384	-	133	225853218	-	BMEA_A1820	-	COG1188J	RNA-binding S4 domain-containing protein
+1717420..1720506	-	1028	225853219	-	BMEA_A1821	-	COG0513LKJ	ATP-dependent helicase
+1720599..1722113	-	504	225853220	-	BMEA_A1822	-	COG0183I	acetyl-CoA acetyltransferase
+1722259..1722690	+	143	225853221	-	BMEA_A1824	-	COG3193R	hypothetical protein
+1722822..1723001	-	59	225853222	rpmF	BMEA_A1825	-	COG0333J	50S ribosomal protein L32
+1723161..1723958	-	265	225853223	mtgA	BMEA_A1826	-	COG0744M	monofunctional biosynthetic peptidoglycan transglycosylase
+1724082..1724996	+	304	225853224	-	BMEA_A1827	-	COG0142H	polyprenyl synthetase
+1725004..1726266	-	420	225853225	ispG	BMEA_A1828	-	COG0821I	4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase
+1726434..1727225	+	263	225853226	-	BMEA_A1829	-	COG1028IQR	3-hydroxybutyrate dehydrogenase
+1727243..1728436	-	397	225853227	-	BMEA_A1830	-	COG0738G	membrane protein MosC
+1728498..1731974	-	1158	225853228	pyc	BMEA_A1831	-	COG1038C	pyruvate carboxylase
+1732240..1733355	-	371	225853229	-	BMEA_A1832	-	COG0683E	Leu/Ile/Val-binding protein
+1733498..1733629	-	43	225853230	-	BMEA_A1833	-	-	hypothetical protein
+1733648..1733785	+	45	225853231	-	BMEA_A1835	-	-	hypothetical protein
+1733976..1735091	-	371	225853232	-	BMEA_A1836	-	COG0683E	Leu/Ile/Val-binding protein precursor
+1735243..1735587	-	114	225853233	-	BMEA_A1837	-	-	hypothetical protein
+1735597..1736346	-	249	225853234	-	BMEA_A1838	-	COG0410E	hypothetical protein
+1736343..1737683	-	446	225853235	-	BMEA_A1839	-	COG0411E	ABC transporter-like protein
+1737683..1739062	-	459	225853236	-	BMEA_A1840	-	COG4177E	inner-membrane translocator
+1739065..1739988	-	307	225853237	-	BMEA_A1841	-	COG0559E	hypothetical protein
+1740267..1741268	-	333	225853238	-	BMEA_A1842	-	COG3938E	hydroxyproline-2-epimerase
+1742574..1742759	+	61	225853239	-	BMEA_A1844	-	-	hypothetical protein
+1742815..1743510	+	231	225853240	-	BMEA_A1845	-	COG1802K	GntR family transcriptional regulator
+1743583..1744020	-	145	225853241	-	BMEA_A1846	-	COG1846K	transcriptional regulator slyA
+1744363..1744770	-	135	225853242	atpC	BMEA_A1847	-	COG0355C	F0F1 ATP synthase subunit epsilon
+1744895..1746460	-	521	225853243	atpD	BMEA_A1849	-	COG0055C	F0F1 ATP synthase subunit beta
+1746588..1747466	-	292	225853244	atpG	BMEA_A1850	-	COG0224C	F0F1 ATP synthase subunit gamma
+1747488..1749017	-	509	225853245	atpA	BMEA_A1851	-	COG0056C	F0F1 ATP synthase subunit alpha
+1749017..1749577	-	186	225853246	atpH	BMEA_A1852	-	COG0712C	F0F1 ATP synthase subunit delta
+1749859..1750272	-	137	225853247	-	BMEA_A1853	-	-	hypothetical protein
+1750339..1752573	-	744	225853248	priA	BMEA_A1854	-	COG1198L	primosome assembly protein PriA
+1752683..1753336	+	217	225853249	talC	BMEA_A1855	-	COG0176G	putative translaldolase
+1753479..1754060	-	193	225853250	-	BMEA_A1856	-	COG5468	hypothetical protein
+1754047..1756680	-	877	225853251	leuS	BMEA_A1857	-	COG0495J	leucyl-tRNA synthetase
+1756803..1757483	+	226	225853252	-	BMEA_A1858	-	COG0325R	hypothetical protein
+1757496..1758026	-	176	225853253	-	BMEA_A1859	-	COG1289S	hypothetical protein
+1758097..1758384	-	95	225853254	-	BMEA_A1860	-	COG5425	Usg family protein
+1758725..1760680	+	651	225853255	acsA	BMEA_A1861	-	COG0365I	acetyl-CoA synthetase
+1760836..1761054	-	72	225853256	-	BMEA_A1862	-	COG5508S	hypothetical protein
+1761186..1762163	+	325	225853257	-	BMEA_A1863	-	COG0501O	heat shock protein HtpX
+1762179..1763576	+	465	225853258	-	BMEA_A1864	-	COG0144J	Fmu domain-containing protein, Sun
+1763697..1765439	+	580	225853259	-	BMEA_A1865	-	COG5360	hypothetical protein
+1765546..1767162	+	538	225853260	purH	BMEA_A1866	-	COG0138F	bifunctional phosphoribosylaminoimidazolecarboxamide formyltransferase/IMP cyclohydrolase
+1768668..1768820	+	50	225853261	-	BMEA_A1868	-	-	hypothetical protein
+1768798..1773600	-	1600	225853262	-	BMEA_A1869	-	COG2902E	NAD-glutamate dehydrogenase
+1773865..1774506	-	213	225853263	-	BMEA_A1870	-	COG3762S	hypothetical protein
+1774519..1775286	-	255	225853264	-	BMEA_A1871	-	COG1512R	hypothetical protein
+1775367..1775990	-	207	225853265	-	BMEA_A1872	-	COG1704S	LemA family protein
+1775987..1776160	-	57	225853266	-	BMEA_A1873	-	-	hypothetical protein
+1776260..1776631	-	123	225853267	rpsP	BMEA_A1874	-	COG0228J	30S ribosomal protein S16
+1776698..1777012	-	104	225853268	-	BMEA_A1875	-	COG1605E	chorismate mutase
+1777018..1778589	-	523	225853269	ffh	BMEA_A1876	-	COG0541U	signal recognition particle protein
+1779024..1779851	+	275	225853270	-	BMEA_A1877	-	COG2951M	lytic murein transglycosylase
+1779915..1780556	-	213	225853271	-	BMEA_A1878	-	COG0288P	carbonic anhydrase
+1780730..1781626	-	298	225853272	-	BMEA_A1879	-	COG2240H	pyridoxamine kinase
+1781628..1781915	-	95	225853273	-	BMEA_A1880	-	-	hypothetical protein
+1782189..1783685	-	498	225853274	mmsA	BMEA_A1881	-	COG1012C	methylmalonate-semialdehyde dehydrogenase
+1783792..1784718	+	308	225853275	-	BMEA_A1882	-	COG0583K	LysR family transcriptional regulator
+1784929..1785573	-	214	225853276	-	BMEA_A1883	-	COG3619S	hypothetical protein
+1785641..1785895	-	84	225853277	-	BMEA_A1885	-	-	hypothetical protein
+1786011..1786547	-	178	225853278	-	BMEA_A1886	-	COG0494LR	dinucleoside polyphosphate hydrolase
+1786765..1788093	-	442	225853279	-	BMEA_A1887	-	COG0793M	carboxyl-terminal protease
+1788083..1789432	-	449	225853280	-	BMEA_A1888	-	COG4942D	leucine zipper protein 1
+1789545..1790444	-	299	225853281	-	BMEA_A1889	-	-	hypothetical protein
+1790562..1791086	-	174	225853282	-	BMEA_A1890	-	COG1576S	rRNA large subunit methyltransferase
+1791105..1791476	-	123	225853283	-	BMEA_A1891	-	COG0799S	iojap-related protein
+1791639..1792313	-	224	225853284	nadD	BMEA_A1892	-	COG1057H	nicotinic acid mononucleotide adenylyltransferase
+1792313..1793596	-	427	225853285	proA	BMEA_A1893	-	COG0014E	gamma-glutamyl phosphate reductase
+1793606..1794742	-	378	225853286	proB	BMEA_A1894	-	COG0263E	gamma-glutamyl kinase
+1794770..1795795	-	341	225853287	-	BMEA_A1895	-	COG0536R	GTPase ObgE
+1797104..1797661	-	185	225853288	-	BMEA_A1896	-	COG1247M	GCN5-related N-acetyltransferase
+1797924..1798406	-	160	225853289	-	BMEA_A1897	-	COG1670J	GCN5-related N-acetyltransferase
+1798485..1798754	-	89	225853290	rpmA	BMEA_A1898	-	COG0211J	50S ribosomal protein L27
+1798780..1799208	-	142	225853291	rplU	BMEA_A1899	-	COG0261J	50S ribosomal protein L21
+1799726..1800604	+	292	225853292	-	BMEA_A1901	-	COG3316L	transposase and inactivated derivatives-like protein
+1800821..1802773	+	650	225853293	-	BMEA_A1902	-	COG2230M	hypothetical protein
+1802770..1803444	+	224	225853294	-	BMEA_A1903	-	COG1296E	hypothetical protein
+1803857..1803970	+	37	225853295	-	BMEA_A1904	-	-	hypothetical protein
+1804003..1804689	-	228	225853296	-	BMEA_A1905	-	COG3316L	transposase and inactivated derivatives-like protein
+1804800..1806239	-	479	225853297	-	BMEA_A1906	-	-	hypothetical protein
+1806415..1807089	-	224	225853298	-	BMEA_A1907	-	-	hypothetical protein
+1807407..1807574	+	55	225853299	-	BMEA_A1908	-	-	hypothetical protein
+1807962..1808114	+	50	225853300	-	BMEA_A1911	-	-	hypothetical protein
+1814227..1816182	+	651	225853301	-	BMEA_A1916	-	COG0739M	peptidase M23B
+1816250..1817476	-	408	225853302	-	BMEA_A1917	-	COG1376S	ErfK/YbiS/YcfS/YnhG family protein
+1818149..1820773	-	874	225853303	clpB	BMEA_A1918	-	COG0542O	ATP-dependent chaperone ClpB
+1820972..1821730	-	252	225853304	-	BMEA_A1919	-	-	hypothetical protein
+1821711..1821983	-	90	225853305	-	BMEA_A1920	-	-	hypothetical protein
+1822045..1822191	+	48	225853306	-	BMEA_A1921	-	-	hypothetical protein
+1822175..1823062	-	295	225853307	hemK	BMEA_A1922	-	COG2890J	methyltransferase, HemK family protein
+1823059..1824138	-	359	225853308	prfA	BMEA_A1923	-	COG0216J	peptide chain release factor 1
+1824335..1826605	-	756	225853309	ptsI	BMEA_A1924	-	COG3605T	phosphoenolpyruvate-protein phosphotransferase
+1826933..1828204	-	423	225853310	-	BMEA_A1925	-	COG0527E	aspartate kinase
+1828422..1829168	+	248	225853311	ubiG	BMEA_A1926	-	COG2227H	3-demethylubiquinone-9 3-methyltransferase
+1829174..1830067	-	297	225853312	-	BMEA_A1927	-	-	hypothetical protein
+1830095..1830520	-	141	225853313	-	BMEA_A1928	-	COG5319S	hypothetical protein
+1830526..1831380	-	284	225853314	-	BMEA_A1929	-	COG0388R	nitrilase/cyanide hydratase and apolipoprotein n-acyltransferase
+1831391..1831657	-	88	225853315	grxC	BMEA_A1930	-	COG0695O	glutaredoxin 3
+1831641..1831763	+	40	225853316	-	BMEA_A1931	-	-	hypothetical protein
+1831741..1832529	-	262	225853317	-	BMEA_A1932	-	COG1040R	competence protein F
+1832712..1833605	+	297	225853318	-	BMEA_A1933	-	COG2226H	methyltransferase type 11
+1833744..1834982	+	412	225853319	-	BMEA_A1935	-	-	major facilitator superfamily protein
+1835008..1835487	-	159	225853320	-	BMEA_A1936	-	COG4103S	hypothetical protein
+1835903..1837474	-	523	225853321	-	BMEA_A1937	-	COG3898	HemY domain-containing protein
+1837487..1838863	-	458	225853322	-	BMEA_A1938	-	COG4223	hypothetical protein
+1838946..1839653	-	235	225853323	-	BMEA_A1939	-	COG1587H	uroporphyrinogen-III synthase
+1839677..1840621	-	314	225853324	hemC	BMEA_A1940	-	COG0181H	porphobilinogen deaminase
+1840740..1841819	+	359	225853325	-	BMEA_A1941	-	COG0533O	putative DNA-binding/iron metalloprotein/AP endonuclease
+1841816..1842796	+	326	225853326	-	BMEA_A1942	-	COG0240C	NAD(P)H-dependent glycerol-3-phosphate dehydrogenase
+1842798..1843088	+	96	225853327	-	BMEA_A1943	-	COG2350S	YciI-like protein
+1843101..1843529	+	142	225853328	-	BMEA_A1944	-	COG2947S	hypothetical protein
+1843481..1844185	+	234	225853329	-	BMEA_A1945	-	COG3897R	hypothetical protein
+1844231..1845088	-	285	225853330	-	BMEA_A1946	-	-	hypothetical protein
+1845204..1846697	+	497	225853331	-	BMEA_A1947	-	COG1167KE	GntR family transcriptional regulator
+1846759..1849212	-	817	225853332	-	BMEA_A1948	-	COG1674D	DNA translocase ftsK
+1849422..1850723	-	433	225853333	amt	BMEA_A1949	-	COG0004P	ammonium transporter
+1850697..1850855	+	52	225853334	-	BMEA_A1950	-	-	hypothetical protein
+1850946..1851899	-	317	225853335	tesB	BMEA_A1951	-	COG1946I	acyl-CoA thioesterase II
+1852068..1853312	+	414	225853336	-	BMEA_A1952	-	COG0654HC	2-octaprenyl-6-methoxyphenyl hydroxylase
+1853398..1853769	-	123	225853337	-	BMEA_A1953	-	COG0346E	glyoxalase/bleomycin resistance protein/dioxygenase
+1854138..1854917	-	259	225853338	-	BMEA_A1955	-	COG0479C	succinate dehydrogenase iron-sulfur subunit
+1854933..1856774	-	613	225853339	sdhA	BMEA_A1956	-	COG1053C	succinate dehydrogenase flavoprotein subunit
+1856782..1857177	-	131	225853340	sdhD	BMEA_A1957	-	COG2142C	succinate dehydrogenase hydrophobic membrane anchor protein
+1857191..1857589	-	132	225853341	sdhC	BMEA_A1958	-	COG2009C	succinate dehydrogenase cytochrome b556 subunit
+1857631..1857825	+	64	225853342	-	BMEA_A1959	-	-	hypothetical protein
+1857934..1858392	-	152	225853343	-	BMEA_A1960	-	COG0456R	hypothetical protein
+1858649..1860058	-	469	225853344	leuC	BMEA_A1961	-	COG0065E	isopropylmalate isomerase large subunit
+1860269..1860706	-	145	225853345	rplS	BMEA_A1962	-	COG0335J	50S ribosomal protein L19
+1862612..1862863	-	83	225853346	-	BMEA_A1965	-	-	hypothetical protein
+1862860..1863270	-	136	225853347	-	BMEA_A1966	-	-	hypothetical protein
+1863263..1863625	-	120	225853348	-	BMEA_A1967	-	COG2329R	hypothetical protein
+1863622..1863945	-	107	225853349	-	BMEA_A1968	-	-	NIPSNAP family protein
+1864016..1864681	+	221	225853350	-	BMEA_A1969	-	COG0640K	ArsR family transcriptional regulator
+1864816..1865550	-	244	225853351	trmD	BMEA_A1970	-	COG0336J	tRNA (guanine-N(1)-)-methyltransferase
+1865547..1866116	-	189	225853352	rimM	BMEA_A1971	-	COG0806J	16S rRNA-processing protein RimM
+1866153..1866278	-	41	225853353	-	BMEA_A1972	-	-	hypothetical protein
+1866340..1867287	+	315	225853354	xerC	BMEA_A1973	-	COG4974L	site-specific tyrosine recombinase XerC
+1867341..1868342	+	333	225853355	-	BMEA_A1974	-	COG3735S	GumN family protein
+1868546..1869949	-	467	225853356	lpdA	BMEA_A1975	-	COG1249C	dihydrolipoamide dehydrogenase
+1870118..1870660	-	180	225853357	-	BMEA_A1976	-	-	hypothetical protein
+1870731..1871369	-	212	225853358	-	BMEA_A1977	-	COG1280E	lysine exporter protein lYSE/YGGA
+1871411..1871824	-	137	225853359	-	BMEA_A1978	-	COG3686S	hypothetical protein
+1871834..1873060	-	408	225853360	sucB	BMEA_A1979	-	COG0508C	dihydrolipoamide succinyltransferase
+1873122..1876136	-	1004	225853361	sucA	BMEA_A1980	-	COG0567C	2-oxoglutarate dehydrogenase E1 component
+1876273..1876422	+	49	225853362	-	BMEA_A1981	-	-	hypothetical protein
+1876412..1877314	-	300	225853363	-	BMEA_A1982	-	COG0074C	succinyl-CoA synthetase subunit alpha
+1877318..1878514	-	398	225853364	-	BMEA_A1983	-	COG0045C	succinyl-CoA synthetase subunit beta
+1878621..1879583	-	320	225853365	mdh	BMEA_A1984	-	COG0039C	malate dehydrogenase
+1879703..1879945	-	80	225853366	-	BMEA_A1985	-	-	hypothetical protein
+1880022..1881185	-	387	225853367	-	BMEA_A1986	-	COG1485R	AFG1-family ATPase
+1881305..1881838	-	177	225853368	-	BMEA_A1987	-	-	hypothetical protein
+1881967..1882170	-	67	225853369	-	BMEA_A1988	-	-	hypothetical protein
+1882201..1883112	+	303	225853370	dapF	BMEA_A1989	-	COG0253E	diaminopimelate epimerase
+1883112..1884395	+	427	225853371	-	BMEA_A1990	-	COG0621J	MiaB-like tRNA modifying enzyme
+1884417..1885814	+	465	225853372	ftsY	BMEA_A1991	-	COG0552U	signal recognition particle-docking protein FtsY
+1885814..1886476	+	220	225853373	ispZ	BMEA_A1992	-	COG2917D	intracellular septation protein A
+1886500..1887282	+	260	225853374	gloB	BMEA_A1993	-	COG0491R	hydroxyacylglutathione hydrolase
+1887329..1887820	+	163	225853375	-	BMEA_A1994	-	-	hypothetical protein
+1887885..1888190	-	101	225853376	-	BMEA_A1995	-	-	hypothetical protein
+1888302..1888718	-	138	225853377	-	BMEA_A1996	-	COG1051F	mutator MutT protein
+1888715..1889506	-	263	225853378	-	BMEA_A1997	-	COG0456R	GCN5-related N-acetyltransferase
+1889564..1890805	-	413	225853379	argJ	BMEA_A1998	-	COG1364E	bifunctional ornithine acetyltransferase/N-acetylglutamate synthase protein
+1891039..1891182	-	47	225853380	-	BMEA_A1999	-	-	hypothetical protein
+1891243..1892238	-	331	225853381	-	BMEA_A2000	-	COG0760O	PpiC-type peptidyl-prolyl cis-trans isomerase
+1892366..1892533	-	55	225853382	-	BMEA_A2001	-	-	hypothetical protein
+1892577..1895297	+	906	225853383	secA	BMEA_A2002	-	COG0653U	preprotein translocase subunit SecA
+1895325..1895465	+	46	225853384	-	BMEA_A2003	-	-	hypothetical protein
+1896074..1897360	+	428	225853385	-	BMEA_A2004	-	COG5653	hypothetical protein
+1897529..1899163	+	544	225853386	-	BMEA_A2005	-	COG2194R	sulfatase
+1899517..1899618	+	33	225853387	-	BMEA_A2006	-	-	hypothetical protein
+1900359..1901315	-	318	225853388	-	BMEA_A2008	-	COG0583K	regulatory protein
+1901355..1901540	-	61	225853389	-	BMEA_A2009	-	-	hypothetical protein
+1902538..1903236	+	232	225853390	-	BMEA_A2011	-	COG0765E	His/Glu/Gln/Arg/opine family amino acid ABC transporter permease
+1903241..1903963	+	240	225853391	-	BMEA_A2012	-	COG0765E	His/Glu/Gln/Arg/opine family amino acid ABC transporter permease
+1903960..1904775	+	271	225853392	-	BMEA_A2013	-	COG1126E	octopine permease ATP-binding protein P
+1904796..1905809	+	337	225853393	-	BMEA_A2014	-	COG0010E	proclavaminate amidinohydrolase
+1905818..1907269	+	483	225853394	-	BMEA_A2015	-	COG1027E	aspartate ammonia-lyase
+1907253..1908008	+	251	225853395	-	BMEA_A2016	-	COG1126E	glutamate/glutamine/aspartate/asparagine transport ATP-binding protein bztD
+1908017..1909015	+	332	225853396	-	BMEA_A2017	-	COG0252EJ	L-asparaginase
+1909152..1909835	-	227	225853397	-	BMEA_A2018	-	COG1802K	GntR family transcriptional regulator
+1909905..1910849	-	314	225853398	-	BMEA_A2019	-	COG0252EJ	L-asparaginase
+1910927..1912234	+	435	225853399	-	BMEA_A2020	-	COG2271G	major facilitator superfamily protein
+1912721..1912873	-	50	225853400	-	BMEA_A2021	-	-	hypothetical protein
+1912920..1914203	-	427	225853401	-	BMEA_A2022	-	COG0626E	methionine gamma-lyase
+1914383..1914832	-	149	225853402	-	BMEA_A2023	-	COG0589T	UspA domain-containing protein
+1915052..1916062	+	336	225853403	cysK	BMEA_A2024	-	COG0031E	cysteine synthase A
+1916144..1916392	-	82	225853404	-	BMEA_A2025	-	-	hypothetical protein
+1916552..1917427	-	291	225853405	-	BMEA_A2026	-	COG1250I	3-hydroxybutyryl-CoA dehydrogenase
+1917911..1918840	-	309	225853406	-	BMEA_A2027	-	COG2025C	hypothetical protein
+1918993..1919739	-	248	225853407	-	BMEA_A2028	-	COG2086C	electron transfer flavoprotein subunit beta
+1920075..1920773	+	232	225853408	-	BMEA_A2029	-	COG0603R	ExsB protein
+1920773..1921138	+	121	225853409	queD	BMEA_A2030	-	COG0720H	queuosine biosynthesis protein QueD
+1921138..1921893	+	251	225853410	queE	BMEA_A2031	-	COG0602O	radical SAM domain-containing protein
+1922030..1922617	-	195	225853411	-	BMEA_A2032	-	COG2096S	ATP:cobalamin adenosyltransferase
+1922619..1922822	-	67	225853412	-	BMEA_A2033	-	-	hypothetical protein
+1922852..1923694	-	280	225853413	-	BMEA_A2034	-	COG0300R	short chain dehydrogenase
+1923852..1924712	+	286	225853414	yihY	BMEA_A2035	-	COG1295S	YihY family protein
+1924730..1925215	+	161	225853415	-	BMEA_A2036	-	COG1671S	hypothetical protein
+1925223..1925939	-	238	225853416	-	BMEA_A2037	-	COG0526OC	redoxin domain-containing protein
+1925993..1927393	+	466	225853417	argH	BMEA_A2038	-	COG0165E	argininosuccinate lyase
+1927498..1927686	+	62	225853418	-	BMEA_A2039	-	COG5567N	hypothetical protein
+1927714..1928979	+	421	225853419	lysA	BMEA_A2040	-	COG0019E	diaminopimelate decarboxylase
+1929078..1931723	+	881	225853420	-	BMEA_A2041	-	-	hypothetical protein
+1931763..1932299	-	178	225853421	hpt	BMEA_A2042	-	COG0634F	hypoxanthine phosphoribosyltransferase
+1932448..1933227	+	259	225853422	-	BMEA_A2043	-	COG2226H	methyltransferase domain-containing protein
+1933372..1934478	+	368	225853423	hisC	BMEA_A2044	-	COG0079E	histidinol-phosphate aminotransferase
+1934483..1935448	+	321	225853424	-	BMEA_A2045	-	COG0287E	cyclohexadienyl dehydrogenase
+1936456..1936659	-	67	225853425	-	BMEA_A2047	-	-	hypothetical protein
+1936648..1937208	+	186	225853426	-	BMEA_A2048	-	COG3703P	ChaC family protein
+1937370..1937486	-	38	225853427	-	BMEA_A2050	-	-	hypothetical protein
+1937541..1937831	+	96	225853428	-	BMEA_A2051	-	-	YGGT family protein
+1938002..1938532	-	176	225853429	-	BMEA_A2052	-	COG0221C	inorganic pyrophosphatase
+1938685..1939467	-	260	225853430	-	BMEA_A2053	-	COG0204I	phospholipid/glycerol acyltransferase
+1939646..1940179	-	177	225853431	-	BMEA_A2054	-	COG1434S	hypothetical protein
+1940545..1941546	-	333	225853432	-	BMEA_A2055	-	COG2177D	hypothetical protein
+1941539..1942198	-	219	225853433	ftsE	BMEA_A2056	-	COG2884D	cell division ATP-binding protein FtsE
+1942203..1942379	-	58	225853434	-	BMEA_A2057	-	-	hypothetical protein
+1942507..1942779	-	90	225853435	-	BMEA_A2058	-	-	hypothetical protein
+1942556..1942873	+	105	225853436	-	BMEA_A2059	-	-	hypothetical protein
+1943257..1943943	+	228	225853437	-	BMEA_A2060	-	COG0580G	aquaporin Z
+1944324..1945019	+	231	225853438	-	BMEA_A2061	-	COG2834M	outer membrane lipoprotein carrier protein LolA
+1945122..1945928	+	268	225853439	-	BMEA_A2062	-	COG0708L	exodeoxyribonuclease III
+1945934..1946395	-	153	225853440	-	BMEA_A2063	-	COG0664T	lysophospholipase nte-1
+1946430..1947113	-	227	225853441	-	BMEA_A2064	-	COG0745TK	transcriptional regulator BasR/PmrA
+1947321..1947866	+	181	225853442	-	BMEA_A2066	-	COG3786S	hypothetical protein
+1947927..1948226	+	99	225853443	-	BMEA_A2067	-	-	hypothetical protein
+1948255..1949403	-	382	225853444	-	BMEA_A2069	-	-	sulfated surface glycoprotein 185 precursor
+1949774..1950853	-	359	225853445	-	BMEA_A2070	-	-	hypothetical protein
+1951180..1951569	+	129	225853446	-	BMEA_A2071	-	-	hypothetical protein
+1951656..1953212	-	518	225853447	-	BMEA_A2072	-	-	glycoprotein X precursor
+1958313..1958984	-	223	225853448	-	BMEA_A2074	-	COG1738S	hypothetical protein
+1959064..1959357	-	97	225853449	rpmB	BMEA_A2075	-	COG0227J	50S ribosomal protein L28
+1959719..1960534	+	271	225853450	-	BMEA_A2076	-	-	hypothetical protein
+1960646..1961068	-	140	225853451	-	BMEA_A2077	-	COG0789K	MerR family transcriptional regulator
+1961157..1963571	+	804	225853452	-	BMEA_A2078	-	COG2217P	heavy metal translocating P-type ATPase
+1963978..1964727	+	249	225853453	-	BMEA_A2079	-	-	hypothetical protein
+1964754..1965839	+	361	225853454	-	BMEA_A2080	-	-	hypothetical protein
+1966012..1967913	-	633	225853455	-	BMEA_A2081	-	COG4547H	cobaltochelatase subunit CobT
+1968021..1969007	-	328	225853456	-	BMEA_A2082	-	COG0714R	cobaltochelatase subunit CobS
+1969086..1969316	+	76	225853457	-	BMEA_A2083	-	-	hypothetical protein
+1969294..1969923	-	209	225853458	-	BMEA_A2084	-	COG0484O	DnaJ domain-containing protein
+1969920..1970117	-	65	225853459	-	BMEA_A2085	-	-	hypothetical protein
+1970110..1970424	+	104	225853460	-	BMEA_A2086	-	COG0271T	BolA protein
+1970449..1971756	-	435	225853461	-	BMEA_A2087	-	COG4536P	hypothetical protein
+1971820..1972956	-	378	225853462	aroB	BMEA_A2088	-	COG0337E	3-dehydroquinate synthase
+1973049..1973651	-	200	225853463	-	BMEA_A2089	-	COG0703E	shikimate kinase
+1973797..1973982	+	61	225853464	-	BMEA_A2090	-	-	hypothetical protein
+1973985..1974908	+	307	225853465	xerD	BMEA_A2091	-	COG4974L	site-specific tyrosine recombinase XerD
+1975047..1976000	+	317	225853466	accA	BMEA_A2092	-	COG0825I	acetyl-CoA carboxylase carboxyltransferase subunit alpha
+1976222..1977433	+	403	225853467	-	BMEA_A2093	-	COG3034S	hypothetical protein
+1977412..1977669	+	85	225853468	-	BMEA_A2094	-	COG0425O	SirA family protein
+1977687..1978859	-	390	225853469	-	BMEA_A2095	-	COG0523R	cobalamin synthesis protein P47K
+1978861..1979973	-	370	225853470	-	BMEA_A2096	-	COG1686M	serine-type D-Ala-D-Ala carboxypeptidase
+1981431..1981565	+	44	225853471	-	BMEA_A2098	-	-	hypothetical protein
+1981633..1982397	-	254	225853472	-	BMEA_A2100	-	COG1028IQR	glucose 1-dehydrogenase 2
+1983037..1983432	+	131	225853473	-	BMEA_A2102	-	-	hypothetical protein
+1985134..1985898	-	254	225853474	-	BMEA_A2104	-	COG1028IQR	3-ketoacyl-(acyl-carrier-protein) reductase
+1985895..1987379	-	494	225853475	-	BMEA_A2105	-	COG2303E	glucose-methanol-choline oxidoreductase
+1987392..1988912	-	506	225853476	-	BMEA_A2106	-	COG1012C	aldehyde dehydrogenase
+1988906..1989682	-	258	225853477	-	BMEA_A2107	-	COG1024I	enoyl-CoA hydratase/isomerase
+1989684..1991174	-	496	225853478	-	BMEA_A2108	-	COG4670I	coenzyme A transferase
+1991180..1992181	-	333	225853479	-	BMEA_A2109	-	COG0673R	hypothetical protein
+1992160..1993218	-	352	225853480	-	BMEA_A2110	-	COG1609K	alanine racemase
+1993469..1994638	+	389	225853481	-	BMEA_A2111	-	-	hypothetical protein
+1994672..1995694	-	340	225853482	-	BMEA_A2112	-	COG2141C	alkanal monooxygenase alpha chain
+1995691..1995900	-	69	225853483	-	BMEA_A2113	-	-	hypothetical protein
+1995963..1996928	+	321	225853484	-	BMEA_A2114	-	COG2984R	hypothetical protein
+1997436..1997570	-	44	225853485	-	BMEA_A2115	-	-	hypothetical protein
+1997572..1998456	+	294	225853486	-	BMEA_A2116	-	COG4120R	hypothetical protein
+1998453..1999247	+	264	225853487	-	BMEA_A2117	-	COG1101R	ABC transporter-like protein
+1999409..2000452	+	347	225853488	holA	BMEA_A2118	-	COG1466L	DNA polymerase III subunit delta
+2000546..2001427	-	293	225853489	-	BMEA_A2119	-	COG1475K	ParB-like partition protein
+2001471..2002268	-	265	225853490	-	BMEA_A2120	-	COG1192D	hypothetical protein
+2002321..2002962	-	213	225853491	gidB	BMEA_A2121	-	COG0357M	16S rRNA methyltransferase GidB
+2002959..2004869	-	636	225853492	gidA	BMEA_A2122	-	COG0445D	tRNA uridine 5-carboxymethylaminomethyl modification enzyme GidA
+2005096..2006424	-	442	225853493	trmE	BMEA_A2123	-	COG0486R	tRNA modification GTPase TrmE
+2008553..2009818	-	421	225853494	rho	BMEA_A2125	-	COG1158K	transcription termination factor Rho
+2010200..2010736	-	178	225853495	-	BMEA_A2126	-	COG1981S	hypothetical protein
+2010733..2011758	-	341	225853496	hemE	BMEA_A2127	-	COG0407H	uroporphyrinogen decarboxylase
+2011991..2012104	-	37	225853497	-	BMEA_A2128	-	-	hypothetical protein
+2012211..2013050	+	279	225853498	-	BMEA_A2129	-	COG1806S	hypothetical protein
+2013047..2013646	+	199	225853499	maf	BMEA_A2130	-	COG0424D	Maf-like protein
+2013639..2014508	+	289	225853500	aroE	BMEA_A2131	-	COG0169E	shikimate 5-dehydrogenase
+2014505..2015107	+	200	225853501	coaE	BMEA_A2132	-	COG0237H	dephospho-CoA kinase
+2015149..2015853	+	234	225853502	dnaQ	BMEA_A2133	-	COG0847L	DNA polymerase III subunit epsilon
+2015912..2016403	-	163	225853503	secB	BMEA_A2134	-	COG1952U	preprotein translocase subunit SecB
+2016523..2017020	-	165	225853504	-	BMEA_A2135	-	COG3030R	FxsA
+2017237..2017932	+	231	225853505	-	BMEA_A2136	-	COG4395S	import inner membrane translocase subunit Tim44
+2017996..2019105	+	369	225853506	-	BMEA_A2137	-	COG2821M	MltA domain-containing protein
+2019111..2019713	+	200	225853507	-	BMEA_A2138	-	COG2840S	Smr protein/MutS2
+2019710..2020090	+	126	225853508	-	BMEA_A2139	-	COG1396K	XRE family transcriptional regulator
+2020099..2021118	-	339	225853509	-	BMEA_A2140	-	-	hypothetical protein
+2021265..2022569	-	434	225853510	hslU	BMEA_A2141	-	COG1220O	ATP-dependent protease ATP-binding subunit HslU
+2022643..2023197	-	184	225853511	-	BMEA_A2142	-	COG5405O	ATP-dependent protease peptidase subunit
+2023494..2024102	+	202	225853512	-	BMEA_A2143	-	COG0131E	imidazoleglycerol-phosphate dehydratase
+2024214..2024723	+	169	225853513	-	BMEA_A2144	-	-	hypothetical protein
+2024726..2025376	+	216	225853514	hisH	BMEA_A2145	-	COG0118E	imidazole glycerol phosphate synthase subunit HisH
+2025381..2026112	+	243	225853515	hisA	BMEA_A2146	-	COG0106E	1-(5-phosphoribosyl)-5-[(5-phosphoribosylamino)methylideneamino] imidazole-4-carboxamide isomerase
+2026109..2026894	+	261	225853516	hisF	BMEA_A2147	-	COG0107E	imidazole glycerol phosphate synthase subunit HisF
+2027030..2027353	+	107	225853517	hisE	BMEA_A2148	-	COG0140E	phosphoribosyl-ATP pyrophosphatase
+2027368..2028336	+	322	225853518	coaA	BMEA_A2149	-	COG1072H	pantothenate kinase
+2028399..2028836	-	145	225853519	-	BMEA_A2150	-	COG1186J	peptidyl-tRNA hydrolase domain protein
+2030959..2031678	+	239	225853520	-	BMEA_A2153	-	COG0745TK	transcriptional regulator ChvI
+2031789..2033594	+	601	225853521	-	BMEA_A2154	-	COG0642T	sensor protein chvG
+2033620..2034099	+	159	225853522	-	BMEA_A2155	-	COG1493T	HPr kinase
+2034351..2034752	+	133	225853523	-	BMEA_A2156	-	COG2893G	PTS system fructose subfamily IIA component
+2034756..2035070	+	104	225853524	-	BMEA_A2157	-	COG1925G	HPr family phosphocarrier
+2035134..2035451	+	105	225853525	-	BMEA_A2158	-	-	hypothetical protein
+2035448..2036848	+	466	225853526	ahcY	BMEA_A2159	-	COG0499H	S-adenosyl-L-homocysteine hydrolase
+2037233..2039812	+	859	225853527	-	BMEA_A2160	-	COG2205T	histidine kinase
+2039821..2041362	+	513	225853528	-	BMEA_A2161	-	COG3178R	hypothetical protein
+2041349..2042068	+	239	225853529	-	BMEA_A2162	-	COG1208MJ	nucleotidyl transferase
+2042083..2045241	+	1052	225853530	addB	BMEA_A2163	-	COG3893L	double-strand break repair protein AddB
+2045238..2048780	+	1180	225853531	addA	BMEA_A2164	-	COG1074L	double-strand break repair helicase AddA
+2048962..2049285	+	107	225853532	trx	BMEA_A2165	-	COG3118O	thioredoxin
+2049499..2050827	-	442	225853533	folC	BMEA_A2166	-	COG0285H	folylpolyglutamate synthase FolC
+2050830..2051735	-	301	225853534	accD	BMEA_A2167	-	COG0777I	acetyl-CoA carboxylase subunit beta
+2051796..2052635	-	279	225853535	trpA	BMEA_A2168	-	COG0159E	tryptophan synthase subunit alpha
+2052632..2053099	-	155	225853536	-	BMEA_A2169	-	-	hypothetical protein
+2053102..2054322	-	406	225853537	trpB	BMEA_A2170	-	COG0133E	tryptophan synthase subunit beta
+2054342..2055010	-	222	225853538	-	BMEA_A2171	-	COG0135E	N-(5'-phosphoribosyl)anthranilate isomerase
+2055049..2055684	-	211	225853539	-	BMEA_A2172	-	COG1434S	hypothetical protein
+2055681..2056442	-	253	225853540	-	BMEA_A2173	-	COG1451R	hypothetical protein
+2056551..2056913	-	120	225853541	-	BMEA_A2174	-	-	hypothetical protein
+2057180..2058331	-	383	225853542	-	BMEA_A2175	-	COG3135Q	benzoate transporter
+2058345..2059136	-	263	225853543	-	BMEA_A2176	-	COG0596R	hypothetical protein
+2059568..2059972	+	134	225853544	-	BMEA_A2177	-	COG0290J	translation initiation factor IF-3
+2060101..2060715	+	204	225853545	-	BMEA_A2178	-	COG2020O	nickel-cobalt-cadmium resistance protein NccN
+2060982..2061182	+	66	225853546	rpmI	BMEA_A2179	-	COG0291J	50S ribosomal protein L35
+2061210..2061614	+	134	225853547	rplT	BMEA_A2180	-	COG0292J	50S ribosomal protein L20
+2061713..2062555	+	280	225853548	-	BMEA_A2181	-	-	hypothetical protein
+2062643..2063752	+	369	225853549	pheS	BMEA_A2182	-	COG0016J	phenylalanyl-tRNA synthetase subunit alpha
+2063774..2066188	+	804	225853550	pheT	BMEA_A2183	-	COG0072J	phenylalanyl-tRNA synthetase subunit beta
+2066258..2067244	+	328	225853551	-	BMEA_A2184	-	COG0673R	oxidoreductase Gfo
+2067470..2069383	+	637	225853552	dnaK	BMEA_A2186	-	COG0443O	molecular chaperone DnaK
+2069401..2069595	-	64	225853553	-	BMEA_A2187	-	-	hypothetical protein
+2069629..2070762	+	377	225853554	dnaJ	BMEA_A2188	-	COG0484O	chaperone protein DnaJ
+2070883..2071482	+	199	225853555	-	BMEA_A2189	-	COG3963I	phosphatidylethanolamine N-methyltransferase / phosphatidyl-N-methylethanolamine N-methyltransferase
+2071692..2072408	+	238	225853556	pyrF	BMEA_A2190	-	COG0284F	orotidine 5'-phosphate decarboxylase
+2072457..2072744	+	95	225853557	-	BMEA_A2191	-	COG5470S	hypothetical protein
+2072782..2073969	-	395	225853558	-	BMEA_A2192	-	COG3386G	regucalcin
+2073905..2074843	+	312	225853559	gshB	BMEA_A2193	-	COG0189HJ	glutathione synthetase
+2074929..2076485	+	518	225853560	-	BMEA_A2194	-	COG0606O	Mg chelatase-related protein
+2076534..2077154	-	206	225853561	-	BMEA_A2195	-	COG3672S	transglutaminase family protein cysteine peptidase BTLCP
+2077602..2077958	-	118	225853562	rlpA	BMEA_A2196	-	COG0797M	rare lipoprotein A
+2078117..2078335	+	72	225853563	-	BMEA_A2197	-	-	hypothetical protein
+2078568..2078918	+	116	225853564	-	BMEA_A2198	-	COG2832S	hypothetical protein
+2079073..2080119	+	348	225853565	-	BMEA_A2199	-	COG0226P	hypothetical protein
+2080261..2081751	+	496	225853566	pstC	BMEA_A2200	-	COG0573P	phosphate ABC transporter permease PstC
+2081751..2083061	+	436	225853567	pstA	BMEA_A2201	-	COG0581P	phosphate ABC transporter permease PstA
+2083078..2083899	+	273	225853568	pstB	BMEA_A2202	-	COG1117P	phosphate transporter ATP-binding protein
+2083965..2084687	+	240	225853569	phoU	BMEA_A2203	-	COG0704P	phosphate transport system regulatory protein PhoU
+2084805..2085491	+	228	225853570	phoB	BMEA_A2204	-	COG0745TK	phosphate regulon transcriptional regulatory protein PhoB
+2085847..2086005	-	52	225853571	-	BMEA_A2205	-	-	hypothetical protein
+2086077..2087057	+	326	225853572	-	BMEA_A2206	-	COG3773M	cell wall hydrolase SleB
+2087167..2087490	-	107	225853573	-	BMEA_A2207	-	-	lipoprotein
+2087567..2088820	+	417	225853574	-	BMEA_A2208	-	COG2309E	aminopeptidase T
+2088981..2089478	-	165	225853575	-	BMEA_A2209	-	COG0783P	DNA starvation/stationary phase protection protein Dps
+2089761..2090450	+	229	225853576	-	BMEA_A2210	-	COG1214O	peptidase M22 glycoprotease
+2090455..2090955	+	166	225853577	-	BMEA_A2211	-	COG0456R	ribosomal-protein-alanine acetyltransferase
+2090952..2091755	+	267	225853578	-	BMEA_A2212	-	COG0204I	1-acyl-sn-glycerol-3-phosphate acyltransferase
+2091813..2093216	+	467	225853579	-	BMEA_A2213	-	COG0621J	(dimethylallyl)adenosine tRNA methylthiotransferase
+2093453..2094436	+	327	225853580	-	BMEA_A2214	-	COG1702T	hypothetical protein
+2094572..2095078	+	168	225853581	-	BMEA_A2215	-	COG0319R	hypothetical protein
+2095081..2096199	+	372	225853582	-	BMEA_A2216	-	COG1253R	hemolysin C
+2096196..2097794	+	532	225853583	lnt	BMEA_A2217	-	COG0815M	apolipoprotein N-acyltransferase
+2097941..2098354	+	137	225853584	-	BMEA_A2219	-	COG1396K	XRE family transcriptional regulator
+2098581..2099846	+	421	225853585	metK	BMEA_A2220	-	COG0192H	S-adenosylmethionine synthetase
+2099855..2100556	+	233	225853586	-	BMEA_A2221	-	COG0220R	tRNA (guanine-N(7)-)-methyltransferase
+2100736..2101395	+	219	225853587	-	BMEA_A2222	-	COG0779S	hypothetical protein
+2101448..2103061	+	537	225853588	nusA	BMEA_A2223	-	COG0195K	transcription elongation factor NusA
+2103444..2104046	+	200	225853589	-	BMEA_A2224	-	COG2740K	hypothetical protein
+2104184..2107063	+	959	225853590	infB	BMEA_A2225	-	COG0532J	translation initiation factor IF-2
+2107329..2107781	+	150	225853591	rbfA	BMEA_A2226	-	COG0858J	ribosome-binding factor A
+2107785..2108759	+	324	225853592	truB	BMEA_A2227	-	COG0130J	tRNA pseudouridine synthase B
+2108930..2109199	+	89	225853593	rpsO	BMEA_A2228	-	COG0184J	30S ribosomal protein S15
+2109483..2111627	+	714	225853594	-	BMEA_A2229	-	COG1185J	polynucleotide phosphorylase/polyadenylase
+2112809..2113627	-	272	225853595	-	BMEA_A2231	-	COG0623I	enoyl-(acyl carrier protein) reductase
+2113642..2114865	-	407	225853596	-	BMEA_A2232	-	COG0304IQ	3-oxoacyl-(acyl carrier protein) synthase I
+2115031..2115549	-	172	225853597	fabA	BMEA_A2233	-	COG0764I	3-hydroxydecanoyl-(acyl carrier protein) dehydratase
+2115796..2116239	+	147	225853598	-	BMEA_A2234	-	COG0735P	ferric uptake regulation protein
+2116405..2117184	+	259	225853599	-	BMEA_A2235	-	COG1464P	lipoprotein, YaeC family protein
+2117229..2117774	-	181	225853600	-	BMEA_A2236	-	COG3807S	hypothetical protein
+2118125..2119129	+	334	225853601	-	BMEA_A2237	-	COG1052CHR	glycerate dehydrogenase
+2119154..2119855	-	233	225853602	-	BMEA_A2238	-	COG0596R	dihydrolipoyllysine-residue acetyltransferase
+2119877..2120749	-	290	225853603	-	BMEA_A2239	-	COG0791M	dipeptidyl-peptidase 6
+2120746..2121096	-	116	225853604	-	BMEA_A2240	-	COG1846K	MarR family transcriptional regulator
+2121171..2122553	-	460	225853605	-	BMEA_A2241	-	COG0260E	cytosol aminopeptidase
+2122657..2122956	+	99	225853606	-	BMEA_A2242	-	-	hypothetical protein
+2122713..2122892	-	59	225853607	-	BMEA_A2243	-	-	hypothetical protein
+2123112..2123993	+	293	225853608	mutM	BMEA_A2244	-	COG0266L	formamidopyrimidine-DNA glycosylase
+2124120..2124893	+	257	225853609	-	BMEA_A2245	-	COG1024I	enoyl-CoA hydratase
+2125229..2125495	+	88	225853610	rpsT	BMEA_A2246	-	COG0268J	30S ribosomal protein S20
