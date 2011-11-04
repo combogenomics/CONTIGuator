@@ -3167,7 +3167,6 @@ def CONTIGuator(options):
         for sF in oCFs.general:
             shutil.copy(sF,sRefDir)
             dDir[sRef].append(sRefDir+'/'+sF)
-        shutil.move(sRef,sRefDir+'/Reference.fsa')
         oCFs.setCrunchFile(sRef,sRefDir+'/'+oCFs.crunch[sRef])
         oCFs.setRefEmblFile(sRef, sRefDir+'/'+oCFs.refembl[sRef])
         oCFs.setEmblFile(sRef, sRefDir+'/'+oCFs.embl[sRef])
