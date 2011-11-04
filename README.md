@@ -86,13 +86,11 @@ The outputs of CONTIGuator are various files and they are divided by folders
 ### “Map_” folders
 According to the number of input reference replicons, there will be the same number of directories whose name starts by “Map_”, followed by the ID of the reference replicon. Inside each directory there will be a series of files that can be used as input for ACT
 
-* Reference.fsa: reference molecule fasta file
+* Reference.embl: pseudo-contig ACT file
 * PseudoContig.fsa: pseudo-contig fasta file
 * PseudoContig.crunch: ACT comparison file
-* PseudoContig.tab: pseudo-contig ACT feature file
-* ReferenceHits.tab: reference molecule ACT feature file
-* ReferenceProteinHits.tab: reference molecule ACT file (protein hits from unmapped regions)
-* ContigHits.tab: another PseudoContig ACT feature file
+* PseudoContig.embl: pseudo-contig ACT file
+* ReferenceProteinHits.tab: reference molecule ACT file (protein hits from unmapped regions) (to be included in the reference embl file)
 * MappedContigs.txt: names (and lenghts) of the contigs mapped to the particular reference molecule
 
 If options -M was selected:
@@ -103,7 +101,6 @@ If options -M was selected:
 * UnAlignedReferenceHits.fsa: unmapped regions fasta file (on reference)
 
 If the primer picking option was selected (-P) the folder will contain other files
-* PCRProducts.tab: putative PCR products ACT feature file
 * PCRPrimers.tsv: table containing details about the PCR primers generated
 
 ### “UnMappedContigs” folder
