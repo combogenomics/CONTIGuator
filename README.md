@@ -90,7 +90,6 @@ According to the number of input reference replicons, there will be the same num
 * PseudoContig.fsa: pseudo-contig fasta file
 * PseudoContig.crunch: ACT comparison file
 * PseudoContig.embl: pseudo-contig ACT file
-* ReferenceProteinHits.tab: reference molecule ACT file (protein hits from unmapped regions) (to be included in the reference embl file)
 * MappedContigs.txt: names (and lenghts) of the contigs mapped to the particular reference molecule
 
 If options -M was selected:
