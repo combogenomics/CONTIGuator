@@ -7,7 +7,7 @@ __author__ = 'Marco Galardini'
 __copyright__ = "Copyright 2011"
 __credits__ = ["Lee Katz", "Florent Lassalle","Margaret Priest"]
 __license__ = "GPL"
-__version__ = "2.2.5"
+__version__ = "2.2.6"
 __maintainer__ = "Marco Galardini"
 __email__ = "marco.galardini@unifi.it"
 __status__ = "Development"
@@ -75,6 +75,7 @@ __status__ = "Development"
 #           FEATURE: The script can be launched from any location now (abacas will be found)
 #           DEPRECATION: DNALenghts.tab is no longer produced as an output
 #   2.2.5   FEATURE: Generation of embl files instead of fasta AND tab files
+#   2.2.6   BUGFIX: The Reference embl file contains also the ptt files analysis
 
 ################################################################################
 # Imports
@@ -2725,7 +2726,7 @@ def GenerateUnMappedProteins(dP,dU,options,mylog):
     #                    ColorOutput(' Extracted '+str(i)+' UnMapped proteins\n','DEV'))
     return 'TranslatedProteinsFromUnMappedRegions.faa'
 
-def RunTBlastN(query,dC,dP,dU,options,mylog):
+def RunTBlastN(query,dC,dP,dU,oCFs,options,mylog):
     #debug
     mylog.WriteLog('INF', 'Going to run tblastn')
     #sys.stdout.write(strftime("%H:%M:%S")+
@@ -2836,15 +2837,22 @@ def RunTBlastN(query,dC,dP,dU,options,mylog):
             f.write('\t'+str(g[0][0])+'-'+str(g[0][1])+'\t'+str(g[1])+'\n')
     f.close()
     for r in dR:
+        from Bio import SeqIO
+        from Bio import SeqFeature
+
+        fname = r+'.reference.fasta'        
+        s = SeqIO.parse(open(oCFs.refembl[fname]),'embl').next()
         i=1
-        f=open(options.sPrefix+'Map_'+r.replace('_','.').replace('-','.')+'/ReferenceProteinHits.tab','w')
-        f.write('ID   tblastn\n')
         for g in dR[r]:
-            f.write('FT   region          '+str(g[0])+'..'+str(g[1])+'\n')
-            f.write('FT                   /systematic_id="region_'+str(i)+'"\n')
-            f.write('FT                   /method="tblastn"\n')
-            f.write('FT                   /colour="3"\n')
-            i=i+1
+            feat = SeqFeature.SeqFeature(SeqFeature.FeatureLocation(
+                                                    g[0],g[1]),
+                                      id='region_'+str(i), type='region_'+str(i))
+            feat.qualifiers['colour']='3'
+            feat.qualifiers['method']='tblastn'
+            s.features.append(feat)
+            i += 1
+
+        SeqIO.write(s,open(oCFs.refembl[fname],'w'),'embl')
 
     # Erase the temporary files
     for f in glob.glob('UnMappedProteinsTempDB*'):
@@ -3211,7 +3219,7 @@ def CONTIGuator(options):
         dU=ReadUnMappedReference(oCFs,options,mylog)
         sUMP=GenerateUnMappedProteins(dP,dU,options,mylog)
         dC=ReadUnMappedContigs(oCFs,mylog)
-        RunTBlastN(sUMP,dC,dP,dU,options,mylog)
+        RunTBlastN(sUMP,dC,dP,dU,oCFs,options,mylog)
     except:
         mylog.WriteLog('INF', 'Something went wrong in reference proteins utilization, skipping...')
         sys.stderr.write(strftime("%H:%M:%S")+
