@@ -19,6 +19,8 @@ For the impatient
     * python CONTIGuator.py -r references.fna -c contigs.fna -P -A
 * Default run with many outputs:
      * Add the -M option
+* Default run showing the maps automatically:
+     * Add the -l option 
 
 Cite the program
 ----------------
@@ -73,6 +75,10 @@ Command line options
 -f prefix for the output directories
 -M prepare even more outputs
 
+### ACT options
+-a ACT binary location
+-l Open the maps automatically
+
 ### Logging
 -V verbose
 -D development
@@ -91,6 +97,7 @@ According to the number of input reference replicons, there will be the same num
 * PseudoContig.crunch: ACT comparison file
 * PseudoContig.embl: pseudo-contig ACT file
 * MappedContigs.txt: names (and lenghts) of the contigs mapped to the particular reference molecule
+* A shell script to open the ACT map
 
 If options -M was selected:
 * AlignDetails.tab: tab-delimited file containing details about the mapped hits
