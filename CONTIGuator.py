@@ -7,10 +7,10 @@ __author__ = 'Marco Galardini'
 __copyright__ = "Copyright 2011"
 __credits__ = ["Lee Katz", "Florent Lassalle","Margaret Priest"]
 __license__ = "GPL"
-__version__ = "2.2.6"
+__version__ = "2.3.0"
 __maintainer__ = "Marco Galardini"
 __email__ = "marco.galardini@unifi.it"
-__status__ = "Development"
+__status__ = "Production"
 
 # CONTIGuator ##################################################################
 #
@@ -76,6 +76,7 @@ __status__ = "Development"
 #           DEPRECATION: DNALenghts.tab is no longer produced as an output
 #   2.2.5   FEATURE: Generation of embl files instead of fasta AND tab files
 #   2.2.6   BUGFIX: The Reference embl file contains also the ptt files analysis
+#   2.3.0   FEATURE: An easier way to open the ACT maps is now implemented
 
 ################################################################################
 # Imports
@@ -87,6 +88,7 @@ try:
     from optparse import OptionParser, OptionGroup
     import copy
     import subprocess
+    import threading
     import os
     import shutil
     import glob
@@ -1504,16 +1506,24 @@ def getOptions():
                 help='Prepare even more outputs?')
     parser.add_option_group(group6)
 
+    # ACT
+    group7 = OptionGroup(parser, "ACT options")
+    group7.add_option('-a', '--act-bin', action="store", dest='act', default='',
+                help='ACT binary location [Default: guess]')
+    group7.add_option('-l', '--lazy', action="store_true", dest='lazy', default=False,
+                help='Let CONTIGuator open the maps for you')
+    parser.add_option_group(group7)
+
     # Logging
-    group7 = OptionGroup(parser, "Logging")
-    group7.add_option('-V', '--verbose', action="store_true", dest='verbose', default=False,
+    group8 = OptionGroup(parser, "Logging")
+    group8.add_option('-V', '--verbose', action="store_true", dest='verbose', default=False,
             help='Verbose? (LOG)')
-    group7.add_option('-D', '--development', action="store_true", dest='development', default=False,
+    group8.add_option('-D', '--development', action="store_true", dest='development', default=False,
             help='Development? (LOG)')
-    group7.add_option('-G', '--debug', action="store_true", dest='debug',
+    group8.add_option('-G', '--debug', action="store_true", dest='debug',
         default=False,
         help='Debug mode?')
-    parser.add_option_group(group7)
+    parser.add_option_group(group8)
 
     # Parse the options
     return parser.parse_args()
@@ -3000,6 +3010,122 @@ def PrintRequirements():
     sys.stderr.write('\t\tor create a symbolic link in usr/bin or /usr/local/bin '+
                     '(as root: \"ln -s /usr/bin/EXECUTABLE /PATH/TO/EXECUTABLE\")\n')
 
+#############################################################
+# Not used for now, let's see how we roll with the act search
+def CheckForConfig(mylog):
+    '''
+    Verify if there is the CONTIGuator configuration directory
+    '''
+    if '.CONTIGuator' in os.listdir(os.getenv("HOME")):
+        if 'CONTIGuator.conf' in os.listdir(os.getenv("HOME")+'/.CONTIGuator'):
+            return True
+        else:return False
+    else:
+        try:
+            os.mkdir(os.getenv("HOME")+'/.CONTIGuator')
+        except:pass
+        return False
+
+def WriteConfig(actpath,mylog):
+    '''
+    Writes the conf file
+    '''
+    import ConfigParser
+
+    # ACT
+    config = ConfigParser.RawConfigParser()
+    config.add_section('ACT')
+    config.set('ACT', 'string', actpath)
+    
+    # Write down to file
+    with open(os.getenv("HOME")+'/.CONTIGuator/CONTIGuator.conf', 'wb') as configfile:
+        config.write(configfile)
+
+def ReadACTConfig(mylog):
+    '''
+    Returns the location of the act executables
+    '''
+    import ConfigParser
+
+    config = ConfigParser.RawConfigParser()
+    config.read('example.cfg')
+
+    try:
+        return config.getstring('ACT', 'string')
+    except:return None
+#############################################################
+ 
+def SearchForACT(mylog):
+    '''
+    Try to find the ACT executables
+    Returns the first act path
+    '''
+    mylog.WriteLog('INF', 'Searching the ACT executable in your system')
+    sys.stdout.write(strftime("%H:%M:%S")+
+                        ' Searching the ACT executable in your system\n')
+    
+    p = subprocess.Popen('locate artemis/act',shell=(sys.platform!="win32"),
+            stdin=subprocess.PIPE,stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE)
+    out = p.communicate()
+    
+    # Is there something?
+    if (out[0]) == '':
+        # No luck!
+        mylog.WriteLog('WRN', 'No ACT binary has been found...')
+        sys.stderr.write(strftime("%H:%M:%S")+
+                    ColorOutput(' No ACT binary has been found...\n','WRN'))
+        return ''
+    else:
+        actpath = out[0].split('\n')[0]
+        mylog.WriteLog('WRN', 'ACT binary: '+actpath)
+        sys.stdout.write(strftime("%H:%M:%S")+
+                    ColorOutput(' ACT binary: '+actpath+'\n','DEV'))
+        return actpath
+    
+def WriteACTLaunchers(actpath,oCFs,prefix,mylog):
+    '''
+    Creates in the base directory an ACT launcher for each reference
+    '''
+    mylog.WriteLog('INF', 'Writing the ACT launcher scripts')
+    sys.stdout.write(strftime("%H:%M:%S")+
+                        ' Writing the ACT launcher scripts\n')
+    
+    fout = []
+    for sRef in oCFs.references:
+        # Ugly part
+        ref = sRef.rstrip('.reference.fasta')
+        refDir = prefix+'Map_'+sRef.split('/')[-1].replace('_','.').replace('-','.')
+        refDir = refDir.rstrip('.reference.fasta')
+        fname = prefix+'_'+ref+'.sh'
+        fname = fname.lstrip('_')
+        #
+        f = open(fname, 'w')
+        f.write('#!/bin/sh\n')
+        f.write(' '.join(
+                [actpath,
+                oCFs.refembl[sRef],
+                oCFs.crunch[sRef],
+                oCFs.embl[sRef]]
+                )+'\n')
+        f.close()
+        # Make the file executable
+        p = subprocess.Popen('chmod 775 '+fname,shell=(sys.platform!="win32"),
+                stdin=subprocess.PIPE,stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE)
+        out = p.communicate()
+        
+        # Copy the launcher inside each Map directory
+        shutil.copy(fname,refDir)
+        # Save the file
+        fout.append( (ref,refDir+'/'+fname) )
+        
+        mylog.WriteLog('DEV', refDir+'/'+fname)
+        sys.stdout.write(strftime("%H:%M:%S")+
+                ColorOutput(' '+ref+' launcher: '+refDir+'/'+fname,'DEV')+'\n')
+    
+    return fout
+
 def PrintStats(oCFs,options,mylog):
     from Bio import SeqIO
     #debug
@@ -3224,6 +3350,59 @@ def CONTIGuator(options):
         mylog.WriteLog('INF', 'Something went wrong in reference proteins utilization, skipping...')
         sys.stderr.write(strftime("%H:%M:%S")+
                ColorOutput(' Something went wrong in reference proteins utilization, skipping...\n','WRN'))
+    
+    # Make the use of ACT slightly easier
+    sys.stdout.write(strftime("%H:%M:%S")+
+           ' Will try to prepare the ACT launchers...\n')
+    #if CheckForConfig(mylog) and ReadACTConfig(mylog):
+    #    actpath = ReadACTConfig(mylog)
+    #else:
+    try:
+        if options.act != '':
+            actpath = options.act
+        else:
+            actpath = SearchForACT(mylog)
+        if actpath == '':
+            raise Exception
+        fout = WriteACTLaunchers(actpath,oCFs,options.sPrefix,mylog)
+        # Should i run ACT for the (lazy) user?
+        if options.lazy:
+            currmap = 1
+            for t in fout:
+                ref = t[0]
+                launcher = t[1]
+                
+                mylog.WriteLog('DEV', 'Opening script: '+ref)
+                sys.stdout.write(strftime("%H:%M:%S")+
+                        ColorOutput(' Opening map: '+ref
+                        +'\n','DEV'))
+                if len(fout) != currmap:
+                    sys.stdout.write(strftime("%H:%M:%S")+
+                        ' Close ACT to open the next map\n')
+                
+                p = subprocess.Popen(launcher,
+                     shell=(sys.platform!="win32"),
+                     stdin=subprocess.PIPE,stdout=subprocess.PIPE,
+                     stderr=subprocess.PIPE)
+                out = p.communicate()
+                currmap +=1
+        else:
+            sys.stdout.write(
+                ColorOutput('To open the ACT maps you can:\n' 
+                    +'\tRun the scripts in each "Maps_" directory\n'
+                    +'\tRe-run with the -l option\n'
+                    +'\tOpen the ACT maps manually\n'
+                    ,'DEV'))    
+    except:
+        # Something went wrong, just print some informations
+        mylog.WriteLog('WRN', 'Could not prepare the ACT launchers!')
+        sys.stderr.write(strftime("%H:%M:%S")+
+                ColorOutput(' Could not prepare the ACT launchers!\n','WRN'))
+        sys.stderr.write(ColorOutput('Solutions:\n\tInstall ACT and re-run\n'
+                +'\tRe-run with -a option indicating the ACT binary location\n'
+                +'\tOpen the ACT maps manually\n','WRN'))
+        #
+        
     # End!
 
     # Delete the unnecessary files...
