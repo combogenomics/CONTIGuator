@@ -3038,8 +3038,8 @@ def WriteConfig(actpath,mylog):
     config.set('ACT', 'string', actpath)
     
     # Write down to file
-    with open(os.getenv("HOME")+'/.CONTIGuator/CONTIGuator.conf', 'wb') as configfile:
-        config.write(configfile)
+    #with open(os.getenv("HOME")+'/.CONTIGuator/CONTIGuator.conf', 'wb') as configfile:
+    #    config.write(configfile)
 
 def ReadACTConfig(mylog):
     '''
