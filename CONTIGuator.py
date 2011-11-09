@@ -7,7 +7,7 @@ __author__ = 'Marco Galardini'
 __copyright__ = "Copyright 2011"
 __credits__ = ["Lee Katz", "Florent Lassalle","Margaret Priest"]
 __license__ = "GPL"
-__version__ = "2.3.0 RC3"
+__version__ = "2.3.0 RC4"
 __maintainer__ = "Marco Galardini"
 __email__ = "marco.galardini@unifi.it"
 __status__ = "Production"
@@ -79,6 +79,7 @@ __status__ = "Production"
 #   2.3.0   FEATURE: An easier way to open the ACT maps is now implemented
 #   RC2     BUGFIX: Support for Biopython 1.57+
 #   RC3     BUGFIX: Fix embl file creation (no more crashes of ACT on long contig names)
+#   RC4     BUGFIX: Fix the primer counting
 
 ################################################################################
 # Imports
@@ -3240,7 +3241,10 @@ def PrintStats(oCFs,options,mylog):
                 l.replace('\n','').replace('\r','')
                 # Exclude the header
                 if 'Left Contig' in l:continue
-                else:p=p+1
+                else:
+                    sprimer = l.split('\t')
+                    if len(sprimer)>3:
+                        p=p+1
         mylog.WriteLog('INF', 'Primers: '+str(p))
         sys.stdout.write(ColorOutput('Primers: '+str(p)+'\n','DEV'))
 
