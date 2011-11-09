@@ -7,7 +7,7 @@ __author__ = 'Marco Galardini'
 __copyright__ = "Copyright 2011"
 __credits__ = ["Lee Katz", "Florent Lassalle","Margaret Priest"]
 __license__ = "GPL"
-__version__ = "2.3.0"
+__version__ = "2.3.0 RC3"
 __maintainer__ = "Marco Galardini"
 __email__ = "marco.galardini@unifi.it"
 __status__ = "Production"
@@ -77,6 +77,8 @@ __status__ = "Production"
 #   2.2.5   FEATURE: Generation of embl files instead of fasta AND tab files
 #   2.2.6   BUGFIX: The Reference embl file contains also the ptt files analysis
 #   2.3.0   FEATURE: An easier way to open the ACT maps is now implemented
+#   RC2     BUGFIX: Support for Biopython 1.57+
+#   RC3     BUGFIX: Fix embl file creation (no more crashes of ACT on long contig names)
 
 ################################################################################
 # Imports
@@ -2014,7 +2016,7 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
     from Bio import SeqIO
     from Bio import Alphabet
     from Bio.Seq import Seq
-    from Bio.Seq import SeqRecord
+    from Bio.SeqRecord import SeqRecord
     from Bio import SeqFeature
     
     # PseudoContig name
@@ -2135,7 +2137,8 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
         
         feat = SeqFeature.SeqFeature(SeqFeature.FeatureLocation(cMap.start,
                                                                 cMap.end),
-                                      id=cMap.name, type=cMap.name)
+                                      id=cMap.name, type='Contig')
+        feat.qualifiers['systematic_id']=cMap.name
         if cMap.strand == '+':
             feat.strand = 1
         else:
@@ -2206,7 +2209,8 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
                                             cMap.start + (cprof.length - hit.qstart))
                 
                 subfeat = SeqFeature.SeqFeature(featloc,
-                                      id=hit.name, type=hit.name)
+                                      id=hit.name, type='Hit')
+                subfeat.qualifiers['systematic_id']=hit.name
                 if hit.strand == '+':
                     subfeat.strand = 1
                 else:
@@ -2219,7 +2223,8 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
                 subfeatRef = SeqFeature.SeqFeature(SeqFeature.FeatureLocation(
                                                                 hit.sstart,
                                                                 hit.send),
-                                      id=hit.name, type=hit.name)
+                                      id=hit.name, type='Hit')
+                subfeatRef.qualifiers['systematic_id']=hit.name
                 if hit.strand == '+':
                     subfeatRef.strand = 1
                 else:
@@ -2519,7 +2524,8 @@ def WritePrimerProducts(sPC,products):
         feat = SeqFeature.SeqFeature(SeqFeature.FeatureLocation(
                                                     p.getLeftPrimer().start,
                                                     p.getRightPrimer().start),
-                                      id=p.name, type=p.name)
+                                      id=p.name, type='PCR')
+        feat.qualifiers['systematic_id']=p.name
         feat.qualifiers['colour']='1'
         feat.qualifiers['method']='Abacas/Primer3'
         s.features.append(feat)
@@ -2856,7 +2862,8 @@ def RunTBlastN(query,dC,dP,dU,oCFs,options,mylog):
         for g in dR[r]:
             feat = SeqFeature.SeqFeature(SeqFeature.FeatureLocation(
                                                     g[0],g[1]),
-                                      id='region_'+str(i), type='region_'+str(i))
+                                      id='region_'+str(i), type='tblastn')
+            feat.qualifiers['systematic_id']='region_'+str(i)
             feat.qualifiers['colour']='3'
             feat.qualifiers['method']='tblastn'
             s.features.append(feat)
