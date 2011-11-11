@@ -7,7 +7,7 @@ __author__ = 'Marco Galardini'
 __copyright__ = "Copyright 2011"
 __credits__ = ["Lee Katz", "Florent Lassalle","Margaret Priest"]
 __license__ = "GPL"
-__version__ = "2.3.0 RC4"
+__version__ = "2.3.0 RC5"
 __maintainer__ = "Marco Galardini"
 __email__ = "marco.galardini@unifi.it"
 __status__ = "Production"
@@ -80,6 +80,7 @@ __status__ = "Production"
 #   RC2     BUGFIX: Support for Biopython 1.57+
 #   RC3     BUGFIX: Fix embl file creation (no more crashes of ACT on long contig names)
 #   RC4     BUGFIX: Fix the primer counting
+#   RC5     BUGFIX: Fix two crashes when no contigs are mapped
 
 ################################################################################
 # Imports
@@ -3101,6 +3102,7 @@ def WriteACTLaunchers(actpath,oCFs,prefix,mylog):
     
     fout = []
     for sRef in oCFs.references:
+        if sRef in oCFs.nomap:continue
         # Ugly part
         ref = sRef.rstrip('.reference.fasta')
         refDir = prefix+'Map_'+sRef.split('/')[-1].replace('_','.').replace('-','.')
@@ -3291,9 +3293,6 @@ def CONTIGuator(options):
         except OSError:pass
         # Mapper sub-functions
         CMap = Mapper(options.ContigFile,sRef,oCFs,mylog)
-        oCFs.setMap(sRef, CMap)
-        # Write down the obtained map -- ACT
-        WriteMap(CMap,options.ContigFile,sRef,oCFs,options.manyOutputs,mylog)
         
         # Verify if the map contains something
         if sRef in oCFs.nomap:
@@ -3305,6 +3304,11 @@ def CONTIGuator(options):
             sys.stdout.write(strftime("%H:%M:%S")+
                ColorOutput(' Molecule '+sRef+' has no contig mapped to it!\n','WRN'))
             continue
+        
+        oCFs.setMap(sRef, CMap)
+        # Write down the obtained map -- ACT
+        WriteMap(CMap,options.ContigFile,sRef,oCFs,options.manyOutputs,mylog)
+        
         dDir[sRef] = []
         for sF in oCFs.ACT:
             shutil.copy(sF,sRefDir)
