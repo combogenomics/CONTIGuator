@@ -10,7 +10,7 @@ __license__ = "GPL"
 __version__ = "2.3.1"
 __maintainer__ = "Marco Galardini"
 __email__ = "marco.galardini@unifi.it"
-__status__ = "Development"
+__status__ = "Production"
 
 # CONTIGuator ##################################################################
 #
