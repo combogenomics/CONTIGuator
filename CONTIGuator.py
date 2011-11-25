@@ -82,6 +82,7 @@ __status__ = "Development"
 #   RC4     BUGFIX: Fix the primer counting
 #   RC5     BUGFIX: Fix two crashes when no contigs are mapped
 #   2.3.1   BUGFIX: Handle non-standard sequence IDs
+#           BUGFIX: Better handling of blast errors
 
 ################################################################################
 # Imports
@@ -1538,7 +1539,7 @@ def getOptions():
 ################################################################################
 # Implementation
 
-def DeprecationWarning(what,mylog):
+def deprecationWarning(what,mylog):
     '''
     Prints a message about a deprecated function
     '''
@@ -1649,11 +1650,21 @@ def ContigProfiler(options,mylog):
         #Pass the file object
         res = DBBlaster.CreateBlastDB(cmd, 'nucl', 'ContigProfilerTempDB',bParseSeqIds=0)
         if res != 0:
-            DeprecationWarning('Legacy-blast',mylog)
+            sys.stdout.write(strftime("%H:%M:%S")+
+                    ColorOutput(' Blast+ error while creating the database!\n','WRN'))
+            sys.stdout.write(strftime("%H:%M:%S")+
+                    ' Check the log file for the offending command\n')
+            sys.stdout.write(strftime("%H:%M:%S")+
+                    ' Trying legacy blast\n')
             mylog.WriteLog('WRN', 'DB creation failed for some reason! Trying to use the old version...')
-            res = DBBlaster.CreateBlastDB(cmd, 'nucl', 'ContigProfilerTempDB', bOld=1)
+            deprecationWarning('Legacy-blast',mylog)
+            res = DBBlaster.CreateBlastDB(cmd, 'nucl', 'ContigProfilerTempDB', bParseSeqIds=0, bOld=1)
             bOldBlast = 1
             if res!=0:
+                sys.stdout.write(strftime("%H:%M:%S")+
+                    ColorOutput(' Legacy blast error while creating the database!\n','ERR'))
+                sys.stdout.write(strftime("%H:%M:%S")+
+                    ' Check the log file for the offending command\n')
                 mylog.WriteLog('ERR', 'DB creation failed for some reason! Exiting...')
                 sys.exit('Blast DB creation failed!')
         # Run Blast
@@ -1666,13 +1677,23 @@ def ContigProfiler(options,mylog):
                              additional=' -soft_masking false')
         res = Blaster.RunBlast('blastn')
         if res != 0:
-            DeprecationWarning('Legacy-blast',mylog)
+            sys.stdout.write(strftime("%H:%M:%S")+
+                    ColorOutput(' Blast+ error while launching nucleotide blast!\n','WRN'))
+            sys.stdout.write(strftime("%H:%M:%S")+
+                    ' Check the log file for the offending command\n')
+            sys.stdout.write(strftime("%H:%M:%S")+
+                    ' Trying legacy blast\n')
             mylog.WriteLog('WRN', 'Blast Run failed for some reason! Trying the old blast version...')
+            deprecationWarning('Legacy-blast',mylog)
             Blaster.FillBlastPar(options.ContigFile, 'ContigProfilerTempDB', sTempOut, options.fExpect,
                              additional='')
             res = Blaster.RunBlast('blastall')
             bOldBlast = 1
             if res != 0:
+                sys.stdout.write(strftime("%H:%M:%S")+
+                    ColorOutput(' Legacy blast error while launching nucletide blast!\n','ERR'))
+                sys.stdout.write(strftime("%H:%M:%S")+
+                    ' Check the log file for the offending command\n')
                 mylog.WriteLog('ERR', 'Blast Run failed for some reason! Exiting...')
                 sys.exit('Blast run failed!')
         dBlastOut[options.ContigFile] = (options.fExpect, sTempOut)
@@ -2759,14 +2780,24 @@ def RunTBlastN(query,dC,dP,dU,oCFs,options,mylog):
     Blaster = Blast(mylog)
     res = Blaster.CreateBlastDB(options.ContigFile, 'nucl', 'UnMappedProteinsTempDB')
     if res != 0:
-        DeprecationWarning('Legacy-blast',mylog)
+        sys.stdout.write(strftime("%H:%M:%S")+
+                    ColorOutput(' Blast+ error while creating the database!\n','WRN'))
+        sys.stdout.write(strftime("%H:%M:%S")+
+                ' Check the log file for the offending command\n')
+        sys.stdout.write(strftime("%H:%M:%S")+
+                    ' Trying legacy blast\n')
+        deprecationWarning('Legacy-blast',mylog)
         mylog.WriteLog('ERR', 'DB creation failed for some reason!... Trying the older version...')
 #        sys.stdout.write(strftime("%H:%M:%S")+
 #                        ColorOutput(' DB creation failed for some reason! Aborting...\n','WRN'))
         res = Blaster.CreateBlastDB(options.ContigFile, 'nucl', 'UnMappedProteinsTempDB', bOld=1)
         bOldBlast = 1
         if res!=0:
-            mylog.WriteLog('ERR', 'DB creation failed for some reason! Exiting...')
+            sys.stdout.write(strftime("%H:%M:%S")+
+                    ColorOutput(' Legacy blast error while creating the database!\n','WRN'))
+            sys.stdout.write(strftime("%H:%M:%S")+
+                    ' Check the log file for the offending command\n')
+            mylog.WriteLog('ERR', 'DB creation failed for some reason!')
             raise Exception
 
     # Run Blast
@@ -2774,13 +2805,23 @@ def RunTBlastN(query,dC,dP,dU,oCFs,options,mylog):
                         'UnMappedProteinsTempDB.xml',options.fExpect)
     res = Blaster.RunBlast('tblastn')
     if res != 0:
-        DeprecationWarning('Legacy-blast',mylog)
+        sys.stdout.write(strftime("%H:%M:%S")+
+                    ColorOutput(' Blast+ error while launching tblastn!\n','WRN'))
+        sys.stdout.write(strftime("%H:%M:%S")+
+                ' Check the log file for the offending command\n')
+        sys.stdout.write(strftime("%H:%M:%S")+
+                    ' Trying legacy blast\n')
+        deprecationWarning('Legacy-blast',mylog)
         mylog.WriteLog('ERR', 'Blast Run failed for some reason! Trying the older version...')
         #sys.stdout.write(strftime("%H:%M:%S")+
         #                ColorOutput(' Blast Run failed for some reason! Aborting...\n','WRN'))
         res = Blaster.RunBlast('legacy_tblastn')
         bOldBlast = 1
         if res != 0:
+            sys.stdout.write(strftime("%H:%M:%S")+
+                    ColorOutput(' Legacy blast error while launching tblastn!\n','WRN'))
+            sys.stdout.write(strftime("%H:%M:%S")+
+                    ' Check the log file for the offending command\n')
             mylog.WriteLog('ERR', 'Blast Run failed for some reason! Exiting...')
             sys.stderr.write(strftime("%H:%M:%S")+
                     ColorOutput(' Blast Run failed for some reason! Aborting...\n','WRN'))
