@@ -7,10 +7,10 @@ __author__ = 'Marco Galardini'
 __copyright__ = "Copyright 2011"
 __credits__ = ["Lee Katz", "Florent Lassalle","Margaret Priest"]
 __license__ = "GPL"
-__version__ = "2.3.0 RC5"
+__version__ = "2.3.1"
 __maintainer__ = "Marco Galardini"
 __email__ = "marco.galardini@unifi.it"
-__status__ = "Production"
+__status__ = "Development"
 
 # CONTIGuator ##################################################################
 #
@@ -81,6 +81,7 @@ __status__ = "Production"
 #   RC3     BUGFIX: Fix embl file creation (no more crashes of ACT on long contig names)
 #   RC4     BUGFIX: Fix the primer counting
 #   RC5     BUGFIX: Fix two crashes when no contigs are mapped
+#   2.3.1   BUGFIX: Handle non-standard sequence IDs
 
 ################################################################################
 # Imports
@@ -1229,8 +1230,9 @@ class Blast(BioPyWrapper):
                 LenList = []
                 for align in BlastQuery.alignments:
                     if (Target and (sKey in align.accession or
-                                    align.title == sKey or
-                                    align.hit_id == sKey)) or (not Target):
+                            align.title == sKey or
+                            align.hit_id == sKey or
+                            align.hit_def.split(' ')[0] == sKey)) or (not Target):
                         ### Here i have all the hsps for the specific target
                         for hsp in align.hsps:
                             # Update Max and Min
@@ -1302,8 +1304,9 @@ class Blast(BioPyWrapper):
 
                 for alignment in BlastQuery.alignments:
                     if (Target and (sKey in alignment.accession or
-                                    alignment.title == sKey or
-                                    alignment.hit_id == sKey)) or (not Target):
+                            alignment.title == sKey or
+                            alignment.hit_id == sKey or
+                            alignment.hit_def.split(' ')[0] == sKey)) or (not Target):
                         for hsp in alignment.hsps:
                             # Save the hits details
                             if hsp.align_length >= iMinHit:
@@ -1644,7 +1647,7 @@ def ContigProfiler(options,mylog):
         cmd = cmd.rstrip()
         cmd = cmd+'"'
         #Pass the file object
-        res = DBBlaster.CreateBlastDB(cmd, 'nucl', 'ContigProfilerTempDB')
+        res = DBBlaster.CreateBlastDB(cmd, 'nucl', 'ContigProfilerTempDB',bParseSeqIds=0)
         if res != 0:
             DeprecationWarning('Legacy-blast',mylog)
             mylog.WriteLog('WRN', 'DB creation failed for some reason! Trying to use the old version...')
