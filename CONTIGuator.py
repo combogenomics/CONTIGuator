@@ -7,7 +7,7 @@ __author__ = 'Marco Galardini'
 __copyright__ = "Copyright 2011"
 __credits__ = ["Lee Katz", "Florent Lassalle","Margaret Priest"]
 __license__ = "GPL"
-__version__ = "2.3.1"
+__version__ = "2.3.2"
 __maintainer__ = "Marco Galardini"
 __email__ = "marco.galardini@unifi.it"
 __status__ = "Production"
@@ -83,6 +83,7 @@ __status__ = "Production"
 #   RC5     BUGFIX: Fix two crashes when no contigs are mapped
 #   2.3.1   BUGFIX: Handle non-standard sequence IDs
 #           BUGFIX: Better handling of blast errors
+#   2.3.2   BUGFIX: Correct map directory name for the ACT scripts
 
 ################################################################################
 # Imports
@@ -3150,7 +3151,7 @@ def WriteACTLaunchers(actpath,oCFs,prefix,mylog):
         # Ugly part
         ref = sRef.rstrip('.reference.fasta')
         refDir = prefix+'Map_'+sRef.split('/')[-1].replace('_','.').replace('-','.')
-        refDir = refDir.rstrip('.reference.fasta')
+        refDir=refDir.replace('.reference.fasta','')
         fname = prefix+'_'+ref+'.sh'
         fname = fname.lstrip('_')
         #
