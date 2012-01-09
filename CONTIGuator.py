@@ -7,10 +7,10 @@ __author__ = 'Marco Galardini'
 __copyright__ = "Copyright 2011"
 __credits__ = ["Lee Katz", "Florent Lassalle","Margaret Priest"]
 __license__ = "GPL"
-__version__ = "2.3.3 RC1"
+__version__ = "2.3.3"
 __maintainer__ = "Marco Galardini"
 __email__ = "marco.galardini@unifi.it"
-__status__ = "Development"
+__status__ = "Production"
 
 # CONTIGuator ##################################################################
 #
@@ -84,6 +84,7 @@ __status__ = "Development"
 #   2.3.1   BUGFIX: Handle non-standard sequence IDs
 #           BUGFIX: Better handling of blast errors
 #   2.3.2   BUGFIX: Correct map directory name for the ACT scripts
+#   2.3.3   BUGFIX: SeqIO write may require a list of sequences on some biopy versions
 
 ################################################################################
 # Imports
@@ -95,7 +96,6 @@ try:
     from optparse import OptionParser, OptionGroup
     import copy
     import subprocess
-    import threading
     import os
     import shutil
     import glob
