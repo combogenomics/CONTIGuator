@@ -1152,8 +1152,6 @@ class Blast(BioPyWrapper):
     def RunBlast(self, taskType):
         '''Run Blast with the desired task'''
         try:
-            import subprocess
-            import sys
             # Create the command line
             cmd = self._LocalTasksFn.get(taskType,self._NoImplYet)(self)
             # Test if it is a command line or an error
