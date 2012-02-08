@@ -192,10 +192,11 @@ class ContigProfile:
                 return self.send
             else:
                 return self.sstart
-    def __init__(self,name,target,length,logObj = None):
+    def __init__(self,name,target,length,seq,logObj = None):
         self.name = name
         self.target = target
         self.length = int(length)
+        self.seq = seq
         self._hitslist = []
         # List of unaligned regions
         # On contig
@@ -631,12 +632,13 @@ class MapItem:
     '''
     Contigs mapped to a reference
     '''
-    def __init__(self,name,start,end,strand):
+    def __init__(self,name,start,end,strand,seq):
         self.name = name
         self.start = int(start)
         self.end = int(end)
         self.overlap = False
         self.strand = strand
+        self.seq = seq
     def __str__(self):
         '''
         Overridden function returning printable details
@@ -647,7 +649,9 @@ class MapItem:
                   ' '.join(['End:',str(self.end)]),
                   ' '.join(['Overlap:',str(self.overlap)]),
                   ' '.join(['Strand:',str(self.strand)])
-                          ]) 
+                          ])
+    def __len__(self):
+        return len(self.seq) 
 
 class ContiguatorCarrier:
     def __init__(self, sCont):
@@ -1888,6 +1892,11 @@ def ContigProfiler(options,mylog):
     ###########################
     ##### Output writing! #####
     ###########################
+    # Preliminary: build a contig sequence db
+    dContigsSeqs = {}
+    handle = open(options.ContigFile)
+    for seq_record in SeqIO.parse(handle, "fasta"):
+        dContigsSeqs[seq_record.id] = str(seq_record.seq)
     # First: Let's check if the list is empty:
     bExit = 1
     for sContig in dCDetails:
@@ -1908,7 +1917,7 @@ def ContigProfiler(options,mylog):
             continue
         sCurrRef = dCDetails[sContig][0].keys()[0]
         cLen = dContigs[sContig]
-        cprof = ContigProfile(sContig,sCurrRef,cLen,mylog)
+        cprof = ContigProfile(sContig,sCurrRef,cLen,dContigsSeqs[sContig],mylog)
         for hit in dOrder[sContig][0]:#Obj[3]:
             # Add each hit to the profile
             hitName = sContig+'_'+str(iHit)
@@ -2341,7 +2350,7 @@ def Mapper(sContig,sRef,oCFs,mylog):
             start = cTiling[0]
             end = cTiling[0] + cprof.length
             cMap = MapItem(cprof.name,start,
-                           end, cprof.getStrand())
+                           end, cprof.getStrand(), cprof.seq)
             ContigsMap.append(cMap)
     ContigsMap = sorted(ContigsMap, key=lambda cMap: cMap.start)
     
