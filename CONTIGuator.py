@@ -7,10 +7,10 @@ __author__ = 'Marco Galardini'
 __copyright__ = "Copyright 2011"
 __credits__ = ["Lee Katz", "Florent Lassalle","Margaret Priest"]
 __license__ = "GPL"
-__version__ = "2.3.3"
+__version__ = "2.4.0"
 __maintainer__ = "Marco Galardini"
 __email__ = "marco.galardini@unifi.it"
-__status__ = "Production"
+__status__ = "Development - Overlap"
 
 # CONTIGuator ##################################################################
 #
