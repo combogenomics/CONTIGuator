@@ -1011,6 +1011,19 @@ class Blast(BioPyWrapper):
         except Exception, e:
             return self._CmdLineErr()
             self._LogException(e)
+    # blastn2seqs
+    def _RunBlastn2Seqs(self):
+        '''Blastn2Seqs'''
+        try:
+            self.mylog.WriteLog('INF', 'Going to run tBlastn')
+            from Bio.Blast.Applications import NcbiblastnCommandline
+            cmd = NcbiblastnCommandline(query=self._query, subject=self._subject,
+                                         evalue=self._evalue,
+                                         outfmt=self._outfmt, out=self._out)
+            return cmd
+        except Exception, e:
+            return self._CmdLineErr()
+            self._LogException(e)
     ## Blast "after-parse" methods:
     def _GetBlastQuery(self, query):
         '''Returns the alignments list of the desired query name'''
@@ -1089,9 +1102,10 @@ class Blast(BioPyWrapper):
             if (queryStart, queryEnd) not in self._AlignRanges:
                 self._AlignRanges.append((queryStart, queryEnd))
     _LocalTasksStr = {'blastall':'BlastallCommandline',
-        'blastn':'NcbiblastnCommandline','tblastn':'NcbitblastnCommandline'}
+        'blastn':'NcbiblastnCommandline','tblastn':'NcbitblastnCommandline',
+        'blastn2seqs':'NcbiblastnCommandline'}
     _LocalTasksFn = {'blastall':_RunBlastAll,'blastn':_RunBlastn,'tblastn':_RuntBlastn,
-                    'legacy_tblastn':_RuntBlastnLegacy}
+                    'legacy_tblastn':_RuntBlastnLegacy, 'blastn2seqs':_RunBlastn2Seqs}
     # 1- Create a Blast DB
     def CreateBlastDB(self):
         # Example cmd line:
