@@ -2391,7 +2391,6 @@ def CheckOverlap(CMap, intrepid, mylog):
         blaster = Blast(mylog)
         blaster.FillBlastPar(before, out=xml, evalue=1e-5,
                              outfmt='5', subject=after)
-        # TODO: res checks
         res = blaster.RunBlast('blastn2seqs')
         if res:
             mylog.WriteLog('WRN', 'Blast error, skipping overlap check')
