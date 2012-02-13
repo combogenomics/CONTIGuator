@@ -926,6 +926,7 @@ class Blast(BioPyWrapper):
             self.subjct_end=int(se)
             self.evalue=float(ev)
             self.bits=float(bi)
+            self.correctSubjectLoc()
         def getTabular(self):
             s=(self.query_id+'\t'+self.hit+'\t'+str(self.identity*100)+'\t'+
                str(self.align_len)+'\t'+str(self.mismatches)+'\t'+
@@ -934,6 +935,11 @@ class Blast(BioPyWrapper):
                '\t'+str(self.subjct_end)+'\t'+
                str(self.evalue)+'\t'+str(self.bits))
             return s
+        def correctSubjectLoc(self):
+            if self.subjct_start > self.subjct_end:
+                temp = self.subjct_end
+                self.subjct_end = self.subjct_start
+                self.subjct_start = temp
     def __init__(self, logObj=None):
         try:BioPyWrapper.__init__(self,logObj)
         except Exception, e:raise Exception(e)
