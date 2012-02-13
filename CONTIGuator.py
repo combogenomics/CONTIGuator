@@ -14,7 +14,7 @@ __status__ = "Production"
 
 # CONTIGuator ##################################################################
 #
-# Author: Marco Galardini, 2011
+# Author: Marco Galardini, 2011-12
 # Department of evolutionary genomics, University of Florence
 #
 
@@ -34,57 +34,6 @@ __status__ = "Production"
 #
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-# VERSIONS #####################################################################
-#
-#   1.0
-#   1.0.1   BUGFIX: removing underscores from contig names
-#   1.1     FEATURE: added a tblastn from proteins in reference molecules with
-#           no homology
-#   1.2     BUGFIX: Handling primer3 newer versions
-#           BUGFIX: Removed "Linear" option
-#   1.3     BUGFIX: Unused splitted contigs correction
-#   1.4     FEATURE: added the -A option to automate the primer design
-#           parameters input
-#           BUGFIX: Various bugfixes
-#   1.4.1   BUGFIX: prevention of crashes during PrintStats function
-#   1.4.2   FEATURE: add the -G (DEBUG) option, improved error handling
-#           BUGFIX: Check the BioPython version
-#   1.4.3   FEATURE: add a prefix to the generated directories (-f option)
-#   1.4.4   BUGFIX: a little bugfix on prefix option
-#   2.0.0   REFACTORED VERSION:
-#               Contig profiling uses only Blast
-#               Abacas and Mummer are used only for primer picking
-#               General restyling of each function
-#               Removed unused functions
-#               Added classes for contig profiling and mapping
-#   rev 1   Support for older python versions
-#           Primer picking verbosity when using -A and -G options
-#   2.1.0   FEATURE: Fail-safe PrintStats
-#           FEATURE: UnMappedContigs.txt file
-#           FEATURE: DNALengths.tab file
-#           FEATURE: Add more outputs with -M option
-#           FEATURE: 4 optional fasta files with aligned/unaligned regions
-#           FEATURE: Deprecation warning when using legacy-blast
-#           FEATURE: Remove those primers generated for Ns regions INSIDE a contig
-#           FEATURE: Generate a PCRPrimers.tsv summary table (-M option)
-#   2.2.0   BUGFIX: UnMappedContigs.txt now is correctly created
-#           FEATURE: PCRPrimers.tsv is now produced by default
-#           FEATURE: The abacas generated outputs after primer picking are not used anymore
-#           FEATURE: Mapped and UnMapped txt files now contain the molecules length
-#           FEATURE: The script can be launched from any location now (abacas will be found)
-#           DEPRECATION: DNALenghts.tab is no longer produced as an output
-#   2.2.5   FEATURE: Generation of embl files instead of fasta AND tab files
-#   2.2.6   BUGFIX: The Reference embl file contains also the ptt files analysis
-#   2.3.0   FEATURE: An easier way to open the ACT maps is now implemented
-#   RC2     BUGFIX: Support for Biopython 1.57+
-#   RC3     BUGFIX: Fix embl file creation (no more crashes of ACT on long contig names)
-#   RC4     BUGFIX: Fix the primer counting
-#   RC5     BUGFIX: Fix two crashes when no contigs are mapped
-#   2.3.1   BUGFIX: Handle non-standard sequence IDs
-#           BUGFIX: Better handling of blast errors
-#   2.3.2   BUGFIX: Correct map directory name for the ACT scripts
-#   2.3.3   BUGFIX: SeqIO write may require a list of sequences on some biopy versions
 
 ################################################################################
 # Imports
