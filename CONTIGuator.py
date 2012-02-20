@@ -5,16 +5,17 @@ Bacterial comparative genomics finishing tool for draft structural genomics insi
 
 __author__ = 'Marco Galardini'
 __copyright__ = "Copyright 2011"
-__credits__ = ["Lee Katz", "Florent Lassalle","Margaret Priest"]
+__credits__ = ["Lee Katz", "Florent Lassalle","Margaret Priest",
+               "Luisa Santopolo","Francesca Decorosi"]
 __license__ = "GPL"
-__version__ = "2.3.3"
+__version__ = "2.5.0"
 __maintainer__ = "Marco Galardini"
 __email__ = "marco.galardini@unifi.it"
 __status__ = "Production"
 
 # CONTIGuator ##################################################################
 #
-# Author: Marco Galardini, 2011
+# Author: Marco Galardini, 2011-12
 # Department of evolutionary genomics, University of Florence
 #
 
@@ -34,57 +35,6 @@ __status__ = "Production"
 #
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-# VERSIONS #####################################################################
-#
-#   1.0
-#   1.0.1   BUGFIX: removing underscores from contig names
-#   1.1     FEATURE: added a tblastn from proteins in reference molecules with
-#           no homology
-#   1.2     BUGFIX: Handling primer3 newer versions
-#           BUGFIX: Removed "Linear" option
-#   1.3     BUGFIX: Unused splitted contigs correction
-#   1.4     FEATURE: added the -A option to automate the primer design
-#           parameters input
-#           BUGFIX: Various bugfixes
-#   1.4.1   BUGFIX: prevention of crashes during PrintStats function
-#   1.4.2   FEATURE: add the -G (DEBUG) option, improved error handling
-#           BUGFIX: Check the BioPython version
-#   1.4.3   FEATURE: add a prefix to the generated directories (-f option)
-#   1.4.4   BUGFIX: a little bugfix on prefix option
-#   2.0.0   REFACTORED VERSION:
-#               Contig profiling uses only Blast
-#               Abacas and Mummer are used only for primer picking
-#               General restyling of each function
-#               Removed unused functions
-#               Added classes for contig profiling and mapping
-#   rev 1   Support for older python versions
-#           Primer picking verbosity when using -A and -G options
-#   2.1.0   FEATURE: Fail-safe PrintStats
-#           FEATURE: UnMappedContigs.txt file
-#           FEATURE: DNALengths.tab file
-#           FEATURE: Add more outputs with -M option
-#           FEATURE: 4 optional fasta files with aligned/unaligned regions
-#           FEATURE: Deprecation warning when using legacy-blast
-#           FEATURE: Remove those primers generated for Ns regions INSIDE a contig
-#           FEATURE: Generate a PCRPrimers.tsv summary table (-M option)
-#   2.2.0   BUGFIX: UnMappedContigs.txt now is correctly created
-#           FEATURE: PCRPrimers.tsv is now produced by default
-#           FEATURE: The abacas generated outputs after primer picking are not used anymore
-#           FEATURE: Mapped and UnMapped txt files now contain the molecules length
-#           FEATURE: The script can be launched from any location now (abacas will be found)
-#           DEPRECATION: DNALenghts.tab is no longer produced as an output
-#   2.2.5   FEATURE: Generation of embl files instead of fasta AND tab files
-#   2.2.6   BUGFIX: The Reference embl file contains also the ptt files analysis
-#   2.3.0   FEATURE: An easier way to open the ACT maps is now implemented
-#   RC2     BUGFIX: Support for Biopython 1.57+
-#   RC3     BUGFIX: Fix embl file creation (no more crashes of ACT on long contig names)
-#   RC4     BUGFIX: Fix the primer counting
-#   RC5     BUGFIX: Fix two crashes when no contigs are mapped
-#   2.3.1   BUGFIX: Handle non-standard sequence IDs
-#           BUGFIX: Better handling of blast errors
-#   2.3.2   BUGFIX: Correct map directory name for the ACT scripts
-#   2.3.3   BUGFIX: SeqIO write may require a list of sequences on some biopy versions
 
 ################################################################################
 # Imports
@@ -125,6 +75,27 @@ class Highlighter:
 def ColorOutput(msg,msgLevel='INF'):
     o=Highlighter()
     return o.ColorMsg(msg,msgLevel)
+
+################################################################################
+# Notifications
+
+def Notify(msg, error = False):
+    '''
+    Launch a notification (may not work on systems without libnotify-bin)
+    '''
+    path = os.path.split(os.path.realpath(__file__))[0]
+    
+    if error:
+        icon = 'error'
+    elif 'icon.png' in path:
+        icon = os.path.join(path, 'icon.png')
+    else:
+        icon = 'info'
+    
+    cmd = '''notify-send -t 2000 -u low -i %s "CONTIGuator" "%s"'''%(icon,msg)
+    subprocess.call(cmd,shell=(sys.platform!="win32"),
+                        stdin=subprocess.PIPE,stdout=subprocess.PIPE,
+                        stderr=subprocess.PIPE)
 
 ################################################################################
 # Classes
@@ -192,10 +163,11 @@ class ContigProfile:
                 return self.send
             else:
                 return self.sstart
-    def __init__(self,name,target,length,logObj = None):
+    def __init__(self,name,target,length,seq,logObj = None):
         self.name = name
         self.target = target
         self.length = int(length)
+        self.seq = seq
         self._hitslist = []
         # List of unaligned regions
         # On contig
@@ -631,12 +603,15 @@ class MapItem:
     '''
     Contigs mapped to a reference
     '''
-    def __init__(self,name,start,end,strand):
+    def __init__(self,name,start,end,strand,seq):
         self.name = name
         self.start = int(start)
         self.end = int(end)
         self.overlap = False
+        self.right = False
+        self.left = False
         self.strand = strand
+        self.seq = seq
     def __str__(self):
         '''
         Overridden function returning printable details
@@ -647,7 +622,9 @@ class MapItem:
                   ' '.join(['End:',str(self.end)]),
                   ' '.join(['Overlap:',str(self.overlap)]),
                   ' '.join(['Strand:',str(self.strand)])
-                          ]) 
+                          ])
+    def __len__(self):
+        return len(self.seq) 
 
 class ContiguatorCarrier:
     def __init__(self, sCont):
@@ -673,6 +650,8 @@ class ContiguatorCarrier:
         self.coverageborderline= ''
         self.multi= ''
         self.primers= {}
+        # "Last" PCR
+        self.lastPCR = {}
         # Splitted unused bufixes
         self.splitted=[]
     def setMap(self, sRef, CMap):
@@ -709,6 +688,8 @@ class ContiguatorCarrier:
         self.profiles.append(cprof)
     def setDir(self,ref,directory):
         self.dirs[ref]=directory
+    def setLastPCR(self,ref,lastfile):
+        self.lastPCR[ref]=lastfile
 
 class ContigMap:
     def __init__(self, sName, sStrand = '', sStart = '0', sEnd = '0', sLength = '0',
@@ -920,6 +901,7 @@ class Blast(BioPyWrapper):
             self.subjct_end=int(se)
             self.evalue=float(ev)
             self.bits=float(bi)
+            self.correctSubjectLoc()
         def getTabular(self):
             s=(self.query_id+'\t'+self.hit+'\t'+str(self.identity*100)+'\t'+
                str(self.align_len)+'\t'+str(self.mismatches)+'\t'+
@@ -928,6 +910,11 @@ class Blast(BioPyWrapper):
                '\t'+str(self.subjct_end)+'\t'+
                str(self.evalue)+'\t'+str(self.bits))
             return s
+        def correctSubjectLoc(self):
+            if self.subjct_start > self.subjct_end:
+                temp = self.subjct_end
+                self.subjct_end = self.subjct_start
+                self.subjct_start = temp
     def __init__(self, logObj=None):
         try:BioPyWrapper.__init__(self,logObj)
         except Exception, e:raise Exception(e)
@@ -1003,6 +990,19 @@ class Blast(BioPyWrapper):
             from Bio.Blast.Applications import NcbitblastnCommandline
             cmd = NcbitblastnCommandline(query=self._query, db=self._db, evalue=self._evalue,
                         outfmt=self._outfmt,out=self._out)
+            return cmd
+        except Exception, e:
+            return self._CmdLineErr()
+            self._LogException(e)
+    # blastn2seqs
+    def _RunBlastn2Seqs(self):
+        '''Blastn2Seqs'''
+        try:
+            self.mylog.WriteLog('INF', 'Going to run tBlastn')
+            from Bio.Blast.Applications import NcbiblastnCommandline
+            cmd = NcbiblastnCommandline(query=self._query, subject=self._subject,
+                                         evalue=self._evalue,
+                                         outfmt=self._outfmt, out=self._out)
             return cmd
         except Exception, e:
             return self._CmdLineErr()
@@ -1085,9 +1085,10 @@ class Blast(BioPyWrapper):
             if (queryStart, queryEnd) not in self._AlignRanges:
                 self._AlignRanges.append((queryStart, queryEnd))
     _LocalTasksStr = {'blastall':'BlastallCommandline',
-        'blastn':'NcbiblastnCommandline','tblastn':'NcbitblastnCommandline'}
+        'blastn':'NcbiblastnCommandline','tblastn':'NcbitblastnCommandline',
+        'blastn2seqs':'NcbiblastnCommandline'}
     _LocalTasksFn = {'blastall':_RunBlastAll,'blastn':_RunBlastn,'tblastn':_RuntBlastn,
-                    'legacy_tblastn':_RuntBlastnLegacy}
+                    'legacy_tblastn':_RuntBlastnLegacy, 'blastn2seqs':_RunBlastn2Seqs}
     # 1- Create a Blast DB
     def CreateBlastDB(self):
         # Example cmd line:
@@ -1132,8 +1133,6 @@ class Blast(BioPyWrapper):
     def RunBlast(self, taskType):
         '''Run Blast with the desired task'''
         try:
-            import subprocess
-            import sys
             # Create the command line
             cmd = self._LocalTasksFn.get(taskType,self._NoImplYet)(self)
             # Test if it is a command line or an error
@@ -1497,6 +1496,8 @@ def getOptions():
                 help='Minimal coverage of the contig (blast-based) [Default: 20%].' 'Values above 100 will be considered 100%')
     group4.add_option('-B', '--bigHitLength', action="store", type='int', dest='iMinBigHit', default=1100,
                 help='Minimal length of a significant blast hit (at least bigger than 1100bp) [Default: 1100].')
+    group4.add_option('-I', '--intrepid', action="store_true", dest='bIntrepid', default=False,
+                    help='Merge contigs when possible?')
     parser.add_option_group(group4)
 
     # Primer picking?
@@ -1667,7 +1668,8 @@ def ContigProfiler(options,mylog):
                 sys.stdout.write(strftime("%H:%M:%S")+
                     ' Check the log file for the offending command\n')
                 mylog.WriteLog('ERR', 'DB creation failed for some reason! Exiting...')
-                sys.exit('Blast DB creation failed!')
+                Notify('Blast DB creation failed!',True)
+                return None
         # Run Blast
         # First, ensure unique names for the blast outputs
         sOut = 'BOut.xml'
@@ -1696,7 +1698,8 @@ def ContigProfiler(options,mylog):
                 sys.stdout.write(strftime("%H:%M:%S")+
                     ' Check the log file for the offending command\n')
                 mylog.WriteLog('ERR', 'Blast Run failed for some reason! Exiting...')
-                sys.exit('Blast run failed!')
+                Notify('Blast run failed!',True)
+                return None
         dBlastOut[options.ContigFile] = (options.fExpect, sTempOut)
         # Erase the temporary DB
         for i in glob.glob('ContigProfilerTempDB*'):
@@ -1722,7 +1725,8 @@ def ContigProfiler(options,mylog):
         sys.stderr.write(strftime("%H:%M:%S")+
                ColorOutput(' Parse failed! fsa:'+
                    options.ContigFile+' BOut:'+tBOut[1]+' Exiting...\n','ERR'))
-        sys.exit()
+        Notify('Parse failed on %s!'%tBOut[1],True)
+        return None
     # Dictionary: Contig -> list of reference details
     # Dictionary of Dictionary referenceID -> (seq_len, coverage, biggestHit, [hits details], [contig profile])
     # Contig profile: [bOrder, %of reference PseudoContig, Dict of overlaps]
@@ -1888,6 +1892,11 @@ def ContigProfiler(options,mylog):
     ###########################
     ##### Output writing! #####
     ###########################
+    # Preliminary: build a contig sequence db
+    dContigsSeqs = {}
+    handle = open(options.ContigFile)
+    for seq_record in SeqIO.parse(handle, "fasta"):
+        dContigsSeqs[seq_record.id] = str(seq_record.seq)
     # First: Let's check if the list is empty:
     bExit = 1
     for sContig in dCDetails:
@@ -1897,7 +1906,7 @@ def ContigProfiler(options,mylog):
         mylog.WriteLog('WRN', 'No Contigs mapped to the reference(s)! Exiting...')
         sys.stderr.write(strftime("%H:%M:%S")+
            ColorOutput(' No contigs mapped to reference(s)! Exiting...\n','WRN'))
-        sys.exit()
+        return None
     # Details
     for sContig in dCDetails:
         # hits numbers
@@ -1908,7 +1917,7 @@ def ContigProfiler(options,mylog):
             continue
         sCurrRef = dCDetails[sContig][0].keys()[0]
         cLen = dContigs[sContig]
-        cprof = ContigProfile(sContig,sCurrRef,cLen,mylog)
+        cprof = ContigProfile(sContig,sCurrRef,cLen,dContigsSeqs[sContig],mylog)
         for hit in dOrder[sContig][0]:#Obj[3]:
             # Add each hit to the profile
             hitName = sContig+'_'+str(iHit)
@@ -2078,6 +2087,9 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
     sAlterC = 'PseudoContig.crunch'
     sContigsMapped = 'MappedContigs.txt'
     oCFs.addGeneralFile(sContigsMapped)
+    # "Last PCR"
+    sLastPCR = 'LastPCR%s.fsa'%oCFs.refNames[sRef]
+    #
     if bMoreOutputs:
         sAlignDetails = 'AlignDetails.tab'
         oCFs.addGeneralFile(sAlignDetails)
@@ -2086,14 +2098,15 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
         sASeqRef = 'AlignedReferenceHits.fsa'
         sNSeqRef = 'UnAlignedReferenceHits.fsa'
         oCFs.addGeneralFile(sASeqContig)
-        oCFs.addGeneralFile(sNSeqContig)
+        oCFs.addGeneralFile (sNSeqContig)
         oCFs.addGeneralFile(sASeqRef)
         oCFs.addGeneralFile(sNSeqRef)
     oCFs.addACTFile('PseudoContig.fsa')
     oCFs.addACTFile('PseudoContig.crunch')
     oCFs.setCrunchFile(sRef,sAlterC)
     oCFs.setPContigFile(sRef,sAlterPC)
-    
+    oCFs.setLastPCR(sRef, sLastPCR)
+        
     # Read the contig file and build a DB as well
     fContig = open(sContig, 'r')
     dContig = {}
@@ -2171,7 +2184,10 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
         else:
             feat.strand = -1
         if cMap.overlap:
-            feat.qualifiers['colour']='5'
+            if cMap.left and cMap.right:
+                feat.qualifiers['colour']='2'
+            elif cMap.left or cMap.right:
+                feat.qualifiers['colour']='16'
             feat.qualifiers['overlap']='YES'
         else:
             feat.qualifiers['colour']='4'
@@ -2292,6 +2308,158 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
     seqRef.seq.alphabet = Alphabet.IUPAC.IUPACUnambiguousDNA()
     SeqIO.write([seqRef],open(seRef,'w'),'embl')
 
+    # "Last" PCR
+    for i in range(100):
+        PContig += 'N'
+    cMap = ContigsMap[0]
+    if cMap.strand == '+':
+        PContig += str(dContig[cMap.name].seq)
+    else:
+        PContig += str(dContig[cMap.name].seq.reverse_complement())
+    fLastPCR = open(sLastPCR, 'w')
+    fLastPCR.write('>'+PName+'\n')
+    Write80CharFile(fLastPCR, PContig)
+    fLastPCR.close()
+
+def CheckHit(hit):
+    gaps = 10
+    mismatches = 20
+    relativealign = (0.9,1.1)
+
+    queryalign = hit.query_end - hit.query_start
+    subjctalign = hit.subjct_end - hit.subjct_start
+    
+    if (queryalign >= hit.align_len * relativealign[1] or 
+        queryalign <=  hit.align_len * relativealign[0]):
+        return False
+    if (subjctalign >= hit.align_len * relativealign[1] or 
+        subjctalign <=  hit.align_len * relativealign[0]):
+        return False
+    
+    if hit.gaps < gaps and hit.mismatches < mismatches:
+        return True
+    else:
+        return False
+    
+def BlastOverlap(previous, contig, border, mylog):
+    # Files
+    before = 'before.fna'
+    after = 'after.fna'
+    xml = 'overlap.xml'
+    
+    # Save the sequences
+    fbefore = open(before,'w')
+    fbefore.write('>before\n%s'%previous.seq)
+    fbefore.close()
+    fafter = open(after,'w')
+    fafter.write('>after\n%s'%contig.seq)
+    fafter.close()
+    
+    # 3- Blast them
+    blaster = Blast(mylog)
+    blaster.FillBlastPar(before, out=xml, evalue=1e-5,
+                         outfmt='5', subject=after)
+    res = blaster.RunBlast('blastn2seqs')
+    if res:
+        mylog.WriteLog('WRN', 'Blast error, skipping overlap check')
+        sys.stdout.write(strftime("%H:%M:%S")+
+             ColorOutput(' Blast error, skipping overlap check\n','WRN'))
+        return
+    res = blaster.ParseBlast(xml)
+    if res:
+        mylog.WriteLog('WRN', 'Parse blast error, skipping overlap check')
+        sys.stdout.write(strftime("%H:%M:%S")+
+             ColorOutput(' Parse blast error, skipping overlap check\n','WRN'))
+        return
+    
+    results = blaster.GetAllQueryHits()
+    
+    overlap = False
+    
+    for q in results:
+        for hit in results[q]:
+            if not CheckHit(hit):
+                continue
+            # Orientations
+            if previous.strand == '+' and contig.strand == '+':
+                if ( (len(previous) - hit.query_end < border)
+                    and (hit.subjct_start - 1 < border )):
+                    overlap = True
+            elif previous.strand == '+' and contig.strand == '-':
+                if ( (len(previous) - hit.query_end  < border)
+                    and (len(contig) - hit.subjct_end < border )):
+                    
+                    overlap = True
+            elif previous.strand == '-' and contig.strand == '+':
+                if ( (hit.query_start - 1 < border)
+                    and (hit.subjct_start - 1 < border )):
+                    
+                    overlap = True
+            elif previous.strand == '-' and contig.strand == '-':
+                if ( (hit.query_start - 1 < border)
+                    and (len(contig) - hit.subjct_end < border )):
+                    
+                    overlap = True
+            if overlap:
+                break
+
+    if overlap:
+        mylog.WriteLog('INF', '%s - %s contig overlap!'%(previous.name,contig.name))
+        previous.overlap = True
+        previous.right = True
+        contig.overlap = True
+        contig.left = True
+        
+    # Clean-up
+    os.remove(before)
+    os.remove(after)
+    os.remove(xml)
+    
+    return overlap
+
+def CheckOverlap(CMap, intrepid, mylog):
+    '''
+    Iteration over the map
+    Blast2seq to see if two near contigs are overlapped
+    If intrepid is set, the contigs may be merged
+    '''
+    mylog.WriteLog('INF', 'Checking contigs overlap')
+    sys.stdout.write(strftime("%H:%M:%S")+
+                        ' Checking contigs overlap\n')
+    
+    if intrepid:
+        mylog.WriteLog('WRN', 'Intrepid mode not implemeted yet...')
+        sys.stdout.write(strftime("%H:%M:%S")+
+                ColorOutput(' Intrepid mode not implemeted yet...\n','WRN'))
+    
+    # Bases near the border of the contig that can be out of the alignment
+    border = 100
+    
+    # Counter
+    overlaps = 0
+    
+    bStart = True
+    for contig in CMap:
+        if bStart:
+            bStart = False
+            continue
+        previous = CMap[CMap.index(contig) - 1]
+        if BlastOverlap(previous, contig, border, mylog):
+            overlaps += 1
+            
+    # Last contig overlap with first one
+    if BlastOverlap(contig, CMap[0], border, mylog):
+        overlaps += 1
+    
+    if overlaps > 0:
+        sys.stdout.write(strftime("%H:%M:%S")+
+             ColorOutput(' %d contig overlap(s) were found\n'%overlaps,'DEV'))
+    else:
+        sys.stdout.write(strftime("%H:%M:%S")+
+             ' No contig overlaps were found\n')
+    
+    return
+
 def Mapper(sContig,sRef,oCFs,mylog):
     '''Reads the profiles generated by Blast and creates a contig map'''
     mylog.WriteLog('INF', 'Generating the map for reference: '+
@@ -2341,7 +2509,7 @@ def Mapper(sContig,sRef,oCFs,mylog):
             start = cTiling[0]
             end = cTiling[0] + cprof.length
             cMap = MapItem(cprof.name,start,
-                           end, cprof.getStrand())
+                           end, cprof.getStrand(), cprof.seq)
             ContigsMap.append(cMap)
     ContigsMap = sorted(ContigsMap, key=lambda cMap: cMap.start)
     
@@ -2379,9 +2547,7 @@ def Mapper(sContig,sRef,oCFs,mylog):
             continue
         previous = ContigsMap[ContigsMap.index(cMap) - 1]
         if previous.end >= cMap.start:
-            # Overlapping
-            previous.overlap = True
-            cMap.overlap = True
+            # Overlapping - But not really a "true" overlap
             slideMap = previous.end - cMap.start + 100
             cMap.start += slideMap
             cMap.end += slideMap
@@ -2421,9 +2587,9 @@ def Mapper(sContig,sRef,oCFs,mylog):
 def RunPrimerPicking(ref,pC,auto,debug,mylog):
     '''Run Abacas just for primer picking'''
     #debug
-    mylog.WriteLog('INF', 'Going to generate primers for molecule: '+str(pC))
+    mylog.WriteLog('INF', 'Going to generate primers for map to '+str(ref))
     sys.stdout.write(strftime("%H:%M:%S")+
-                        ' Going to generate primers for molecule: '+str(pC)+'\n')
+                        ' Going to generate primers for map to '+str(ref)+'\n')
 
     # perl abacas.1.1.pl -r <REF>  -q <PSeudoContig> -e
     # Run Abacas and check the return code
@@ -2451,7 +2617,9 @@ def RunPrimerPicking(ref,pC,auto,debug,mylog):
         mylog.WriteLog('ERR',str(out[1]))
         sys.stderr.write(strftime("%H:%M:%S")+
             ColorOutput(' ERROR: Abacas run failed for some reason!\n','ERR'))
-        sys.exit()
+        Notify('Abacas run failure!',True)
+        return False
+    return True
 
 def AbacasPrimer3Parse(sFile,sFasta):
     '''
@@ -2509,13 +2677,16 @@ def RemoveInnerPrimers(products,ContigMap,mylog):
     '''
     toBeRemoved = []
     
+    LastMap = copy.deepcopy(ContigMap)
+    LastMap.append(ContigMap[0])
+    
     for p in products:
         b=0
         # Cycle through the map
-        for c in ContigMap:
+        for c in LastMap:
             # Get the next item
             try:
-                c1 = ContigMap[ContigMap.index(c)+1]
+                c1 = LastMap[LastMap.index(c)+1]
             except:
                 break
             # Is there any product here?
@@ -2548,6 +2719,30 @@ def WritePrimerProducts(sPC,products):
     s=SeqIO.parse(open(sPC),'embl').next()
     
     for p in products:
+        # "Last" PCR?
+        if p.getRightPrimer().start > len(s):
+            # "Last" PCR product: split it!
+            first = len(s) - p.getLeftPrimer().start
+            feat = SeqFeature.SeqFeature(SeqFeature.FeatureLocation(
+                                                    p.getLeftPrimer().start,
+                                                    len(s)),
+                                      id=p.name, type='PCR')
+            feat.qualifiers['systematic_id']=p.name+'_1'
+            feat.qualifiers['colour']='1'
+            feat.qualifiers['method']='Abacas/Primer3'
+            s.features.append(feat)
+            # Second part
+            second = len(p) - first - 100
+            feat = SeqFeature.SeqFeature(SeqFeature.FeatureLocation(
+                                                    0,
+                                                    second),
+                                      id=p.name, type='PCR')
+            feat.qualifiers['systematic_id']=p.name+'_2'
+            feat.qualifiers['colour']='1'
+            feat.qualifiers['method']='Abacas/Primer3'
+            s.features.append(feat)
+            break
+        #
         feat = SeqFeature.SeqFeature(SeqFeature.FeatureLocation(
                                                     p.getLeftPrimer().start,
                                                     p.getRightPrimer().start),
@@ -2559,7 +2754,7 @@ def WritePrimerProducts(sPC,products):
     
     SeqIO.write([s],open(sPC,'w'),'embl')
             
-def PrimerTable(products,ContigMap,outFile):
+def PrimerTable(products,ContigMap,outFile,sPC):
     '''
     Opens the Abacas/primer3 output file and generates a table
     The table will tell which primers are between two contigs and
@@ -2574,6 +2769,9 @@ def PrimerTable(products,ContigMap,outFile):
                 'GC','Reverse Primer','Length','Start','Tm','GC',
                 'Estimated Amplicon length','Estimated PCR Product'])+'\n')
     
+    from Bio import SeqIO
+    s=SeqIO.parse(open(sPC),'embl').next()
+    
     # Cycle through the map
     for c in ContigMap:
         # Get the next item
@@ -2582,18 +2780,32 @@ def PrimerTable(products,ContigMap,outFile):
         except:
             break
         # Is there any product here?
-        b = 0
+        b = False
         for p in products:
-            if (p.getLeftPrimer().start < c.end and 
-                p.getRightPrimer().start > c1.start):
+            if ((p.getLeftPrimer().start < c.end and 
+                p.getRightPrimer().start > c1.start) and
+                not p.getRightPrimer().start > len(s) ):
                 # Good!
-                b = 1
+                b = True
                 break
         if not b:
             # No product here
             f.write('\t'.join([c.name, c1.name, 'NOT FOUND']) + '\n')
         else:
             f.write('\t'.join([c.name, c1.name, str(p)]) + '\n')
+        
+    # "Last" PCR
+    c1 = ContigMap[0]
+    b = False
+    for p in products:
+        if ( (p.getLeftPrimer().start + len(p)) >  len(s)):
+            b = True
+            break
+    if not b:
+        # No product here
+        f.write('\t'.join([c.name, c1.name, 'NOT FOUND']) + '\n')
+    else:
+        f.write('\t'.join([c.name, c1.name, str(p)]) + '\n')
     
     f.close()
 
@@ -3315,7 +3527,8 @@ def CONTIGuator(options):
         sys.stdout.write(strftime("%Y-%m-%d %H:%M:%S")+
                             ColorOutput(' Stopping CONTIGuator\n','WRN'))
         mylog.WriteLog('INF','Stopping CONTIGuator')
-        sys.exit()
+        Notify('Some requirements are not met',True)
+        sys.exit(1)
 
     # Start!
     # Make a snapshoot of the directory (to cancel the intermediate files)
@@ -3323,6 +3536,12 @@ def CONTIGuator(options):
     #
     
     oCFs = ContigProfiler(options,mylog)
+    if not oCFs:
+        DeleteTemporaryFiles(lStart)
+        sys.stdout.write(strftime("%Y-%m-%d %H:%M:%S")+
+                            ColorOutput(' Stopping CONTIGuator\n','WRN'))
+        mylog.WriteLog('INF','Stopping CONTIGuator')
+        sys.exit(0)
     
     dDir = {}
     for sRef in oCFs.references.keys():
@@ -3350,6 +3569,9 @@ def CONTIGuator(options):
                ColorOutput(' Molecule '+sRef+' has no contig mapped to it!\n','WRN'))
             continue
         
+        # Check the overlaps between near contigs
+        CheckOverlap(CMap, options.bIntrepid, mylog)
+        
         oCFs.setMap(sRef, CMap)
         # Write down the obtained map -- ACT
         WriteMap(CMap,options.ContigFile,sRef,oCFs,options.manyOutputs,mylog)
@@ -3372,11 +3594,12 @@ def CONTIGuator(options):
                 continue
             sRefDir = options.sPrefix+'Map_'+sRef.split('/')[-1].replace('_','.').replace('-','.')
             sRefDir=sRefDir.replace('.reference.fasta','')
-            RunPrimerPicking(options.ContigFile,oCFs.PC[sRef],
-                            options.bAuto,options.debug,mylog)
+            if not RunPrimerPicking(options.ContigFile,oCFs.lastPCR[sRef],
+                            options.bAuto,options.debug,mylog):
+                sys.exit(1)
             # Output name
             primer3Out = 'primer3.summary.out'
-            products = AbacasPrimer3Parse(primer3Out,oCFs.PC[sRef])
+            products = AbacasPrimer3Parse(primer3Out,oCFs.lastPCR[sRef])
             products = RemoveInnerPrimers(products,oCFs.maps[sRef],mylog)
             WritePrimerProducts(oCFs.embl[sRef],products)
             mylog.WriteLog('INF', 'Generating a primer summary table: '+
@@ -3384,7 +3607,7 @@ def CONTIGuator(options):
             sys.stdout.write(strftime("%H:%M:%S")+
                 ' Generating a primer summary table: '+sRefDir+
                 '/PCRPrimers.tsv\n')
-            PrimerTable(products,oCFs.maps[sRef],'PCRPrimers.tsv')
+            PrimerTable(products,oCFs.maps[sRef],'PCRPrimers.tsv',oCFs.embl[sRef])
             shutil.copy('PCRPrimers.tsv',sRefDir)
             oCFs.primers[sRef] = sRefDir+'/PCRPrimers.tsv'
     # Give me some stats...
@@ -3472,6 +3695,7 @@ def CONTIGuator(options):
     sys.stdout.write(strftime("%Y-%m-%d %H:%M:%S")+
                             ColorOutput(' Stopping CONTIGuator\n','IMP'))
     mylog.WriteLog('INF','Stopping CONTIGuator')
+    Notify('The results are ready')
 
 def main():
     if bExitForImportFailed:
@@ -3490,6 +3714,7 @@ def main():
                 mylog.WriteLog('ERR',str(e))
                 sys.stderr.write(strftime("%H:%M:%S")+
                     ColorOutput(' ERROR: '+str(e)+'\n','ERR'))
+                Notify(str(e), True)
         else:CONTIGuator(options)
 
 if __name__ == '__main__':
