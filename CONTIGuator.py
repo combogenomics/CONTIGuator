@@ -2345,6 +2345,82 @@ def CheckHit(hit):
         return True
     else:
         return False
+    
+def BlastOverlap(previous, contig, border, mylog):
+    # Files
+    before = 'before.fna'
+    after = 'after.fna'
+    xml = 'overlap.xml'
+    
+    # Save the sequences
+    fbefore = open(before,'w')
+    fbefore.write('>before\n%s'%previous.seq)
+    fbefore.close()
+    fafter = open(after,'w')
+    fafter.write('>after\n%s'%contig.seq)
+    fafter.close()
+    
+    # 3- Blast them
+    blaster = Blast(mylog)
+    blaster.FillBlastPar(before, out=xml, evalue=1e-5,
+                         outfmt='5', subject=after)
+    res = blaster.RunBlast('blastn2seqs')
+    if res:
+        mylog.WriteLog('WRN', 'Blast error, skipping overlap check')
+        sys.stdout.write(strftime("%H:%M:%S")+
+             ColorOutput(' Blast error, skipping overlap check\n','WRN'))
+        return
+    res = blaster.ParseBlast(xml)
+    if res:
+        mylog.WriteLog('WRN', 'Parse blast error, skipping overlap check')
+        sys.stdout.write(strftime("%H:%M:%S")+
+             ColorOutput(' Parse blast error, skipping overlap check\n','WRN'))
+        return
+    
+    results = blaster.GetAllQueryHits()
+    
+    overlap = False
+    
+    for q in results:
+        for hit in results[q]:
+            if not CheckHit(hit):
+                continue
+            # Orientations
+            if previous.strand == '+' and contig.strand == '+':
+                if ( (len(previous) - hit.query_end < border)
+                    and (hit.subjct_start - 1 < border )):
+                    overlap = True
+            elif previous.strand == '+' and contig.strand == '-':
+                if ( (len(previous) - hit.query_end  < border)
+                    and (len(contig) - hit.subjct_end < border )):
+                    
+                    overlap = True
+            elif previous.strand == '-' and contig.strand == '+':
+                if ( (hit.query_start - 1 < border)
+                    and (hit.subjct_start - 1 < border )):
+                    
+                    overlap = True
+            elif previous.strand == '-' and contig.strand == '-':
+                if ( (hit.query_start - 1 < border)
+                    and (len(contig) - hit.subjct_end < border )):
+                    
+                    overlap = True
+            if overlap:
+                break
+
+    if overlap:
+        mylog.WriteLog('INF', '%s - %s contig overlap!'%(previous.name,contig.name))
+        previous.overlap = True
+        previous.right = True
+        contig.overlap = True
+        contig.left = True
+        
+    # Clean-up
+    os.remove(before)
+    os.remove(after)
+    os.remove(xml)
+    
+    return overlap
 
 def CheckOverlap(CMap, intrepid, mylog):
     '''
@@ -2364,11 +2440,6 @@ def CheckOverlap(CMap, intrepid, mylog):
     # Bases near the border of the contig that can be out of the alignment
     border = 100
     
-    # Files
-    before = 'before.fna'
-    after = 'after.fna'
-    xml = 'overlap.xml'
-    
     # Counter
     overlaps = 0
     
@@ -2378,70 +2449,12 @@ def CheckOverlap(CMap, intrepid, mylog):
             bStart = False
             continue
         previous = CMap[CMap.index(contig) - 1]
-    
-        # Save the sequences
-        fbefore = open(before,'w')
-        fbefore.write('>before\n%s'%previous.seq)
-        fbefore.close()
-        fafter = open(after,'w')
-        fafter.write('>after\n%s'%contig.seq)
-        fafter.close()
-        
-        # 3- Blast them
-        blaster = Blast(mylog)
-        blaster.FillBlastPar(before, out=xml, evalue=1e-5,
-                             outfmt='5', subject=after)
-        res = blaster.RunBlast('blastn2seqs')
-        if res:
-            mylog.WriteLog('WRN', 'Blast error, skipping overlap check')
-            sys.stdout.write(strftime("%H:%M:%S")+
-                 ColorOutput(' Blast error, skipping overlap check\n','WRN'))
-            return
-        res = blaster.ParseBlast(xml)
-        if res:
-            mylog.WriteLog('WRN', 'Parse blast error, skipping overlap check')
-            sys.stdout.write(strftime("%H:%M:%S")+
-                 ColorOutput(' Parse blast error, skipping overlap check\n','WRN'))
-            return
-        
-        results = blaster.GetAllQueryHits()
-        
-        overlap = False
-        
-        for q in results:
-            for hit in results[q]:
-                if not CheckHit(hit):
-                    continue
-                # Orientations
-                if previous.strand == '+' and contig.strand == '+':
-                    if ( (len(previous) - hit.query_end < border)
-                        and (hit.subjct_start - 1 < border )):
-                        overlap = True
-                elif previous.strand == '+' and contig.strand == '-':
-                    if ( (len(previous) - hit.query_end  < border)
-                        and (len(contig) - hit.subjct_end < border )):
-                        
-                        overlap = True
-                elif previous.strand == '-' and contig.strand == '+':
-                    if ( (hit.query_start - 1 < border)
-                        and (hit.subjct_start - 1 < border )):
-                        
-                        overlap = True
-                elif previous.strand == '-' and contig.strand == '-':
-                    if ( (hit.query_start - 1 < border)
-                        and (len(contig) - hit.subjct_end < border )):
-                        
-                        overlap = True
-                if overlap:
-                    break
-    
-        if overlap:
+        if BlastOverlap(previous, contig, border, mylog):
             overlaps += 1
-            mylog.WriteLog('INF', '%s - %s contig overlap!'%(previous.name,contig.name))
-            previous.overlap = True
-            previous.right = True
-            contig.overlap = True
-            contig.left = True
+            
+    # Last contig overlap with first one
+    if BlastOverlap(contig, CMap[0], border, mylog):
+        overlaps += 1
     
     if overlaps > 0:
         sys.stdout.write(strftime("%H:%M:%S")+
@@ -2449,11 +2462,6 @@ def CheckOverlap(CMap, intrepid, mylog):
     else:
         sys.stdout.write(strftime("%H:%M:%S")+
              ' No contig overlaps were found\n')
-    
-    # Clean-up
-    os.remove(before)
-    os.remove(after)
-    os.remove(xml)
     
     return
 
