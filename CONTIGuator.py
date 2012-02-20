@@ -76,6 +76,27 @@ def ColorOutput(msg,msgLevel='INF'):
     return o.ColorMsg(msg,msgLevel)
 
 ################################################################################
+# Notifications
+
+def Notify(msg, error = False):
+    '''
+    Launch a notification (may not work on systems without libnotify-bin)
+    '''
+    path = os.path.split(os.path.realpath(__file__))[0]
+    
+    if error:
+        icon = 'error'
+    elif 'icon.png' in path:
+        icon = os.path.join(path, 'icon.png')
+    else:
+        icon = 'info'
+    
+    cmd = '''notify-send -t 2000 -u low -i %s "CONTIGuator" "%s"'''%(icon,msg)
+    subprocess.call(cmd,shell=(sys.platform!="win32"),
+                        stdin=subprocess.PIPE,stdout=subprocess.PIPE,
+                        stderr=subprocess.PIPE)
+
+################################################################################
 # Classes
 
 class ContigProfile:
@@ -1616,7 +1637,8 @@ def ContigProfiler(options,mylog):
                 sys.stdout.write(strftime("%H:%M:%S")+
                     ' Check the log file for the offending command\n')
                 mylog.WriteLog('ERR', 'DB creation failed for some reason! Exiting...')
-                sys.exit('Blast DB creation failed!')
+                Notify('Blast DB creation failed!',True)
+                return None
         # Run Blast
         # First, ensure unique names for the blast outputs
         sOut = 'BOut.xml'
@@ -1645,7 +1667,8 @@ def ContigProfiler(options,mylog):
                 sys.stdout.write(strftime("%H:%M:%S")+
                     ' Check the log file for the offending command\n')
                 mylog.WriteLog('ERR', 'Blast Run failed for some reason! Exiting...')
-                sys.exit('Blast run failed!')
+                Notify('Blast run failed!',True)
+                return None
         dBlastOut[options.ContigFile] = (options.fExpect, sTempOut)
         # Erase the temporary DB
         for i in glob.glob('ContigProfilerTempDB*'):
@@ -1671,7 +1694,8 @@ def ContigProfiler(options,mylog):
         sys.stderr.write(strftime("%H:%M:%S")+
                ColorOutput(' Parse failed! fsa:'+
                    options.ContigFile+' BOut:'+tBOut[1]+' Exiting...\n','ERR'))
-        sys.exit()
+        Notify('Parse failed on %s!'%tBOut[1],True)
+        return None
     # Dictionary: Contig -> list of reference details
     # Dictionary of Dictionary referenceID -> (seq_len, coverage, biggestHit, [hits details], [contig profile])
     # Contig profile: [bOrder, %of reference PseudoContig, Dict of overlaps]
@@ -1846,7 +1870,7 @@ def ContigProfiler(options,mylog):
         mylog.WriteLog('WRN', 'No Contigs mapped to the reference(s)! Exiting...')
         sys.stderr.write(strftime("%H:%M:%S")+
            ColorOutput(' No contigs mapped to reference(s)! Exiting...\n','WRN'))
-        sys.exit()
+        return None
     # Details
     for sContig in dCDetails:
         # hits numbers
@@ -2400,7 +2424,9 @@ def RunPrimerPicking(ref,pC,auto,debug,mylog):
         mylog.WriteLog('ERR',str(out[1]))
         sys.stderr.write(strftime("%H:%M:%S")+
             ColorOutput(' ERROR: Abacas run failed for some reason!\n','ERR'))
-        sys.exit()
+        Notify('Abacas run failure!',True)
+        return False
+    return True
 
 def AbacasPrimer3Parse(sFile,sFasta):
     '''
@@ -3264,7 +3290,8 @@ def CONTIGuator(options):
         sys.stdout.write(strftime("%Y-%m-%d %H:%M:%S")+
                             ColorOutput(' Stopping CONTIGuator\n','WRN'))
         mylog.WriteLog('INF','Stopping CONTIGuator')
-        sys.exit()
+        Notify('Some requirements are not met',True)
+        sys.exit(1)
 
     # Start!
     # Make a snapshoot of the directory (to cancel the intermediate files)
@@ -3272,6 +3299,12 @@ def CONTIGuator(options):
     #
     
     oCFs = ContigProfiler(options,mylog)
+    if not oCFs:
+        DeleteTemporaryFiles(lStart)
+        sys.stdout.write(strftime("%Y-%m-%d %H:%M:%S")+
+                            ColorOutput(' Stopping CONTIGuator\n','WRN'))
+        mylog.WriteLog('INF','Stopping CONTIGuator')
+        sys.exit(0)
     
     dDir = {}
     for sRef in oCFs.references.keys():
@@ -3321,8 +3354,9 @@ def CONTIGuator(options):
                 continue
             sRefDir = options.sPrefix+'Map_'+sRef.split('/')[-1].replace('_','.').replace('-','.')
             sRefDir=sRefDir.replace('.reference.fasta','')
-            RunPrimerPicking(options.ContigFile,oCFs.PC[sRef],
-                            options.bAuto,options.debug,mylog)
+            if not RunPrimerPicking(options.ContigFile,oCFs.lastPCR[sRef],
+                            options.bAuto,options.debug,mylog):
+                sys.exit(1)
             # Output name
             primer3Out = 'primer3.summary.out'
             products = AbacasPrimer3Parse(primer3Out,oCFs.PC[sRef])
@@ -3421,6 +3455,7 @@ def CONTIGuator(options):
     sys.stdout.write(strftime("%Y-%m-%d %H:%M:%S")+
                             ColorOutput(' Stopping CONTIGuator\n','IMP'))
     mylog.WriteLog('INF','Stopping CONTIGuator')
+    Notify('The results are ready')
 
 def main():
     if bExitForImportFailed:
@@ -3439,6 +3474,7 @@ def main():
                 mylog.WriteLog('ERR',str(e))
                 sys.stderr.write(strftime("%H:%M:%S")+
                     ColorOutput(' ERROR: '+str(e)+'\n','ERR'))
+                Notify(str(e), True)
         else:CONTIGuator(options)
 
 if __name__ == '__main__':
