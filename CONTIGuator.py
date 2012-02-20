@@ -11,7 +11,7 @@ __license__ = "GPL"
 __version__ = "2.5.0"
 __maintainer__ = "Marco Galardini"
 __email__ = "marco.galardini@unifi.it"
-__status__ = "Production"
+__status__ = "Development - Overlap"
 
 # CONTIGuator ##################################################################
 #
@@ -163,10 +163,11 @@ class ContigProfile:
                 return self.send
             else:
                 return self.sstart
-    def __init__(self,name,target,length,logObj = None):
+    def __init__(self,name,target,length,seq,logObj = None):
         self.name = name
         self.target = target
         self.length = int(length)
+        self.seq = seq
         self._hitslist = []
         # List of unaligned regions
         # On contig
@@ -602,12 +603,15 @@ class MapItem:
     '''
     Contigs mapped to a reference
     '''
-    def __init__(self,name,start,end,strand):
+    def __init__(self,name,start,end,strand,seq):
         self.name = name
         self.start = int(start)
         self.end = int(end)
         self.overlap = False
+        self.right = False
+        self.left = False
         self.strand = strand
+        self.seq = seq
     def __str__(self):
         '''
         Overridden function returning printable details
@@ -618,7 +622,9 @@ class MapItem:
                   ' '.join(['End:',str(self.end)]),
                   ' '.join(['Overlap:',str(self.overlap)]),
                   ' '.join(['Strand:',str(self.strand)])
-                          ]) 
+                          ])
+    def __len__(self):
+        return len(self.seq) 
 
 class ContiguatorCarrier:
     def __init__(self, sCont):
@@ -895,6 +901,7 @@ class Blast(BioPyWrapper):
             self.subjct_end=int(se)
             self.evalue=float(ev)
             self.bits=float(bi)
+            self.correctSubjectLoc()
         def getTabular(self):
             s=(self.query_id+'\t'+self.hit+'\t'+str(self.identity*100)+'\t'+
                str(self.align_len)+'\t'+str(self.mismatches)+'\t'+
@@ -903,6 +910,11 @@ class Blast(BioPyWrapper):
                '\t'+str(self.subjct_end)+'\t'+
                str(self.evalue)+'\t'+str(self.bits))
             return s
+        def correctSubjectLoc(self):
+            if self.subjct_start > self.subjct_end:
+                temp = self.subjct_end
+                self.subjct_end = self.subjct_start
+                self.subjct_start = temp
     def __init__(self, logObj=None):
         try:BioPyWrapper.__init__(self,logObj)
         except Exception, e:raise Exception(e)
@@ -978,6 +990,19 @@ class Blast(BioPyWrapper):
             from Bio.Blast.Applications import NcbitblastnCommandline
             cmd = NcbitblastnCommandline(query=self._query, db=self._db, evalue=self._evalue,
                         outfmt=self._outfmt,out=self._out)
+            return cmd
+        except Exception, e:
+            return self._CmdLineErr()
+            self._LogException(e)
+    # blastn2seqs
+    def _RunBlastn2Seqs(self):
+        '''Blastn2Seqs'''
+        try:
+            self.mylog.WriteLog('INF', 'Going to run tBlastn')
+            from Bio.Blast.Applications import NcbiblastnCommandline
+            cmd = NcbiblastnCommandline(query=self._query, subject=self._subject,
+                                         evalue=self._evalue,
+                                         outfmt=self._outfmt, out=self._out)
             return cmd
         except Exception, e:
             return self._CmdLineErr()
@@ -1060,9 +1085,10 @@ class Blast(BioPyWrapper):
             if (queryStart, queryEnd) not in self._AlignRanges:
                 self._AlignRanges.append((queryStart, queryEnd))
     _LocalTasksStr = {'blastall':'BlastallCommandline',
-        'blastn':'NcbiblastnCommandline','tblastn':'NcbitblastnCommandline'}
+        'blastn':'NcbiblastnCommandline','tblastn':'NcbitblastnCommandline',
+        'blastn2seqs':'NcbiblastnCommandline'}
     _LocalTasksFn = {'blastall':_RunBlastAll,'blastn':_RunBlastn,'tblastn':_RuntBlastn,
-                    'legacy_tblastn':_RuntBlastnLegacy}
+                    'legacy_tblastn':_RuntBlastnLegacy, 'blastn2seqs':_RunBlastn2Seqs}
     # 1- Create a Blast DB
     def CreateBlastDB(self):
         # Example cmd line:
@@ -1107,8 +1133,6 @@ class Blast(BioPyWrapper):
     def RunBlast(self, taskType):
         '''Run Blast with the desired task'''
         try:
-            import subprocess
-            import sys
             # Create the command line
             cmd = self._LocalTasksFn.get(taskType,self._NoImplYet)(self)
             # Test if it is a command line or an error
@@ -1472,6 +1496,8 @@ def getOptions():
                 help='Minimal coverage of the contig (blast-based) [Default: 20%].' 'Values above 100 will be considered 100%')
     group4.add_option('-B', '--bigHitLength', action="store", type='int', dest='iMinBigHit', default=1100,
                 help='Minimal length of a significant blast hit (at least bigger than 1100bp) [Default: 1100].')
+    group4.add_option('-I', '--intrepid', action="store_true", dest='bIntrepid', default=False,
+                    help='Merge contigs when possible?')
     parser.add_option_group(group4)
 
     # Primer picking?
@@ -1866,6 +1892,11 @@ def ContigProfiler(options,mylog):
     ###########################
     ##### Output writing! #####
     ###########################
+    # Preliminary: build a contig sequence db
+    dContigsSeqs = {}
+    handle = open(options.ContigFile)
+    for seq_record in SeqIO.parse(handle, "fasta"):
+        dContigsSeqs[seq_record.id] = str(seq_record.seq)
     # First: Let's check if the list is empty:
     bExit = 1
     for sContig in dCDetails:
@@ -1886,7 +1917,7 @@ def ContigProfiler(options,mylog):
             continue
         sCurrRef = dCDetails[sContig][0].keys()[0]
         cLen = dContigs[sContig]
-        cprof = ContigProfile(sContig,sCurrRef,cLen,mylog)
+        cprof = ContigProfile(sContig,sCurrRef,cLen,dContigsSeqs[sContig],mylog)
         for hit in dOrder[sContig][0]:#Obj[3]:
             # Add each hit to the profile
             hitName = sContig+'_'+str(iHit)
@@ -2153,7 +2184,10 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
         else:
             feat.strand = -1
         if cMap.overlap:
-            feat.qualifiers['colour']='5'
+            if cMap.left and cMap.right:
+                feat.qualifiers['colour']='2'
+            elif cMap.left or cMap.right:
+                feat.qualifiers['colour']='16'
             feat.qualifiers['overlap']='YES'
         else:
             feat.qualifiers['colour']='4'
@@ -2287,6 +2321,145 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
     Write80CharFile(fLastPCR, PContig)
     fLastPCR.close()
 
+def CheckHit(hit):
+    gaps = 10
+    mismatches = 20
+    relativealign = (0.9,1.1)
+
+    queryalign = hit.query_end - hit.query_start
+    subjctalign = hit.subjct_end - hit.subjct_start
+    
+    if (queryalign >= hit.align_len * relativealign[1] or 
+        queryalign <=  hit.align_len * relativealign[0]):
+        return False
+    if (subjctalign >= hit.align_len * relativealign[1] or 
+        subjctalign <=  hit.align_len * relativealign[0]):
+        return False
+    
+    if hit.gaps < gaps and hit.mismatches < mismatches:
+        return True
+    else:
+        return False
+    
+def BlastOverlap(previous, contig, border, mylog):
+    # Files
+    before = 'before.fna'
+    after = 'after.fna'
+    xml = 'overlap.xml'
+    
+    # Save the sequences
+    fbefore = open(before,'w')
+    fbefore.write('>before\n%s'%previous.seq)
+    fbefore.close()
+    fafter = open(after,'w')
+    fafter.write('>after\n%s'%contig.seq)
+    fafter.close()
+    
+    # 3- Blast them
+    blaster = Blast(mylog)
+    blaster.FillBlastPar(before, out=xml, evalue=1e-5,
+                         outfmt='5', subject=after)
+    res = blaster.RunBlast('blastn2seqs')
+    if res:
+        mylog.WriteLog('WRN', 'Blast error, skipping overlap check')
+        sys.stdout.write(strftime("%H:%M:%S")+
+             ColorOutput(' Blast error, skipping overlap check\n','WRN'))
+        return
+    res = blaster.ParseBlast(xml)
+    if res:
+        mylog.WriteLog('WRN', 'Parse blast error, skipping overlap check')
+        sys.stdout.write(strftime("%H:%M:%S")+
+             ColorOutput(' Parse blast error, skipping overlap check\n','WRN'))
+        return
+    
+    results = blaster.GetAllQueryHits()
+    
+    overlap = False
+    
+    for q in results:
+        for hit in results[q]:
+            if not CheckHit(hit):
+                continue
+            # Orientations
+            if previous.strand == '+' and contig.strand == '+':
+                if ( (len(previous) - hit.query_end < border)
+                    and (hit.subjct_start - 1 < border )):
+                    overlap = True
+            elif previous.strand == '+' and contig.strand == '-':
+                if ( (len(previous) - hit.query_end  < border)
+                    and (len(contig) - hit.subjct_end < border )):
+                    
+                    overlap = True
+            elif previous.strand == '-' and contig.strand == '+':
+                if ( (hit.query_start - 1 < border)
+                    and (hit.subjct_start - 1 < border )):
+                    
+                    overlap = True
+            elif previous.strand == '-' and contig.strand == '-':
+                if ( (hit.query_start - 1 < border)
+                    and (len(contig) - hit.subjct_end < border )):
+                    
+                    overlap = True
+            if overlap:
+                break
+
+    if overlap:
+        mylog.WriteLog('INF', '%s - %s contig overlap!'%(previous.name,contig.name))
+        previous.overlap = True
+        previous.right = True
+        contig.overlap = True
+        contig.left = True
+        
+    # Clean-up
+    os.remove(before)
+    os.remove(after)
+    os.remove(xml)
+    
+    return overlap
+
+def CheckOverlap(CMap, intrepid, mylog):
+    '''
+    Iteration over the map
+    Blast2seq to see if two near contigs are overlapped
+    If intrepid is set, the contigs may be merged
+    '''
+    mylog.WriteLog('INF', 'Checking contigs overlap')
+    sys.stdout.write(strftime("%H:%M:%S")+
+                        ' Checking contigs overlap\n')
+    
+    if intrepid:
+        mylog.WriteLog('WRN', 'Intrepid mode not implemeted yet...')
+        sys.stdout.write(strftime("%H:%M:%S")+
+                ColorOutput(' Intrepid mode not implemeted yet...\n','WRN'))
+    
+    # Bases near the border of the contig that can be out of the alignment
+    border = 100
+    
+    # Counter
+    overlaps = 0
+    
+    bStart = True
+    for contig in CMap:
+        if bStart:
+            bStart = False
+            continue
+        previous = CMap[CMap.index(contig) - 1]
+        if BlastOverlap(previous, contig, border, mylog):
+            overlaps += 1
+            
+    # Last contig overlap with first one
+    if BlastOverlap(contig, CMap[0], border, mylog):
+        overlaps += 1
+    
+    if overlaps > 0:
+        sys.stdout.write(strftime("%H:%M:%S")+
+             ColorOutput(' %d contig overlap(s) were found\n'%overlaps,'DEV'))
+    else:
+        sys.stdout.write(strftime("%H:%M:%S")+
+             ' No contig overlaps were found\n')
+    
+    return
+
 def Mapper(sContig,sRef,oCFs,mylog):
     '''Reads the profiles generated by Blast and creates a contig map'''
     mylog.WriteLog('INF', 'Generating the map for reference: '+
@@ -2336,7 +2509,7 @@ def Mapper(sContig,sRef,oCFs,mylog):
             start = cTiling[0]
             end = cTiling[0] + cprof.length
             cMap = MapItem(cprof.name,start,
-                           end, cprof.getStrand())
+                           end, cprof.getStrand(), cprof.seq)
             ContigsMap.append(cMap)
     ContigsMap = sorted(ContigsMap, key=lambda cMap: cMap.start)
     
@@ -2374,9 +2547,7 @@ def Mapper(sContig,sRef,oCFs,mylog):
             continue
         previous = ContigsMap[ContigsMap.index(cMap) - 1]
         if previous.end >= cMap.start:
-            # Overlapping
-            previous.overlap = True
-            cMap.overlap = True
+            # Overlapping - But not really a "true" overlap
             slideMap = previous.end - cMap.start + 100
             cMap.start += slideMap
             cMap.end += slideMap
@@ -3397,6 +3568,9 @@ def CONTIGuator(options):
             sys.stdout.write(strftime("%H:%M:%S")+
                ColorOutput(' Molecule '+sRef+' has no contig mapped to it!\n','WRN'))
             continue
+        
+        # Check the overlaps between near contigs
+        CheckOverlap(CMap, options.bIntrepid, mylog)
         
         oCFs.setMap(sRef, CMap)
         # Write down the obtained map -- ACT
