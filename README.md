@@ -53,38 +53,38 @@ Command line options
 --------------------
 
 ### Inputs
--c fasta file containing all the contigs
--r fasta file containing the reference genome; if it contains more than one sequence (i.e. more than one replicon) it can both be in a single file or in more files (just use -r multiple times)
--f prefix for the output directories
+* -c fasta file containing all the contigs
+* -r fasta file containing the reference genome; if it contains more than one sequence (i.e. more than one replicon) it can both be in a single file or in more files (just use -r multiple times)
+* -f prefix for the output directories
 
 ### Blast parameters
--e Blast e-value treshold [Default: 1e-20]
+* -e Blast e-value treshold [Default: 1e-20]
 
 ### “Parse Blast” mode
--p parse ready-made Blast output (no Blast runs will be performed) [Default: no]
--x Blast XML output to be parsed [Default: blast.xml]
+* -p parse ready-made Blast output (no Blast runs will be performed) [Default: no]
+* -x Blast XML output to be parsed [Default: blast.xml]
 
 ### Contig profiling parameters
--L minimal lenght of a contig to be accepted in the analysis [Default: 0 bp]
--C minimal coverage of a contig to be accepted in the analysis [Default: 20%]
--B minimal lenght of a significant Blast hit [Default: 100 bp]
+* -L minimal lenght of a contig to be accepted in the analysis [Default: 0 bp]
+* -C minimal coverage of a contig to be accepted in the analysis [Default: 20%]
+* -B minimal lenght of a significant Blast hit [Default: 100 bp]
 
 ### Primer picking
--P do primer picking [Default: no]
--A use default parameters for primer picking [Default: no]
+* -P do primer picking [Default: no]
+* -A use default parameters for primer picking [Default: no]
 
 ### Output options
--f prefix for the output directories
--M prepare even more outputs
+* -f prefix for the output directories
+* -M prepare even more outputs
 
 ### ACT options
--a ACT binary location
--l Open the maps automatically
+* -a ACT binary location
+* -l Open the maps automatically
 
 ### Logging
--V verbose
--D development
--G debug mode
+* -V verbose
+* -D development
+* -G debug mode
 
 Outputs
 -------
