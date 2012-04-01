@@ -1,7 +1,7 @@
 CONTIGuator
 ===========
 
-[![logo](http://contiguator.sourceforge.net/logo.jpg)](http://contiguator.sourceforge.net)
+[![logo](http://contiguator.sourceforge.net/img/logoweb.png)](http://contiguator.sourceforge.net)
 
 Introduction
 ------------
