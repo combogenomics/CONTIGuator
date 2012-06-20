@@ -3693,7 +3693,6 @@ def CONTIGuator(options):
     sys.stdout.write(strftime("%Y-%m-%d %H:%M:%S")+
                             ColorOutput(' Stopping CONTIGuator\n','IMP'))
     mylog.WriteLog('INF','Stopping CONTIGuator')
-    Notify('The results are ready')
 
 def main():
     if bExitForImportFailed:
