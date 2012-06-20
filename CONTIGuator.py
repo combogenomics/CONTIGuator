@@ -6,7 +6,7 @@ Bacterial comparative genomics finishing tool for draft structural genomics insi
 __author__ = 'Marco Galardini'
 __copyright__ = "Copyright 2011"
 __credits__ = ["Lee Katz", "Florent Lassalle","Margaret Priest",
-               "Luisa Santopolo","Francesca Decorosi"]
+               "Luisa Santopolo","Francesca Decorosi","Mitchell Stanton-Cook"]
 __license__ = "GPL"
 __version__ = "2.5.0"
 __maintainer__ = "Marco Galardini"
