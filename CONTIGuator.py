@@ -1491,11 +1491,11 @@ def getOptions():
     # Contig profiling options
     group4 = OptionGroup(parser, "Contig profiling parameters")
     group4.add_option('-L', '--minLength', action="store", type='int', dest='iMinLength', default=1000,
-                help='Minimal length of the contig (at least bigger than 1000bp) [Default: 1000].')
+                help='Minimal length of the contig (suggested bigger than 1000bp) [Default: 1000].')
     group4.add_option('-C', '--minCoverage', action="store", type='int', dest='iMinCoverage', default=20,
                 help='Minimal coverage of the contig (blast-based) [Default: 20%].' 'Values above 100 will be considered 100%')
     group4.add_option('-B', '--bigHitLength', action="store", type='int', dest='iMinBigHit', default=1100,
-                help='Minimal length of a significant blast hit (at least bigger than 1100bp) [Default: 1100].')
+                help='Minimal length of a significant blast hit (suggested bigger than 1100bp) [Default: 1100].')
     group4.add_option('-I', '--intrepid', action="store_true", dest='bIntrepid', default=False,
                     help='Merge contigs when possible?')
     parser.add_option_group(group4)
@@ -1582,15 +1582,13 @@ def ContigProfiler(options,mylog):
     if options.iMinCoverage > 100:
         options.iMinCoverage = 100
     if options.iMinLength < 1000:
-        mylog.WriteLog('WRN', 'Minimum contig lenght forced to 1000 bp')
+        mylog.WriteLog('WRN', 'Minimum contig length should be greater than 1000 bp')
         sys.stderr.write(strftime("%H:%M:%S")+
-            ColorOutput(' Minimum contig length forced to 1000\n','WRN'))
-        options.iMinLength=1000
+        ColorOutput(' Minimum contig length should be greater than 1000\n','WRN'))
     if options.iMinBigHit < 1100:
-        mylog.WriteLog('WRN', 'Minimum \"Big hit\" lenght forced to 1100 bp')
+        mylog.WriteLog('WRN', 'Minimum \"Big hit\" length should be greater than 1100 bp')
         sys.stderr.write(strftime("%H:%M:%S")+
-            ColorOutput(' Minimum \"Big hit\" length forced to 1100\n','WRN'))
-        options.iMinBigHit=1100
+        ColorOutput(' Minimum \"Big hit\" length should be greater than 1100\n','WRN'))
 
     # List of Reference molecules
     dRefFiles={}
