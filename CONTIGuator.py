@@ -2160,7 +2160,7 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
         for hit in nonAligned:
             fNSeqRef.write('>'+hit.name+'\n')
             Write80CharFile(fNSeqRef, 
-                            seqRef.seq[hit.sstart:
+                            seqRef.seq[hit.sstart-1:
                                        hit.send])
         # Log
         mylog.WriteLog('DEV', sRef+' contains '+str(len(nonAligned))+' regions'+
@@ -2173,8 +2173,8 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
         # Mapped contigs
         fCMapped.write(cMap.name+'\t'+str(len(dContig[cMap.name]))+'\n')
         
-        feat = SeqFeature.SeqFeature(SeqFeature.FeatureLocation(cMap.start,
-                                                                cMap.end),
+        feat = SeqFeature.SeqFeature(SeqFeature.FeatureLocation(cMap.start-1,
+                                                                cMap.end-1),
                                       id=cMap.name, type='Contig')
         feat.qualifiers['systematic_id']=cMap.name
         if cMap.strand == '+':
@@ -2202,7 +2202,7 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
                 for hit in cprof.getUnalignedRegions():
                     fNSeqContig.write('>'+hit.name+'\n')
                     Write80CharFile(fNSeqContig, 
-                                    dContig[cprof.name].seq[hit.qstart:
+                                    dContig[cprof.name].seq[hit.qstart-1:
                                                             hit.qend])
                 # Write details and sequences of aligned regions
                 for hit in cprof.orderSHits():
@@ -2218,21 +2218,21 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
                     # Write contig hits
                     fASeqContig.write('>'+hit.name+'\n')
                     Write80CharFile(fASeqContig, 
-                                    dContig[cprof.name].seq[hit.qstart:
+                                    dContig[cprof.name].seq[hit.qstart-1:
                                                             hit.qend])
                     # Write contig hits
                     fASeqRef.write('>'+hit.name+'\n')
                     Write80CharFile(fASeqRef, 
-                                    seqRef.seq[hit.sstart:
+                                    seqRef.seq[hit.sstart-1:
                                                hit.send])
             for hit in cprof.getHits():
                 # Crunch file
                 if cprof.getStrand() == '+':
-                    crunchStart = cMap.start+hit.qstart
-                    crunchEnd = cMap.start+hit.qend
+                    crunchStart = cMap.start+hit.qstart-1
+                    crunchEnd = cMap.start+hit.qend-1
                 else:
-                    crunchStart = cMap.start + (cprof.length - hit.qend)
-                    crunchEnd = cMap.start + (cprof.length - hit.qstart)
+                    crunchStart = cMap.start + (cprof.length - hit.qend) -1
+                    crunchEnd = cMap.start + (cprof.length - hit.qstart) -1
                 fAlterC.write(str(int(cprof.getCoverage()))+' '+
                             str(hit.identity)+' '+
                             str(crunchStart)+' '+
@@ -2242,12 +2242,12 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
                             str(hit.send)+' unknown NONE\n')
             
                 if cprof.getStrand() == '+':
-                    featloc = SeqFeature.FeatureLocation(cMap.start+hit.qstart,
-                                                        cMap.start+hit.qend)
+                    featloc = SeqFeature.FeatureLocation(cMap.start-1+hit.qstart-1,
+                                                        cMap.start-1+hit.qend-1)
                 else:
                     featloc = SeqFeature.FeatureLocation(
-                                            cMap.start + (cprof.length - hit.qend),
-                                            cMap.start + (cprof.length - hit.qstart))
+                                            cMap.start-1 + (cprof.length - hit.qend-1),
+                                            cMap.start-1 + (cprof.length - hit.qstart-1))
                 
                 subfeat = SeqFeature.SeqFeature(featloc,
                                       id=hit.name, type='Hit')
@@ -2262,7 +2262,7 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
                 #MapSeq.features.append(subfeat)
                 
                 subfeatRef = SeqFeature.SeqFeature(SeqFeature.FeatureLocation(
-                                                                hit.sstart,
+                                                                hit.sstart-1,
                                                                 hit.send),
                                       id=hit.name, type='Hit')
                 subfeatRef.qualifiers['systematic_id']=hit.name
@@ -2290,9 +2290,6 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
             PContig += str(dContig[cMap.name].seq)
         else:
             PContig += str(dContig[cMap.name].seq.reverse_complement())
-    
-    # Add a last N
-    PContig += 'N'
     
     # Write the fasta to file
     fAlterPC = open(sAlterPC, 'w')
