@@ -22,7 +22,9 @@ For the impatient
 * Default run with many outputs:
      * Add the -M option
 * Default run showing the maps automatically:
-     * Add the -l option 
+     * Add the -l option
+* Default run with no N to fill the gaps:
+     * Add the -N option
 
 Cite the program
 ----------------
@@ -65,9 +67,11 @@ Command line options
 * -x Blast XML output to be parsed [Default: blast.xml]
 
 ### Contig profiling parameters
-* -L minimal lenght of a contig to be accepted in the analysis [Default: 0 bp]
+* -L minimal lenght of a contig to be accepted in the analysis [Default: 1000 bp]
 * -C minimal coverage of a contig to be accepted in the analysis [Default: 20%]
-* -B minimal lenght of a significant Blast hit [Default: 100 bp]
+* -B minimal lenght of a significant Blast hit [Default: 1100 bp]
+* -N Do not use N to fill the gaps
+* -I Merge contigs when possible? [Not yet implemented]
 
 ### Primer picking
 * -P do primer picking [Default: no]
