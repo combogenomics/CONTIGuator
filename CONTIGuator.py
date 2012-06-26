@@ -2319,6 +2319,122 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
     Write80CharFile(fLastPCR, PContig)
     fLastPCR.close()
 
+def ManualACT(name, sRef, sPC, sCrunch, outdir, mylog):
+    '''
+    Create a manual version of the ACT map
+    Many thanks to Peter Cock for his amazing tutorial
+    (http://twitter.com/Biopython/statuses/136511304604192770)
+    '''
+    from Bio.Graphics.GenomeDiagram import Diagram, CrossLink
+    from Bio.SeqFeature import SeqFeature, FeatureLocation
+    from Bio import SeqIO
+    from reportlab.lib import colors
+    from reportlab.lib.units import cm
+    
+    genomes = [sRef, sPC]
+    
+    # Prepare the diagram
+    gd_diagram = Diagram(name, track_size=0.10, circular=False)
+    tracks = dict()
+    feature_sets = dict()
+    records = dict()
+    for f in genomes:
+        records[f] = SeqIO.read(f, 'embl')
+        tracks[f] = gd_diagram.new_track(1, name=f, start=0, end=len(records[f]),
+                                         scale_smalltick_interval=100000,
+                                         scale_largetick_interval=1000000,
+                                         scale_fontsize=10)
+        feature_sets[f] = tracks[f].new_set()
+
+    # Analyze the Crunch file
+    q_set = feature_sets[sPC]
+    s_set = feature_sets[sRef]
+    handle = open(sCrunch)
+    for line in handle:
+        if line[0]=="#":
+            continue
+        parts = line.rstrip("\n").split(None,7)
+        q_start, q_end = int(parts[2]), int(parts[3])
+        s_start, s_end = int(parts[5]), int(parts[6])
+        flip = False
+        if q_start > q_end:
+            flip = not flip
+            q_start, q_end = q_end, q_start
+        if s_start > s_end:
+            flip = not flip
+            s_start, s_end = s_end, s_start
+        
+        # Set the transparency value for the hit
+        score = float(parts[0])/150
+        # Add more transparency for the tracks hit
+        score1 = float(parts[0])/500
+        
+        hit_track = colors.Color(1, 0, 0, alpha=score1)
+        if flip:
+            c = colors.Color(0, 0, 1, alpha=score)
+            b = False
+        else:
+            c = colors.Color(1, 0, 0, alpha=score)
+            b = False
+        q_feature = q_set.add_feature(SeqFeature(FeatureLocation(q_start-1, q_end)),
+                                                 color=hit_track, border=b)
+        s_feature = s_set.add_feature(SeqFeature(FeatureLocation(s_start-1, s_end)),
+                                                 color=hit_track, border=b)
+        gd_diagram.cross_track_links.append(CrossLink(q_feature, s_feature, c, b))
+    handle.close()
+    
+    # Add the hits, the contigs and the PCR products
+    for f in genomes:
+        record = records[f]
+        feature_set = feature_sets[f]
+        for feat in record.features:
+            if feat.type == "Contig":
+                if feat.qualifiers['colour'] == ['4']:
+                    feature_set.add_feature(feat, sigil="ARROW",
+                                    arrowshaft_height=1.0,
+                                    color=colors.lightblue,
+                                    border=colors.blue,label=True,
+                                    label_size=4, label_angle=45,
+                                    label_position="middle",
+                                    name = feat.qualifiers['systematic_id'][0])
+                elif feat.qualifiers['colour'] == ['16']:
+                    feature_set.add_feature(feat, sigil="ARROW",
+                                    arrowshaft_height=1.0,
+                                    color=colors.tomato,
+                                    border=colors.red,
+                                    label=True,
+                                    label_size=4, label_angle=45,
+                                    label_position="middle",
+                                    name = feat.qualifiers['systematic_id'][0])
+                elif feat.qualifiers['colour'] == ['2']:
+                    feature_set.add_feature(feat, sigil="ARROW",
+                                    arrowshaft_height=1.0,
+                                    color=colors.red,
+                                    border=colors.red,label=True,
+                                    label_size=4, label_angle=45,
+                                    label_position="middle",
+                                    name = feat.qualifiers['systematic_id'][0])
+            elif feat.type == "PCR":
+                feature_set.add_feature(feat,
+                                    color=colors.grey,
+                                    border=colors.grey)
+            elif feat.type == "Hit":
+                feature_set.add_feature(feat,
+                                    color=colors.tomato,
+                                    border=colors.red)
+
+    # Writing the map
+    # The length of the page should be proportional to the reference length
+    width = len(records[sRef])/25000
+    gd_diagram.draw(format="linear",fragments=1,
+                orientation="landscape", pagesize=(width*cm,20*cm))
+    path = os.path.join(outdir, name)
+    gd_diagram.write(path + ".pdf", "PDF")
+    
+    sys.stdout.write(strftime("%H:%M:%S")+
+            ColorOutput(' Generated a manual ACT map %s\n'%(path+'.pdf'),'DEV'))
+    mylog.WriteLog('INF','Generated a manual ACT map %s'%(path+'.pdf'))
+
 def CheckHit(hit):
     gaps = 10
     mismatches = 20
@@ -3541,6 +3657,16 @@ def CONTIGuator(options):
     lStart=os.listdir('.')
     #
     
+    # Check if we can create "ACT" maps with BioPython
+    import Bio
+    bPDF = False
+    if float(Bio.__version__) >= 1.59:
+        bPDF = True
+    else:
+        sys.stdout.write(strftime("%H:%M:%S")+
+            ColorOutput(' Biopython >= 1.59 is needed to generate PDF maps\n',
+                        'WRN'))
+    
     oCFs = ContigProfiler(options,mylog)
     if not oCFs:
         DeleteTemporaryFiles(lStart)
@@ -3594,6 +3720,7 @@ def CONTIGuator(options):
         oCFs.setEmblFile(sRef, sRefDir+'/'+oCFs.embl[sRef])
         oCFs.setPContigFile(sRef, sRefDir+'/'+oCFs.PC[sRef])
         oCFs.setDir(sRef, sRefDir)
+        
     if options.bPrimer:
         for sRef in oCFs.references.keys():
             if sRef in oCFs.nomap:
@@ -3616,6 +3743,19 @@ def CONTIGuator(options):
             PrimerTable(products,oCFs.maps[sRef],'PCRPrimers.tsv',oCFs.embl[sRef])
             shutil.copy('PCRPrimers.tsv',sRefDir)
             oCFs.primers[sRef] = sRefDir+'/PCRPrimers.tsv'
+    
+    if bPDF:
+        for sRef in oCFs.references.keys():
+            if sRef in oCFs.nomap:
+                continue
+            
+            sRefDir = options.sPrefix+'Map_'+sRef.split('/')[-1].replace('_','.').replace('-','.')
+            sRefDir=sRefDir.replace('.reference.fasta','')
+            
+            ManualACT(sRef.replace('.reference.fasta',''), oCFs.refembl[sRef],
+                      oCFs.embl[sRef],
+                      oCFs.crunch[sRef], sRefDir, mylog)
+    
     # Give me some stats...
     try:
         PrintStats(oCFs,options,mylog)
@@ -3681,7 +3821,12 @@ def CONTIGuator(options):
                     +'\tRun the scripts in each "Maps_" directory\n'
                     +'\tRe-run with the -l option\n'
                     +'\tOpen the ACT maps manually\n'
-                    ,'DEV'))    
+                    ,'DEV'))
+            
+            if bPDF:
+                sys.stdout.write(
+            ColorOutput('\tOr you can use the pdf maps in each "Maps_" directory\n'
+            ,'DEV'))
     except:
         # Something went wrong, just print some informations
         mylog.WriteLog('WRN', 'Could not prepare the ACT launchers!')
