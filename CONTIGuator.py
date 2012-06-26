@@ -1497,8 +1497,6 @@ def getOptions():
                 help='Minimal coverage of the contig (blast-based) [Default: 20%].' 'Values above 100 will be considered 100%')
     group4.add_option('-B', '--bigHitLength', action="store", type='int', dest='iMinBigHit', default=1100,
                 help='Minimal length of a significant blast hit (suggested bigger than 1100bp) [Default: 1100].')
-    group4.add_option('-N', '--no-n', action="store_true", dest='bNoN', default=False,
-                    help='Do not use N to fill the gaps')
     group4.add_option('-I', '--intrepid', action="store_true", dest='bIntrepid', default=False,
                     help='Merge contigs when possible?')
     parser.add_option_group(group4)
@@ -1517,6 +1515,8 @@ def getOptions():
                 help='Directories prefix [Default: No]')
     group6.add_option('-M', '--many', action="store_true", dest='manyOutputs', default=False,
                 help='Prepare even more outputs?')
+    group6.add_option('-N', '--no-n', action="store_true", dest='bNoN', default=False,
+                    help='Do not use N to fill the gaps')
     parser.add_option_group(group6)
 
     # ACT

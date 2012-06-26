@@ -70,7 +70,6 @@ Command line options
 * -L minimal lenght of a contig to be accepted in the analysis [Default: 1000 bp]
 * -C minimal coverage of a contig to be accepted in the analysis [Default: 20%]
 * -B minimal lenght of a significant Blast hit [Default: 1100 bp]
-* -N Do not use N to fill the gaps
 * -I Merge contigs when possible? [Not yet implemented]
 
 ### Primer picking
@@ -80,6 +79,7 @@ Command line options
 ### Output options
 * -f prefix for the output directories
 * -M prepare even more outputs
+* -N Do not use N to fill the gaps
 
 ### ACT options
 * -a ACT binary location
