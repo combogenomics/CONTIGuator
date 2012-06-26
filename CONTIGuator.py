@@ -2593,9 +2593,9 @@ def Mapper(sContig,sRef,oCFs,bNoN,mylog):
 def RunPrimerPicking(ref,pC,auto,debug,mylog):
     '''Run Abacas just for primer picking'''
     #debug
-    mylog.WriteLog('INF', 'Going to generate primers for map to '+str(ref))
+    mylog.WriteLog('INF', 'Going to generate primers for map to '+str(pC))
     sys.stdout.write(strftime("%H:%M:%S")+
-                        ' Going to generate primers for map to '+str(ref)+'\n')
+                        ' Going to generate primers for map to '+str(pC)+'\n')
 
     # perl abacas.1.1.pl -r <REF>  -q <PSeudoContig> -e
     # Run Abacas and check the return code
