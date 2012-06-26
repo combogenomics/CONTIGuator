@@ -89,6 +89,7 @@ def Notify(msg, error = False):
         icon = 'error'
     elif 'icon.png' in path:
         icon = os.path.join(path, 'icon.png')
+        icon = os.path.abspath(icon)
     else:
         icon = 'info'
     
