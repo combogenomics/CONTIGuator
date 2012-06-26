@@ -1773,12 +1773,12 @@ def ContigProfiler(options,mylog):
             if iBiggestHit > iTempBig:
                 iTempBig = iBiggestHit
             # Save the contig Details - if we are above threshold
-            if iCoverage > options.iMinCoverage or iBiggestHit > options.iMinBigHit:
+            if iCoverage > options.iMinCoverage and iBiggestHit > options.iMinBigHit:
                 dTempDict = {}
                 dTempDict[sRef] = [len(seq_record), iCoverage, iBiggestHit,
                                     PBlaster.GetHitsDetails(sRef), []]
                 dCDetails[seq_record.id].append(dTempDict)
-        if iTempCov <= options.iMinCoverage and iTempBig <= options.iMinBigHit:
+        if iTempCov <= options.iMinCoverage or iTempBig <= options.iMinBigHit:
             # Next sequence!
             lNoCoverage.append(seq_record.id)
             continue
