@@ -2422,6 +2422,10 @@ def ManualACT(name, sRef, sPC, sCrunch, outdir, mylog):
                 feature_set.add_feature(feat,
                                     color=colors.tomato,
                                     border=colors.red)
+            elif feat.type == "tblastn":
+                feature_set.add_feature(feat,
+                                    color=colors.lightgreen,
+                                    border=colors.green)
 
     # Writing the map
     # The length of the page should be proportional to the reference length
@@ -3744,18 +3748,6 @@ def CONTIGuator(options):
             shutil.copy('PCRPrimers.tsv',sRefDir)
             oCFs.primers[sRef] = sRefDir+'/PCRPrimers.tsv'
     
-    if bPDF:
-        for sRef in oCFs.references.keys():
-            if sRef in oCFs.nomap:
-                continue
-            
-            sRefDir = options.sPrefix+'Map_'+sRef.split('/')[-1].replace('_','.').replace('-','.')
-            sRefDir=sRefDir.replace('.reference.fasta','')
-            
-            ManualACT(sRef.replace('.reference.fasta',''), oCFs.refembl[sRef],
-                      oCFs.embl[sRef],
-                      oCFs.crunch[sRef], sRefDir, mylog)
-    
     # Give me some stats...
     try:
         PrintStats(oCFs,options,mylog)
@@ -3779,6 +3771,18 @@ def CONTIGuator(options):
         mylog.WriteLog('INF', 'Something went wrong in reference proteins utilization, skipping...')
         sys.stderr.write(strftime("%H:%M:%S")+
                ColorOutput(' Something went wrong in reference proteins utilization, skipping...\n','WRN'))
+    
+    if bPDF:
+        for sRef in oCFs.references.keys():
+            if sRef in oCFs.nomap:
+                continue
+            
+            sRefDir = options.sPrefix+'Map_'+sRef.split('/')[-1].replace('_','.').replace('-','.')
+            sRefDir=sRefDir.replace('.reference.fasta','')
+            
+            ManualACT(sRef.replace('.reference.fasta',''), oCFs.refembl[sRef],
+                      oCFs.embl[sRef],
+                      oCFs.crunch[sRef], sRefDir, mylog)
     
     # Make the use of ACT slightly easier
     sys.stdout.write(strftime("%H:%M:%S")+
