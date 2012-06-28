@@ -2557,9 +2557,10 @@ def CheckOverlap(CMap, mylog):
         if BlastOverlap(previous, contig, border, mylog):
             overlaps += 1
             
-    # Last contig overlap with first one
-    if BlastOverlap(contig, CMap[0], border, mylog):
-        overlaps += 1
+    # Last contig overlap with first one (only if they are different :))
+    if contig.name != CMap[0].name:
+        if BlastOverlap(contig, CMap[0], border, mylog):
+            overlaps += 1
     
     if overlaps > 0:
         sys.stdout.write(strftime("%H:%M:%S")+
