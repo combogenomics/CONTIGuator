@@ -1,0 +1,80 @@
+Version 2.6
+-----------
+* FEATURE: PDF maps in each "Map_" folder (BioPython >= 1.59 is needed)
+* FEATURE: -B and -L values can be set below the suggested minimum values
+* FEATURE: -N option to generate the maps without the 100 Ns between each contig
+* BUGFIX: Coverage option (-C) now working as expected
+* BUGFIX: One base misplacement of contigs in ACT maps
+* BUGFIX: No overlap check when there is only one contig mapped
+* DEPRECATION: -I option removed 
+* OTHER: Some credits to recent contributors
+* OTHER: Changelog file added
+
+Version 2.5.0
+-------------
+* FEATURE: PCR primers are computed from the last contig to the first one
+* FEATURE: Overlaps between contigs are checked using Blast
+* FEATURE: Notifications and better errors handling
+* BUGFIX: Unused imports clean-up
+* BUGFIX: Code header clean-up
+* OTHER: Some credits to recent contributors
+
+Version 2.3.3
+-------------
+* BUGFIX: Older biopython versions support: SeqIO write method may require a list
+* Version 2.3.2:
+* BUGFIX: Correct map directory name for the ACT scripts
+
+Version 2.3.1
+-------------
+* BUGFIX: Make Blast suport any kind of sequences IDs
+* BUGFIX: Clearer messages on Blast failures
+
+Version 2.3
+-----------
+* FEATURE: Generation of embl files instead of fasta AND tab files (just three files are needed by ACT now)
+* FEATURE: An easier way to open the ACT maps is now implemented script are generated in each "Map_" directory the maps can be automatically opened (-l option)
+* BUGFIX: Support for Biopython 1.57+
+* BUGFIX: EMBL files no more causing crashes of ACT on long contig names
+* BUGFIX: PrintStats now gives the correct number of primers
+* BUGFIX: Fix two crashes when no contigs are mapped
+
+Version 2.2
+-----------
+* FEATURE: PCRPrimers.tsv is now produced by default (with -P option)
+* FEATURE: Mapped and UnMapped txt files now contain the molecules length
+* FEATURE: The script can be launched from any location now (abacas will be found)
+* BUGFIX: UnMappedContigs.txt now is correctly created
+* DEPRECATION: The abacas generated outputs after primer picking are not used anymore
+* DEPRECATION: DNALenghts.tab is no longer produced as an output
+
+Version 2.1
+-----------
+* FEATURE: UnMappedContigs.txt file
+* FEATURE: DNALengths.tab file
+* FEATURE: More outputs with -M option:
+    * Four fasta files with aligned/unaligned regions (on contigs and reference)
+    * PCRPrimers.tsv, containing details about the generated primers
+* BUGFIX: Remove those primers generated because of Ns regions INSIDE a contig
+* BUGFIX: Fail-safe printing of statistics
+* DEPRECATION: Use of legacy-blast now gives a deprecation warning
+
+Version 2.0
+-----------
+* REFACTOR: Contig profiling and mapping use only Blast
+* REFACTOR: Abacas and Mummer are used only for primer picking
+* REFACTOR: Removed deprecated functions and added new classes
+* FEATURE: New "map" file (MappedContigs.txt), containing the contigs mapped to the reference
+* BUGFIX: Minimum contig length and minimum big hit length now have a minimum size
+
+Versions 1.x
+------------
+* 1.0.1 BUGFIX: removing underscores from contig names
+* 1.1 FEATURE: added a tblastn from proteins in reference molecules with no homology
+* 1.2 BUGFIX: Handling primer3 newer versions // Removed "Linear" option
+* 1.3 BUGFIX: Unused splitted contigs correction
+* 1.4 FEATURE: added the -A option to automate the primer design parameters input // Various bugfixes
+* 1.4.1 BUGFIX: prevention of crashes during PrintStats function
+* 1.4.2 FEATURE: added the -G (DEBUG) option // Check for really old BioPython versions
+* 1.4.3 FEATURE: add a prefix to the generated directories (-f option)
+* 1.4.4 BUGFIX: a little bugfix on prefix option
