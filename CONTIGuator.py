@@ -3740,6 +3740,8 @@ def CONTIGuator(options):
             PrimerTable(products,oCFs.maps[sRef],'PCRPrimers.tsv',oCFs.embl[sRef])
             shutil.copy('PCRPrimers.tsv',sRefDir)
             oCFs.primers[sRef] = sRefDir+'/PCRPrimers.tsv'
+            
+        Notify('PCR primers generation terminated')
     
     # Give me some stats...
     try:
