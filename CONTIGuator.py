@@ -1497,8 +1497,6 @@ def getOptions():
                 help='Minimal coverage of the contig (blast-based) [Default: 20%].' 'Values above 100 will be considered 100%')
     group4.add_option('-B', '--bigHitLength', action="store", type='int', dest='iMinBigHit', default=1100,
                 help='Minimal length of a significant blast hit (suggested bigger than 1100bp) [Default: 1100].')
-    group4.add_option('-I', '--intrepid', action="store_true", dest='bIntrepid', default=False,
-                    help='Merge contigs when possible?')
     parser.add_option_group(group4)
 
     # Primer picking?
@@ -2535,20 +2533,14 @@ def BlastOverlap(previous, contig, border, mylog):
     
     return overlap
 
-def CheckOverlap(CMap, intrepid, mylog):
+def CheckOverlap(CMap, mylog):
     '''
     Iteration over the map
     Blast2seq to see if two near contigs are overlapped
-    If intrepid is set, the contigs may be merged
     '''
     mylog.WriteLog('INF', 'Checking contigs overlap')
     sys.stdout.write(strftime("%H:%M:%S")+
                         ' Checking contigs overlap\n')
-    
-    if intrepid:
-        mylog.WriteLog('WRN', 'Intrepid mode not implemeted yet...')
-        sys.stdout.write(strftime("%H:%M:%S")+
-                ColorOutput(' Intrepid mode not implemeted yet...\n','WRN'))
     
     # Bases near the border of the contig that can be out of the alignment
     border = 100
@@ -3706,7 +3698,7 @@ def CONTIGuator(options):
             continue
         
         # Check the overlaps between near contigs
-        CheckOverlap(CMap, options.bIntrepid, mylog)
+        CheckOverlap(CMap, mylog)
         
         oCFs.setMap(sRef, CMap)
         # Write down the obtained map -- ACT
