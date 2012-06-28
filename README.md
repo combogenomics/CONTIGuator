@@ -70,7 +70,6 @@ Command line options
 * -L minimal lenght of a contig to be accepted in the analysis [Default: 1000 bp]
 * -C minimal coverage of a contig to be accepted in the analysis [Default: 20%]
 * -B minimal lenght of a significant Blast hit [Default: 1100 bp]
-* -I Merge contigs when possible? [Not yet implemented]
 
 ### Primer picking
 * -P do primer picking [Default: no]
@@ -133,3 +132,14 @@ This folder contains those contigs that CONTIGuator was unable to map in fasta f
 
 ### Other files
 In addition to these files, a log file (called “CONTIGuator.log”) is present in the source directory: the amount of log output can be modulated using the options -V and -D.
+
+Visualization
+-------------
+
+The outputs of CONTIGuator can be loaded into the Artemis comparison tool (ACT).
+
+One way to open the maps is to use the shell script that CONTIGuator may have generated in each “Map_” directory: just launch each script (i.e. by double-clicking); if you are a lazy user (like me) just add the -l option and CONTIGuator should show each map automatically. Otherwise you can open the maps manually by starting ACT.
+
+The reference molecule is on top, while the pseudo-contig is on bottom. The contigs coloured in light-red or in red are those that are supposed to overlap each other. On the reference track, the red blocks represent the regions of the reference with a significant hit with a region of a contig, while the green blocks represent those regions having a tblastn hit.
+
+Another way to visualize the maps is to open the pdf map that is present in each "Map_" folder: these maps can be opened and edited in vector graphics programs like Adobe Illustrator or inkscape for publication purposes. The only requirement is that the user has a version of biopython equal or greater than 1.59.
