@@ -3794,63 +3794,6 @@ def CONTIGuator(options):
             ManualACT(sRef.replace('.reference.fasta',''), oCFs.refembl[sRef],
                       oCFs.embl[sRef],
                       oCFs.crunch[sRef], sRefDir, mylog)
-    
-    # Make the use of ACT slightly easier
-    sys.stdout.write(strftime("%H:%M:%S")+
-           ' Will try to prepare the ACT launchers...\n')
-    #if CheckForConfig(mylog) and ReadACTConfig(mylog):
-    #    actpath = ReadACTConfig(mylog)
-    #else:
-    try:
-        if options.act != '':
-            actpath = options.act
-        else:
-            actpath = SearchForACT(mylog)
-        if actpath == '':
-            raise Exception
-        fout = WriteACTLaunchers(actpath,oCFs,options.sPrefix,mylog)
-        # Should i run ACT for the (lazy) user?
-        if options.lazy:
-            currmap = 1
-            for t in fout:
-                ref = t[0]
-                launcher = t[1]
-                
-                mylog.WriteLog('DEV', 'Opening script: '+ref)
-                sys.stdout.write(strftime("%H:%M:%S")+
-                        ColorOutput(' Opening map: '+ref
-                        +'\n','DEV'))
-                if len(fout) != currmap:
-                    sys.stdout.write(strftime("%H:%M:%S")+
-                        ' Close ACT to open the next map\n')
-                
-                p = subprocess.Popen(launcher,
-                     shell=(sys.platform!="win32"),
-                     stdin=subprocess.PIPE,stdout=subprocess.PIPE,
-                     stderr=subprocess.PIPE)
-                out = p.communicate()
-                currmap +=1
-        else:
-            sys.stdout.write(
-                ColorOutput('To open the ACT maps you can:\n' 
-                    +'\tRun the scripts in each "Maps_" directory\n'
-                    +'\tRe-run with the -l option\n'
-                    +'\tOpen the ACT maps manually\n'
-                    ,'DEV'))
-            
-            if bPDF:
-                sys.stdout.write(
-            ColorOutput('\tOr you can use the pdf maps in each "Maps_" directory\n'
-            ,'DEV'))
-    except:
-        # Something went wrong, just print some informations
-        mylog.WriteLog('WRN', 'Could not prepare the ACT launchers!')
-        sys.stderr.write(strftime("%H:%M:%S")+
-                ColorOutput(' Could not prepare the ACT launchers!\n','WRN'))
-        sys.stderr.write(ColorOutput('Solutions:\n\tInstall ACT and re-run\n'
-                +'\tRe-run with -a option indicating the ACT binary location\n'
-                +'\tOpen the ACT maps manually\n','WRN'))
-        #
         
     # End!
 
