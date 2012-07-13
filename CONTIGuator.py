@@ -3511,6 +3511,9 @@ def PrintStats(oCFs,options,mylog):
     sys.stdout.write(strftime("%H:%M:%S")+
                         ' CONTIGuator stats\n')
 
+    fsum = open('summary.tsv','w')
+    fsum.write('\t'.join([str(x) for x in ['Category', '#', 'bp']]) + '\n')
+
     # Contigs
     i=0
     j=0
@@ -3522,6 +3525,8 @@ def PrintStats(oCFs,options,mylog):
     mylog.WriteLog('INF', 'Input contigs: '+str(j)+', '+str(i)+' bp')
     sys.stdout.write(ColorOutput('Input contigs: ','DEV')+str(j)+', '+
                      str(i)+' bp\n')
+
+    fsum.write('\t'.join([str(x) for x in ['Input contigs', j, i]]) + '\n')
 
     # Mapped Contigs
     i=0
@@ -3538,6 +3543,8 @@ def PrintStats(oCFs,options,mylog):
     sys.stdout.write(ColorOutput('Mapped contigs: ','DEV')+str(j)+', '+
                      str(i)+' bp\n')
 
+    fsum.write('\t'.join([str(x) for x in ['Mapped contigs', j, i]]) + '\n')
+
     # Total excluded
     i=0
     j=0
@@ -3550,6 +3557,8 @@ def PrintStats(oCFs,options,mylog):
     sys.stdout.write(ColorOutput('UnMapped contigs: ','DEV')+str(j)+', '+
                      str(i)+' bp\n')
     
+    fsum.write('\t'.join([str(x) for x in ['UnMapped contigs',j, i]]) + '\n')
+    
     sys.stdout.write(ColorOutput('UnMapped categories:\n','DEV'))
     i=0
     j=0
@@ -3559,6 +3568,9 @@ def PrintStats(oCFs,options,mylog):
     mylog.WriteLog('INF', 'Short contigs: '+str(j)+', '+str(i)+' bp')
     sys.stdout.write(ColorOutput('\tShort contigs: ','DEV')+str(j)+', '+
                      str(i)+' bp\n')
+    
+    fsum.write('\t'.join([str(x) for x in ['UnMapped: Short contigs', j, i]]) + '\n')
+                     
     i=0
     j=0
     for s in SeqIO.parse(open(oCFs.nocoverage),'fasta'):
@@ -3568,6 +3580,9 @@ def PrintStats(oCFs,options,mylog):
                    str(i)+' bp')
     sys.stdout.write(ColorOutput('\tContigs with poor coverage: ','DEV')+
                 str(j)+', '+str(i)+' bp\n')
+                
+    fsum.write('\t'.join([str(x) for x in ['UnMapped: Poor coverage', j, i]]) + '\n')
+                
     i=0
     j=0
     for s in SeqIO.parse(open(oCFs.coverageborderline),'fasta'):
@@ -3577,6 +3592,9 @@ def PrintStats(oCFs,options,mylog):
                    str(i)+' bp')
     sys.stdout.write(ColorOutput('\tContigs with nearly good coverage: ','DEV')+
                      str(j)+', '+str(i)+' bp\n')
+                     
+    fsum.write('\t'.join([str(x) for x in ['UnMapped: Borderline coverage', j, i]]) + '\n')
+                     
     i=0
     j=0
     for s in SeqIO.parse(open(oCFs.multi),'fasta'):
@@ -3587,6 +3605,9 @@ def PrintStats(oCFs,options,mylog):
     sys.stdout.write(
             ColorOutput('\tContigs mapped to more than one replicon: ','DEV')+
             str(j)+', '+str(i)+' bp\n')
+            
+    fsum.write('\t'.join([str(x) for x in ['UnMapped: More than one replicon', j, i]]) + '\n')
+            
     i=0
     j=0
     al=[]
@@ -3602,7 +3623,8 @@ def PrintStats(oCFs,options,mylog):
     sys.stdout.write(
         ColorOutput('\tContigs discarded due to duplicated hits: ','DEV')+
         str(j)+', '+str(i)+' bp\n')
-
+        
+    fsum.write('\t'.join([str(x) for x in ['UnMapped: Duplicated hits', j, i]]) + '\n')
 
     if options.bPrimer:
         p=0
@@ -3617,9 +3639,13 @@ def PrintStats(oCFs,options,mylog):
                         p=p+1
         mylog.WriteLog('INF', 'Primers: '+str(p))
         sys.stdout.write(ColorOutput('Primers: '+str(p)+'\n','DEV'))
+        
+        fsum.write('\t'.join([str(x) for x in ['Primers', p, '']]) + '\n')
 
     sys.stdout.write('Map files (viewable with ACT) are in the Map_ directories'+
                      ' (one for each putative replicon)\n')
+                     
+    fsum.close()
 
 ################################################################################
 # Main
@@ -3735,6 +3761,7 @@ def CONTIGuator(options):
     # Give me some stats...
     try:
         PrintStats(oCFs,options,mylog)
+        lStart.append('summary.tsv')
     except:
         mylog.WriteLog('INF', 'Something went wrong while printing stats'+
                        ', skipping...')
