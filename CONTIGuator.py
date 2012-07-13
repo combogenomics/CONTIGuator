@@ -1667,7 +1667,6 @@ def ContigProfiler(options,mylog):
                 sys.stdout.write(strftime("%H:%M:%S")+
                     ' Check the log file for the offending command\n')
                 mylog.WriteLog('ERR', 'DB creation failed for some reason! Exiting...')
-                Notify('Blast DB creation failed!',True)
                 return None
         # Run Blast
         # First, ensure unique names for the blast outputs
@@ -1697,7 +1696,6 @@ def ContigProfiler(options,mylog):
                 sys.stdout.write(strftime("%H:%M:%S")+
                     ' Check the log file for the offending command\n')
                 mylog.WriteLog('ERR', 'Blast Run failed for some reason! Exiting...')
-                Notify('Blast run failed!',True)
                 return None
         dBlastOut[options.ContigFile] = (options.fExpect, sTempOut)
         # Erase the temporary DB
@@ -1724,7 +1722,6 @@ def ContigProfiler(options,mylog):
         sys.stderr.write(strftime("%H:%M:%S")+
                ColorOutput(' Parse failed! fsa:'+
                    options.ContigFile+' BOut:'+tBOut[1]+' Exiting...\n','ERR'))
-        Notify('Parse failed on %s!'%tBOut[1],True)
         return None
     # Dictionary: Contig -> list of reference details
     # Dictionary of Dictionary referenceID -> (seq_len, coverage, biggestHit, [hits details], [contig profile])
@@ -2736,7 +2733,6 @@ def RunPrimerPicking(ref,pC,auto,debug,mylog):
         mylog.WriteLog('ERR',str(out[1]))
         sys.stderr.write(strftime("%H:%M:%S")+
             ColorOutput(' ERROR: Abacas run failed for some reason!\n','ERR'))
-        Notify('Abacas run failure!',True)
         return False
     return True
 
@@ -3646,7 +3642,6 @@ def CONTIGuator(options):
         sys.stdout.write(strftime("%Y-%m-%d %H:%M:%S")+
                             ColorOutput(' Stopping CONTIGuator\n','WRN'))
         mylog.WriteLog('INF','Stopping CONTIGuator')
-        Notify('Some requirements are not met',True)
         sys.exit(1)
 
     # Start!
@@ -3740,8 +3735,6 @@ def CONTIGuator(options):
             PrimerTable(products,oCFs.maps[sRef],'PCRPrimers.tsv',oCFs.embl[sRef])
             shutil.copy('PCRPrimers.tsv',sRefDir)
             oCFs.primers[sRef] = sRefDir+'/PCRPrimers.tsv'
-            
-        Notify('PCR primers generation terminated')
     
     # Give me some stats...
     try:
@@ -3863,7 +3856,6 @@ def main():
                 mylog.WriteLog('ERR',str(e))
                 sys.stderr.write(strftime("%H:%M:%S")+
                     ColorOutput(' ERROR: '+str(e)+'\n','ERR'))
-                Notify(str(e), True)
         else:CONTIGuator(options)
 
 if __name__ == '__main__':
