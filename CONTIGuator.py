@@ -2709,11 +2709,7 @@ def RunPrimerPicking(ref,pC,auto,debug,mylog):
 
     # perl abacas.1.1.pl -r <REF>  -q <PSeudoContig> -e
     # Run Abacas and check the return code
-    if auto:
-        f=open('newlines','w')
-        for i in range(13):
-            f.write('\n')
-        f.close()
+    if auto or 'newlines' in os.listsdir('.'):
         path = '/'.join(os.path.realpath(__file__).split('/')[:-1])+'/'
         cmd = 'perl '+path+'abacas* -r \"'+ref+'\"  -q \"'+pC+'\" -e < newlines'
         mylog.WriteLog('WRN', 'Abacas cmd line: '+str(cmd)+'')
