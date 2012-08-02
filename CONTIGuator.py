@@ -3814,7 +3814,7 @@ def main():
             ColorOutput(' Starting CONTIGuator\n','IMP'))
 
         (options, args) = getOptions()
-        if not options.debug:
+        if options.debug:
             try:
                 CONTIGuator(options)
             except Exception, e:
@@ -3822,6 +3822,7 @@ def main():
                 mylog.WriteLog('ERR',str(e))
                 sys.stderr.write(strftime("%H:%M:%S")+
                     ColorOutput(' ERROR: '+str(e)+'\n','ERR'))
+                raise e
         else:CONTIGuator(options)
 
 if __name__ == '__main__':
