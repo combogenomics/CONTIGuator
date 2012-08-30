@@ -1433,9 +1433,9 @@ class Blast(BioPyWrapper):
         self.mylog.WriteLog('INF', 'Blast parameters: '+str(query)+' '+
                         str(db)+' '+str(out)+' '+str(evalue)+' '+str(outfmt)+
                         str(task)+' '+str(additional)+'')
-        self._query=query
-        self._db=db
-        self._out=out
+        self._query='"%s"'%query
+        self._db='"%s"'%db
+        self._out='"%s"'%out
         self._evalue=evalue
         self._outfmt=outfmt
         self._task=task
