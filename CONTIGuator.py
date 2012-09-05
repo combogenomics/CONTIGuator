@@ -1667,7 +1667,7 @@ def ContigProfiler(options,mylog):
                 sys.stdout.write(strftime("%H:%M:%S")+
                     ' Check the log file for the offending command\n')
                 mylog.WriteLog('ERR', 'DB creation failed for some reason! Exiting...')
-                return None
+                raise Exception
         # Run Blast
         # First, ensure unique names for the blast outputs
         sOut = 'BOut.xml'
@@ -1696,7 +1696,7 @@ def ContigProfiler(options,mylog):
                 sys.stdout.write(strftime("%H:%M:%S")+
                     ' Check the log file for the offending command\n')
                 mylog.WriteLog('ERR', 'Blast Run failed for some reason! Exiting...')
-                return None
+                raise Exception
         dBlastOut[options.ContigFile] = (options.fExpect, sTempOut)
         # Erase the temporary DB
         for i in glob.glob('ContigProfilerTempDB*'):
@@ -1722,7 +1722,7 @@ def ContigProfiler(options,mylog):
         sys.stderr.write(strftime("%H:%M:%S")+
                ColorOutput(' Parse failed! fsa:'+
                    options.ContigFile+' BOut:'+tBOut[1]+' Exiting...\n','ERR'))
-        return None
+        raise Exception
     # Dictionary: Contig -> list of reference details
     # Dictionary of Dictionary referenceID -> (seq_len, coverage, biggestHit, [hits details], [contig profile])
     # Contig profile: [bOrder, %of reference PseudoContig, Dict of overlaps]
@@ -3743,7 +3743,7 @@ def CONTIGuator(options):
             sRefDir=sRefDir.replace('.reference.fasta','')
             if not RunPrimerPicking(options.ContigFile,oCFs.lastPCR[sRef],
                             options.bAuto,options.debug,mylog):
-                sys.exit(1)
+                raise Exception
             # Output name
             primer3Out = 'primer3.summary.out'
             products = AbacasPrimer3Parse(primer3Out,oCFs.lastPCR[sRef])
@@ -3814,7 +3814,7 @@ def main():
             ColorOutput(' Starting CONTIGuator\n','IMP'))
 
         (options, args) = getOptions()
-        if not options.debug:
+        if options.debug:
             try:
                 CONTIGuator(options)
             except Exception, e:
@@ -3822,6 +3822,7 @@ def main():
                 mylog.WriteLog('ERR',str(e))
                 sys.stderr.write(strftime("%H:%M:%S")+
                     ColorOutput(' ERROR: '+str(e)+'\n','ERR'))
+                raise e
         else:CONTIGuator(options)
 
 if __name__ == '__main__':
