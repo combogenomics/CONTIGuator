@@ -8,7 +8,7 @@ __copyright__ = "Copyright 2011-12"
 __credits__ = ["Lee Katz", "Florent Lassalle","Margaret Priest",
                "Luisa Santopolo","Francesca Decorosi","Mitchell Stanton-Cook"]
 __license__ = "GPL"
-__version__ = "2.6.1"
+__version__ = "2.6.2"
 __maintainer__ = "Marco Galardini"
 __email__ = "marco.galardini@unifi.it"
 __status__ = "Production"
@@ -3832,6 +3832,13 @@ def main():
                 mylog.WriteLog('ERR',str(e))
                 sys.stderr.write(strftime("%H:%M:%S")+
                     ColorOutput(' ERROR: '+str(e)+'\n','ERR'))
+                try:
+                    # Write down the last error for the web page
+                    fout = open('LASTERROR','w')
+                    fout.write(str(e))
+                    fout.close()
+                except:
+                    pass
                 raise e
         else:CONTIGuator(options)
 
