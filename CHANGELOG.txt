@@ -22,7 +22,9 @@ Version 2.5.0
 Version 2.3.3
 -------------
 * BUGFIX: Older biopython versions support: SeqIO write method may require a list
-* Version 2.3.2:
+
+Version 2.3.2
+-------------
 * BUGFIX: Correct map directory name for the ACT scripts
 
 Version 2.3.1
