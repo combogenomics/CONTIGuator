@@ -3664,6 +3664,16 @@ def CONTIGuator(options):
             ColorOutput(' Biopython >= 1.59 is needed to generate PDF maps\n',
                         'WRN'))
     
+    # Check the inputs
+    # Is the Contigs file in FASTA?
+    from Bio import SeqIO
+    if len([x for x in SeqIO.parse(open(options.ContigFile), 'fasta')]) == 0:
+        raise ValueError('Contigs file (%s) may not be in FASTA format'%options.ContigFile)
+    # Are the reference file(s) in FASTA format?
+    for sInFile in options.lReferenceFiles:
+        if len([x for x in SeqIO.parse(open(sInFile), 'fasta')]) == 0:
+            raise ValueError('Reference file (%s) may not be in FASTA format'%sInFile)
+    
     oCFs = ContigProfiler(options,mylog)
     if not oCFs:
         DeleteTemporaryFiles(lStart)
