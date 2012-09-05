@@ -8,7 +8,7 @@ __copyright__ = "Copyright 2011-12"
 __credits__ = ["Lee Katz", "Florent Lassalle","Margaret Priest",
                "Luisa Santopolo","Francesca Decorosi","Mitchell Stanton-Cook"]
 __license__ = "GPL"
-__version__ = "2.6.0"
+__version__ = "2.6.1"
 __maintainer__ = "Marco Galardini"
 __email__ = "marco.galardini@unifi.it"
 __status__ = "Production"
@@ -1433,9 +1433,9 @@ class Blast(BioPyWrapper):
         self.mylog.WriteLog('INF', 'Blast parameters: '+str(query)+' '+
                         str(db)+' '+str(out)+' '+str(evalue)+' '+str(outfmt)+
                         str(task)+' '+str(additional)+'')
-        self._query=query
-        self._db=db
-        self._out=out
+        self._query='"%s"'%query
+        self._db='"%s"'%db
+        self._out='"%s"'%out
         self._evalue=evalue
         self._outfmt=outfmt
         self._task=task
