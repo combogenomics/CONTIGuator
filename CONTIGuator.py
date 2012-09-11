@@ -1507,6 +1507,8 @@ def getOptions():
                     help='Do primer picking?')
     group5.add_option('-A', '--auto', action="store_true", dest='bAuto', default=False,
                     help='Automatic primer picking parameters?')
+    group5.add_option('-I', '--inner', action="store_true", dest='bInner', default=False,
+                    help='Include gap closing inside contigs?')
     parser.add_option_group(group5)
 
     # Output
@@ -2827,10 +2829,10 @@ def RemoveInnerPrimers(products,ContigMap,mylog):
     
     if len(toBeRemoved) > 1:
         mylog.WriteLog('INF', 'Removed: '+str(len(toBeRemoved))+
-                       ' inner contigs')
+                       ' inner primers')
         sys.stdout.write(strftime("%H:%M:%S")+
                     ColorOutput(' Removed: '+str(len(toBeRemoved))+
-                       ' inner contigs\n','WRN'))
+                       ' inner primers\n','WRN'))
         for p in toBeRemoved:
             products.remove(p)
     
@@ -2906,6 +2908,15 @@ def PrimerTable(products,ContigMap,outFile,sPC):
             c1 = ContigMap[ContigMap.index(c)+1]
         except:
             break
+        
+        # Inner PCR primers?
+        for p in products:
+            if ((p.getLeftPrimer().start >= c.start and 
+                p.getRightPrimer().start <= c.end) and
+                not p.getRightPrimer().start > len(s) ):
+                f.write('\t'.join([c.name, c.name, str(p)]) + '\n') 
+        #
+        
         # Is there any product here?
         b = False
         for p in products:
@@ -3760,7 +3771,8 @@ def CONTIGuator(options):
             # Output name
             primer3Out = 'primer3.summary.out'
             products = AbacasPrimer3Parse(primer3Out,oCFs.lastPCR[sRef])
-            products = RemoveInnerPrimers(products,oCFs.maps[sRef],mylog)
+            if not options.bInner:
+                products = RemoveInnerPrimers(products,oCFs.maps[sRef],mylog)
             WritePrimerProducts(oCFs.embl[sRef],products)
             mylog.WriteLog('INF', 'Generating a primer summary table: '+
                 sRefDir+'/PCRPrimers.tsv')
