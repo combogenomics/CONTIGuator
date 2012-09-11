@@ -1497,6 +1497,8 @@ def getOptions():
                 help='Minimal coverage of the contig (blast-based) [Default: 20%].' 'Values above 100 will be considered 100%')
     group4.add_option('-B', '--bigHitLength', action="store", type='int', dest='iMinBigHit', default=1100,
                 help='Minimal length of a significant blast hit (suggested bigger than 1100bp) [Default: 1100].')
+    group4.add_option('-R', '--multiRepliconRatio', action="store", type='float', dest='fMUltiRep', default=1.5,
+                help='Minimum ratio  [Default: 1.5].')    
     parser.add_option_group(group4)
 
     # Primer picking?
@@ -1590,6 +1592,10 @@ def ContigProfiler(options,mylog):
         mylog.WriteLog('WRN', 'Minimum \"Big hit\" length should be greater than 1100 bp')
         sys.stderr.write(strftime("%H:%M:%S")+
         ColorOutput(' Minimum \"Big hit\" length should be greater than 1100\n','WRN'))
+    if options.fMUltiRep <= 1:
+        mylog.WriteLog('WRN', 'Minimum Multiple replicon ratio should be greater than')
+        sys.stderr.write(strftime("%H:%M:%S")+
+        ColorOutput(' Minimum Multiple replicon ratio should be greater than 1\n','WRN'))    
 
     # List of Reference molecules
     dRefFiles={}
@@ -1790,6 +1796,13 @@ def ContigProfiler(options,mylog):
             # We'll take the best hit, only and only
             # if there is a big difference
             bAssigned = 0
+            
+            # If there is just one reference in the dCDetails dict
+            # there's no need to check!
+            if len(dCDetails[seq_record.id]) == 1:
+                dCAttribution[seq_record.id] = dCDetails[seq_record.id][0].keys()[0]
+                continue
+            
             for dRef in dCDetails[seq_record.id]:
                 currObj = dRef[dRef.keys()[0]]
                 bBestCandidate = 0
@@ -1803,13 +1816,8 @@ def ContigProfiler(options,mylog):
                     if(currObj[1] >= options.iMinCoverage and
                             currObj2[1] < options.iMinCoverage):
                         bBestCandidate = 1
-                    # one % is bigger at least two times than the other
-                    elif fPercRatio >= 2:
-                        bBestCandidate = 1
-                    # same thing for the biggestHit but both % should be under threshold
-                    elif( fBigHitRatio >= 2 and
-                            (currObj[1] >= options.iMinCoverage and
-                            currObj2[1] >= options.iMinCoverage)):
+                    # one % is bigger at least fMultiRatio than the other
+                    elif fPercRatio >= options.fMUltiRep or fBigHitRatio >= options.fMUltiRep:
                         bBestCandidate = 1
                     # Nothing to do!
                     # Erase the boolean
