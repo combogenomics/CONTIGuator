@@ -1,3 +1,18 @@
+Version 2.7
+-----------
+* FEATURE: new option to modulate the multiple replicons conflicts (-R)
+* FEATURE: new option to obtain also the inner primers (-I)
+* BUGFIX: multiple replicons collision bugfixes
+* BUGFIX: better BioPython version check
+
+Version 2.6.2
+-------------
+* FEATURE: check the input files format
+
+Version 2.6.1
+-------------
+* BUGFIX: Sanitize Blast inputs when files or sequences names contain non-standard chars
+
 Version 2.6
 -----------
 * FEATURE: PDF maps in each "Map_" folder (BioPython >= 1.59 is needed)
