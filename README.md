@@ -70,10 +70,12 @@ Command line options
 * -L minimal lenght of a contig to be accepted in the analysis [Default: 1000 bp]
 * -C minimal coverage of a contig to be accepted in the analysis [Default: 20%]
 * -B minimal lenght of a significant Blast hit [Default: 1100 bp]
+* -R minimum ratio for best replicon estimation in case of a conflict [Default: 1.5]
 
 ### Primer picking
 * -P do primer picking [Default: no]
 * -A use default parameters for primer picking [Default: no]
+* -I compute also the inner primers
 
 ### Output options
 * -f prefix for the output directories
