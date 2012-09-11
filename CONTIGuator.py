@@ -1657,7 +1657,7 @@ def ContigProfiler(options,mylog):
         cmd = cmd.rstrip()
         cmd = cmd+'"'
         #Pass the file object
-        res = DBBlaster.CreateBlastDB(cmd, 'nucl', 'ContigProfilerTempDB',bParseSeqIds=0)
+        res = DBBlaster.CreateBlastDB(cmd, 'nucl', 'ContigProfilerTempDB',bParseSeqIds=1)
         if res != 0:
             sys.stdout.write(strftime("%H:%M:%S")+
                     ColorOutput(' Blast+ error while creating the database!\n','WRN'))
@@ -1667,7 +1667,7 @@ def ContigProfiler(options,mylog):
                     ' Trying legacy blast\n')
             mylog.WriteLog('WRN', 'DB creation failed for some reason! Trying to use the old version...')
             deprecationWarning('Legacy-blast',mylog)
-            res = DBBlaster.CreateBlastDB(cmd, 'nucl', 'ContigProfilerTempDB', bParseSeqIds=0, bOld=1)
+            res = DBBlaster.CreateBlastDB(cmd, 'nucl', 'ContigProfilerTempDB', bParseSeqIds=1, bOld=1)
             bOldBlast = 1
             if res!=0:
                 sys.stdout.write(strftime("%H:%M:%S")+
