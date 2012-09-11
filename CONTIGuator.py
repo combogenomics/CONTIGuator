@@ -3261,6 +3261,19 @@ def RunTBlastN(query,dC,dP,dU,oCFs,options,mylog):
 ################################################################################
 # Checks
 
+def getBioPyVersion():
+    import Bio
+    v = Bio.__version__
+    while 1:
+        try:
+            # Imparsable, return a fake version
+            if len(v) == 0:
+                return 0
+            v = float(v)
+            return v
+        except:
+            v = v[:-1]
+
 def CheckRequirements(options,mylog):
     #debug
     mylog.WriteLog('INF', 'Checking software requirements')
@@ -3286,7 +3299,7 @@ def CheckRequirements(options,mylog):
                     ColorOutput(' ERROR: BioPython is missing!\n','ERR'))
         return 1
     # Check BioPython version
-    if float(Bio.__version__)<1.5:
+    if getBioPyVersion() < 1.5:
         mylog.WriteLog('ERR','BioPython version may be too old!')
         sys.stderr.write(strftime("%H:%M:%S")+
                     ColorOutput(' ERROR: BioPython version may be too old!\n','ERR'))
@@ -3655,9 +3668,8 @@ def CONTIGuator(options):
     #
     
     # Check if we can create "ACT" maps with BioPython
-    import Bio
     bPDF = False
-    if float(Bio.__version__) >= 1.59:
+    if getBioPyVersion() >= 1.59:
         bPDF = True
     else:
         sys.stdout.write(strftime("%H:%M:%S")+
