@@ -1,3 +1,7 @@
+Version 2.7.1
+-------------
+* FEATURE: two new files to detail the position of the unaligned regions (-M)
+
 Version 2.7
 -----------
 * FEATURE: new option to modulate the multiple replicons conflicts (-R)
