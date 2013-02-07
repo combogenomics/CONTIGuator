@@ -113,6 +113,8 @@ If options -M was selected:
 * AlignDetails.tab: tab-delimited file containing details about the mapped hits
 * AlignedContigsHits.fsa: mapped hits fasta file (on contigs)
 * AlignedReferenceHits.fsa: mapped hits fasta file (on reference)
+* UnAlignedContigsDetails.tab: details on unmapped regions (on contigs)
+* UnAlignedReferenceDetails.tab: details on unmapped regions (on reference)
 * UnAlignedContigsHits.fsa: unmapped regions fasta file (on contigs)
 * UnAlignedReferenceHits.fsa: unmapped regions fasta file (on reference)
 
