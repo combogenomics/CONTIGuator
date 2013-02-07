@@ -2102,6 +2102,10 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
     if bMoreOutputs:
         sAlignDetails = 'AlignDetails.tab'
         oCFs.addGeneralFile(sAlignDetails)
+        sNCAlignDetails = 'UnAlignedContigsDetails.tab'
+        oCFs.addGeneralFile(sNCAlignDetails)
+        sNRAlignDetails = 'UnAlignedReferenceDetails.tab'
+        oCFs.addGeneralFile(sNRAlignDetails)
         sASeqContig = 'AlignedContigsHits.fsa'
         sNSeqContig = 'UnAlignedContigsHits.fsa'
         sASeqRef = 'AlignedReferenceHits.fsa'
@@ -2134,6 +2138,8 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
     fCMapped = open(sContigsMapped,'w')
     if bMoreOutputs:
         fADetails = open(sAlignDetails,'w')
+        fNCADetails = open(sNCAlignDetails,'w')
+        fNRADetails = open(sNRAlignDetails,'w')
         fASeqContig = open(sASeqContig,'w')
         fNSeqContig = open(sNSeqContig,'w')
         fASeqRef = open(sASeqRef,'w')
@@ -2169,6 +2175,12 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
             nonAligned.append(nHit)
         # Write down those regions!
         for hit in nonAligned:
+            fNRADetails.write('\t'.join([
+                                       hit.name,
+                                       str(hit.sstart),
+                                       str(hit.send),
+                                       hit.strand])+
+                                    '\n')
             fNSeqRef.write('>'+hit.name+'\n')
             Write80CharFile(fNSeqRef, 
                             seqRef.seq[hit.sstart-1:
@@ -2211,6 +2223,12 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,mylog):
             if bMoreOutputs:
                 # Write UnAligned regions
                 for hit in cprof.getUnalignedRegions():
+                    fNCADetails.write('\t'.join([
+                                               hit.name,
+                                               str(hit.qstart),
+                                               str(hit.qend),
+                                               hit.strand])+
+                                    '\n')
                     fNSeqContig.write('>'+hit.name+'\n')
                     Write80CharFile(fNSeqContig, 
                                     dContig[cprof.name].seq[hit.qstart-1:
