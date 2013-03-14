@@ -1,3 +1,7 @@
+Version 2.7.2
+-------------
+* BUGFIX: correctly import pre-made blast outputs (-p)
+
 Version 2.7.1
 -------------
 * FEATURE: two new files to detail the position of the unaligned regions (-M)
