@@ -8,7 +8,7 @@ __copyright__ = "Copyright 2011-12"
 __credits__ = ["Lee Katz", "Florent Lassalle","Margaret Priest",
                "Luisa Santopolo","Francesca Decorosi","Mitchell Stanton-Cook"]
 __license__ = "GPL"
-__version__ = "2.7.1"
+__version__ = "2.7.2"
 __maintainer__ = "Marco Galardini"
 __email__ = "marco.galardini@unifi.it"
 __status__ = "Production"
@@ -1713,7 +1713,7 @@ def ContigProfiler(options,mylog):
             os.remove(i)
     else:
         # Fill the Blast output container
-        dBlastOut[options.ContigFile] = [(0, options.BlastOut)]
+        dBlastOut[options.ContigFile] = (0, options.BlastOut)
 
     # Object to keep in memory the files
     oCFs = ContiguatorCarrier(options.ContigFile)
