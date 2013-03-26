@@ -3928,11 +3928,12 @@ def main():
     if bExitForImportFailed:
         pass
     else:
+        (options, args) = getOptions()
+        
         # Message
         sys.stdout.write(strftime("%Y-%m-%d %H:%M:%S")+
             ColorOutput(' Starting CONTIGuator\n','IMP'))
-
-        (options, args) = getOptions()
+        
         if not options.debug:
             try:
                 CONTIGuator(options)
