@@ -1478,6 +1478,11 @@ def getOptions():
                     'If -p ("Parse Blast") was NOT set')
     group2.add_option('-e', '--expect', action="store", type='float', dest='fExpect', default=1e-20,
                     help='Blast e-value [Default: 1e-20].')
+    group2.add_option('-b', '--blastn', action="store_true", dest='bUseBlastn',
+                default=False,
+                help='Use blastn instead of megablast (may be more sensitive)')
+    group2.add_option('-t', '--threads', action="store", type='int', dest='iThreads', default=1,
+                help='Threads used by Blast.')              
     parser.add_option_group(group2)
 
     # Mode: Launch Blast or parse ready-made results?
@@ -1583,7 +1588,7 @@ def ContigProfiler(options,mylog):
     sys.stdout.write(strftime("%H:%M:%S")+
                         ' Starting contig profiling\n')
 
-    # iMinCoverage Checking
+    # Some parameters checks
     if options.iMinCoverage > 100:
         options.iMinCoverage = 100
     if options.iMinLength < 1000:
@@ -1598,6 +1603,11 @@ def ContigProfiler(options,mylog):
         mylog.WriteLog('WRN', 'Minimum Multiple replicon ratio should be greater than')
         sys.stderr.write(strftime("%H:%M:%S")+
         ColorOutput(' Minimum Multiple replicon ratio should be greater than 1\n','WRN'))    
+    if options.iThreads < 1:
+        mylog.WriteLog('WRN', 'The number of threads used by Blast should be higher than 1')
+        sys.stderr.write(strftime("%H:%M:%S")+
+        ColorOutput(' The number of threads used by Blast should be higher than 1\n','WRN'))
+        options.iThreads = 1
 
     # List of Reference molecules
     dRefFiles={}
@@ -1682,8 +1692,16 @@ def ContigProfiler(options,mylog):
         Blaster = Blast(mylog)
         # Unique name
         sTempOut = sOut.split('.')[0]+options.ContigFile.split('.')[0].split('/')[-1]+str(options.fExpect)+'.xml'
-        Blaster.FillBlastPar(options.ContigFile, 'ContigProfilerTempDB', sTempOut, options.fExpect,
-                             additional=' -soft_masking false')
+        if not options.bUseBlastn:
+            Blaster.FillBlastPar(options.ContigFile, 'ContigProfilerTempDB', sTempOut, options.fExpect,
+                             additional=' -soft_masking false -num_threads %d'%options.iThreads)
+        else:
+            mylog.WriteLog('WRN', 'Using the blastn algorithm instead of megablast')
+            sys.stdout.write(strftime("%H:%M:%S")+
+                    ColorOutput(' Using the blastn algorithm instead of megablast\n','WRN'))
+            Blaster.FillBlastPar(options.ContigFile, 'ContigProfilerTempDB', sTempOut, options.fExpect,
+                             additional=' -soft_masking false -num_threads %d'%options.iThreads,
+                             task='blastn')
         res = Blaster.RunBlast('blastn')
         if res != 0:
             sys.stdout.write(strftime("%H:%M:%S")+
@@ -3869,12 +3887,13 @@ def main():
     if bExitForImportFailed:
         pass
     else:
+        (options, args) = getOptions()
+        
         # Message
         sys.stdout.write(strftime("%Y-%m-%d %H:%M:%S")+
             ColorOutput(' Starting CONTIGuator\n','IMP'))
-
-        (options, args) = getOptions()
-        if options.debug:
+        
+        if not options.debug:
             try:
                 CONTIGuator(options)
             except Exception, e:
