@@ -61,6 +61,8 @@ Command line options
 
 ### Blast parameters
 * -e Blast e-value treshold [Default: 1e-20]
+* -b Use the blastn algorithm instead of megablast (for distant genomes)
+* -t Threads to be used by Blast (useful for large genomes)
 
 ### “Parse Blast” mode
 * -p parse ready-made Blast output (no Blast runs will be performed) [Default: no]
@@ -80,6 +82,7 @@ Command line options
 ### Output options
 * -f prefix for the output directories
 * -M prepare even more outputs
+* -n How many Ns should be used to fill the gaps
 * -N Do not use N to fill the gaps
 
 ### ACT options

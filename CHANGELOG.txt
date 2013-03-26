@@ -1,3 +1,10 @@
+Version 2.7.3
+-------------
+* FEATURE: -b option to use thblastn algorithm instead of megablast (for distant genomes)
+* FEATURE: -t options to use more than one blast thread (useful for large genomes)
+* FEATURE: -n option to regulate the distance between adjacent contigs
+* BUGFIX: a cleaner "--version" output
+
 Version 2.7.2
 -------------
 * BUGFIX: correctly import pre-made blast outputs (-p)
