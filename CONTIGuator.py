@@ -8,7 +8,7 @@ __copyright__ = "Copyright 2011-12"
 __credits__ = ["Lee Katz", "Florent Lassalle","Margaret Priest",
                "Luisa Santopolo","Francesca Decorosi","Mitchell Stanton-Cook"]
 __license__ = "GPL"
-__version__ = "2.7.3"
+__version__ = "2.7.4"
 __maintainer__ = "Marco Galardini"
 __email__ = "marco.galardini@unifi.it"
 __status__ = "Production"
@@ -1630,6 +1630,18 @@ def ContigProfiler(options,mylog):
     iNum = 0
     for sInFile in options.lReferenceFiles:
         for seq in SeqIO.parse(open(sInFile), 'fasta'):
+            # Blast doesn't like tabs in FASTA headers
+            # Complain about it and exit
+            if '\t' in seq.description:
+                mylog.WriteLog('ERR', 'Sequence '+str(seq.id)+' has tabs (\\t\) in the FASTA header')
+                sys.stderr.write(strftime("%H:%M:%S")+
+                        ColorOutput(' ERROR: Sequence '+str(seq.id)+
+                                    ' has tabs (\\t) in the FASTA header\n','ERR'))
+                sys.stderr.write(strftime("%H:%M:%S")+
+                        ColorOutput(' ERROR: Blast doesn\'t like that: use spaces and re-run'+
+                                    ' CONTIGuator\n','ERR'))
+                sys.exit(1)
+
             # Write a file for each reference sequence
             iSeqs=SeqIO.write([seq],open(seq.id.replace('|','_')+
                                          '.reference.fasta','w'),'fasta')

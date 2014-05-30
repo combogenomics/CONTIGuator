@@ -1,3 +1,7 @@
+Version 2.7.4
+-------------
+* BUGFIX: return with an error message when a FASTA header contains a tab
+
 Version 2.7.3
 -------------
 * FEATURE: -b option to use tblastn algorithm instead of megablast (for distant genomes)
