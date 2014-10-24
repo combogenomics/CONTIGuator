@@ -2806,7 +2806,17 @@ def AbacasPrimer3Parse(sFile,sFasta):
     '''
     from Bio import SeqIO
     seq = SeqIO.parse(open(sFasta),'fasta').next()
-    
+   
+    # Check perimer3 version, from version 2.3.x
+    # the primer sequence is in another field
+    p3ver = getPrimer3Version()
+    if p3ver is not None and p3ver[0] > 1 and p3ver[1] > 2:
+        # New version
+        pseq = 7
+    else:
+        # Old versions
+        pseq = 6
+
     products = []
     iPre = 0
     i=0
@@ -2827,7 +2837,7 @@ def AbacasPrimer3Parse(sFile,sFasta):
                 l = l.replace('  ',' ')
             s = l.split(' ')
             left = Primer(iPre+int(s[0])+1,int(s[1]),float(s[2]),
-                          float(s[3]),s[6])
+                          float(s[3]),s[pseq])
         elif l.count('1\tRIGHT PRIMER') > 0 or l.count('0\tRIGHT PRIMER') > 0:
             l = l.replace('1\tRIGHT PRIMER','')
             l = l.replace('0\tRIGHT PRIMER','')
@@ -2836,7 +2846,7 @@ def AbacasPrimer3Parse(sFile,sFasta):
                 l = l.replace('  ',' ')
             s = l.split(' ')
             right = Primer(iPre+int(s[0])+1,int(s[1]),float(s[2]),
-                           float(s[3]),s[6])
+                           float(s[3]),s[pseq])
         
         if left and right:
             PP = PrimerProduct(i)
