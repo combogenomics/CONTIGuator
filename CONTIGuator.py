@@ -3343,6 +3343,23 @@ def getBioPyVersion():
         except:
             v = v[:-1]
 
+def getPrimer3Version():
+    p = subprocess.Popen('primer3_core -about',shell=(sys.platform!="win32"),
+                    stdin=subprocess.PIPE,stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE)
+    vstring = p.communicate()[0]
+    if vstring == '':
+        return None
+
+    try:
+        major = vstring.split('.')[0].split()[-1]
+        minor = vstring.split('.')[1]
+        numb = vstring.split('.')[2]
+    except:
+        return None
+
+    return major, minor, numb
+
 def CheckRequirements(options,mylog):
     #debug
     mylog.WriteLog('INF', 'Checking software requirements')
@@ -3432,10 +3449,8 @@ def CheckRequirements(options,mylog):
     sys.stdout.write(strftime("%H:%M:%S")+
                         ' Checking primer3 version\n')
 
-    p = subprocess.Popen('primer3_core -about',shell=(sys.platform!="win32"),
-                    stdin=subprocess.PIPE,stdout=subprocess.PIPE,
-                    stderr=subprocess.PIPE)
-    if p.communicate()[0]!='':
+    p3ver = getPrimer3Version()
+    if p3ver is not None:
         #debug
         mylog.WriteLog('INF', 'Recent primer3 version detected! Modifing ABACAS...')
         sys.stdout.write(strftime("%H:%M:%S")+
