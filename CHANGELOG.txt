@@ -1,3 +1,7 @@
+Version 2.7.5
+-------------
+* BUGFIX: be aware of the primer3 version, and treat the output differently
+
 Version 2.7.4
 -------------
 * BUGFIX: return with an error message when a FASTA header contains a tab
