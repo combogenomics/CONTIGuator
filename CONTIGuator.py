@@ -7,11 +7,11 @@ __author__ = 'Marco Galardini'
 __copyright__ = "Copyright 2011-12"
 __credits__ = ["Lee Katz", "Florent Lassalle","Margaret Priest",
                "Luisa Santopolo","Francesca Decorosi","Mitchell Stanton-Cook",
-               "Markus Ankenbrand"]
+               "Markus Ankenbrand", "Jesús Hernández Romano"]
 __license__ = "GPL"
-__version__ = "2.7.5"
+__version__ = "2.8.0"
 __maintainer__ = "Marco Galardini"
-__email__ = "marco@ebi.ac.uk"
+__email__ = "marco.galardini@twincore.de"
 __status__ = "Production"
 
 # CONTIGuator ##################################################################
@@ -50,9 +50,9 @@ try:
     import os
     import shutil
     import glob
-except Exception, e:
-    print 'Basic imports failed!'
-    print e
+except Exception as e:
+    print('Basic imports failed!')
+    print(e)
     bExitForImportFailed=1
 
 ################################################################################
@@ -845,7 +845,7 @@ class DbeBase:
         if logObj is None:
             try:
                 self.mylog = LOG('Bioinfo.log')
-            except Exception, e:
+            except Exception as e:
                 self._LogException(e)
                 raise Exception(e)
         else:
@@ -874,12 +874,12 @@ class DbeBase:
 class BioPyWrapper(DbeBase):
     def __init__(self, logObj=None):
         try:DbeBase.__init__(self,logObj)
-        except Exception, e:raise Exception(e)
+        except Exception as e:raise Exception(e)
         try:
             # Try to import BioPython
             import Bio
             self.mylog.WriteLog('DEV', 'Bioinfo module using BioPython')
-        except ImportError, e:
+        except ImportError as e:
             self.mylog.WriteLog('ERR', 'BioPython module not installed (1.54b or higher)')
             self._LogException(e)
             raise Exception(e)
@@ -919,7 +919,7 @@ class Blast(BioPyWrapper):
                 self.subjct_start = temp
     def __init__(self, logObj=None):
         try:BioPyWrapper.__init__(self,logObj)
-        except Exception, e:raise Exception(e)
+        except Exception as e:raise Exception(e)
         # Fill the default parameters
         self._query=''
         self._db=''
@@ -954,7 +954,7 @@ class Blast(BioPyWrapper):
                 cmd = NcbiblastnCommandline(query=self._query, db=self._db, evalue=self._evalue,
                 outfmt=self._outfmt,out=self._out, task=self._task)
             return cmd
-        except Exception, e:
+        except Exception as e:
             return self._CmdLineErr()
             self._LogException(e)
     def _RunBlastAll(self):
@@ -968,7 +968,7 @@ class Blast(BioPyWrapper):
                         gap_open=0,gap_extend=0)
             cmd = str(cmd)+' > '+self._out
             return cmd
-        except Exception, e:
+        except Exception as e:
             return self._CmdLineErr()
             self._LogException(e)
     def _RuntBlastnLegacy(self):
@@ -981,7 +981,7 @@ class Blast(BioPyWrapper):
                         show_gi='T',)
             cmd = str(cmd)+' > '+self._out
             return cmd
-        except Exception, e:
+        except Exception as e:
             return self._CmdLineErr()
             self._LogException(e)
     # tblastn
@@ -993,7 +993,7 @@ class Blast(BioPyWrapper):
             cmd = NcbitblastnCommandline(query=self._query, db=self._db, evalue=self._evalue,
                         outfmt=self._outfmt,out=self._out)
             return cmd
-        except Exception, e:
+        except Exception as e:
             return self._CmdLineErr()
             self._LogException(e)
     # blastn2seqs
@@ -1006,7 +1006,7 @@ class Blast(BioPyWrapper):
                                          evalue=self._evalue,
                                          outfmt=self._outfmt, out=self._out)
             return cmd
-        except Exception, e:
+        except Exception as e:
             return self._CmdLineErr()
             self._LogException(e)
     ## Blast "after-parse" methods:
@@ -1037,7 +1037,7 @@ class Blast(BioPyWrapper):
             self.mylog.WriteLog('INF', 'The query was not found')
             self._currExpect = 'None'
             return None
-        except Exception, e:
+        except Exception as e:
             self.mylog.WriteLog('WRN', 'The blast results are not parsed yet')
             self._LogException(e)
             raise NameError
@@ -1121,10 +1121,10 @@ class Blast(BioPyWrapper):
             # All went ok
             self.mylog.WriteLog('INF', 'Blast DB creation finished')
             return 0
-        except ReturnCodeError, err:
+        except ReturnCodeError as err:
             self.mylog.WriteLog('WRN', 'BlastDB returned error '+str(err.err)+'')
             return 5
-        except Exception, e:
+        except Exception as e:
             self.mylog.WriteLog('ERR', 'Could not create Blast DB')
             self._LogException(e)
             return 999
@@ -1158,10 +1158,10 @@ class Blast(BioPyWrapper):
                 # All went ok
                 self.mylog.WriteLog('INF', 'Blast run finished')
                 return 0
-        except ReturnCodeError, err:
+        except ReturnCodeError as err:
             self.mylog.WriteLog('WRN', 'Blast returned error '+str(err.err)+'')
             return 5
-        except Exception, e:
+        except Exception as e:
             self.mylog.WriteLog('ERR', 'Could not Blast')
             self._LogException(e)
             return 999
@@ -1199,7 +1199,7 @@ class Blast(BioPyWrapper):
                 return len(BlastQuery.alignments)
             # Our query was not found
             return 0
-        except Exception, e:
+        except Exception as e:
             self.mylog.WriteLog('WRN', 'TARGETS - Could not handle query: '+
                                         str(query))
             self._LogException(e)
@@ -1227,7 +1227,7 @@ class Blast(BioPyWrapper):
             if BlastQuery is not None:
                 # Length containers
                 LenMax = 0
-                LenMin = sys.maxint
+                LenMin = sys.maxsize
                 LenMean = 0
                 LenTotal = 0
                 LenList = []
@@ -1255,7 +1255,7 @@ class Blast(BioPyWrapper):
                                                 ' Min-'+str(LenMin)+' - query: '+
                                                 str(BlastQuery.query)+
                                                 ' Target: '+str(align.accession))
-                            if LenMin == sys.maxint:
+                            if LenMin == sys.maxsize:
                                 LenMin = 0
                             return (LenMin, LenMax, LenMean)
                 if not Target:
@@ -1270,12 +1270,12 @@ class Blast(BioPyWrapper):
                                         str(LenMean)+' Max-'+str(LenMax)+
                                         ' Min-'+str(LenMin)+' - query: '+
                                         str(BlastQuery.query))
-                    if LenMin == sys.maxint:
+                    if LenMin == sys.maxsize:
                         LenMin = 0
                     return (LenMin, LenMax, LenMean)
             # Our query was not found
             return (0,0,0)
-        except Exception, e:
+        except Exception as e:
             self.mylog.WriteLog('WRN', 'ALIGNMENT LENGTH - Could not handle query: '+str(query))
             self._LogException(e)
             return (0,0,0)
@@ -1345,7 +1345,7 @@ class Blast(BioPyWrapper):
                 return percentage
             # Our query was not found
             return 0
-        except Exception, e:
+        except Exception as e:
             self.mylog.WriteLog('WRN', 'QUERYCOVERAGE - Could not handle query: '+str(query))
             self._LogException(e)
             return 0
@@ -1376,7 +1376,7 @@ class Blast(BioPyWrapper):
                 return lRepliconIDs
             # Not present in any alignment
             return []
-        except Exception, e:
+        except Exception as e:
             self.mylog.WriteLog('WRN', 'TARGETS - Could not handle query: '+
                                         str(query))
             self._LogException(e)
@@ -1400,7 +1400,7 @@ class Blast(BioPyWrapper):
                                     hsp.bits)
                             DB[BlastQuery.query].append(h)
             return DB
-        except Exception, e:
+        except Exception as e:
             self.mylog.WriteLog('WRN', 'GETALLQUERYHITS - Could not handle request')
             self._LogException(e)
             return {}
@@ -1423,7 +1423,7 @@ class Blast(BioPyWrapper):
                                     hsp.bits)
                             DB[BlastQuery.query].append(h)
             return DB
-        except Exception, e:
+        except Exception as e:
             self.mylog.WriteLog('WRN', 'GETALLQUERYHITS - Could not handle request')
             self._LogException(e)
             return {}
@@ -1677,7 +1677,7 @@ def ContigProfiler(options,mylog):
         mylog.WriteLog('INF', 'Run Blast making the database')
         DBBlaster = Blast(mylog)
         cmd = '"'
-        for sF in dRefFiles.values():
+        for sF in list(dRefFiles.values()):
             cmd= cmd+sF+' '
         cmd = cmd.rstrip()
         cmd = cmd+'"'
@@ -1835,14 +1835,14 @@ def ContigProfiler(options,mylog):
             # If there is just one reference in the dCDetails dict
             # there's no need to check!
             if len(dCDetails[seq_record.id]) == 1:
-                dCAttribution[seq_record.id] = dCDetails[seq_record.id][0].keys()[0]
+                dCAttribution[seq_record.id] = list(dCDetails[seq_record.id][0].keys())[0]
                 continue
             
             for dRef in dCDetails[seq_record.id]:
-                currObj = dRef[dRef.keys()[0]]
+                currObj = dRef[list(dRef.keys())[0]]
                 bBestCandidate = 0
                 for dRef2 in dCDetails[seq_record.id]:
-                    currObj2 = dRef2[dRef2.keys()[0]]
+                    currObj2 = dRef2[list(dRef2.keys())[0]]
                     if currObj == currObj2:
                         continue
                     fPercRatio = float(currObj[1])/float(currObj2[1])
@@ -1861,7 +1861,7 @@ def ContigProfiler(options,mylog):
                 if bBestCandidate == 1:
                     # This reference is the rigth one!
                     dCDetails[seq_record.id] = [dRef]
-                    dCAttribution[seq_record.id] = dRef.keys()[0]
+                    dCAttribution[seq_record.id] = list(dRef.keys())[0]
                     bAssigned = 1
                     break
             if bAssigned == 1:
@@ -1905,7 +1905,7 @@ def ContigProfiler(options,mylog):
     for sContig in dCDetails:
         if len(dCDetails[sContig]) == 0:
             continue
-        sCurrRef = dCDetails[sContig][0].keys()[0]
+        sCurrRef = list(dCDetails[sContig][0].keys())[0]
         # Take the hits list
         lHits = dCDetails[sContig][0][sCurrRef][3]
         # Check if all the hits have the right ordering
@@ -1955,9 +1955,9 @@ def ContigProfiler(options,mylog):
         iHit = 0
         if len(dCDetails[sContig]) == 0:
             continue
-        if sContig not in dCAttribution.keys():
+        if sContig not in list(dCAttribution.keys()):
             continue
-        sCurrRef = dCDetails[sContig][0].keys()[0]
+        sCurrRef = list(dCDetails[sContig][0].keys())[0]
         cLen = dContigs[sContig]
         cprof = ContigProfile(sContig,sCurrRef,cLen,dContigsSeqs[sContig],mylog)
         for hit in dOrder[sContig][0]:#Obj[3]:
@@ -2012,7 +2012,7 @@ def ContigProfiler(options,mylog):
         fFiltered = open(sFiltered, 'w')
         handle = open(options.ContigFile)
         for seq_record in SeqIO.parse(handle, "fasta"):
-            if seq_record.id in dCAttribution.keys():
+            if seq_record.id in list(dCAttribution.keys()):
                 if sRef == dCAttribution[seq_record.id]:
                     fFiltered.write('>'+seq_record.id+'\n')
                     Write80CharFile(fFiltered, str(seq_record.seq))
@@ -2092,7 +2092,6 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,iNumN,mylog):
                         ' Writing the map to files\n')
     
     from Bio import SeqIO
-    from Bio import Alphabet
     from Bio.Seq import Seq
     from Bio.SeqRecord import SeqRecord
     from Bio import SeqFeature
@@ -2101,7 +2100,7 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,iNumN,mylog):
     PName = 'PseudoContig_'+oCFs.refNames[sRef]
     
     # Pseudocontig Sequence
-    MapSeq = SeqRecord(Seq('',Alphabet.IUPAC.IUPACUnambiguousDNA()),
+    MapSeq = SeqRecord(Seq(''),
                     id = PName,
                     description = 'PseudoContig map generated by CONTIGuator '+
                     __version__)
@@ -2162,7 +2161,7 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,iNumN,mylog):
     # Read the reference file and build yet another DB
     # It will contain just one entry
     fRef = open(sRef, 'r')
-    seqRef = SeqIO.parse(fRef, 'fasta').next()
+    seqRef = next(SeqIO.parse(fRef, 'fasta'))
     
     # Print PseudoContig(s)
     # Print Crunch file
@@ -2360,9 +2359,10 @@ def WriteMap(ContigsMap,sContig,sRef,oCFs,bMoreOutputs,iNumN,mylog):
     fAlterPC.close()
     
     # Write the embl files
-    MapSeq.seq = Seq(PContig,Alphabet.IUPAC.IUPACUnambiguousDNA())
+    MapSeq.seq = Seq(PContig)
+    MapSeq.annotations["molecule_type"] = "DNA"
+    seqRef.annotations["molecule_type"] = "DNA"
     SeqIO.write([MapSeq],open(sePC,'w'),'embl')
-    seqRef.seq.alphabet = Alphabet.IUPAC.IUPACUnambiguousDNA()
     SeqIO.write([seqRef],open(seRef,'w'),'embl')
 
     # "Last" PCR
@@ -2643,7 +2643,7 @@ def Mapper(sContig,sRef,oCFs,bNoN,iNumN,mylog):
     # Compute the reference length
     from Bio import SeqIO
     fReference = open(sRef, 'r')
-    oRef = SeqIO.parse(fReference, 'fasta').next()
+    oRef = next(SeqIO.parse(fReference, 'fasta'))
     iRefLen = len(oRef)
     mylog.WriteLog('INF',sRef+' length: '+str(iRefLen))
     
@@ -2806,7 +2806,7 @@ def AbacasPrimer3Parse(sFile,sFasta):
     Parses the Abacas/Primer3 output and returns a list with PrimerProduct objects
     '''
     from Bio import SeqIO
-    seq = SeqIO.parse(open(sFasta),'fasta').next()
+    seq = next(SeqIO.parse(open(sFasta),'fasta'))
    
     # Check perimer3 version, from version 2.3.x
     # the primer sequence is in another field
@@ -2906,7 +2906,7 @@ def WritePrimerProducts(sPC,products,iNumN):
     from Bio import SeqIO
     from Bio import SeqFeature
     
-    s=SeqIO.parse(open(sPC),'embl').next()
+    s=next(SeqIO.parse(open(sPC),'embl'))
     
     for p in products:
         # "Last" PCR?
@@ -2960,7 +2960,7 @@ def PrimerTable(products,ContigMap,outFile,sPC):
                 'Estimated Amplicon length','Estimated PCR Product'])+'\n')
     
     from Bio import SeqIO
-    s=SeqIO.parse(open(sPC),'embl').next()
+    s=next(SeqIO.parse(open(sPC),'embl'))
     
     # Cycle through the map
     for c in ContigMap:
@@ -3315,7 +3315,7 @@ def RunTBlastN(query,dC,dP,dU,oCFs,options,mylog):
         from Bio import SeqFeature
 
         fname = r+'.reference.fasta'        
-        s = SeqIO.parse(open(oCFs.refembl[fname]),'embl').next()
+        s = next(SeqIO.parse(open(oCFs.refembl[fname]),'embl'))
         i=1
         for g in dR[r]:
             feat = SeqFeature.SeqFeature(SeqFeature.FeatureLocation(
@@ -3523,10 +3523,10 @@ def WriteConfig(actpath,mylog):
     '''
     Writes the conf file
     '''
-    import ConfigParser
+    import configparser
 
     # ACT
-    config = ConfigParser.RawConfigParser()
+    config = configparser.RawConfigParser()
     config.add_section('ACT')
     config.set('ACT', 'string', actpath)
     
@@ -3538,9 +3538,9 @@ def ReadACTConfig(mylog):
     '''
     Returns the location of the act executables
     '''
-    import ConfigParser
+    import configparser
 
-    config = ConfigParser.RawConfigParser()
+    config = configparser.RawConfigParser()
     config.read('example.cfg')
 
     try:
@@ -3797,7 +3797,7 @@ def CONTIGuator(options):
         options.iNumN = 0
     
     dDir = {}
-    for sRef in oCFs.references.keys():
+    for sRef in list(oCFs.references.keys()):
         
         # Check if ContigProfiler yielded some results
         # Clean up if yes 
@@ -3843,7 +3843,7 @@ def CONTIGuator(options):
         oCFs.setDir(sRef, sRefDir)
         
     if options.bPrimer:
-        for sRef in oCFs.references.keys():
+        for sRef in list(oCFs.references.keys()):
             if sRef in oCFs.nomap:
                 continue
             sRefDir = options.sPrefix+'Map_'+sRef.split('/')[-1].replace('_','.').replace('-','.')
@@ -3893,7 +3893,7 @@ def CONTIGuator(options):
                ColorOutput(' Something went wrong in reference proteins utilization, skipping...\n','WRN'))
     
     if bPDF:
-        for sRef in oCFs.references.keys():
+        for sRef in list(oCFs.references.keys()):
             if sRef in oCFs.nomap:
                 continue
             
@@ -3984,7 +3984,7 @@ def main():
         if not options.debug:
             try:
                 CONTIGuator(options)
-            except Exception, e:
+            except Exception as e:
                 mylog = LOG('CONTIGuator.log')
                 mylog.WriteLog('ERR',str(e))
                 sys.stderr.write(strftime("%H:%M:%S")+

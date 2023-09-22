@@ -1,8 +1,6 @@
 CONTIGuator
 ===========
 
-[![logo](http://contiguator.sourceforge.net/img/logoweb.png)](http://contiguator.sourceforge.net)
-
 Introduction
 ------------
 
